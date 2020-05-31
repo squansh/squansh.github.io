@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>孙全胜的博客</title>
+  
+  <subtitle>squansh</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2020-05-30T08:22:36.831Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>squansh</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>笔记本电脑</title>
+    <link href="http://yoursite.com/111.html"/>
+    <id>http://yoursite.com/111.html</id>
+    <published>2020-05-30T08:14:13.000Z</published>
+    <updated>2020-05-30T08:22:36.831Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://yoursite.com/hello-world.html"/>
+    <id>http://yoursite.com/hello-world.html</id>
+    <published>2020-05-30T02:22:53.656Z</published>
+    <updated>2020-05-30T02:22:53.657Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+</feed>
