@@ -1,32 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>笔记本电脑</title>
-    <url>/111.html</url>
-    <content><![CDATA[<p>asfasfasfasfasfasasfasfasuhssbxU<br>BCASUNC9ASDUASIU</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/hello-world.html</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
     <title>WIN10 未安装任何音频驱动 扬声器有个小红叉（已解决）</title>
-    <url>/1.html</url>
+    <url>/WIN10%20%E6%9C%AA%E5%AE%89%E8%A3%85%E4%BB%BB%E4%BD%95%E9%9F%B3%E9%A2%91%E9%A9%B1%E5%8A%A8%20%E6%89%AC%E5%A3%B0%E5%99%A8%E6%9C%89%E4%B8%AA%E5%B0%8F%E7%BA%A2%E5%8F%89%EF%BC%88%E5%B7%B2%E8%A7%A3%E5%86%B3%EF%BC%89.html</url>
     <content><![CDATA[<p>经历了无数次的下载安装各种驱动，无数次重启，几乎试了全网所有的方法都是不行，最后使用了国外论坛的方法终于成功了</p>
 <p><img src="https://img-blog.csdnimg.cn/20200205210158898.png" alt="这是我电脑现在的情况，问题已经完全解决了，太激动了哈哈"></p>
 <p>此方法必须要先重启电脑，重启后立刻进行此操作！！</p>
@@ -45,9 +21,171 @@
 ]]></content>
       <categories>
         <category>win10</category>
+        <category>未安装任何音频驱动</category>
       </categories>
       <tags>
         <tag>win10</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>MATLAB安装USB Webcams工具箱出现‘error’</title>
+    <url>/MATLAB%E5%AE%89%E8%A3%85USB%20Webcams%E5%B7%A5%E5%85%B7%E7%AE%B1%E5%87%BA%E7%8E%B0%E2%80%98error%E2%80%99.html</url>
+    <content><![CDATA[<p>下载matlab的Support Package for USB Webcams</p>
+<p><img src="https://img-blog.csdnimg.cn/20200208215954945.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<a id="more"></a>
+<p>点击安装后出现错误，无法安装<br> receive the error “There was a problem downloading the Support Package”<br> 出现这种情况一般是因为电脑和工具箱的服务器连接错误，可能是防火墙阻止连接，可以暂时禁止防护软件再重新安装。<br> 在这里说一下：有些情况重新试几次就行，但是如果一直不行就可能是proxy、firewall的原因。<br>我经过一番折腾已经下载完成了：<br><img src="https://img-blog.csdnimg.cn/20200208224301292.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>对于proxy问题，大家可以找下相关文章。<br>对于firewall<br>如果正在运行firewall，需要绕过阻碍连接mathworks服务器。<br>mathworks安装程序需要联系以下端口和地址上的mathworks服务器：<br>登录：mathworks.com<br>服务.mathworks.com<br>TCP端口80和443<br>Firewall需要绕过两个端口上两个地址的阻碍连接，<br>这些服务器不使用静态IP地址，为动态IP地址。所以需要使用域名搜索。   </p>
+<p>如果有问题可以再联系我，也可以找相关文章，此篇文章会在以后遇到具体问题时再做详细更改。           </p>
+]]></content>
+      <categories>
+        <category>MATLAB</category>
+      </categories>
+      <tags>
+        <tag>MATLAB</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>MATLAB自适应直方图均衡—adapthisteq</title>
+    <url>/MATLAB%E8%87%AA%E9%80%82%E5%BA%94%E7%9B%B4%E6%96%B9%E5%9B%BE%E5%9D%87%E8%A1%A1%E2%80%94adapthisteq.html</url>
+    <content><![CDATA[<p>今天写调用摄像头处理图像函数，用到了adapthisteq函数，顺便对adapthisteq函数做了一些总结。</p>
+<p>adapthisteq：适应直方图均衡化对比度限制器。通过转换强度图像中的值来改变图像的对比度。</p>
+<p>histeq：自适应直方图均衡。</p>
+<a id="more"></a>
+<p>与histeq函数不同的是，adapthisteq处理的是图片的小块区域的数据，而不是整个图像对比度增强，使输出区域的直方图大约匹配指定的直方图。相邻的小块用双线性插值把它们混合在一起，以消除人工诱导的边界。对比，尤其是在同质区域，可以限制，以避免放大图像中可能存在的噪声。</p>
+<p>G = adapthisteq(I, param1, val1, param2, val2, …)</p>
+<p><strong>‘NumTiles’</strong>：由正整数组成的二元向量[ m, n ]。[ m, n ]为指定小块区域的行列数，M 和 n 都必须至少为2。图像块的总数等于 m * n。 默认值为 [ 8,  8 ]。 </p>
+<p><strong>‘ClipLimit’</strong>  ：是从0到1的实数标量，用于限制对比度增强。数值越大，对比度越高。默认值为: 0.01。</p>
+<p><strong>‘NBins’</strong>：正整数标量。为构建直方图时使用的直方图设置容器数增强对比度的转换。更高的值结果导致有在更大的动态范围，代价是较慢的处理速度。 默认值: 256。</p>
+<p> <strong>‘Range’</strong>：’original’ 或 ‘full’. 控制输出图像数据的范围。 如果‘ Range’设置为‘ original’ ，则范围限制为[ min (i (：))  max (i (：))]。 否则，默认情况下，或者当‘ Range’设置为‘ full’时，将使用输出图像类的全部范围(e.g.    uint8  是 [0 255])。默认值：full。</p>
+<p><strong>‘Distribution’</strong>：’uniform’, ‘rayleigh’, ‘exponential’。通过指定分布类型，为图像块设置所需的直方图形状。 默认值：uniform。</p>
+<p><strong>‘Alpha’</strong>：是一个分布参数，当“ Dist”为“ rayleigh”或“ exponential”时可以使用这个参数。 默认值：0.4。</p>
+<p>下面是随手写的一份代码，可以直观的看到adapthisteq的使用方法和使用效果。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">I &#x3D; rgb2gray(imread(&#39;tupian.png&#39;));</span><br><span class="line">figure;</span><br><span class="line">imshow(I);</span><br><span class="line"></span><br><span class="line">I1 &#x3D; adapthisteq(I);</span><br><span class="line">figure;</span><br><span class="line">imshow(I1);</span><br><span class="line"></span><br><span class="line">I2 &#x3D; adapthisteq(I,&#39;NumTiles&#39;,[50 50]);</span><br><span class="line">figure;</span><br><span class="line">imshow(I2);</span><br><span class="line"></span><br><span class="line">I3 &#x3D; adapthisteq(I,&#39;NumTiles&#39;,[50 50],&#39;ClipLimit&#39;,0.5);</span><br><span class="line">figure;</span><br><span class="line">imshow(I3);</span><br><span class="line"></span><br><span class="line">I4 &#x3D; adapthisteq(I,&#39;NumTiles&#39;,[50 50],&#39;ClipLimit&#39;,...</span><br><span class="line">0.5,&#39;NBins&#39;,400);</span><br><span class="line">figure;</span><br><span class="line">imshow(I4);</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/2020020917231924.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><img src="https://img-blog.csdnimg.cn/20200209172340536.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200209172424575.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/2020020917250378.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200209172520303.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>这里注意第一行代码，</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">I &#x3D; rgb2gray(imread(&#39;tupian.png&#39;));</span><br><span class="line">I &#x3D; imread(&#39;tupian.png&#39;);</span><br></pre></td></tr></table></figure>
+
+<p>很多人会忘记做灰度处理导致adapthisteq使用错误。</p>
+<p>写文章时间较紧，如有错误，还请指正。</p>
+]]></content>
+      <categories>
+        <category>MATLAB</category>
+      </categories>
+      <tags>
+        <tag>MATLAB</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>如何使用MATLAB调用摄像头—代码详解</title>
+    <url>/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8MATLAB%E8%B0%83%E7%94%A8%E6%91%84%E5%83%8F%E5%A4%B4%E2%80%94%E4%BB%A3%E7%A0%81%E8%AF%A6%E8%A7%A3.html</url>
+    <content><![CDATA[<blockquote>
+<p>大家也可以加我的交流群，所有资料我会在群里分享出来哦：977947271</p>
+<p>2020/5/30：</p>
+</blockquote>
+<p>最近在做关于图像识别的项目。</p>
+<p>接触了MATLAB的许多操作，在这里做下关于调用笔记本摄像头的笔记。</p>
+<a id="more"></a>
+<p>首先需要了解imaqhwinfo函数，在命令行输入imaqhwinfo就可以看到自己笔记本相关适配器和MATLAB版本的信息.但并不能看到摄像头的信息。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">&gt;&gt;imaqhwinfo</span><br><span class="line">ans =  </span><br><span class="line">   包含以下字段的struct:</span><br><span class="line"> </span><br><span class="line">       InstalledAdaptors:  &#123;<span class="string">'winvideo'</span>&#125;</span><br><span class="line">           MATLABVersion:  <span class="string">'9.4 ( R2018a ) '</span></span><br><span class="line">             ToolboxName: <span class="string">'Image Acquisition Toolbox'</span></span><br><span class="line">          ToolboxVersion: <span class="string">'5.4 (R2018a)'</span>`</span><br></pre></td></tr></table></figure>
+<p>想要了解摄像头的信息就需要在imaqhwinfo中添加相关函数</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">&gt;&gt;imaqhwinfo(<span class="string">'winvideo'</span>)</span><br></pre></td></tr></table></figure>
+<p>下面是适配器相关信息</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">ans = </span><br><span class="line">  包含以下字段的struct:</span><br><span class="line">  </span><br><span class="line">      AdaptorDllName: <span class="string">'C:\MATLAB\mwwinvideoimaq.dll'</span></span><br><span class="line">   AdaptorDllVersion: <span class="string">'5.4 (R2018)'</span></span><br><span class="line">         AdaptorName: <span class="string">'winvideo'</span></span><br><span class="line">           DeviceIDs: &#123;[<span class="number">1</span>]&#125;</span><br><span class="line">          DeviceInfo: [<span class="number">1</span>×<span class="number">1</span> struct]</span><br></pre></td></tr></table></figure>
+<p>imaqhwinfo()返回的是一个结构体，其中 DeviceID 和 DeviceInfo比较重要。DeviceID 储存着电脑上所有可用摄像头的ID，每个ID对应着电脑可用的一个摄像头；DeviceInfo 里面储存着摄像头的信息，就是我们平时所说的视频格式。</p>
+<p>下面以我的电脑为例：</p>
+<p>使用 DeviceInfo.DeviceID 可以看到摄像头的 ID 为 1</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">&gt;&gt;I = imaqhwinfo(<span class="string">'winvideo'</span>);</span><br><span class="line">&gt;&gt;I.DeviceInfo.DeviceID</span><br><span class="line"> ans =</span><br><span class="line"> 	<span class="number">1</span></span><br></pre></td></tr></table></figure>
+<p>使用 DeviceInfo.SupportedFormats 函数可得到我的摄像头支持的格式是<br>{‘YUY2_160x120’}    {‘YUY2_320x240’}    {‘YUY2_640x480’}这三种。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">&gt;&gt;I = imaqhwinfo(<span class="string">'winvideo'</span>);</span><br><span class="line">&gt;&gt;I.DeviceInfo.SupportedFormats</span><br><span class="line">ans =</span><br><span class="line">     <span class="number">1</span>×<span class="number">3</span>cell 数组</span><br><span class="line">     &#123;<span class="string">'YUY2_160x120'</span>&#125;    &#123;<span class="string">'YUY2_320x240'</span>&#125;    &#123;<span class="string">'YUY2_640x480'</span>&#125;</span><br></pre></td></tr></table></figure>
+<p>调用摄像头注意这个函数 videoinput（adaptorname，deviceID，format）</p>
+<p>如果我使用ID为 ‘1’ 的摄像头，格式选择为{‘YUY2_640x480’}，</p>
+<p>那么代码为</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">videoinput(<span class="string">'winvideo'</span>,<span class="number">1</span>,<span class="string">'YUY2_640x480'</span>)</span><br></pre></td></tr></table></figure>
+<p>下面上简单的代码：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">vid = videoinput(<span class="string">'winvideo'</span>,<span class="number">1</span>,<span class="string">'YUY2_640x480'</span>);   %选择摄像头和格式</span><br><span class="line">preview (vid);    			%显示vid函数中摄像头拍摄的画面</span><br><span class="line">frame = getsnapshot(vid);   			%获取每一帧的图片</span><br><span class="line">figure;imshow(frame);   		%在figure中显示出摄像头拍摄的画面</span><br><span class="line">	%如果想保存图片可以使用下面的函数</span><br><span class="line">	%但这种函数保存打开摄像头那一瞬间的图片</span><br><span class="line">	%有时间我将介绍如何使用gui去实现随时拍照的代码，</span><br><span class="line">imwrite(frame,<span class="string">'A.png'</span>);</span><br></pre></td></tr></table></figure>
+<p>下面是微微复杂点的代码，一般在实战中会用到，单纯是想玩的话，上面的代码已经够了。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">obj = videoinput(<span class="string">'winvideo'</span>,<span class="number">1</span>,<span class="string">'YUY2_640×480'</span>)；</span><br><span class="line">%winvideo<span class="string">'由函数imaqhwinfo查出</span></span><br><span class="line"><span class="string">set(vid,'</span>FramesPerTrigge<span class="string">r',1);</span></span><br><span class="line"><span class="string">%FramesPerTrigger用特定的帧数去捕获选定的视频 </span></span><br><span class="line"><span class="string">set(vid, '</span>TriggerRepeat<span class="string">', Inf);</span></span><br><span class="line"><span class="string">%不断地触发TriggerRepeat，以上代码一般不需要改动</span></span><br><span class="line"><span class="string">set(vid,'</span>ReturnedColorSpace<span class="string">','</span>rg<span class="string">b');</span></span><br><span class="line"><span class="string">%设置返回的视频颜色，‘rgb’是正常颜色，需要返回其他色彩可以在做改动</span></span><br><span class="line"><span class="string">vidRes=get(obj,'</span>VideoResolution<span class="string">');         </span></span><br><span class="line"><span class="string">%获得视频的长与宽，是二维数组</span></span><br><span class="line"><span class="string">nBands=get(obj,'</span>NumberOfBands<span class="string">');           </span></span><br><span class="line"><span class="string">%获得图像的颜色层数</span></span><br><span class="line"><span class="string">hImage=image(zeros(vidRes(2),vidRes(1),nBands));</span></span><br><span class="line"><span class="string">%获得图像的句柄</span></span><br><span class="line"><span class="string">preview(obj,hImage);</span></span><br><span class="line"><span class="string">%以上是我对这些代码的理解，具体情况在这里就没法细说了</span></span><br></pre></td></tr></table></figure>
+<p>这里就把简单的介绍完了。</p>
+<p>建议有需要的朋友使用GUI去实现对视频、图片的播放、保存、并做相应处理的操作。</p>
+<p>有时间我会把我的项目再深入介绍一下如何对这些进行操作，如果有感兴趣的朋友也可以联系我。</p>
+]]></content>
+      <categories>
+        <category>MATLAB</category>
+      </categories>
+      <tags>
+        <tag>MATLAB</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Anaconda镜像下载地址</title>
+    <url>/Anaconda%E9%95%9C%E5%83%8F%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80.html</url>
+    <content><![CDATA[<p>清华大学镜像：<a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/" target="_blank" rel="noopener">https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/</a><br><img src="https://img-blog.csdnimg.cn/20200217154416803.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>这里建议大家下载这里画圈的版本，是python3.6的Windows版本。</p>
+<p>我试了anaconda官网的下载，基本速度在10k左右；用清华镜像下载的话速度在6M上下，速度很快。</p>
+<p>安装的话就是正常安装，安装过程中全部选择默认就可以了，我也试过不用默认的安装方式，并未发现什么不同。所以不用担心。</p>
+<p>下次会发一篇关于新手如何了解anaconda的文章。</p>
+]]></content>
+      <categories>
+        <category>python</category>
+        <category>下载anaconda</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>anaconda</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>新手如何使用anaconda（python）—简单介绍</title>
+    <url>/%E6%96%B0%E6%89%8B%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8anaconda%EF%BC%88python%EF%BC%89%E2%80%94%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D.html</url>
+    <content><![CDATA[<p>我之前用 python 的 IDLE 去写代码，但是在深度学习的部分，代码频频报错，因为 python 的很多库都没有，而自己去下载的话速度极其的慢。</p>
+<p>所以下载 anaconda 了， anaconda 里已经下载了很多库（虽然依然没有我想要的库），但相比单单一个 python 软件便好用许多。</p>
+<p>这里介绍一下新手如何快速使用 anaconda（我也是刚接触 python，好在比C简单多了，和 matlab 又很像）：</p>
+<p>我们在：</p>
+<p>清华镜像下载   anaconda（下载过程看我另一篇博文）：<br><a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/" target="_blank" rel="noopener">https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/</a></p>
+<p>安装好了之后</p>
+<p><img src="https://img-blog.csdnimg.cn/20200217161343829.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>开始界面应该有这些东西，不过我们需要的一般只有 Jupyter Notebook 和  Anaconda Prompt。</p>
+<p>Jupyter Notebook 可以当作 python 来用，只是界面不同。 Anaconda Prompt 就是和windows 的 cmd 差不多。</p>
+<p><img src="https://img-blog.csdnimg.cn/20200217162002355.png" alt="在这里插入图片描述"></p>
+<p>在prompt里输入python，则就会显示python的版本，我这里是3.6.5。</p>
+<p>并进入python的编程环境：</p>
+<p><img src="https://img-blog.csdnimg.cn/20200217163039966.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>不过最好不要在这里写代码吧，因为…上图就是教训呀！（新手不懂。。。）</p>
+<p>回归正题：<br>代码一般都在Jupyter Notebook里写<br>这里打开Jupyter Notebook</p>
+<p><img src="https://img-blog.csdnimg.cn/2020021716330039.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200217163404727.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>电脑会自动打开网页 jupyter , anaconda中的python就是个web程序。在这里就可以开始python之旅了。上图现实的打开文件路径，可以打开里面储存的文件。</p>
+<p><img src="https://img-blog.csdnimg.cn/20200217164043772.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>点击new按钮就可以创建新的text file 和folder.</p>
+<p>打开text:</p>
+<p><img src="https://img-blog.csdnimg.cn/2020021716452081.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">就可以编辑文字和代码。</p>
+<p>点击 python 3 就可以正常的进行代码的编写了，下面随手写了个新手代码，按住shift+Enter就可以运行代码了。</p>
+<p><img src="https://img-blog.csdnimg.cn/20200217165201133.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>我也是个新手，因为 MATLAB 项目的需要所以转战 python。</p>
+<p>接下来我会继续更新 MATLAB 项目的部分，也会开始python爬虫的编写。</p>
+<p>欢迎各位指正错误。</p>
+]]></content>
+      <categories>
+        <category>python</category>
+        <category>使用anaconda</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>anaconda</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>MATLAB账户未关联到许可证—无法打开help文档—解决方法</title>
+    <url>/MATLAB%E8%B4%A6%E6%88%B7%E6%9C%AA%E5%85%B3%E8%81%94%E5%88%B0%E8%AE%B8%E5%8F%AF%E8%AF%81%E2%80%94%E6%97%A0%E6%B3%95%E6%89%93%E5%BC%80help%E6%96%87%E6%A1%A3%E2%80%94%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95.html</url>
+    <content><![CDATA[<p>今天在使用help命令时，需要参阅一些函数的help文档，却发现我的matlab无法关联到许可证<br><img src="https://img-blog.csdnimg.cn/20200211154400903.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<a id="more"></a>
+<p>对于一些朋友，只需要在命令行输入‘license’便可得到许可证编号。但我的matlab是破解版的，所以没有许可证。</p>
+<p>再参阅的国外论坛后，找到了解决方法。<br>下面就教大家如何解决：<br><img src="https://img-blog.csdnimg.cn/20200211154735579.png" alt="在这里插入图片描述"><br>点击‘预设项’—‘帮助’<br><img src="https://img-blog.csdnimg.cn/20200211155006810.png" alt="在这里插入图片描述"></p>
+<p>选择‘安装在本地’—‘在小窗口中’<br><img src="https://img-blog.csdnimg.cn/20200211155132806.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>即可解决问题，方法简单，只供破解版用户参阅。<br>有问题可联系我。</p>
+]]></content>
+      <categories>
+        <category>MATLAB</category>
+      </categories>
+      <tags>
+        <tag>MATLAB</tag>
       </tags>
   </entry>
 </search>
