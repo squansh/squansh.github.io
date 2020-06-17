@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-06-17T01:30:21.189Z</updated>
+  <updated>2020-06-17T02:12:07.105Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>WIN10 未安装任何音频驱动 扬声器有个小红叉（已解决）</title>
+    <link href="http://yoursite.com/1.html"/>
+    <id>http://yoursite.com/1.html</id>
+    <published>2020-06-17T01:34:21.000Z</published>
+    <updated>2020-06-17T02:12:07.105Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;经历了无数次的下载安装各种驱动，无数次重启，几乎试了全网所有的方法都是不行，最后使用了国外论坛的方法终于成功了&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://img-blog.csdnimg.cn/20200205210158898.png&quot; alt=&quot;这是我电脑现在的情况，问题已经完全解决了，太激动了哈哈&quot;&gt;&lt;/p&gt;
+&lt;p&gt;此方法必须要先重启电脑，重启后立刻进行此操作！！&lt;/p&gt;
+&lt;p&gt;我当时右击扬声器图标，选择打开声音设置&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="win10" scheme="http://yoursite.com/categories/win10/"/>
+    
+    
+      <category term="win10" scheme="http://yoursite.com/tags/win10/"/>
+    
+  </entry>
   
   <entry>
     <title>笔记本电脑</title>
