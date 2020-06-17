@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-05-30T08:22:36.831Z</updated>
+  <updated>2020-06-17T01:16:57.602Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>win10扬声器有个小红叉（已解决）</title>
+    <link href="http://yoursite.com/win10%E6%89%AC%E5%A3%B0%E5%99%A8%E6%9C%89%E4%B8%AA%E5%B0%8F%E7%BA%A2%E5%8F%89%EF%BC%88%E5%B7%B2%E8%A7%A3%E5%86%B3%EF%BC%89.html"/>
+    <id>http://yoursite.com/win10%E6%89%AC%E5%A3%B0%E5%99%A8%E6%9C%89%E4%B8%AA%E5%B0%8F%E7%BA%A2%E5%8F%89%EF%BC%88%E5%B7%B2%E8%A7%A3%E5%86%B3%EF%BC%89.html</id>
+    <published>2020-06-17T00:59:11.624Z</published>
+    <updated>2020-06-17T01:16:57.602Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;hr&gt;
+&lt;p&gt;title: WIN10 未安装任何音频驱动 扬声器有个小红叉（已解决）&lt;br&gt;date: 2020-06-17
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>笔记本电脑</title>
