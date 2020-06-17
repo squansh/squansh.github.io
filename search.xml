@@ -21,7 +21,6 @@
 ]]></content>
       <categories>
         <category>win10</category>
-        <category>未安装任何音频驱动</category>
       </categories>
       <tags>
         <tag>win10</tag>
@@ -73,6 +72,7 @@
       </categories>
       <tags>
         <tag>MATLAB</tag>
+        <tag>语法笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -86,6 +86,7 @@
 <p>接触了MATLAB的许多操作，在这里做下关于调用笔记本摄像头的笔记。</p>
 <a id="more"></a>
 <p>首先需要了解imaqhwinfo函数，在命令行输入imaqhwinfo就可以看到自己笔记本相关适配器和MATLAB版本的信息.但并不能看到摄像头的信息。</p>
+<!--more-->
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">&gt;&gt;imaqhwinfo</span><br><span class="line">ans =  </span><br><span class="line">   包含以下字段的struct:</span><br><span class="line"> </span><br><span class="line">       InstalledAdaptors:  &#123;<span class="string">'winvideo'</span>&#125;</span><br><span class="line">           MATLABVersion:  <span class="string">'9.4 ( R2018a ) '</span></span><br><span class="line">             ToolboxName: <span class="string">'Image Acquisition Toolbox'</span></span><br><span class="line">          ToolboxVersion: <span class="string">'5.4 (R2018a)'</span>`</span><br></pre></td></tr></table></figure>
 <p>想要了解摄像头的信息就需要在imaqhwinfo中添加相关函数</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">&gt;&gt;imaqhwinfo(<span class="string">'winvideo'</span>)</span><br></pre></td></tr></table></figure>
@@ -128,7 +129,7 @@
 ]]></content>
       <categories>
         <category>python</category>
-        <category>下载anaconda</category>
+        <category>入门</category>
       </categories>
       <tags>
         <tag>python</tag>
@@ -168,7 +169,7 @@
 ]]></content>
       <categories>
         <category>python</category>
-        <category>使用anaconda</category>
+        <category>入门</category>
       </categories>
       <tags>
         <tag>python</tag>
@@ -189,6 +190,753 @@
       </categories>
       <tags>
         <tag>MATLAB</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>No module named &#39;pkg_resources&#39;解决方法</title>
+    <url>/No%20module%20named%20&#39;pkg_resources&#39;%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95.html</url>
+    <content><![CDATA[<blockquote>
+<p>No module named ‘pkg_resources’</p>
+</blockquote>
+<p>我在安装 pip 时出现这种问题</p>
+<p><strong>解决方法:</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">curl https://bootstrap.pypa.io/ez_setup.py | python</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/20200311193145656.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>等待 Downloading setuptools 完成后即可.</p>
+]]></content>
+      <categories>
+        <category>python</category>
+        <category>error&amp;库</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>error&amp;库</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>MATLAB 的global函数（全局变量）—从python和MAT实例中详细解释</title>
+    <url>/MATLAB%20%E7%9A%84global%E5%87%BD%E6%95%B0%EF%BC%88%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F%EF%BC%89%E2%80%94%E4%BB%8Epython%E5%92%8CMAT%E5%AE%9E%E4%BE%8B%E4%B8%AD%E8%AF%A6%E7%BB%86%E8%A7%A3%E9%87%8A.html</url>
+    <content><![CDATA[<p>今天本来发布了用摄像头 gui 拍照的程序，然后有人私信我问其中的global函数的使用方法。</p>
+<p>我想了一下，就以摄像头拍照为例子去解释一下这个函数的用法吧。</p>
+<p>但是首先用python中的一个小例子来说明一下：</p>
+<a id="more"></a>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">&gt;&gt;&gt;YOU = <span class="string">'老大'</span></span><br><span class="line">&gt;&gt;&gt;<span class="function"><span class="keyword">def</span> <span class="title">fun</span><span class="params">()</span>:</span></span><br><span class="line">		YOU = <span class="string">'老二'</span></span><br><span class="line">		<span class="keyword">print</span>（YOU）</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt;fun()</span><br><span class="line">&gt;&gt;&gt;print(YOU)</span><br></pre></td></tr></table></figure>
+<p>大家应该知道结果是</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">老二</span><br><span class="line">老大</span><br></pre></td></tr></table></figure>
+<p>但如果使用global：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"> I = <span class="string">'老大'</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">global</span> I</span><br><span class="line">    I=<span class="string">'老二'</span>    </span><br><span class="line">    print(I)</span><br><span class="line">    </span><br><span class="line">fun()</span><br><span class="line">print(I)</span><br></pre></td></tr></table></figure>
+<p>在这里简单想下就是使用global定义之后，函数内的变量也就可以被改变了</p>
+<p>就像变量与参数之间的关系，但是使用global之后，参数就变成真实的变量了，可以在define的函数中改变之前定义的值，很有意思。</p>
+<p>结果可想而知：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">老二</span><br><span class="line">老二</span><br><span class="line">%%%%%谁**是老二啊？？？！！！要当就当老大啊！！！</span><br></pre></td></tr></table></figure>
+<p>所以代码应该改成这样：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"> I = <span class="string">'你是老二吧，哈哈'</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">global</span> I</span><br><span class="line">    I=<span class="string">'我才是老大，哈哈哈哈'</span>    </span><br><span class="line">    print(I)</span><br><span class="line">    </span><br><span class="line">fun()</span><br><span class="line">print(I)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">我才是老大，哈哈哈哈</span><br><span class="line">我才是老大，哈哈哈哈</span><br></pre></td></tr></table></figure>
+
+<p>OK 现在返回的就是你心底最先说的话吧，，哈哈，不开玩笑了……</p>
+<p>下面看看在matlab实例项目中的应用吧：</p>
+<p><img src="https://img-blog.csdnimg.cn/20200219193459740.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>话不多说，直接上代码：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function">function <span class="title">pushbutton1_Callback</span><span class="params">(hObject, eventdata, handles)</span></span></span><br><span class="line"><span class="function">% hObject    handle to <span class="title">pushbutton1</span> <span class="params">(see GCBO)</span></span></span><br><span class="line"><span class="function">% eventdata  reserved - to be defined in a future version of MATLAB</span></span><br><span class="line"><span class="function">% handles    structure with handles and user <span class="title">data</span> <span class="params">(see GUIDATA)</span></span></span><br><span class="line"><span class="function">		vid </span>= videoinput(<span class="string">'winvideo'</span>,<span class="number">1</span>);%调用摄像头</span><br><span class="line">		axes = (handles.axes1);%指定figure</span><br><span class="line">		preview(vid);%显示视频</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">pushbutton2_Callback</span>(<span class="params">hObject, eventdata, handles</span>)</span></span><br><span class="line">% hObject    handle to pushbutton2 (see GCBO)</span><br><span class="line">% eventdata  reserved - to be defined <span class="keyword">in</span> a future version <span class="keyword">of</span> MATLAB</span><br><span class="line">% handles    structure <span class="keyword">with</span> handles and user data (see GUIDATA)</span><br><span class="line">		frame = getsnapshot(vid);%获取每一帧</span><br><span class="line">		I = ycbcr2rgb(frame);%RGB图像</span><br><span class="line">		imwrite(I,<span class="string">'csdn.png'</span>);</span><br></pre></td></tr></table></figure>
+<p>如果我代码是这样的话，命令行一定会报错：未定义变量‘vid’</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">未定义函数或变量 <span class="string">'vid'</span>。</span><br></pre></td></tr></table></figure>
+
+<p>大家看到pushbutton_1中定义vid在pushbutton_2中调用不了</p>
+<p>理由很简单，vid是push_1中的局部变量</p>
+<p>所以解决这个问题最好就是在push_1和push_2中把vid定义为全局变量</p>
+<p>而实现这个操作的就是global函数。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function">function <span class="title">pushbutton1_Callback</span><span class="params">(hObject, eventdata, handles)</span></span></span><br><span class="line"><span class="function">% hObject    handle to <span class="title">pushbutton1</span> <span class="params">(see GCBO)</span></span></span><br><span class="line"><span class="function">% eventdata  reserved - to be defined in a future version of MATLAB</span></span><br><span class="line"><span class="function">% handles    structure with handles and user <span class="title">data</span> <span class="params">(see GUIDATA)</span></span></span><br><span class="line"><span class="function">		<span class="title">global</span><span class="params">(vid)</span></span></span><br><span class="line"><span class="function">		vid </span>= videoinput(<span class="string">'winvideo'</span>,<span class="number">1</span>);%调用摄像头</span><br><span class="line">		axes = (handles.axes1);%指定figure</span><br><span class="line">		preview(vid);%显示视频</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">pushbutton2_Callback</span>(<span class="params">hObject, eventdata, handles</span>)</span></span><br><span class="line">% hObject    handle to pushbutton2 (see GCBO)</span><br><span class="line">% eventdata  reserved - to be defined <span class="keyword">in</span> a future version <span class="keyword">of</span> MATLAB</span><br><span class="line">% handles    structure <span class="keyword">with</span> handles and user data (see GUIDATA)</span><br><span class="line">		global(vid)</span><br><span class="line">		frame = getsnapshot(vid);%获取每一帧</span><br><span class="line">		I = ycbcr2rgb(frame);%RGB图像</span><br><span class="line">		imwrite(I,<span class="string">'csdn.png'</span>);</span><br></pre></td></tr></table></figure>
+<p>而加上全局变量后就可以正常运行。</p>
+<p>好了，这样的global函数就说完了。</p>
+<p>题外话：</p>
+<p>最近新型冠状病毒疫情有所好转，我老爸在家把盗墓笔记全部电影电视剧看完了</p>
+<p>现在拉着我们家人一起看斗罗大陆的动画片….(不过还真的挺好看的哈哈哈)</p>
+<p>不说了，赶快陪爸妈看斗罗大陆动画片了…</p>
+<p>希望疫情赶快结束吧！！！</p>
+]]></content>
+      <categories>
+        <category>MATLAB</category>
+      </categories>
+      <tags>
+        <tag>MATLAB</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Matlab如何打开c++文件</title>
+    <url>/Matlab%E5%A6%82%E4%BD%95%E6%89%93%E5%BC%80c++%E6%96%87%E4%BB%B6.html</url>
+    <content><![CDATA[<p>最近在尝试视觉分析的项目</p>
+<p>总是会遇到一些cpp文件需要在matlab中运行，在这里记录一下操作</p>
+<p><strong>1、命令行输入</strong> ：<code>mex -setup</code></p>
+<p><img src="https://img-blog.csdnimg.cn/20200314231840100.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<a id="more"></a>
+<p><strong>2、我这里需要再选择语言的种类</strong></p>
+<p>点击 <code>mex -setup C++</code></p>
+<p><img src="https://img-blog.csdnimg.cn/20200314232025601.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><strong>3、运行 C 文件</strong></p>
+<p>输入 mex +文件名和后缀</p>
+<p>比如我这里需要运行名为 maxsubarray2D.cpp 的文件，</p>
+<p>所以我输入：<code>mex maxsubarray2D.cpp</code><br><img src="https://img-blog.csdnimg.cn/20200314232301967.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200314232508289.png" alt="在这里插入图片描述"><br>显示编译完成后就可以进行接下来的操作了。</p>
+]]></content>
+      <categories>
+        <category>MATLAB</category>
+      </categories>
+      <tags>
+        <tag>MATLAB</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python99道经典练习题答案</title>
+    <url>/Python99%E9%81%93%E7%BB%8F%E5%85%B8%E7%BB%83%E4%B9%A0%E9%A2%98%E7%AD%94%E6%A1%88.html</url>
+    <content><![CDATA[<p>转载与百度文库：<br><a href="https://wenku.baidu.com/view/bc745bdaf6ec4afe04a1b0717fd5360cbb1a8d16.html" target="_blank" rel="noopener">https://wenku.baidu.com/view/bc745bdaf6ec4afe04a1b0717fd5360cbb1a8d16.html</a></p>
+]]></content>
+      <categories>
+        <category>python</category>
+        <category>入门</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>入门练习题</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python中 pip 的安装——windows系统</title>
+    <url>/Python%E4%B8%AD%20pip%20%E7%9A%84%E5%AE%89%E8%A3%85%E2%80%94%E2%80%94windows%E7%B3%BB%E7%BB%9F.html</url>
+    <content><![CDATA[<p>我的 Windows 环境下的 python 是没有 pip 文件的，所以想要实现 pip 命令就要手动安装pip 文件</p>
+<p>这篇和接下来的文章我会演示　windows 系统下的 “IDLE” 安装 pip 可能遇到的所有问题</p>
+<p><strong>pip 20.0.2官方下载地址</strong>：<a href="https://pypi.org/project/pip/#description" target="_blank" rel="noopener">https://pypi.org/project/pip/#description</a></p>
+<p><img src="https://img-blog.csdnimg.cn/2020031117175539.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<a id="more"></a>
+<p>点击 Download files下载 pip-20.0.2 tar.gz</p>
+<p><img src="https://img-blog.csdnimg.cn/20200311171901315.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>解压后找到 setup.py 所在文件夹的路径</p>
+<p><img src="https://img-blog.csdnimg.cn/20200311172223338.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>按”win+ R”输入 cmd</p>
+<p><img src="https://img-blog.csdnimg.cn/20200311172503467.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>输入 ：cd +setup.py 所在文件夹的路径</p>
+<p>我的路径为：</p>
+<blockquote>
+<p>C:\Users\27511\Desktop\pip-20.0.2\pip-20.0.2</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">cd C:\Users\<span class="number">27511</span>\Desktop\pip<span class="number">-20.0</span><span class="number">.2</span>\pip<span class="number">-20.0</span><span class="number">.2</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/20200311172830673.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>————————————————————————————————————<br>按理说再输入 python setup.py install 就能完成安装</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">python setup.py install</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/20200311173048620.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>但是我这里报错了：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">ModuleNotFoundError: No module named <span class="string">'setuptools'</span></span><br></pre></td></tr></table></figure>
+<p>这是很常遇见的错误提示，不用担心，这是因为Windows环境下Python默认是没有安装 setuptools 这个模块的，这也是一个第三方模块。</p>
+<p><strong>两种方法：</strong></p>
+<p><strong>1、setuptools 46.0.0官方下载链接：</strong><a href="https://pypi.org/project/setuptools/" target="_blank" rel="noopener">https://pypi.org/project/setuptools/</a></p>
+<p>解压后复制 setuptools 文件放在 python 的安装路径下 Lib 文件夹里就行了。</p>
+<p><img src="https://img-blog.csdnimg.cn/20200311175701782.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><img src="https://img-blog.csdnimg.cn/20200311175919678.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>安装了setuptools之后，再运行“python setup.py install”就可以了。</p>
+<p><strong>2、脚本链接：</strong><a href="https://bootstrap.pypa.io/ez_setup.py" target="_blank" rel="noopener">https://bootstrap.pypa.io/ez_setup.py</a></p>
+<p>直接复制代码在IDLE中运行，会自动运行 exe ，识别python版本，自动下载setuptools 并安装。</p>
+<p><img src="https://img-blog.csdnimg.cn/20200311174553858.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>之后再重新python setup.py install运行就可以了</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">python setup.py install</span><br></pre></td></tr></table></figure>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<p>介绍下可能出现的问题：<br>|问题|解决方法  |<br>|–|–|<br>| 1、运行脚本后只下载了setuptools压缩包，没有自动安装 |  那就解压，复制 setuptools 文件放在 python 的安装路径下 Lib 文件夹里就行（上面有具体介绍）<br>|2、运行 python setup.py install 后又出现其他 No module named ‘ ***’|再下载这种库的压缩包，复制相关文件放在 python 的安装路径下 Lib 文件夹里就行|</p>
+<p>如果有人接下来遇到各种各样的 No module named ‘ ***’</p>
+<p>那么可以参照我接下来的文章，或留言也可以</p>
+<p>因为我上文演示的 python 未安装任何多余的库</p>
+<p>接下来会继续解决所有的 No module named ‘ ***’  问题</p>
+<p>直到这个 IDLE 可以使用 pip 命令为止</p>
+]]></content>
+      <categories>
+        <category>python</category>
+        <category>error&amp;库</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>error&amp;库</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python 官方的中文文档</title>
+    <url>/Python%20%E5%AE%98%E6%96%B9%E7%9A%84%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3.html</url>
+    <content><![CDATA[<p>今天打开Python documentation 查阅函数使用方法，像往常一样，我打开了百度翻译</p>
+<p>突发奇想，要不上网找找有没有哪位大佬翻译好的中文文档，发现python官网上竟然发布了python的中文文档….(python初学者表示之前真的不知道)</p>
+<p>Python官方文档链接：<a href="https://docs.python.org/zh-cn/3/" target="_blank" rel="noopener">https://docs.python.org/zh-cn/3/</a></p>
+<a id="more"></a>
+
+<p><img src="https://img-blog.csdnimg.cn/20200307155243677.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>其中包含了从2.7到3.8各个版本的文档</p>
+<p><img src="https://img-blog.csdnimg.cn/20200307155833344.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>这里是标准库的各个模块</p>
+<p><img src="https://img-blog.csdnimg.cn/20200307155939236.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>以 difflib 为例</p>
+<p><img src="https://img-blog.csdnimg.cn/20200307160024922.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<hr>
+<p>哈哈哈哈哈，以后再也不用担心看不懂英文了</p>
+<p>可以硬气的关闭“百度翻译”了</p>
+]]></content>
+      <categories>
+        <category>python</category>
+        <category>入门</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python学习笔记_3：python 列表的使用方法—详细</title>
+    <url>/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_3%EF%BC%9Apython%20%E5%88%97%E8%A1%A8%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%E2%80%94%E8%AF%A6%E7%BB%86.html</url>
+    <content><![CDATA[<p>今天已经开始了第三个 python 的笔记了</p>
+<p>我想开始介绍一下列表的一些使用方法</p>
+<p>“列表”是什么？？</p>
+<p><img src="https://img-blog.csdnimg.cn/20200304181714958.png" alt="在这里插入图片描述"></p>
+<p>其实就是C语言的数组,不知道为什么在python中有的人说列表有的人说数组</p>
+<a id="more"></a>
+<p>这个数组中可以存放存放所有我们学过的数据类型，甚至是汉字、标点符号。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>I = [<span class="number">123</span>,<span class="string">'A'</span>,<span class="string">'魔法师'</span>,<span class="string">'!'</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(I)</span><br><span class="line">输出为</span><br><span class="line">[<span class="number">123</span>, <span class="string">'A'</span>, <span class="string">'魔法师'</span>, <span class="string">'!'</span>]</span><br></pre></td></tr></table></figure>
+<p>这里的 <strong>I</strong> 就是一个列表，需要注意一点，列表中的数据不用加引号，但字母与汉字、标点符号是要加引号的。</p>
+<p>而且列表中也可以添加列表：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>M = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>I = [<span class="number">123</span>,<span class="string">'A'</span>,<span class="string">'魔法师'</span>,<span class="string">'!'</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(I)</span><br><span class="line">输出为</span><br><span class="line">[<span class="number">123</span>, <span class="string">'A'</span>, <span class="string">'魔法师'</span>, <span class="string">'!'</span>, [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]]</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/20200304182739884.png" alt="!\[在这里插入图片描述\](https://img-blog.csdnimg.cn/20200304182618958.png"><br>何止是有点意思，下面介绍列表的具体使用方法，更有意思嘞</p>
+<p><strong>1、向列表中增添元素</strong>——————–</p>
+<p>列表中增添元素可以用到三个函数：<strong>append、extend、insert</strong></p>
+<p><strong>insert 是将元素插入任意位置</strong></p>
+<p><strong>而append 和 extend 都是在列表末尾增添元素</strong></p>
+<p><strong>但也有部分区别</strong></p>
+<p><strong>先介绍一下append 和 extend</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>I = [<span class="number">123</span>,<span class="string">'A'</span>,<span class="string">'魔法师'</span>,<span class="string">'!'</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>I.append(<span class="number">456</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(I)</span><br><span class="line">输出为</span><br><span class="line">[<span class="number">123</span>, <span class="string">'A'</span>, <span class="string">'魔法师'</span>, <span class="string">'!'</span>, <span class="number">456</span>]</span><br><span class="line">----------------------------------</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>I = [<span class="number">123</span>,<span class="string">'A'</span>,<span class="string">'魔法师'</span>,<span class="string">'!'</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>I.extend(<span class="number">456</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(I)</span><br><span class="line">输出为</span><br><span class="line">[<span class="number">123</span>, <span class="string">'A'</span>, <span class="string">'魔法师'</span>, <span class="string">'!'</span>, <span class="number">456</span>]</span><br></pre></td></tr></table></figure>
+<p>——————————————————————————————<br>而区别就在于如果添加的不是元素，而是一个新的列表的时候</p>
+<p><strong>append 直接添加一个内置列表；</strong></p>
+<p><strong>而 extend 是将列表中的元素分别添加进列表里：</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>I = [<span class="number">123</span>,<span class="string">'A'</span>,<span class="string">'魔法师'</span>,<span class="string">'!'</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>I.append([<span class="string">'456'</span>,<span class="string">'ABC'</span>])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(I)</span><br><span class="line">输出为</span><br><span class="line">[<span class="number">123</span>, <span class="string">'A'</span>, <span class="string">'魔法师'</span>, <span class="string">'!'</span>, [<span class="string">'456'</span>, <span class="string">'ABC'</span>]]</span><br><span class="line">--------------------------------------------</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>I = [<span class="number">123</span>,<span class="string">'A'</span>,<span class="string">'魔法师'</span>,<span class="string">'!'</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>I.extend([<span class="string">'456'</span>,<span class="string">'ABC'</span>])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(I)</span><br><span class="line">输出为</span><br><span class="line">[<span class="number">123</span>, <span class="string">'A'</span>, <span class="string">'魔法师'</span>, <span class="string">'!'</span>, <span class="string">'456'</span>, <span class="string">'ABC'</span>]</span><br></pre></td></tr></table></figure>
+<p><strong><strong>下面介绍 insert 的用法：</strong></strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>I = [<span class="string">'A'</span>,<span class="string">'B'</span>,<span class="string">'D'</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>I.insert(<span class="number">2</span>,<span class="string">'C'</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(I)</span><br><span class="line">输出为</span><br><span class="line">[<span class="string">'A'</span>, <span class="string">'B'</span>, <span class="string">'C'</span>, <span class="string">'D'</span>]</span><br><span class="line">--------------------------------------</span><br><span class="line">% insert 添加新的列表时和 append 差不多</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>I = [<span class="string">'A'</span>,<span class="string">'B'</span>,<span class="string">'D'</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>I.insert(<span class="number">2</span>,[<span class="string">'C'</span>,<span class="string">'3'</span>])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(I)</span><br><span class="line">输出为</span><br><span class="line">[<span class="string">'A'</span>, <span class="string">'B'</span>, [<span class="string">'C'</span>, <span class="string">'3'</span>], <span class="string">'D'</span>]</span><br></pre></td></tr></table></figure>
+<p>用　X．insert　就可以解决一切添加列表元素的问题了</p>
+<p><strong>2、修改列表中的某个元素</strong>———————-</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>I = [<span class="string">'A'</span>,<span class="string">'B'</span>,[[<span class="string">'G'</span>,<span class="string">'D'</span>],<span class="string">'E'</span>],<span class="string">'F'</span>] %将G改为C </span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>I[<span class="number">2</span>][<span class="number">0</span>][<span class="number">0</span>] = <span class="string">'C'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(I)</span><br><span class="line">结果变成了</span><br><span class="line">[<span class="string">'A'</span>, <span class="string">'B'</span>, [[<span class="string">'c'</span>, <span class="string">'D'</span>], <span class="string">'E'</span>], <span class="string">'F'</span>] </span><br><span class="line">%我们想要的样子</span><br></pre></td></tr></table></figure>
+
+<p><strong>3、对列表进行排序</strong>———————<br>sort 函数将列表的数字或字母进行顺序排列</p>
+<p>但列表中同时含有字母或数字时就会报错</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>I = [<span class="string">'A'</span>,<span class="string">'C'</span>,<span class="string">'D'</span>,<span class="string">'F'</span>,<span class="string">'E'</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>I.sort()</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(I)</span><br><span class="line">输出为</span><br><span class="line">[<span class="string">'A'</span>, <span class="string">'C'</span>, <span class="string">'D'</span>, <span class="string">'E'</span>, <span class="string">'F'</span>]</span><br></pre></td></tr></table></figure>
+<p>还有一个好玩的函数 reverse ,可以将列表顺序颠倒</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>I = [<span class="string">'A'</span>,<span class="string">'C'</span>,<span class="string">'D'</span>,<span class="string">'F'</span>,<span class="string">'E'</span>,<span class="number">1</span>,<span class="number">4</span>,<span class="number">2</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>I.reverse()</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(I)</span><br><span class="line">输出为</span><br><span class="line">[<span class="number">2</span>, <span class="number">4</span>, <span class="number">1</span>, <span class="string">'E'</span>, <span class="string">'F'</span>, <span class="string">'D'</span>, <span class="string">'C'</span>, <span class="string">'A'</span>]</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>到这里关于列表的常用使用函数基本都介绍了</p>
+<p>最近学校天天上网课,心好累,好难啊啊啊啊啊</p>
+<p><img src="https://img-blog.csdnimg.cn/20200304211049839.png" alt="在这里插入图片描述"></p>
+]]></content>
+      <categories>
+        <category>python</category>
+        <category>语法笔记</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>语法笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python学习笔记_1：print中end的用法 print（‘’，end=&#39;&#39;）</title>
+    <url>/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_1%EF%BC%9Aprint%E4%B8%ADend%E7%9A%84%E7%94%A8%E6%B3%95%20print%EF%BC%88%E2%80%98%E2%80%99%EF%BC%8Cend=&#39;&#39;%EF%BC%89.html</url>
+    <content><![CDATA[<p>学了那么久的python，都没有过系统的总结一下知识点，所以我决定在这里出一次python知识点集合——Python学习笔记。<br><img src="https://img-blog.csdnimg.cn/20200302170928468.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<a id="more"></a>
+<p>哈哈哈哈，就当是自己随时可以查阅的笔记本了</p>
+<p>下面开始介绍第一知识点：</p>
+<p>print 中 end 的用法：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">%先让输出两个 str</span><br><span class="line">%则两个 str 一定经过一次 <span class="keyword">print</span> 的换行操作</span><br><span class="line">&gt;&gt;&gt;print(<span class="string">'ABC'</span>)</span><br><span class="line">&gt;&gt;&gt;print(<span class="string">'DEF'</span>)</span><br><span class="line">ABC</span><br><span class="line">DEF</span><br></pre></td></tr></table></figure>
+<p>如果我加上 “end”</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">&gt;&gt;&gt;print(<span class="string">'ABC'</span>,end =<span class="string">''</span>) %这里的end中没有东西</span><br><span class="line">&gt;&gt;&gt;print(<span class="string">'DEF'</span>)</span><br><span class="line">%则结果为</span><br><span class="line">ABCDEF</span><br><span class="line">%因为end的作用就是告诉<span class="keyword">print</span>，将<span class="keyword">print</span>自带</span><br><span class="line">的换行用end中指定的str代替</span><br></pre></td></tr></table></figure>
+<p>如果我将end中填入‘ ’空格</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">&gt;&gt;&gt;print(<span class="string">'ABC'</span>,end =<span class="string">' '</span>)</span><br><span class="line">&gt;&gt;&gt;print(<span class="string">'DEF'</span>)</span><br><span class="line">ABC DEF</span><br></pre></td></tr></table></figure>
+<p>如果我指定end中为其他数</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">&gt;&gt;&gt;print(<span class="string">'ABC'</span>,end =<span class="string">'123'</span>)</span><br><span class="line">&gt;&gt;&gt;print(<span class="string">'DEF'</span>)</span><br><span class="line">ABC123DEF</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>python</category>
+        <category>语法笔记</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>语法笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python学习笔记_2：判断str类型的函数</title>
+    <url>/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_2%EF%BC%9A%E5%88%A4%E6%96%ADstr%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%87%BD%E6%95%B0.html</url>
+    <content><![CDATA[<p>相信大家都喜欢表情包吧</p>
+<p>话说学习Python一定要坚持，持之以恒，万事开头难嘛</p>
+<p><img src="https://img-blog.csdnimg.cn/2020030218253379.png" alt="在这里插入图片描述"></p>
+<p>哈哈，稍微皮一下</p>
+<a id="more"></a>
+<p>经过整理</p>
+<p>今天给大家介绍一下 python 中可以判断 str 类型的函数：</p>
+<p>1、isdigit： 判断 str 是否为数字 </p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>I = <span class="string">'123'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(I.isdigit())</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">if</span> I.isdigit():</span><br><span class="line">&gt;&gt;&gt;		print(<span class="string">'yes'</span>)</span><br><span class="line">%输出结果为</span><br><span class="line"><span class="literal">True</span></span><br><span class="line">yes</span><br></pre></td></tr></table></figure>
+
+<p>2、isalpha：判断 str 是否为字母</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>I = <span class="string">'Abc'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(I.isalpha())</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">if</span> I.isalpha()</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>	print(<span class="string">'yes'</span>)</span><br><span class="line">%输出结果为</span><br><span class="line"><span class="literal">True</span></span><br><span class="line">yes</span><br></pre></td></tr></table></figure>
+
+<p>3、isalnum：判断 str 是否为字母或数字</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>I = <span class="string">'A2c'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(I.isalnum())</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">if</span> I.isalnum()</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>	print(<span class="string">'yes'</span>)</span><br><span class="line">%输出结果为</span><br><span class="line"><span class="literal">True</span></span><br><span class="line">yes</span><br></pre></td></tr></table></figure>
+<p>4、islower：判断 str 是否为小写</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>I = <span class="string">'abc'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(I.islower())</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">if</span> I.islower()</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>	print(<span class="string">'yes'</span>)</span><br><span class="line">%输出结果为</span><br><span class="line"><span class="literal">True</span></span><br><span class="line">yes</span><br></pre></td></tr></table></figure>
+
+<p>5、isupper：判断 str 是否为大写</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>I = <span class="string">'ABC'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print()</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">if</span> I.isupper()</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>	print(<span class="string">'yes'</span>)</span><br><span class="line">%输出结果为</span><br><span class="line"><span class="literal">True</span></span><br><span class="line">yes</span><br></pre></td></tr></table></figure>
+
+<p>6、istitle：判断 str 是否仅有首字母大写</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>I = <span class="string">'Abc Def'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print()</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">if</span> I.istitle()</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>	print(<span class="string">'yes'</span>)</span><br><span class="line">%输出结果为</span><br><span class="line"><span class="literal">True</span></span><br><span class="line">yes</span><br></pre></td></tr></table></figure>
+
+<p>7、isspace：判断 str 是否为空格符</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>I = <span class="string">' '</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print()</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">if</span> I.isspace()</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>	print(<span class="string">'yes'</span>)</span><br><span class="line">%输出结果为</span><br><span class="line"><span class="literal">True</span></span><br><span class="line">yes</span><br></pre></td></tr></table></figure>
+<hr>
+<hr>
+<hr>
+<p>看完梨泰院的第10集，心情复杂…唉<br><img src="https://img-blog.csdnimg.cn/20200302221055518.png" alt="在这里插入图片描述"></p>
+<p>喝杯咖啡再回来继续更博文<br><img src="https://img-blog.csdnimg.cn/20200302220305485.png" alt="在这里插入图片描述"></p>
+]]></content>
+      <categories>
+        <category>python</category>
+        <category>语法笔记</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>语法笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python学习笔记_4列表和元组的区别</title>
+    <url>/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_4%EF%BC%9A%E5%88%97%E8%A1%A8%E5%92%8C%E5%85%83%E7%BB%84%E7%9A%84%E5%8C%BA%E5%88%AB.html</url>
+    <content><![CDATA[<p>上节我主要详细的介绍了一下列表的用法</p>
+<p>突然想起来需要说一下列表和元组的区别,所以这篇文章就简洁点,以文字为主</p>
+<p><strong>列表:存放的是暂时的元素,可以更改,增添</strong></p>
+<p><strong>元组:存放的是不可更改的元素,不可删除,不可添加,不可修改</strong></p>
+<a id="more"></a>
+<p>list ( [ string ] )：将 str 转化为列表</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>exmp = <span class="string">'abcd efgh'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>list(exmp)</span><br><span class="line">输出为</span><br><span class="line">[<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>, <span class="string">'d'</span>, <span class="string">' '</span>, <span class="string">'e'</span>, <span class="string">'f'</span>, <span class="string">'g'</span>, <span class="string">'h'</span>]</span><br></pre></td></tr></table></figure>
+
+<p>tuple ( [ string ] )：将 str 转化为元组</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>exmp = <span class="string">'abcd efgh'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>tuple(exmp)</span><br><span class="line">输出为</span><br><span class="line">(<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>, <span class="string">'d'</span>, <span class="string">' '</span>, <span class="string">'e'</span>, <span class="string">'f'</span>, <span class="string">'g'</span>, <span class="string">'h'</span>)</span><br></pre></td></tr></table></figure>
+
+<p>当我们的项目中需要一些永远不用更改的数据,那就用元组</p>
+<p>如果我们需要后期维护并修改时就用列表</p>
+<p>但是在一定条件下我们需要改变元组中的数据或者增添一些新元素难道就没办法了嘛?<br><img src="https://img-blog.csdnimg.cn/20200304212858622.png" alt="在这里插入图片描述"></p>
+<p>当然不是,我们可以新建一个元组来代替原来的元组啊….是不是方法很沙雕</p>
+<p>不过在这里要说一个关于在元组之中添加元素的方法</p>
+<p>比如要在下列元组的’B’’E’中添加’C’’D’</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>I = (<span class="string">'A'</span>,<span class="string">'B'</span>,<span class="string">'E'</span>,<span class="string">'F'</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>I = I[<span class="number">0</span>:<span class="number">2</span>]+(<span class="string">'C'</span>,<span class="string">'D'</span>)+I[<span class="number">2</span>:]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(I)</span><br><span class="line">输出为</span><br><span class="line">(<span class="string">'A'</span>, <span class="string">'B'</span>, <span class="string">'C'</span>, <span class="string">'D'</span>, <span class="string">'E'</span>, <span class="string">'F'</span>)</span><br></pre></td></tr></table></figure>
+<p>这样如果在遇到紧急需要处理的问题时能省事的解决</p>
+<p>但如果真的要对元组改动太大</p>
+<p>那只能新建一个元组了,所以我们一般不太会使用元组。</p>
+]]></content>
+      <categories>
+        <category>python</category>
+        <category>语法笔记</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>语法笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python学习笔记_5：字符串格式化符号及进制转换</title>
+    <url>/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_5%EF%BC%9A%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%A0%BC%E5%BC%8F%E5%8C%96%E7%AC%A6%E5%8F%B7%E5%8F%8A%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2.html</url>
+    <content><![CDATA[<p>介绍下经常用得到的格式化字符</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">%c	：格式化字符及其ASCII码</span><br><span class="line">%s	：格式化字符串</span><br><span class="line">%d	：格式化整数</span><br><span class="line">%f	：可指定小数点精度</span><br><span class="line">%e	：用科学计数法表示小数</span><br><span class="line">%g	：根据值的的具体情况使用%f或%e</span><br><span class="line">%o	：八进制</span><br><span class="line">%x	：十六进制</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<hr>
+<p>简单的进制转换：<br>1、十六进制转换</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>I = input(<span class="string">'请输入一个数'</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>I = int(I)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(<span class="string">'%x'</span> %I)</span><br></pre></td></tr></table></figure>
+<p>2、八进制转换</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">I = input(<span class="string">'请输入一个数'</span>)</span><br><span class="line">I = int(I)</span><br><span class="line">print(<span class="string">'%o'</span> %I)</span><br></pre></td></tr></table></figure>
+<p>3、二进制转换</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">%%% python 中的二进制可以直接用 bin() 函数处理</span><br><span class="line">I = input(<span class="string">'请输入一个数'</span>)</span><br><span class="line">I = int(I)</span><br><span class="line">print(bin(I))</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>python</category>
+        <category>语法笔记</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>语法笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python学习笔记_6：global 与 nanlacal 的区别</title>
+    <url>/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_6%EF%BC%9Aglobal%20%E4%B8%8E%20nanlacal%20%E7%9A%84%E5%8C%BA%E5%88%AB.html</url>
+    <content><![CDATA[<p>之前我在 matlab 的笔记里介绍过一次 global 的用法</p>
+<p>这次在 python 中介绍下 global 和 nanlacal 的区别</p>
+<p><strong>global 函数：</strong></p>
+<p>在函数中修改全局变量</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>I = <span class="string">'ABC'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="function"><span class="keyword">def</span> <span class="title">fun</span><span class="params">()</span>:</span></span><br><span class="line">		<span class="keyword">global</span> I</span><br><span class="line">		I = <span class="string">'123'</span></span><br><span class="line">		print(I)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>fun()</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(I)</span><br><span class="line">%输出为</span><br><span class="line"><span class="number">123</span></span><br><span class="line"><span class="number">123</span></span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<p>运行 fun() 函数时，global 函数将全局变量 I = ‘ABC’ 修改为 I = ‘123’，并覆盖原先的全局变量 I 的值。</p>
+<p><strong>nonlocal 函数：</strong></p>
+<p>在函数中的内部函数中，修改其外部函数中定义的局部变量</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">先看一份例子，稍后我们使用<span class="keyword">nonlocal</span>来修改</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>I = <span class="string">'东北大鹌鹑'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="function"><span class="keyword">def</span> <span class="title">fun</span><span class="params">()</span>:</span></span><br><span class="line">    	I = <span class="string">'PDD'</span></span><br><span class="line">    	<span class="function"><span class="keyword">def</span> <span class="title">function</span><span class="params">()</span>:</span></span><br><span class="line">        	I = <span class="string">'周淑怡'</span></span><br><span class="line">        	print(I)</span><br><span class="line">    	function()</span><br><span class="line">    	print(I)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>fun()</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(I)</span><br><span class="line">%输出是%</span><br><span class="line">周淑怡</span><br><span class="line">PDD</span><br><span class="line">东北大鹌鹑</span><br></pre></td></tr></table></figure>
+<p>而我现在把 ’PDD‘ 也换成 ’周淑怡‘ ，就要使用nonlocal函数了<br><img src="https://img-blog.csdnimg.cn/20200306152352813.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>I = <span class="string">'东北大鹌鹑'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="function"><span class="keyword">def</span> <span class="title">fun</span><span class="params">()</span>:</span></span><br><span class="line">    	I = <span class="string">'PDD'</span></span><br><span class="line">    	<span class="function"><span class="keyword">def</span> <span class="title">function</span><span class="params">()</span>:</span></span><br><span class="line">	        <span class="keyword">nonlocal</span> I</span><br><span class="line">        	I = <span class="string">'周淑怡'</span></span><br><span class="line">        	print(I)</span><br><span class="line">    	function()</span><br><span class="line">    	print(I)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>fun()</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(I)</span><br><span class="line">%输出为</span><br><span class="line">周淑怡</span><br><span class="line">周淑怡</span><br><span class="line">东北大鹌鹑</span><br></pre></td></tr></table></figure>
+<p>PDD：你怎么把我给整没了呢？？？<br><img src="https://img-blog.csdnimg.cn/20200306152038752.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>哈哈哈哈，皮一下<br><img src="https://img-blog.csdnimg.cn/20200306152417290.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>从上面的例子可以看到：</p>
+<p>我们一般在某函数的内部函数中使用 nonlocal 函数来修改这个函数的局部变量，而不会改变整个代码的全局变量，nonlocal 用途还算比较广泛的。</p>
+]]></content>
+      <categories>
+        <category>python</category>
+        <category>语法笔记</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>语法笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python安装 chardet</title>
+    <url>/Python%E5%AE%89%E8%A3%85%20chardet.html</url>
+    <content><![CDATA[<p>Chardet：通用字符编码检测器</p>
+<p>chardet 3.0.4官网链接<a href="https://pypi.org/project/chardet/#files" target="_blank" rel="noopener">https://pypi.org/project/chardet/#files</a></p>
+<p><img src="https://img-blog.csdnimg.cn/20200309201404769.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<a id="more"></a>
+<p>下载—&gt;解压文件后，找到chardet文件夹</p>
+<p><img src="https://img-blog.csdnimg.cn/20200309203606459.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>复制在python的安装路径下的 Lib 文件夹内即可</p>
+<p>部分同学的 Lib 文件夹下有 site-packages 文件夹，则最好将 chardet 复制在 site-packages 文件夹内</p>
+<p>pycharm 和 anaconda 都可以这样安装（不会使用 pip 的同学）</p>
+<p><img src="https://img-blog.csdnimg.cn/20200309204210131.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>然后 chardet 就可以正常使了</p>
+<p><img src="https://img-blog.csdnimg.cn/2020030921003628.png" alt="在这里插入图片描述"></p>
+]]></content>
+      <categories>
+        <category>python</category>
+        <category>error&amp;库</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>error&amp;库</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python学习笔记_7：index() 和 dict() 的用法详解</title>
+    <url>/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_7%EF%BC%9Aindex()%20%E5%92%8C%20dict()%20%E7%9A%84%E7%94%A8%E6%B3%95%E8%AF%A6%E8%A7%A3.html</url>
+    <content><![CDATA[<p>前面的笔记中我详细介绍了列表和元组</p>
+<p><strong>当我们需要列表中某一元素的相应位置时</strong></p>
+<p>就要提到 <strong>index()</strong> 这个神奇的函数了</p>
+<h2 id="混讲一下-index-和-dict"><a href="#混讲一下-index-和-dict" class="headerlink" title="混讲一下 index() 和 dict()"></a>混讲一下 index() 和 dict()</h2><p><strong>1、index() 的简单用法：</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>I = [<span class="string">'东北大鹌鹑'</span>,<span class="string">'周淑怡'</span>,<span class="string">'刘某人'</span>,<span class="string">'胡歌'</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(I.index(<span class="string">'胡歌'</span>))</span><br><span class="line"><span class="number">3</span></span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<p>所以 index 可以直接输出该元素的位置。</p>
+<p><strong>2、今天要说的 index() 的用法跟 dict() 函数有点关系，index 在有时候可以代替 dict 函数去实现字典的功能：</strong></p>
+<p><strong>先简单介绍一下 dict() 函数：</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">###首先我给四人每个人一个定义###</span></span><br><span class="line">%东北大鹌鹑--&gt;小胖子</span><br><span class="line">%周淑怡------&gt;大美女</span><br><span class="line">%刘某人------&gt;反向抽烟</span><br><span class="line">%胡歌--------&gt;艺术家</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>I = dict(((<span class="string">'东北大鹌鹑'</span>,<span class="string">'小胖子'</span>),(<span class="string">'周淑怡'</span>,<span class="string">'大美女'</span>),\</span><br><span class="line">			 (<span class="string">'刘某人'</span>,<span class="string">'反向抽烟'</span>),(<span class="string">'胡歌'</span>,<span class="string">'艺术家'</span>)))</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(I[<span class="string">'周淑怡'</span>])</span><br><span class="line">大美女</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(I[<span class="string">'刘某人'</span>])</span><br><span class="line">反向抽烟</span><br></pre></td></tr></table></figure>
+<p>所以 dict ( obj ) 会返回 obj 的定义</p>
+<p><strong>3、用 index() 来实现上述操作：</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>people = [<span class="string">'东北大鹌鹑'</span>,<span class="string">'周淑怡'</span>,<span class="string">'刘某人'</span>,<span class="string">'胡歌'</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>mapping = [<span class="string">'小胖子'</span>,<span class="string">'大美女'</span>,<span class="string">'反向抽烟'</span>,<span class="string">'艺术家'</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(<span class="string">'周淑怡是%s'</span> %(mapping[people.index(<span class="string">'周淑怡'</span>)]))</span><br><span class="line">周淑怡是大美女</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(<span class="string">'胡歌是%s'</span> %(mapping[people.index(<span class="string">'胡歌'</span>)]))</span><br><span class="line">胡歌是艺术家</span><br></pre></td></tr></table></figure>
+
+<p><strong>总结：</strong><br>本来是想把 dict() 函数单独详细的说一下，但是写文章的时候突然想起来 index() 在这种情况下可以代替 dict() 的用法，而且 dict() 也比较简单，就在这里一起介绍了。</p>
+]]></content>
+      <categories>
+        <category>python</category>
+        <category>语法笔记</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>语法笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python的Scripts文件夹为空——已解决</title>
+    <url>/Python%E7%9A%84Scripts%E6%96%87%E4%BB%B6%E5%A4%B9%E4%B8%BA%E7%A9%BA%E2%80%94%E2%80%94%E5%B7%B2%E8%A7%A3%E5%86%B3.html</url>
+    <content><![CDATA[<p>如果有 windows 环境的 python 的话，很可能会出现 Scripts 文件夹为空，这样就无法正常在 cmd 正常使用 pip 命令。</p>
+<p><strong>解决方法：</strong></p>
+<p> cmd 中输入： <code>python -m ensurepip</code></p>
+<p><img src="https://img-blog.csdnimg.cn/20200313174634904.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<a id="more"></a>
+<p>文件夹下就出现 exe 文件</p>
+<p><img src="https://img-blog.csdnimg.cn/20200313174720149.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>问题解决。</p>
+]]></content>
+      <categories>
+        <category>python</category>
+        <category>error&amp;库</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>error&amp;库</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python学习笔记_9：class 类定义的属性与方法——详解</title>
+    <url>/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_9%EF%BC%9Aclass%20%E7%B1%BB%E5%AE%9A%E4%B9%89%E7%9A%84%E5%B1%9E%E6%80%A7%E4%B8%8E%E6%96%B9%E6%B3%95%E2%80%94%E2%80%94%E8%AF%A6%E8%A7%A3.html</url>
+    <content><![CDATA[<p>对很多没有其他语言基础的初学者来说，可能学到 python 的类定义的时候会苦恼很久</p>
+<p>但，无论我们遇到什么困难，也不要怕，微笑着面对他，消除恐惧的最好办法就是面对恐惧，坚持，才是胜利，加油，奥利给！！！</p>
+<p><img src="https://img-blog.csdnimg.cn/20200308134728646.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<a id="more"></a>
+<p>今天就给大家浅谈一下 class 中遇到的小问题吧</p>
+<p><strong>1、首先类的对象是什么时候产生的？</strong></p>
+<p>当类被定义完成时，类定义就变成了类的对象，可以通过 “类名.属性” 或 “类名.方法名()”  引用或使用相关的属性或方法</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="class"><span class="keyword">class</span> <span class="title">I</span>:</span></span><br><span class="line">    	<span class="function"><span class="keyword">def</span> <span class="title">text</span><span class="params">(self,x)</span>:</span></span><br><span class="line">        	print(<span class="string">'%d'</span>%(x**<span class="number">2</span>))</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>O = I()</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>O.text</span><br><span class="line">&lt;bound method I.text of &lt;__main__.I object at <span class="number">0x0000018820ABCB38</span>&gt;&gt;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>O.text(<span class="number">3</span>)</span><br><span class="line"><span class="number">9</span></span><br></pre></td></tr></table></figure>
+<p><strong>2、类的属性可以将类的方法覆盖</strong><br>当给 O.text 赋值时，O.text(obj) 就会报错，因为 O.text 将 O.text()  覆盖</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="class"><span class="keyword">class</span> <span class="title">I</span>:</span></span><br><span class="line">    	<span class="function"><span class="keyword">def</span> <span class="title">text</span><span class="params">(self,x)</span>:</span></span><br><span class="line">        	print(<span class="string">'%d'</span>%(x**<span class="number">2</span>))</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>O = I()</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>O.text(<span class="number">4</span>)</span><br><span class="line"><span class="number">16</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>O.text = <span class="number">5</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>O.text(<span class="number">4</span>)</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"&lt;pyshell#11&gt;"</span>, line <span class="number">1</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">    O.text(<span class="number">4</span>)</span><br><span class="line">TypeError: <span class="string">'int'</span> object <span class="keyword">is</span> <span class="keyword">not</span> callable</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>O.text</span><br><span class="line"><span class="number">5</span></span><br></pre></td></tr></table></figure>
+<p><strong>3、注意类属性和实例属性的区别</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="class"><span class="keyword">class</span> <span class="title">I</span>:</span></span><br><span class="line">		count = <span class="number">1</span></span><br><span class="line">		<span class="function"><span class="keyword">def</span> <span class="title">text</span><span class="params">(self)</span></span></span><br><span class="line">			self.a = 2</span><br><span class="line">			self.b = <span class="number">3</span></span><br><span class="line">			self.c = <span class="number">4</span></span><br><span class="line">			I.num = <span class="number">5</span></span><br></pre></td></tr></table></figure>
+<p>count 和num 就是类属性（静态变量），a,b,c则是实例属性</p>
+<p>4、Error——传参错误</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="class"><span class="keyword">class</span> <span class="title">I</span>:</span></span><br><span class="line">    	<span class="function"><span class="keyword">def</span> <span class="title">text</span><span class="params">()</span>:</span></span><br><span class="line">        	print(<span class="string">'abc'</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>O = I()   %默认将O的值传给I(),作为I() 的参数</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>O.text()</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"&lt;pyshell#20&gt;"</span>, line <span class="number">1</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">    O.text()</span><br><span class="line">TypeError: text() takes <span class="number">0</span> positional arguments but <span class="number">1</span> was given</span><br></pre></td></tr></table></figure>
+<p>因为python中的 “类.obj（）” 需要实例才可以使用，上述代码中python 就会默认将O的值传给 I() ，所以再调用 O.text() 时就是报错</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">TypeError: text() takes <span class="number">0</span> positional arguments but <span class="number">1</span> was given</span><br><span class="line">%需要<span class="number">0</span>个参数，但是已经传入<span class="number">1</span>个参数</span><br></pre></td></tr></table></figure>
+<p>所以应该在 def text() 加入实例对象</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="class"><span class="keyword">class</span> <span class="title">I</span>:</span></span><br><span class="line">    	<span class="function"><span class="keyword">def</span> <span class="title">text</span><span class="params">(obj)</span>:</span></span><br><span class="line">        	print(<span class="string">'abc'</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>O = I()   </span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>O.text()</span><br><span class="line">abc</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>python</category>
+        <category>语法笔记</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>语法笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>VLFeat工具包下载</title>
+    <url>/VLFeat%E5%B7%A5%E5%85%B7%E5%8C%85%E4%B8%8B%E8%BD%BD.html</url>
+    <content><![CDATA[<p><strong>vlfeat 官方下载链接：</strong><a href="https://www.vlfeat.org/" target="_blank" rel="noopener">https://www.vlfeat.org/</a></p>
+<p>运用于计算机视觉算法专业图像的理解和局部特征提取和匹配。算法包括Fisher向量，VLAD，SIFT，MSER，k均值，分层k均值，聚集信息瓶颈，SLIC超像素，快速移位超像素，大规模SVM训练等。它是用C编写的，以提高效率和兼容性，并带有MATLAB的接口（易于使用）和详细的文档。</p>
+<p>点击直接下载压缩包，不过下载速度可能会有点慢,可以使用迅雷下载</p>
+<a id="more"></a>
+<p><img src="https://img-blog.csdnimg.cn/2020031317311149.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>这里是源代码和安装教程</p>
+<p><img src="https://img-blog.csdnimg.cn/20200313173258764.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><strong>我的 vl_setup.m 文件的位置是：</strong></p>
+<p>D:\MATLAB 2018a anzhuanglujing\toolbox\vlfeat-0.9.21-bin\vlfeat-0.9.21\toolbox</p>
+<p>所以命令行输入：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">run(<span class="string">'D:\MATLAB 2018a anzhuanglujing\toolbox\vlfeat-0.9.21-bin\vlfeat-0.9.21\toolbox\vl_setup.m'</span>)</span><br></pre></td></tr></table></figure>
+<p>即可使用 vlfeat 工具包</p>
+<p><img src="https://img-blog.csdnimg.cn/20200314234457223.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+]]></content>
+      <categories>
+        <category>MATLAB</category>
+      </categories>
+      <tags>
+        <tag>MATLAB</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python学习笔记_8：set 函数的使用方法</title>
+    <url>/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_8%EF%BC%9Aset%20%E5%87%BD%E6%95%B0%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95.html</url>
+    <content><![CDATA[<p>前面我们介绍了python的列表，元组，dict。</p>
+<p>set就是我们所说的集合</p>
+<p>今天介绍一下set 函数的基本用法:</p>
+<p><strong>1、set的使用方法</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>I = set([<span class="number">3</span>,<span class="number">5</span>,<span class="number">2</span>,<span class="number">1</span>,<span class="number">4</span>])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(I)</span><br><span class="line">&#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>&#125;</span><br><span class="line">%set会自动将数字排序</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<p><strong>2、set自动合并相同元素</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>I = set([<span class="number">5</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">2</span>])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(I)</span><br><span class="line">&#123;<span class="number">2</span>,<span class="number">3</span>,<span class="number">5</span>&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>3、集合中元素是无序的</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>I = set([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>I[<span class="number">1</span>]</span><br><span class="line">%%就会报错</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"&lt;pyshell#14&gt;"</span>, line <span class="number">1</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">    I[<span class="number">1</span>]</span><br><span class="line">TypeError: <span class="string">'set'</span> object does <span class="keyword">not</span> support indexing</span><br></pre></td></tr></table></figure>
+<p><strong>4、集合 set 增减元素</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>I.add(<span class="number">5</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>I</span><br><span class="line">&#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>I.remove(<span class="number">5</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>I</span><br><span class="line">&#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>python</category>
+        <category>语法笔记</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>语法笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>教女朋友一周学会 python 爬虫_1</title>
+    <url>/%E6%95%99%E5%A5%B3%E6%9C%8B%E5%8F%8B%E4%B8%80%E5%91%A8%E5%AD%A6%E4%BC%9A%20python%20%E7%88%AC%E8%99%AB_1.html</url>
+    <content><![CDATA[<p>今天开始我将简单介绍一下网络爬虫，并开始带大家学习如何写爬虫</p>
+<p><strong>一、爬虫介绍</strong></p>
+<p> <strong>1、什么是爬虫？</strong></p>
+<p>你可以把互联网想想成一个巨大的蜘蛛网，而爬虫就是一个小蜘蛛在网的各个节点中穿梭。   就像探测机器一样，基本操作就是模拟人去浏览各个网站，浏览数据，查看信息。</p>
+<a id="more"></a>
+<p> <strong>2、爬虫可以做什么？</strong></p>
+<p><strong>（1）抢火车票：</strong></p>
+<p>这应该是爬虫行业中使用量最大，很多抢票软件每秒对12306扫数千数万次。</p>
+<p><strong>（2）刷浏览量：</strong></p>
+<p>爬虫重灾区应该是微博无疑了，爬虫代码指向微博的某一个接口，可以获取用户的微博列表，微博动态，等等信息。</p>
+<p>有的人用爬虫指挥机器人，来打开某人的微博进行点赞、评论或留言。也就是微博上所谓的僵尸粉（去年某坤微博转发过亿次还记得吗）。</p>
+<p>还有很多更“好玩”的用处，这里就不废话了</p>
+<p><strong>二、正式开始学习</strong></p>
+<p>想写爬虫，首先要了解 URL：</p>
+<p>统一资源定位符（Universal Resource Locator），简单说就是表示资源的地址（我们说某个网站的网址就是 URL）。</p>
+<p><strong>1、urllib.request.urlopen（）函数</strong></p>
+<blockquote>
+<p><strong>urllib 是一个软件包，收集了几个用于处理URL的模块 ：</strong><br>.<br><strong>urllib.request ： 用于打开和阅读URL</strong><br>.<br><strong>urllib.error ： 包含由引发的异常 urllib.request</strong><br>.<br><strong>urllib.parse ： 用于解析URL</strong><br>.<br><strong>urllib.robotparser ： 用于解析robots.txt文件</strong></p>
+</blockquote>
+<p><strong>urllib.request—用于打开URL的可扩展库</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">urllib.request.urlopen（url，data = <span class="literal">None</span>，[ timeout，] *，cafile = <span class="literal">None</span>，capath = <span class="literal">None</span>，cadefault = <span class="literal">False</span>，context = <span class="literal">None</span> ）</span><br><span class="line"><span class="comment">##打开url，字符串或 Request 对象</span></span><br></pre></td></tr></table></figure>
+<p>data：访问URL时传输的数据</p>
+<p>timeout：参数以秒为单位，检测是否超时</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Time：2020/03/11 1:07</span></span><br><span class="line"><span class="comment"># environment:IDLE</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> urllib.request</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>response=urllib.request.urlopen(<span class="string">"http://www.baidu.com"</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>type(response)</span><br><span class="line">&lt;<span class="class"><span class="keyword">class</span> '<span class="title">http</span>.<span class="title">client</span>.<span class="title">HTTPResponse</span>'&gt;</span></span><br><span class="line"><span class="class"># 返回 <span class="title">HTTPResponse</span> 类型数据</span></span><br></pre></td></tr></table></figure>
+<hr>
+<p><strong>2、实例检测某网站的编码</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> chardet</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> urllib.request</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>url = input(<span class="string">'input address：'</span>)</span><br><span class="line"><span class="comment"># 输入网址</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>response = urllib.request.urlopen(url)</span><br><span class="line"><span class="comment"># urllib.request.urlopen信息传给response</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>infor = response.read()</span><br><span class="line"><span class="comment"># 返回获取到的页面内容</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>encode = chardet.detect(infor)[<span class="string">'encoding'</span>]</span><br><span class="line">&gt;&gt;&gt;print(encode)</span><br><span class="line">input address：http://www.baidu.com</span><br><span class="line">utf<span class="number">-8</span></span><br></pre></td></tr></table></figure>
+<hr>
+<p><strong>3、检测网站状态</strong></p>
+<p>“200”则说明网站正常</p>
+<p>“404”就说明不正常</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> urllib.request</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>response=urllib.request.urlopen(<span class="string">"http://www.baidu.com"</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>code=response.getcode()</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(code)</span><br><span class="line"><span class="number">200</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<hr>
+<hr>
+<p>今天晚上一直看 LOL 直播，现在有点撑不住了，都凌晨一点半了</p>
+<p>早起还要上网课</p>
+<p>上完网课再更</p>
+]]></content>
+      <categories>
+        <category>python</category>
+        <category>爬虫</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>爬虫</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>怎么下载网页在线视频</title>
+    <url>/%E6%80%8E%E4%B9%88%E4%B8%8B%E8%BD%BD%E7%BD%91%E9%A1%B5%E5%9C%A8%E7%BA%BF%E8%A7%86%E9%A2%91.html</url>
+    <content><![CDATA[<p>在线看视频多少会有些卡顿，所以就可以将视频先下载下来之后看</p>
+<p>但对我而言，大部分视频都是在线甚至很小众的</p>
+<p>单独拿B站等大型网站来说，我们可以使用“硕鼠”等</p>
+<p>复制需要下载的视频的链接，复制在这里就可以准备下载<br><img src="https://img-blog.csdnimg.cn/20200223233143492.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>但今天说的没有那么简单</p>
+<p>硕鼠这种软件毕竟可下载的网站数量有限</p>
+<p>像我今天遇到了无法用硕鼠直接下载的情况</p>
+<p>下面给大家详细介绍三种方法：</p>
+<p><strong>1、**</strong>拿谷歌浏览器来说，如果想下载视频，先要打开视频，打开开发者工具**<br><img src="https://img-blog.csdnimg.cn/20200223233748416.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>选择”Network“—&gt;”all“<br><img src="https://img-blog.csdnimg.cn/20200223233938512.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">最好按F5刷新一下界面，不然可以会导致加载的视频不完整：</p>
+<p>在界面中找到 Time 框中的时间随着真实秒数在变化的文件，一般为所有现实的文件中时间最长，size 最大的文件，则这个文件就是我们想要的文件<br><img src="https://img-blog.csdnimg.cn/20200223234755761.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>右键该文件——选择”Open in new tab“,再右键另存为就可以了<br><img src="https://img-blog.csdnimg.cn/20200224100123975.jpeg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>这是第一种比较简单的方法。</p>
+<p><strong>2、**</strong>打开视频，右键点击画面空白处 选择”查看网页源代码“，再Ctrl+F 打开查找窗口。**</p>
+<p>因为我一直在学习韩语，所以这里以某韩语教学视频为例<br><img src="https://img-blog.csdnimg.cn/20200223235957978.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>输入”url”,复制这些url后面的连接去迅雷直接搜索网站下载就ok了。<br><img src="https://img-blog.csdnimg.cn/20200224000136299.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong>3、**</strong>这个方法就比较小众了，因为很多视频不会出现这种情况**</p>
+<p>有的视频的开发者工具打开后发现全部都是ts后缀的文件</p>
+<p>列表显示的都是分割过的文件，保存下来也只是1段1段的<br><img src="https://img-blog.csdnimg.cn/20200224000803175.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>所以这时候就需要找到这些 ts 后缀的文件的缓存地址了</p>
+<p>打开新的标签页输入“chrome://version/”</p>
+<p>就可以知道这些 mp2t 文件被保存的位置<br><img src="https://img-blog.csdnimg.cn/20200224001554297.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>现在我为了接下来述说简单点，我把刚刚</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">C:\Users\<span class="number">27511</span>\AppData\Local\Google\Chrome\Application\chrome.exe</span><br></pre></td></tr></table></figure>
+<p>这个路径下的 mp2t 文件全部移到新的文件夹，名字就叫 CSDN<br>我再建立一个新的文件夹，名字叫 CSDN2，两个文件夹都放在名为1的文件夹下面</p>
+<p>那么现在按win+R 输入 cmd 打开窗口输入：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">copy /b  D:\<span class="number">1</span>\CSDN D:\<span class="number">1</span>\CSDN2\<span class="keyword">new</span>.mp4</span><br><span class="line">%copy /b  C:\f\  D:\f\<span class="keyword">new</span>.ts</span><br><span class="line">%copy /b不能动</span><br><span class="line">%C：\f\ 是缓存的mp2y文件的位置</span><br><span class="line">%D：\f\是将mp2y合并后储存的位置</span><br><span class="line">%<span class="keyword">new</span>是文件名，ts是文件后缀</span><br></pre></td></tr></table></figure>
+<p>给大家看一下CSDN文件夹<br><img src="https://img-blog.csdnimg.cn/20200224004637895.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>现在在cmd中输入：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">copy /b  D:\<span class="number">1</span>\CSDN D:\<span class="number">1</span>\CSDN2\<span class="keyword">new</span>.mp4</span><br><span class="line">%我这里保存为MP4格式，可以根据需要随意更改后缀</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/202002240048274.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200224004856636.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>而我的CSDN2文件夹中就有了MP4格式的视频文件了</p>
+<p><img src="https://img-blog.csdnimg.cn/20200224005006426.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>这样就可以正常观看了。</p>
+<p>这几种方法均是我最近下载视频文件的终于到的可以解决问题的方法，基本所有的视频均可以解决。</p>
+<p>如有其他问题，可以联系我</p>
+]]></content>
+      <categories>
+        <category>win10</category>
+        <category>下载网页视频</category>
+      </categories>
+      <tags>
+        <tag>win10</tag>
+        <tag>下载网页视频</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>鱼C论坛小甲鱼Python课后题</title>
+    <url>/%E9%B1%BCC%E8%AE%BA%E5%9D%9B%E5%B0%8F%E7%94%B2%E9%B1%BCPython%E8%AF%BE%E5%90%8E%E9%A2%98.html</url>
+    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">本人是从小甲鱼的python视频一步步过来的</span><br><span class="line">所以刚看到小甲鱼的课后题库就转载过来和大家分享</span><br><span class="line">如有侵权，请联系删除</span><br></pre></td></tr></table></figure>
+
+
+<p>之前python时就是学习的小甲鱼的课程</p>
+<p>现在看了那么多的教学视频，感觉还是小甲鱼的视频有点意思</p>
+<p>正定不失风趣，正经不失一丝**（看过小甲鱼视频的应该都懂，哈哈哈哈）</p>
+<p>刚刚在百度文库中看了小甲鱼的Python课后题总结，毕竟小甲鱼专门搞得课后题，正确率就比其他的整合的题目要准确很多：</p>
+<p>小甲鱼Python课后题百度文库：<br><a href="https://wenku.baidu.com/view/84d437faf021dd36a32d7375a417866fb94ac067.html" target="_blank" rel="noopener">https://wenku.baidu.com/view/84d437faf021dd36a32d7375a417866fb94ac067.html</a></p>
+]]></content>
+      <categories>
+        <category>python</category>
+        <category>入门</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>使用MATLAB调用摄像头并拍照—详细代码</title>
+    <url>/%E4%BD%BF%E7%94%A8MATLAB%E8%B0%83%E7%94%A8%E6%91%84%E5%83%8F%E5%A4%B4%E5%B9%B6%E6%8B%8D%E7%85%A7%E2%80%94%E8%AF%A6%E7%BB%86%E4%BB%A3%E7%A0%81.html</url>
+    <content><![CDATA[<blockquote>
+<p>大家也可以加我的交流群，所有资料我会在群里分享出来哦：977947271<br>2020/5/30：</p>
+</blockquote>
+<p>今天给大家介绍一下我第一次使用matlab进行摄像头拍照并进行图像处理的过程</p>
+<p>下面是个简单的GUI：</p>
+<p><img src="https://img-blog.csdnimg.cn/20200219115644543.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<a id="more"></a>
+<p>虽然不使用GUI也可以实现这种功能，不过我建议初学者最好使用GUI来控制程序，之后有时间我会发布不使用GUI来实现这种功能的博文。</p>
+<p>GUI界面的建立这里就不多说了。</p>
+<p>这个GUI是由一个坐标轴和四个按钮组成，按钮分别是“打开摄像头”，“拍照并保存”，“关闭摄像头”，“图像处理”，对应代码中的pushbutton1/2/3/4。</p>
+<p>目的是先打开摄像头，再拍摄照片到电脑中，最后调用图片去进行处理。</p>
+<p>下面介绍代码：<br>这里是 pushbutton1 的callback</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">varargout&#123;<span class="number">1</span>&#125; = handles.output;</span><br><span class="line"><span class="keyword">global</span> vid</span><br><span class="line">%定义一个全局变量，<span class="keyword">global</span>的用法可以参照我的另一篇博文</span><br><span class="line">vid = videoinput(<span class="string">'winvideo'</span>,<span class="number">1</span>,<span class="string">'YUY2_640x480'</span>);</span><br><span class="line">%winvideo函数可参照另一篇文章中imaqhwinfo的用法</span><br><span class="line">set(vid,<span class="string">'FramesPerTrigger'</span>,<span class="number">1</span>);</span><br><span class="line">%用特定的帧数去显示视频</span><br><span class="line">set(vid,<span class="string">'TriggerRepeat'</span>,Inf);</span><br><span class="line">vidRes = get(vid,<span class="string">'VideoResolution'</span>);</span><br><span class="line">%二维数组，获取视频长宽</span><br><span class="line">nBands = get(ojb,<span class="string">'NumberOfBands'</span>);</span><br><span class="line">%获得图像的颜色层数</span><br><span class="line">axes(handles.axes1);</span><br><span class="line">%让视频显示在指定的axes1坐标中</span><br><span class="line"><span class="keyword">global</span> hImage</span><br><span class="line">%定义全局变量hImage</span><br><span class="line">hImage = image(zeros(vidRes(<span class="number">2</span>),vidRes(<span class="number">1</span>),nBands));</span><br><span class="line">%获得图像的句柄</span><br><span class="line">preview（vid,hImage）;</span><br></pre></td></tr></table></figure>
+<p>点开“打开摄像头后”在 axes1 中就可看到拍摄的画面</p>
+<p>接下来介绍图片的保存：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">global</span> vid;</span><br><span class="line">frame = getsnapshot(vid);</span><br><span class="line">%摄像头每一帧的画面</span><br><span class="line">frame = ycbcr2rgb(frame);</span><br><span class="line">%将捕获的图像转化为RGB格式的图像</span><br><span class="line">[filename,pathname] = uiputfile(&#123;<span class="string">'*.bmp'</span>,<span class="string">'BMP files'</span>:<span class="string">'*.jpg'</span>,<span class="string">'JPG files'</span>&#125;<span class="string">'格式'</span>);</span><br><span class="line">%照片名称与储存路径</span><br><span class="line"><span class="keyword">if</span> isequal(filename,<span class="number">0</span>) || isequal(pathname,<span class="number">0</span>)</span><br><span class="line">%文件名与路径是否被占用</span><br><span class="line">	<span class="keyword">return</span>;</span><br><span class="line"><span class="keyword">else</span> </span><br><span class="line">	fpath = fullfile(pathname,filename);</span><br><span class="line">end</span><br><span class="line">imwrite(frame,fpath);</span><br></pre></td></tr></table></figure>
+<p>其实这种操作的逻辑对于matlab 的GUI来说，都可以比较简便的解决</p>
+<p>关闭摄像头：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">%很简单，在callback中写入一个函数即可</span><br><span class="line">close（findobj(<span class="string">'gca'</span>,<span class="string">'figure_csdn'</span>)）;</span><br><span class="line">%findobj(<span class="string">'PropertyName'</span>,<span class="string">'PropertyValue'</span>,...)</span><br><span class="line">返回figure的句柄</span><br></pre></td></tr></table></figure>
+<p>对于想要对图像进行处理的话：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">%就需要在callback中写入读取上图保存的图片的代码</span><br><span class="line">x = imread(<span class="string">'name.jpg'</span>);</span><br><span class="line">imshow(x);</span><br><span class="line">%在进行相应的处理程序</span><br></pre></td></tr></table></figure>
+<p>因为 gui 的代码冗长且很多地方无用，就无法将代码全部贴出来，但是对于有些基础的是可以看懂的，所有代码都放在相应的cb中进行。</p>
+<p>之后会发出更复杂的定时拍照的程序 gui，希望有技术大佬可以帮助指点错误与不足。</p>
+<p>如果有需要这篇文章中源码和 gui 的可以私信我。</p>
+<p>欢迎大家指正不足。</p>
+]]></content>
+      <categories>
+        <category>MATLAB</category>
+      </categories>
+      <tags>
+        <tag>MATLAB</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Win10自带的虚拟机如何打开—Hyper-v</title>
+    <url>/Win10%E8%87%AA%E5%B8%A6%E7%9A%84%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%A6%82%E4%BD%95%E6%89%93%E5%BC%80%E2%80%94Hyper-v.html</url>
+    <content><![CDATA[<p>作为一个程序员电脑里面怎么能没有安装虚拟机呢…</p>
+<p>我之前装的虚拟机是VMware，配置的环境是openSUSE（大多数程序员好像用Ubuntu）</p>
+<p>作为电气工程的学生，我也不了解程序员界的行情…..这些事情也无从考究</p>
+<p>不过最近开始使用win10自带的虚拟机Hyper-v了，不过会和VM有兼容性问题。</p>
+<a id="more"></a>
+<p>直接上操作：<br>    打开 “控制面板”—&gt;“程序”<br><img src="https://img-blog.csdnimg.cn/20200222215045728.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>选择“启用或关闭windows功能”<br><img src="https://img-blog.csdnimg.cn/20200222215429330.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>选中Hyper-v的所有工具—就可以点击“确定”等待了<br><img src="https://img-blog.csdnimg.cn/20200222215807339.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200222215905888.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>这里让电脑立即重启<br><img src="https://img-blog.csdnimg.cn/20200222215954888.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>一般来说重启后就能找到hyper-v</p>
+<p>可是我的电脑重启时竟然显示无法正常安装</p>
+<p>我一开始觉得是VM的兼容性问题，我还傻乎乎的把VM卸载了（我之前用VM是为了运行R语言代码，后来就没怎么用过）</p>
+<p>结果还是不行</p>
+<p>后来在windows论坛上找到了解决方法</p>
+<p>“win+X”进入管理员PowerShell运行模式——&gt;</p>
+<p>输入</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">.\bcdedit /<span class="built_in">set</span> hypervisorlaunchtype <span class="keyword">auto</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/20200222223623274.png" alt="在这里插入图片描述"><br>显示操作成功完成即可</p>
+<p>最后结果：<br><img src="https://img-blog.csdnimg.cn/2020022222372689.png" alt="在这里插入图片描述"><br>有需要 openSUSE 资源的朋友可以找我，压缩资源我电脑里还是有的。</p>
+]]></content>
+      <categories>
+        <category>win10</category>
+      </categories>
+      <tags>
+        <tag>win10</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>如何创建可直接修改后缀来改变格式的文档</title>
+    <url>/%E5%A6%82%E4%BD%95%E5%88%9B%E5%BB%BA%E5%8F%AF%E7%9B%B4%E6%8E%A5%E4%BF%AE%E6%94%B9%E5%90%8E%E7%BC%80%E6%9D%A5%E6%94%B9%E5%8F%98%E6%A0%BC%E5%BC%8F%E7%9A%84%E6%96%87%E6%A1%A3.html</url>
+    <content><![CDATA[<p>程序员应该都知道，我们新建一个文本文档后</p>
+<p>可以直接改变文本的后缀来创建相应的文件</p>
+<p>最熟悉不过的就是 python 了，直接新建一个文本，‘txt’ 后缀改为 ‘py’</p>
+<p>再用IDLE打开再省事不过了</p>
+<p>但我今天重装系统后发现新建的文本不显示后缀，我也没法改：</p>
+<a id="more"></a>
+<p><img src="https://img-blog.csdnimg.cn/20200224174108439.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><strong>**在这里记录一下如何操作：</strong><br>1、打开‘电脑’—&gt;’查看’—&gt;‘选项’**<br><img src="https://img-blog.csdnimg.cn/20200224174842735.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt=""><br><strong>2、‘查看’—&gt;取消选择’隐藏已知文件类型的拓展名’</strong><br><img src="https://img-blog.csdnimg.cn/20200224175153420.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>然后就可以正常操作了<br><img src="https://img-blog.csdnimg.cn/20200224175553276.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/2020022417560399.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>请无视其他无关文件和字幕….<br>请无视其他无关文件和字幕…<br>请无视其他无关文件和字幕…<br>(重要的无视说三遍！！！)</p>
+]]></content>
+      <categories>
+        <category>win10</category>
+      </categories>
+      <tags>
+        <tag>win10</tag>
       </tags>
   </entry>
 </search>

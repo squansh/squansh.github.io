@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-06-17T02:45:04.453Z</updated>
+  <updated>2020-06-17T10:55:51.516Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,172 +17,556 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>新手如何使用anaconda（python）—简单介绍</title>
-    <link href="http://yoursite.com/%E6%96%B0%E6%89%8B%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8anaconda%EF%BC%88python%EF%BC%89%E2%80%94%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D.html"/>
-    <id>http://yoursite.com/%E6%96%B0%E6%89%8B%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8anaconda%EF%BC%88python%EF%BC%89%E2%80%94%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D.html</id>
-    <published>2020-06-17T02:39:27.000Z</published>
-    <updated>2020-06-17T02:45:04.453Z</updated>
+    <title>Matlab如何打开c++文件</title>
+    <link href="http://yoursite.com/Matlab%E5%A6%82%E4%BD%95%E6%89%93%E5%BC%80c++%E6%96%87%E4%BB%B6.html"/>
+    <id>http://yoursite.com/Matlab%E5%A6%82%E4%BD%95%E6%89%93%E5%BC%80c++%E6%96%87%E4%BB%B6.html</id>
+    <published>2020-06-17T10:54:46.000Z</published>
+    <updated>2020-06-17T10:55:51.516Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;我之前用 python 的 IDLE 去写代码，但是在深度学习的部分，代码频频报错，因为 python 的很多库都没有，而自己去下载的话速度极其的慢。&lt;/p&gt;
-&lt;p&gt;所以下载 anaconda 了， anaconda 里已经下载了很多库（虽然依然没有我想要的库），但相比单单一个 python 软件便好用许多。&lt;/p&gt;
-&lt;p&gt;这里介绍一下新手如何快速使用 anaconda（我也是刚接触 python，好在比C简单多了，和 matlab 又很像）：&lt;/p&gt;
+      &lt;p&gt;最近在尝试视觉分析的项目&lt;/p&gt;
+&lt;p&gt;总是会遇到一些cpp文件需要在matlab中运行，在这里记录一下操作&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1、命令行输入&lt;/strong&gt; ：&lt;code&gt;mex -setup&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://img-blog.csdnimg.cn/20200314231840100.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70&quot; alt=&quot;在这里插入图片描述&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="MATLAB" scheme="http://yoursite.com/categories/MATLAB/"/>
+    
+    
+      <category term="MATLAB" scheme="http://yoursite.com/tags/MATLAB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python的Scripts文件夹为空——已解决</title>
+    <link href="http://yoursite.com/Python%E7%9A%84Scripts%E6%96%87%E4%BB%B6%E5%A4%B9%E4%B8%BA%E7%A9%BA%E2%80%94%E2%80%94%E5%B7%B2%E8%A7%A3%E5%86%B3.html"/>
+    <id>http://yoursite.com/Python%E7%9A%84Scripts%E6%96%87%E4%BB%B6%E5%A4%B9%E4%B8%BA%E7%A9%BA%E2%80%94%E2%80%94%E5%B7%B2%E8%A7%A3%E5%86%B3.html</id>
+    <published>2020-06-17T10:52:50.000Z</published>
+    <updated>2020-06-17T10:54:00.453Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;如果有 windows 环境的 python 的话，很可能会出现 Scripts 文件夹为空，这样就无法正常在 cmd 正常使用 pip 命令。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;解决方法：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt; cmd 中输入： &lt;code&gt;python -m ensurepip&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://img-blog.csdnimg.cn/20200313174634904.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70&quot; alt=&quot;在这里插入图片描述&quot;&gt;&lt;/p&gt;
     
     </summary>
     
     
       <category term="python" scheme="http://yoursite.com/categories/python/"/>
     
-      <category term="使用anaconda" scheme="http://yoursite.com/categories/python/%E4%BD%BF%E7%94%A8anaconda/"/>
+      <category term="error&amp;库" scheme="http://yoursite.com/categories/python/error-%E5%BA%93/"/>
     
     
       <category term="python" scheme="http://yoursite.com/tags/python/"/>
     
-      <category term="anaconda" scheme="http://yoursite.com/tags/anaconda/"/>
+      <category term="error&amp;库" scheme="http://yoursite.com/tags/error-%E5%BA%93/"/>
     
   </entry>
   
   <entry>
-    <title>Anaconda镜像下载地址</title>
-    <link href="http://yoursite.com/Anaconda%E9%95%9C%E5%83%8F%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80.html"/>
-    <id>http://yoursite.com/Anaconda%E9%95%9C%E5%83%8F%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80.html</id>
-    <published>2020-06-17T02:37:39.000Z</published>
-    <updated>2020-06-17T02:45:07.720Z</updated>
+    <title>VLFeat工具包下载</title>
+    <link href="http://yoursite.com/VLFeat%E5%B7%A5%E5%85%B7%E5%8C%85%E4%B8%8B%E8%BD%BD.html"/>
+    <id>http://yoursite.com/VLFeat%E5%B7%A5%E5%85%B7%E5%8C%85%E4%B8%8B%E8%BD%BD.html</id>
+    <published>2020-06-17T10:51:28.000Z</published>
+    <updated>2020-06-17T10:52:36.068Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;清华大学镜像：&lt;a href=&quot;https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/&lt;/a&gt;&lt;br&gt;&lt;img src=&quot;https://img-blog.csdnimg.cn/20200217154416803.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70&quot; alt=&quot;在这里插入图片描述&quot;&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;strong&gt;vlfeat 官方下载链接：&lt;/strong&gt;&lt;a href=&quot;https://www.vlfeat.org/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://www.vlfeat.org/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;运用于计算机视觉算法专业图像的理解和局部特征提取和匹配。算法包括Fisher向量，VLAD，SIFT，MSER，k均值，分层k均值，聚集信息瓶颈，SLIC超像素，快速移位超像素，大规模SVM训练等。它是用C编写的，以提高效率和兼容性，并带有MATLAB的接口（易于使用）和详细的文档。&lt;/p&gt;
+&lt;p&gt;点击直接下载压缩包，不过下载速度可能会有点慢,可以使用迅雷下载&lt;/p&gt;
     
     </summary>
     
     
-      <category term="python" scheme="http://yoursite.com/categories/python/"/>
-    
-      <category term="下载anaconda" scheme="http://yoursite.com/categories/python/%E4%B8%8B%E8%BD%BDanaconda/"/>
+      <category term="MATLAB" scheme="http://yoursite.com/categories/MATLAB/"/>
     
     
-      <category term="python" scheme="http://yoursite.com/tags/python/"/>
-    
-      <category term="anaconda" scheme="http://yoursite.com/tags/anaconda/"/>
+      <category term="MATLAB" scheme="http://yoursite.com/tags/MATLAB/"/>
     
   </entry>
   
   <entry>
-    <title>如何使用MATLAB调用摄像头—代码详解</title>
-    <link href="http://yoursite.com/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8MATLAB%E8%B0%83%E7%94%A8%E6%91%84%E5%83%8F%E5%A4%B4%E2%80%94%E4%BB%A3%E7%A0%81%E8%AF%A6%E8%A7%A3.html"/>
-    <id>http://yoursite.com/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8MATLAB%E8%B0%83%E7%94%A8%E6%91%84%E5%83%8F%E5%A4%B4%E2%80%94%E4%BB%A3%E7%A0%81%E8%AF%A6%E8%A7%A3.html</id>
-    <published>2020-06-17T02:35:33.000Z</published>
-    <updated>2020-06-17T02:37:18.220Z</updated>
+    <title>No module named &#39;pkg_resources&#39;解决方法</title>
+    <link href="http://yoursite.com/No%20module%20named%20&#39;pkg_resources&#39;%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95.html"/>
+    <id>http://yoursite.com/No%20module%20named%20&#39;pkg_resources&#39;%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95.html</id>
+    <published>2020-06-17T10:47:42.000Z</published>
+    <updated>2020-06-17T10:51:14.661Z</updated>
     
     <summary type="html">
     
-      &lt;blockquote&gt;
-&lt;p&gt;大家也可以加我的交流群，所有资料我会在群里分享出来哦：977947271&lt;/p&gt;
-&lt;p&gt;2020/5/30：&lt;/p&gt;
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;No module named ‘pkg_resources’&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;最近在做关于图像识别的项目。&lt;/p&gt;
-&lt;p&gt;接触了MATLAB的许多操作，在这里做下关于调用笔记本摄像头的笔记。&lt;/p&gt;
+&lt;p&gt;我在安装 pip 时出现这种问题&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;解决方法:&lt;/strong&gt;&lt;/p&gt;
+&lt;figure
+        
+      
     
     </summary>
     
     
-      <category term="MATLAB" scheme="http://yoursite.com/categories/MATLAB/"/>
+      <category term="python" scheme="http://yoursite.com/categories/python/"/>
+    
+      <category term="error&amp;库" scheme="http://yoursite.com/categories/python/error-%E5%BA%93/"/>
     
     
-      <category term="MATLAB" scheme="http://yoursite.com/tags/MATLAB/"/>
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+      <category term="error&amp;库" scheme="http://yoursite.com/tags/error-%E5%BA%93/"/>
     
   </entry>
   
   <entry>
-    <title>MATLAB账户未关联到许可证—无法打开help文档—解决方法</title>
-    <link href="http://yoursite.com/MATLAB%E8%B4%A6%E6%88%B7%E6%9C%AA%E5%85%B3%E8%81%94%E5%88%B0%E8%AE%B8%E5%8F%AF%E8%AF%81%E2%80%94%E6%97%A0%E6%B3%95%E6%89%93%E5%BC%80help%E6%96%87%E6%A1%A3%E2%80%94%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95.html"/>
-    <id>http://yoursite.com/MATLAB%E8%B4%A6%E6%88%B7%E6%9C%AA%E5%85%B3%E8%81%94%E5%88%B0%E8%AE%B8%E5%8F%AF%E8%AF%81%E2%80%94%E6%97%A0%E6%B3%95%E6%89%93%E5%BC%80help%E6%96%87%E6%A1%A3%E2%80%94%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95.html</id>
-    <published>2020-06-17T02:32:57.000Z</published>
-    <updated>2020-06-17T02:35:20.853Z</updated>
+    <title>Python中 pip 的安装——windows系统</title>
+    <link href="http://yoursite.com/Python%E4%B8%AD%20pip%20%E7%9A%84%E5%AE%89%E8%A3%85%E2%80%94%E2%80%94windows%E7%B3%BB%E7%BB%9F.html"/>
+    <id>http://yoursite.com/Python%E4%B8%AD%20pip%20%E7%9A%84%E5%AE%89%E8%A3%85%E2%80%94%E2%80%94windows%E7%B3%BB%E7%BB%9F.html</id>
+    <published>2020-06-17T10:45:02.000Z</published>
+    <updated>2020-06-17T10:50:14.708Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;今天在使用help命令时，需要参阅一些函数的help文档，却发现我的matlab无法关联到许可证&lt;br&gt;&lt;img src=&quot;https://img-blog.csdnimg.cn/20200211154400903.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70&quot; alt=&quot;在这里插入图片描述&quot;&gt;&lt;/p&gt;
+      &lt;p&gt;我的 Windows 环境下的 python 是没有 pip 文件的，所以想要实现 pip 命令就要手动安装pip 文件&lt;/p&gt;
+&lt;p&gt;这篇和接下来的文章我会演示　windows 系统下的 “IDLE” 安装 pip 可能遇到的所有问题&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;pip 20.0.2官方下载地址&lt;/strong&gt;：&lt;a href=&quot;https://pypi.org/project/pip/#description&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://pypi.org/project/pip/#description&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://img-blog.csdnimg.cn/2020031117175539.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70&quot; alt=&quot;在这里插入图片描述&quot;&gt;&lt;/p&gt;
     
     </summary>
     
     
-      <category term="MATLAB" scheme="http://yoursite.com/categories/MATLAB/"/>
+      <category term="python" scheme="http://yoursite.com/categories/python/"/>
+    
+      <category term="error&amp;库" scheme="http://yoursite.com/categories/python/error-%E5%BA%93/"/>
     
     
-      <category term="MATLAB" scheme="http://yoursite.com/tags/MATLAB/"/>
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+      <category term="error&amp;库" scheme="http://yoursite.com/tags/error-%E5%BA%93/"/>
     
   </entry>
   
   <entry>
-    <title>MATLAB自适应直方图均衡—adapthisteq</title>
-    <link href="http://yoursite.com/MATLAB%E8%87%AA%E9%80%82%E5%BA%94%E7%9B%B4%E6%96%B9%E5%9B%BE%E5%9D%87%E8%A1%A1%E2%80%94adapthisteq.html"/>
-    <id>http://yoursite.com/MATLAB%E8%87%AA%E9%80%82%E5%BA%94%E7%9B%B4%E6%96%B9%E5%9B%BE%E5%9D%87%E8%A1%A1%E2%80%94adapthisteq.html</id>
-    <published>2020-06-17T02:28:44.000Z</published>
-    <updated>2020-06-17T02:35:08.668Z</updated>
+    <title>教女朋友一周学会 python 爬虫_1</title>
+    <link href="http://yoursite.com/%E6%95%99%E5%A5%B3%E6%9C%8B%E5%8F%8B%E4%B8%80%E5%91%A8%E5%AD%A6%E4%BC%9A%20python%20%E7%88%AC%E8%99%AB_1.html"/>
+    <id>http://yoursite.com/%E6%95%99%E5%A5%B3%E6%9C%8B%E5%8F%8B%E4%B8%80%E5%91%A8%E5%AD%A6%E4%BC%9A%20python%20%E7%88%AC%E8%99%AB_1.html</id>
+    <published>2020-06-17T10:40:52.000Z</published>
+    <updated>2020-06-17T10:41:47.667Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;今天写调用摄像头处理图像函数，用到了adapthisteq函数，顺便对adapthisteq函数做了一些总结。&lt;/p&gt;
-&lt;p&gt;adapthisteq：适应直方图均衡化对比度限制器。通过转换强度图像中的值来改变图像的对比度。&lt;/p&gt;
-&lt;p&gt;histeq：自适应直方图均衡。&lt;/p&gt;
+      &lt;p&gt;今天开始我将简单介绍一下网络爬虫，并开始带大家学习如何写爬虫&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;一、爬虫介绍&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt; &lt;strong&gt;1、什么是爬虫？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;你可以把互联网想想成一个巨大的蜘蛛网，而爬虫就是一个小蜘蛛在网的各个节点中穿梭。   就像探测机器一样，基本操作就是模拟人去浏览各个网站，浏览数据，查看信息。&lt;/p&gt;
     
     </summary>
     
     
-      <category term="MATLAB" scheme="http://yoursite.com/categories/MATLAB/"/>
+      <category term="python" scheme="http://yoursite.com/categories/python/"/>
+    
+      <category term="爬虫" scheme="http://yoursite.com/categories/python/%E7%88%AC%E8%99%AB/"/>
     
     
-      <category term="MATLAB" scheme="http://yoursite.com/tags/MATLAB/"/>
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+      <category term="爬虫" scheme="http://yoursite.com/tags/%E7%88%AC%E8%99%AB/"/>
     
   </entry>
   
   <entry>
-    <title>MATLAB安装USB Webcams工具箱出现‘error’</title>
-    <link href="http://yoursite.com/MATLAB%E5%AE%89%E8%A3%85USB%20Webcams%E5%B7%A5%E5%85%B7%E7%AE%B1%E5%87%BA%E7%8E%B0%E2%80%98error%E2%80%99.html"/>
-    <id>http://yoursite.com/MATLAB%E5%AE%89%E8%A3%85USB%20Webcams%E5%B7%A5%E5%85%B7%E7%AE%B1%E5%87%BA%E7%8E%B0%E2%80%98error%E2%80%99.html</id>
-    <published>2020-06-17T02:23:41.000Z</published>
-    <updated>2020-06-17T02:27:05.344Z</updated>
+    <title>Python安装 chardet</title>
+    <link href="http://yoursite.com/Python%E5%AE%89%E8%A3%85%20chardet.html"/>
+    <id>http://yoursite.com/Python%E5%AE%89%E8%A3%85%20chardet.html</id>
+    <published>2020-06-17T10:35:24.000Z</published>
+    <updated>2020-06-17T10:49:55.532Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;下载matlab的Support Package for USB Webcams&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://img-blog.csdnimg.cn/20200208215954945.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70&quot; alt=&quot;在这里插入图片描述&quot;&gt;&lt;/p&gt;
+      &lt;p&gt;Chardet：通用字符编码检测器&lt;/p&gt;
+&lt;p&gt;chardet 3.0.4官网链接&lt;a href=&quot;https://pypi.org/project/chardet/#files&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://pypi.org/project/chardet/#files&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://img-blog.csdnimg.cn/20200309201404769.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70&quot; alt=&quot;在这里插入图片描述&quot;&gt;&lt;/p&gt;
     
     </summary>
     
     
-      <category term="MATLAB" scheme="http://yoursite.com/categories/MATLAB/"/>
+      <category term="python" scheme="http://yoursite.com/categories/python/"/>
+    
+      <category term="error&amp;库" scheme="http://yoursite.com/categories/python/error-%E5%BA%93/"/>
     
     
-      <category term="MATLAB" scheme="http://yoursite.com/tags/MATLAB/"/>
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+      <category term="error&amp;库" scheme="http://yoursite.com/tags/error-%E5%BA%93/"/>
     
   </entry>
   
   <entry>
-    <title>WIN10 未安装任何音频驱动 扬声器有个小红叉（已解决）</title>
-    <link href="http://yoursite.com/WIN10%20%E6%9C%AA%E5%AE%89%E8%A3%85%E4%BB%BB%E4%BD%95%E9%9F%B3%E9%A2%91%E9%A9%B1%E5%8A%A8%20%E6%89%AC%E5%A3%B0%E5%99%A8%E6%9C%89%E4%B8%AA%E5%B0%8F%E7%BA%A2%E5%8F%89%EF%BC%88%E5%B7%B2%E8%A7%A3%E5%86%B3%EF%BC%89.html"/>
-    <id>http://yoursite.com/WIN10%20%E6%9C%AA%E5%AE%89%E8%A3%85%E4%BB%BB%E4%BD%95%E9%9F%B3%E9%A2%91%E9%A9%B1%E5%8A%A8%20%E6%89%AC%E5%A3%B0%E5%99%A8%E6%9C%89%E4%B8%AA%E5%B0%8F%E7%BA%A2%E5%8F%89%EF%BC%88%E5%B7%B2%E8%A7%A3%E5%86%B3%EF%BC%89.html</id>
-    <published>2020-06-17T01:34:21.000Z</published>
-    <updated>2020-06-17T02:19:54.625Z</updated>
+    <title>Python学习笔记_9：class 类定义的属性与方法——详解</title>
+    <link href="http://yoursite.com/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_9%EF%BC%9Aclass%20%E7%B1%BB%E5%AE%9A%E4%B9%89%E7%9A%84%E5%B1%9E%E6%80%A7%E4%B8%8E%E6%96%B9%E6%B3%95%E2%80%94%E2%80%94%E8%AF%A6%E8%A7%A3.html"/>
+    <id>http://yoursite.com/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_9%EF%BC%9Aclass%20%E7%B1%BB%E5%AE%9A%E4%B9%89%E7%9A%84%E5%B1%9E%E6%80%A7%E4%B8%8E%E6%96%B9%E6%B3%95%E2%80%94%E2%80%94%E8%AF%A6%E8%A7%A3.html</id>
+    <published>2020-06-17T10:33:00.000Z</published>
+    <updated>2020-06-17T10:34:23.490Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;经历了无数次的下载安装各种驱动，无数次重启，几乎试了全网所有的方法都是不行，最后使用了国外论坛的方法终于成功了&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://img-blog.csdnimg.cn/20200205210158898.png&quot; alt=&quot;这是我电脑现在的情况，问题已经完全解决了，太激动了哈哈&quot;&gt;&lt;/p&gt;
-&lt;p&gt;此方法必须要先重启电脑，重启后立刻进行此操作！！&lt;/p&gt;
-&lt;p&gt;我当时右击扬声器图标，选择打开声音设置&lt;/p&gt;
+      &lt;p&gt;对很多没有其他语言基础的初学者来说，可能学到 python 的类定义的时候会苦恼很久&lt;/p&gt;
+&lt;p&gt;但，无论我们遇到什么困难，也不要怕，微笑着面对他，消除恐惧的最好办法就是面对恐惧，坚持，才是胜利，加油，奥利给！！！&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://img-blog.csdnimg.cn/20200308134728646.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70&quot; alt=&quot;在这里插入图片描述&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="python" scheme="http://yoursite.com/categories/python/"/>
+    
+      <category term="语法笔记" scheme="http://yoursite.com/categories/python/%E8%AF%AD%E6%B3%95%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+      <category term="语法笔记" scheme="http://yoursite.com/tags/%E8%AF%AD%E6%B3%95%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python 官方的中文文档</title>
+    <link href="http://yoursite.com/Python%20%E5%AE%98%E6%96%B9%E7%9A%84%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3.html"/>
+    <id>http://yoursite.com/Python%20%E5%AE%98%E6%96%B9%E7%9A%84%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3.html</id>
+    <published>2020-06-17T10:31:38.000Z</published>
+    <updated>2020-06-17T10:32:40.066Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;今天打开Python documentation 查阅函数使用方法，像往常一样，我打开了百度翻译&lt;/p&gt;
+&lt;p&gt;突发奇想，要不上网找找有没有哪位大佬翻译好的中文文档，发现python官网上竟然发布了python的中文文档….(python初学者表示之前真的不知道)&lt;/p&gt;
+&lt;p&gt;Python官方文档链接：&lt;a href=&quot;https://docs.python.org/zh-cn/3/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://docs.python.org/zh-cn/3/&lt;/a&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="python" scheme="http://yoursite.com/categories/python/"/>
+    
+      <category term="入门" scheme="http://yoursite.com/categories/python/%E5%85%A5%E9%97%A8/"/>
+    
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python学习笔记_8：set 函数的使用方法</title>
+    <link href="http://yoursite.com/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_8%EF%BC%9Aset%20%E5%87%BD%E6%95%B0%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95.html"/>
+    <id>http://yoursite.com/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_8%EF%BC%9Aset%20%E5%87%BD%E6%95%B0%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95.html</id>
+    <published>2020-06-17T10:30:17.000Z</published>
+    <updated>2020-06-17T10:30:55.538Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;前面我们介绍了python的列表，元组，dict。&lt;/p&gt;
+&lt;p&gt;set就是我们所说的集合&lt;/p&gt;
+&lt;p&gt;今天介绍一下set 函数的基本用法:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1、set的使用方法&lt;/strong&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;I = set([&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;])&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;print(I)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;%set会自动将数字排序&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+      <category term="python" scheme="http://yoursite.com/categories/python/"/>
+    
+      <category term="语法笔记" scheme="http://yoursite.com/categories/python/%E8%AF%AD%E6%B3%95%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+      <category term="语法笔记" scheme="http://yoursite.com/tags/%E8%AF%AD%E6%B3%95%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python学习笔记_7：index() 和 dict() 的用法详解</title>
+    <link href="http://yoursite.com/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_7%EF%BC%9Aindex()%20%E5%92%8C%20dict()%20%E7%9A%84%E7%94%A8%E6%B3%95%E8%AF%A6%E8%A7%A3.html"/>
+    <id>http://yoursite.com/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_7%EF%BC%9Aindex()%20%E5%92%8C%20dict()%20%E7%9A%84%E7%94%A8%E6%B3%95%E8%AF%A6%E8%A7%A3.html</id>
+    <published>2020-06-17T10:29:23.000Z</published>
+    <updated>2020-06-17T10:30:02.907Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;前面的笔记中我详细介绍了列表和元组&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;当我们需要列表中某一元素的相应位置时&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;就要提到 &lt;strong&gt;index()&lt;/strong&gt; 这个神奇的函数了&lt;/p&gt;
+&lt;h2 id=&quot;混讲一下-index-和-dict&quot;&gt;&lt;a href=&quot;#混讲一下-index-和-dict&quot; class=&quot;headerlink&quot; title=&quot;混讲一下 index() 和 dict()&quot;&gt;&lt;/a&gt;混讲一下 index() 和 dict()&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;1、index() 的简单用法：&lt;/strong&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;I = [&lt;span class=&quot;string&quot;&gt;&#39;东北大鹌鹑&#39;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&#39;周淑怡&#39;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&#39;刘某人&#39;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&#39;胡歌&#39;&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;print(I.index(&lt;span class=&quot;string&quot;&gt;&#39;胡歌&#39;&lt;/span&gt;))&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+      <category term="python" scheme="http://yoursite.com/categories/python/"/>
+    
+      <category term="语法笔记" scheme="http://yoursite.com/categories/python/%E8%AF%AD%E6%B3%95%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+      <category term="语法笔记" scheme="http://yoursite.com/tags/%E8%AF%AD%E6%B3%95%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python学习笔记_6：global 与 nanlacal 的区别</title>
+    <link href="http://yoursite.com/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_6%EF%BC%9Aglobal%20%E4%B8%8E%20nanlacal%20%E7%9A%84%E5%8C%BA%E5%88%AB.html"/>
+    <id>http://yoursite.com/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_6%EF%BC%9Aglobal%20%E4%B8%8E%20nanlacal%20%E7%9A%84%E5%8C%BA%E5%88%AB.html</id>
+    <published>2020-06-17T10:28:11.000Z</published>
+    <updated>2020-06-17T10:29:10.267Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;之前我在 matlab 的笔记里介绍过一次 global 的用法&lt;/p&gt;
+&lt;p&gt;这次在 python 中介绍下 global 和 nanlacal 的区别&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;global 函数：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;在函数中修改全局变量&lt;/p&gt;
+&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;I = &lt;span class=&quot;string&quot;&gt;&#39;ABC&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;fun&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;global&lt;/span&gt; I&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		I = &lt;span class=&quot;string&quot;&gt;&#39;123&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		print(I)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;fun()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;print(I)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;%输出为&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;123&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;123&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+      <category term="python" scheme="http://yoursite.com/categories/python/"/>
+    
+      <category term="语法笔记" scheme="http://yoursite.com/categories/python/%E8%AF%AD%E6%B3%95%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+      <category term="语法笔记" scheme="http://yoursite.com/tags/%E8%AF%AD%E6%B3%95%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python学习笔记_5：字符串格式化符号及进制转换</title>
+    <link href="http://yoursite.com/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_5%EF%BC%9A%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%A0%BC%E5%BC%8F%E5%8C%96%E7%AC%A6%E5%8F%B7%E5%8F%8A%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2.html"/>
+    <id>http://yoursite.com/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_5%EF%BC%9A%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%A0%BC%E5%BC%8F%E5%8C%96%E7%AC%A6%E5%8F%B7%E5%8F%8A%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2.html</id>
+    <published>2020-06-17T10:27:07.000Z</published>
+    <updated>2020-06-17T10:27:55.538Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;介绍下经常用得到的格式化字符&lt;/p&gt;
+&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;%c	：格式化字符及其ASCII码&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;%s	：格式化字符串&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;%d	：格式化整数&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;%f	：可指定小数点精度&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;%e	：用科学计数法表示小数&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;%g	：根据值的的具体情况使用%f或%e&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;%o	：八进制&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;%x	：十六进制&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+      <category term="python" scheme="http://yoursite.com/categories/python/"/>
+    
+      <category term="语法笔记" scheme="http://yoursite.com/categories/python/%E8%AF%AD%E6%B3%95%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+      <category term="语法笔记" scheme="http://yoursite.com/tags/%E8%AF%AD%E6%B3%95%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python学习笔记_4列表和元组的区别</title>
+    <link href="http://yoursite.com/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_4%EF%BC%9A%E5%88%97%E8%A1%A8%E5%92%8C%E5%85%83%E7%BB%84%E7%9A%84%E5%8C%BA%E5%88%AB.html"/>
+    <id>http://yoursite.com/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_4%EF%BC%9A%E5%88%97%E8%A1%A8%E5%92%8C%E5%85%83%E7%BB%84%E7%9A%84%E5%8C%BA%E5%88%AB.html</id>
+    <published>2020-06-17T10:24:43.000Z</published>
+    <updated>2020-06-17T10:26:39.290Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;上节我主要详细的介绍了一下列表的用法&lt;/p&gt;
+&lt;p&gt;突然想起来需要说一下列表和元组的区别,所以这篇文章就简洁点,以文字为主&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;列表:存放的是暂时的元素,可以更改,增添&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;元组:存放的是不可更改的元素,不可删除,不可添加,不可修改&lt;/strong&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="python" scheme="http://yoursite.com/categories/python/"/>
+    
+      <category term="语法笔记" scheme="http://yoursite.com/categories/python/%E8%AF%AD%E6%B3%95%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+      <category term="语法笔记" scheme="http://yoursite.com/tags/%E8%AF%AD%E6%B3%95%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python学习笔记_3：python 列表的使用方法—详细</title>
+    <link href="http://yoursite.com/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_3%EF%BC%9Apython%20%E5%88%97%E8%A1%A8%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%E2%80%94%E8%AF%A6%E7%BB%86.html"/>
+    <id>http://yoursite.com/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_3%EF%BC%9Apython%20%E5%88%97%E8%A1%A8%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%E2%80%94%E8%AF%A6%E7%BB%86.html</id>
+    <published>2020-06-17T10:23:56.000Z</published>
+    <updated>2020-06-17T10:26:28.650Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;今天已经开始了第三个 python 的笔记了&lt;/p&gt;
+&lt;p&gt;我想开始介绍一下列表的一些使用方法&lt;/p&gt;
+&lt;p&gt;“列表”是什么？？&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://img-blog.csdnimg.cn/20200304181714958.png&quot; alt=&quot;在这里插入图片描述&quot;&gt;&lt;/p&gt;
+&lt;p&gt;其实就是C语言的数组,不知道为什么在python中有的人说列表有的人说数组&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="python" scheme="http://yoursite.com/categories/python/"/>
+    
+      <category term="语法笔记" scheme="http://yoursite.com/categories/python/%E8%AF%AD%E6%B3%95%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+      <category term="语法笔记" scheme="http://yoursite.com/tags/%E8%AF%AD%E6%B3%95%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python学习笔记_2：判断str类型的函数</title>
+    <link href="http://yoursite.com/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_2%EF%BC%9A%E5%88%A4%E6%96%ADstr%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%87%BD%E6%95%B0.html"/>
+    <id>http://yoursite.com/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_2%EF%BC%9A%E5%88%A4%E6%96%ADstr%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%87%BD%E6%95%B0.html</id>
+    <published>2020-06-17T09:59:35.000Z</published>
+    <updated>2020-06-17T10:26:13.978Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;相信大家都喜欢表情包吧&lt;/p&gt;
+&lt;p&gt;话说学习Python一定要坚持，持之以恒，万事开头难嘛&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://img-blog.csdnimg.cn/2020030218253379.png&quot; alt=&quot;在这里插入图片描述&quot;&gt;&lt;/p&gt;
+&lt;p&gt;哈哈，稍微皮一下&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="python" scheme="http://yoursite.com/categories/python/"/>
+    
+      <category term="语法笔记" scheme="http://yoursite.com/categories/python/%E8%AF%AD%E6%B3%95%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+      <category term="语法笔记" scheme="http://yoursite.com/tags/%E8%AF%AD%E6%B3%95%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python学习笔记_1：print中end的用法 print（‘’，end=&#39;&#39;）</title>
+    <link href="http://yoursite.com/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_1%EF%BC%9Aprint%E4%B8%ADend%E7%9A%84%E7%94%A8%E6%B3%95%20print%EF%BC%88%E2%80%98%E2%80%99%EF%BC%8Cend=&#39;&#39;%EF%BC%89.html"/>
+    <id>http://yoursite.com/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_1%EF%BC%9Aprint%E4%B8%ADend%E7%9A%84%E7%94%A8%E6%B3%95%20print%EF%BC%88%E2%80%98%E2%80%99%EF%BC%8Cend=&#39;&#39;%EF%BC%89.html</id>
+    <published>2020-06-17T09:56:07.000Z</published>
+    <updated>2020-06-17T09:58:38.192Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;学了那么久的python，都没有过系统的总结一下知识点，所以我决定在这里出一次python知识点集合——Python学习笔记。&lt;br&gt;&lt;img src=&quot;https://img-blog.csdnimg.cn/20200302170928468.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70&quot; alt=&quot;在这里插入图片描述&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="python" scheme="http://yoursite.com/categories/python/"/>
+    
+      <category term="语法笔记" scheme="http://yoursite.com/categories/python/%E8%AF%AD%E6%B3%95%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+      <category term="语法笔记" scheme="http://yoursite.com/tags/%E8%AF%AD%E6%B3%95%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如何创建可直接修改后缀来改变格式的文档</title>
+    <link href="http://yoursite.com/%E5%A6%82%E4%BD%95%E5%88%9B%E5%BB%BA%E5%8F%AF%E7%9B%B4%E6%8E%A5%E4%BF%AE%E6%94%B9%E5%90%8E%E7%BC%80%E6%9D%A5%E6%94%B9%E5%8F%98%E6%A0%BC%E5%BC%8F%E7%9A%84%E6%96%87%E6%A1%A3.html"/>
+    <id>http://yoursite.com/%E5%A6%82%E4%BD%95%E5%88%9B%E5%BB%BA%E5%8F%AF%E7%9B%B4%E6%8E%A5%E4%BF%AE%E6%94%B9%E5%90%8E%E7%BC%80%E6%9D%A5%E6%94%B9%E5%8F%98%E6%A0%BC%E5%BC%8F%E7%9A%84%E6%96%87%E6%A1%A3.html</id>
+    <published>2020-06-17T09:54:03.000Z</published>
+    <updated>2020-06-17T09:55:54.080Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;程序员应该都知道，我们新建一个文本文档后&lt;/p&gt;
+&lt;p&gt;可以直接改变文本的后缀来创建相应的文件&lt;/p&gt;
+&lt;p&gt;最熟悉不过的就是 python 了，直接新建一个文本，‘txt’ 后缀改为 ‘py’&lt;/p&gt;
+&lt;p&gt;再用IDLE打开再省事不过了&lt;/p&gt;
+&lt;p&gt;但我今天重装系统后发现新建的文本不显示后缀，我也没法改：&lt;/p&gt;
     
     </summary>
     
     
       <category term="win10" scheme="http://yoursite.com/categories/win10/"/>
     
-      <category term="未安装任何音频驱动" scheme="http://yoursite.com/categories/win10/%E6%9C%AA%E5%AE%89%E8%A3%85%E4%BB%BB%E4%BD%95%E9%9F%B3%E9%A2%91%E9%A9%B1%E5%8A%A8/"/>
-    
     
       <category term="win10" scheme="http://yoursite.com/tags/win10/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python99道经典练习题答案</title>
+    <link href="http://yoursite.com/Python99%E9%81%93%E7%BB%8F%E5%85%B8%E7%BB%83%E4%B9%A0%E9%A2%98%E7%AD%94%E6%A1%88.html"/>
+    <id>http://yoursite.com/Python99%E9%81%93%E7%BB%8F%E5%85%B8%E7%BB%83%E4%B9%A0%E9%A2%98%E7%AD%94%E6%A1%88.html</id>
+    <published>2020-06-17T09:50:05.000Z</published>
+    <updated>2020-06-17T09:51:31.416Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;转载与百度文库：&lt;br&gt;&lt;a href=&quot;https://wenku.baidu.com/view/bc745bdaf6ec4afe04a1b0717fd5360cbb1a8d16.html&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="python" scheme="http://yoursite.com/categories/python/"/>
+    
+      <category term="入门" scheme="http://yoursite.com/categories/python/%E5%85%A5%E9%97%A8/"/>
+    
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+      <category term="入门练习题" scheme="http://yoursite.com/tags/%E5%85%A5%E9%97%A8%E7%BB%83%E4%B9%A0%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>鱼C论坛小甲鱼Python课后题</title>
+    <link href="http://yoursite.com/%E9%B1%BCC%E8%AE%BA%E5%9D%9B%E5%B0%8F%E7%94%B2%E9%B1%BCPython%E8%AF%BE%E5%90%8E%E9%A2%98.html"/>
+    <id>http://yoursite.com/%E9%B1%BCC%E8%AE%BA%E5%9D%9B%E5%B0%8F%E7%94%B2%E9%B1%BCPython%E8%AF%BE%E5%90%8E%E9%A2%98.html</id>
+    <published>2020-06-17T09:45:22.000Z</published>
+    <updated>2020-06-17T09:47:29.935Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span
+        
+      
+    
+    </summary>
+    
+    
+      <category term="python" scheme="http://yoursite.com/categories/python/"/>
+    
+      <category term="入门" scheme="http://yoursite.com/categories/python/%E5%85%A5%E9%97%A8/"/>
+    
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
     
   </entry>
   
