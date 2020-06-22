@@ -1,25 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Anaconda镜像下载地址</title>
-    <url>/Anaconda%E9%95%9C%E5%83%8F%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80.html</url>
-    <content><![CDATA[<p>清华大学镜像：<a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/" target="_blank" rel="noopener">https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/</a><br><img src="https://img-blog.csdnimg.cn/20200217154416803.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<a id="more"></a>
-<p>这里建议大家下载这里画圈的版本，是python3.6的Windows版本。</p>
-<p>我试了anaconda官网的下载，基本速度在10k左右；用清华镜像下载的话速度在6M上下，速度很快。</p>
-<p>安装的话就是正常安装，安装过程中全部选择默认就可以了，我也试过不用默认的安装方式，并未发现什么不同。所以不用担心。</p>
-<p>下次会发一篇关于新手如何了解anaconda的文章。</p>
-]]></content>
-      <categories>
-        <category>python</category>
-        <category>入门</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>anaconda</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Command “python setup.py egg_info” failed——完美解决</title>
     <url>/Command%20%E2%80%9Cpython%20setup.py%20egg_info%E2%80%9D%20failed%E2%80%94%E2%80%94%E5%AE%8C%E7%BE%8E%E8%A7%A3%E5%86%B3.html</url>
     <content><![CDATA[<p>用 ubuntu 安装 <code>django-mdeditor==0.1.13</code> 时报错：</p>
@@ -43,6 +24,25 @@
         <tag>python</tag>
         <tag>error&amp;库</tag>
         <tag>ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Anaconda镜像下载地址</title>
+    <url>/Anaconda%E9%95%9C%E5%83%8F%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80.html</url>
+    <content><![CDATA[<p>清华大学镜像：<a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/" target="_blank" rel="noopener">https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/</a><br><img src="https://img-blog.csdnimg.cn/20200217154416803.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<a id="more"></a>
+<p>这里建议大家下载这里画圈的版本，是python3.6的Windows版本。</p>
+<p>我试了anaconda官网的下载，基本速度在10k左右；用清华镜像下载的话速度在6M上下，速度很快。</p>
+<p>安装的话就是正常安装，安装过程中全部选择默认就可以了，我也试过不用默认的安装方式，并未发现什么不同。所以不用担心。</p>
+<p>下次会发一篇关于新手如何了解anaconda的文章。</p>
+]]></content>
+      <categories>
+        <category>python</category>
+        <category>入门</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>anaconda</tag>
       </tags>
   </entry>
   <entry>
@@ -95,61 +95,6 @@
       </categories>
       <tags>
         <tag>MATLAB</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>ERROR Cannot uninstall &#39;xxx&#39;. It is a distutils installed project and thus we cannot accurately</title>
-    <url>/ERROR%EF%BC%9ACannot%20uninstall%20&#39;xxx&#39;.%20It%20is%20a%20distutils%20installed%20project%20and%20thus%20we%20cannot%20accurately.html</url>
-    <content><![CDATA[<p>今天安装 <code>serial</code> 时报错：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">ERROR: Cannot uninstall <span class="string">'PyYAML'</span>. It <span class="keyword">is</span> a distutils installed project <span class="keyword">and</span> thus we</span><br><span class="line">       cannot accurately determine which files belong to it which would lead to </span><br><span class="line">       only a partial uninstall .</span><br><span class="line">错误：无法卸载“ PyYAML”。 这是一个distutils安装的项目，因此我们</span><br><span class="line">        无法准确确定哪些文件属于该文件，这将导致</span><br><span class="line">        仅部分卸载</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
-<p>我的环境：win10、py3.6</p>
-<p>解决办法：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">报错 Cannot uninstall <span class="string">'abcd'</span>，那就 pip install --ignore-installed abcd</span><br></pre></td></tr></table></figure>
-
-<p>因为我报错 <code>Cannot uninstall &#39;PyYAML&#39;</code>，所以</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">pip install --ignore-installed pyyaml</span><br><span class="line"><span class="comment">#Successfully installed pyyaml-5.3.1</span></span><br><span class="line"><span class="string">'安装完成后,再下载自己想要下载的包'</span></span><br><span class="line">pip install serial</span><br><span class="line"><span class="comment">#Successfully installed iso8601-0.1.12 serial-0.0.97</span></span><br></pre></td></tr></table></figure>
-<p>就成功解决了。</p>
-]]></content>
-      <categories>
-        <category>python</category>
-        <category>error&amp;库</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>error&amp;库</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>MATLAB自适应直方图均衡—adapthisteq</title>
-    <url>/MATLAB%E8%87%AA%E9%80%82%E5%BA%94%E7%9B%B4%E6%96%B9%E5%9B%BE%E5%9D%87%E8%A1%A1%E2%80%94adapthisteq.html</url>
-    <content><![CDATA[<p>今天写调用摄像头处理图像函数，用到了adapthisteq函数，顺便对adapthisteq函数做了一些总结。</p>
-<p>adapthisteq：适应直方图均衡化对比度限制器。通过转换强度图像中的值来改变图像的对比度。</p>
-<p>histeq：自适应直方图均衡。</p>
-<a id="more"></a>
-<p>与histeq函数不同的是，adapthisteq处理的是图片的小块区域的数据，而不是整个图像对比度增强，使输出区域的直方图大约匹配指定的直方图。相邻的小块用双线性插值把它们混合在一起，以消除人工诱导的边界。对比，尤其是在同质区域，可以限制，以避免放大图像中可能存在的噪声。</p>
-<p>G = adapthisteq(I, param1, val1, param2, val2, …)</p>
-<p><strong>‘NumTiles’</strong>：由正整数组成的二元向量[ m, n ]。[ m, n ]为指定小块区域的行列数，M 和 n 都必须至少为2。图像块的总数等于 m * n。 默认值为 [ 8,  8 ]。 </p>
-<p><strong>‘ClipLimit’</strong>  ：是从0到1的实数标量，用于限制对比度增强。数值越大，对比度越高。默认值为: 0.01。</p>
-<p><strong>‘NBins’</strong>：正整数标量。为构建直方图时使用的直方图设置容器数增强对比度的转换。更高的值结果导致有在更大的动态范围，代价是较慢的处理速度。 默认值: 256。</p>
-<p> <strong>‘Range’</strong>：’original’ 或 ‘full’. 控制输出图像数据的范围。 如果‘ Range’设置为‘ original’ ，则范围限制为[ min (i (：))  max (i (：))]。 否则，默认情况下，或者当‘ Range’设置为‘ full’时，将使用输出图像类的全部范围(e.g.    uint8  是 [0 255])。默认值：full。</p>
-<p><strong>‘Distribution’</strong>：’uniform’, ‘rayleigh’, ‘exponential’。通过指定分布类型，为图像块设置所需的直方图形状。 默认值：uniform。</p>
-<p><strong>‘Alpha’</strong>：是一个分布参数，当“ Dist”为“ rayleigh”或“ exponential”时可以使用这个参数。 默认值：0.4。</p>
-<p>下面是随手写的一份代码，可以直观的看到adapthisteq的使用方法和使用效果。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">I &#x3D; rgb2gray(imread(&#39;tupian.png&#39;));</span><br><span class="line">figure;</span><br><span class="line">imshow(I);</span><br><span class="line"></span><br><span class="line">I1 &#x3D; adapthisteq(I);</span><br><span class="line">figure;</span><br><span class="line">imshow(I1);</span><br><span class="line"></span><br><span class="line">I2 &#x3D; adapthisteq(I,&#39;NumTiles&#39;,[50 50]);</span><br><span class="line">figure;</span><br><span class="line">imshow(I2);</span><br><span class="line"></span><br><span class="line">I3 &#x3D; adapthisteq(I,&#39;NumTiles&#39;,[50 50],&#39;ClipLimit&#39;,0.5);</span><br><span class="line">figure;</span><br><span class="line">imshow(I3);</span><br><span class="line"></span><br><span class="line">I4 &#x3D; adapthisteq(I,&#39;NumTiles&#39;,[50 50],&#39;ClipLimit&#39;,...</span><br><span class="line">0.5,&#39;NBins&#39;,400);</span><br><span class="line">figure;</span><br><span class="line">imshow(I4);</span><br></pre></td></tr></table></figure>
-<p><img src="https://img-blog.csdnimg.cn/2020020917231924.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p><img src="https://img-blog.csdnimg.cn/20200209172340536.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200209172424575.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/2020020917250378.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200209172520303.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>这里注意第一行代码，</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">I &#x3D; rgb2gray(imread(&#39;tupian.png&#39;));</span><br><span class="line">I &#x3D; imread(&#39;tupian.png&#39;);</span><br></pre></td></tr></table></figure>
-
-<p>很多人会忘记做灰度处理导致adapthisteq使用错误。</p>
-<p>写文章时间较紧，如有错误，还请指正。</p>
-]]></content>
-      <categories>
-        <category>MATLAB</category>
-      </categories>
-      <tags>
-        <tag>MATLAB</tag>
-        <tag>语法笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -209,6 +154,38 @@
       </tags>
   </entry>
   <entry>
+    <title>MATLAB自适应直方图均衡—adapthisteq</title>
+    <url>/MATLAB%E8%87%AA%E9%80%82%E5%BA%94%E7%9B%B4%E6%96%B9%E5%9B%BE%E5%9D%87%E8%A1%A1%E2%80%94adapthisteq.html</url>
+    <content><![CDATA[<p>今天写调用摄像头处理图像函数，用到了adapthisteq函数，顺便对adapthisteq函数做了一些总结。</p>
+<p>adapthisteq：适应直方图均衡化对比度限制器。通过转换强度图像中的值来改变图像的对比度。</p>
+<p>histeq：自适应直方图均衡。</p>
+<a id="more"></a>
+<p>与histeq函数不同的是，adapthisteq处理的是图片的小块区域的数据，而不是整个图像对比度增强，使输出区域的直方图大约匹配指定的直方图。相邻的小块用双线性插值把它们混合在一起，以消除人工诱导的边界。对比，尤其是在同质区域，可以限制，以避免放大图像中可能存在的噪声。</p>
+<p>G = adapthisteq(I, param1, val1, param2, val2, …)</p>
+<p><strong>‘NumTiles’</strong>：由正整数组成的二元向量[ m, n ]。[ m, n ]为指定小块区域的行列数，M 和 n 都必须至少为2。图像块的总数等于 m * n。 默认值为 [ 8,  8 ]。 </p>
+<p><strong>‘ClipLimit’</strong>  ：是从0到1的实数标量，用于限制对比度增强。数值越大，对比度越高。默认值为: 0.01。</p>
+<p><strong>‘NBins’</strong>：正整数标量。为构建直方图时使用的直方图设置容器数增强对比度的转换。更高的值结果导致有在更大的动态范围，代价是较慢的处理速度。 默认值: 256。</p>
+<p> <strong>‘Range’</strong>：’original’ 或 ‘full’. 控制输出图像数据的范围。 如果‘ Range’设置为‘ original’ ，则范围限制为[ min (i (：))  max (i (：))]。 否则，默认情况下，或者当‘ Range’设置为‘ full’时，将使用输出图像类的全部范围(e.g.    uint8  是 [0 255])。默认值：full。</p>
+<p><strong>‘Distribution’</strong>：’uniform’, ‘rayleigh’, ‘exponential’。通过指定分布类型，为图像块设置所需的直方图形状。 默认值：uniform。</p>
+<p><strong>‘Alpha’</strong>：是一个分布参数，当“ Dist”为“ rayleigh”或“ exponential”时可以使用这个参数。 默认值：0.4。</p>
+<p>下面是随手写的一份代码，可以直观的看到adapthisteq的使用方法和使用效果。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">I &#x3D; rgb2gray(imread(&#39;tupian.png&#39;));</span><br><span class="line">figure;</span><br><span class="line">imshow(I);</span><br><span class="line"></span><br><span class="line">I1 &#x3D; adapthisteq(I);</span><br><span class="line">figure;</span><br><span class="line">imshow(I1);</span><br><span class="line"></span><br><span class="line">I2 &#x3D; adapthisteq(I,&#39;NumTiles&#39;,[50 50]);</span><br><span class="line">figure;</span><br><span class="line">imshow(I2);</span><br><span class="line"></span><br><span class="line">I3 &#x3D; adapthisteq(I,&#39;NumTiles&#39;,[50 50],&#39;ClipLimit&#39;,0.5);</span><br><span class="line">figure;</span><br><span class="line">imshow(I3);</span><br><span class="line"></span><br><span class="line">I4 &#x3D; adapthisteq(I,&#39;NumTiles&#39;,[50 50],&#39;ClipLimit&#39;,...</span><br><span class="line">0.5,&#39;NBins&#39;,400);</span><br><span class="line">figure;</span><br><span class="line">imshow(I4);</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/2020020917231924.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><img src="https://img-blog.csdnimg.cn/20200209172340536.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200209172424575.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/2020020917250378.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200209172520303.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>这里注意第一行代码，</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">I &#x3D; rgb2gray(imread(&#39;tupian.png&#39;));</span><br><span class="line">I &#x3D; imread(&#39;tupian.png&#39;);</span><br></pre></td></tr></table></figure>
+
+<p>很多人会忘记做灰度处理导致adapthisteq使用错误。</p>
+<p>写文章时间较紧，如有错误，还请指正。</p>
+]]></content>
+      <categories>
+        <category>MATLAB</category>
+      </categories>
+      <tags>
+        <tag>MATLAB</tag>
+        <tag>语法笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>ModuleNotFoundError：No module named “ckeditor”</title>
     <url>/ModuleNotFoundError%EF%BC%9ANo%20module%20named%20%E2%80%9Cckeditor%E2%80%9D.html</url>
     <content><![CDATA[<p><img src="https://img-blog.csdnimg.cn/20200518195810898.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
@@ -250,6 +227,29 @@ Did you mean &#39;conda create&#39;?</code></p>
 <p><img src="https://img-blog.csdnimg.cn/20200315230444682.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 <p><strong>等待直到下载成功</strong></p>
 <p><img src="https://img-blog.csdnimg.cn/20200315230542856.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+]]></content>
+      <categories>
+        <category>python</category>
+        <category>error&amp;库</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>error&amp;库</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>ERROR Cannot uninstall &#39;xxx&#39;. It is a distutils installed project and thus we cannot accurately</title>
+    <url>/ERROR%EF%BC%9ACannot%20uninstall%20&#39;xxx&#39;.%20It%20is%20a%20distutils%20installed%20project%20and%20thus%20we%20cannot%20accurately.html</url>
+    <content><![CDATA[<p>今天安装 <code>serial</code> 时报错：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">ERROR: Cannot uninstall <span class="string">'PyYAML'</span>. It <span class="keyword">is</span> a distutils installed project <span class="keyword">and</span> thus we</span><br><span class="line">       cannot accurately determine which files belong to it which would lead to </span><br><span class="line">       only a partial uninstall .</span><br><span class="line">错误：无法卸载“ PyYAML”。 这是一个distutils安装的项目，因此我们</span><br><span class="line">        无法准确确定哪些文件属于该文件，这将导致</span><br><span class="line">        仅部分卸载</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<p>我的环境：win10、py3.6</p>
+<p>解决办法：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">报错 Cannot uninstall <span class="string">'abcd'</span>，那就 pip install --ignore-installed abcd</span><br></pre></td></tr></table></figure>
+
+<p>因为我报错 <code>Cannot uninstall &#39;PyYAML&#39;</code>，所以</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">pip install --ignore-installed pyyaml</span><br><span class="line"><span class="comment">#Successfully installed pyyaml-5.3.1</span></span><br><span class="line"><span class="string">'安装完成后,再下载自己想要下载的包'</span></span><br><span class="line">pip install serial</span><br><span class="line"><span class="comment">#Successfully installed iso8601-0.1.12 serial-0.0.97</span></span><br></pre></td></tr></table></figure>
+<p>就成功解决了。</p>
 ]]></content>
       <categories>
         <category>python</category>
@@ -353,32 +353,6 @@ Did you mean &#39;conda create&#39;?</code></p>
       </tags>
   </entry>
   <entry>
-    <title>Python学习笔记_1：print中end的用法 print（‘’，end=&#39;&#39;）</title>
-    <url>/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_1%EF%BC%9Aprint%E4%B8%ADend%E7%9A%84%E7%94%A8%E6%B3%95%20print%EF%BC%88%E2%80%98%E2%80%99%EF%BC%8Cend=&#39;&#39;%EF%BC%89.html</url>
-    <content><![CDATA[<p>学了那么久的python，都没有过系统的总结一下知识点，所以我决定在这里出一次python知识点集合——Python学习笔记。<br><img src="https://img-blog.csdnimg.cn/20200302170928468.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<a id="more"></a>
-<p>哈哈哈哈，就当是自己随时可以查阅的笔记本了</p>
-<p>下面开始介绍第一知识点：</p>
-<p>print 中 end 的用法：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">%先让输出两个 str</span><br><span class="line">%则两个 str 一定经过一次 <span class="keyword">print</span> 的换行操作</span><br><span class="line">&gt;&gt;&gt;print(<span class="string">'ABC'</span>)</span><br><span class="line">&gt;&gt;&gt;print(<span class="string">'DEF'</span>)</span><br><span class="line">ABC</span><br><span class="line">DEF</span><br></pre></td></tr></table></figure>
-<p>如果我加上 “end”</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">&gt;&gt;&gt;print(<span class="string">'ABC'</span>,end =<span class="string">''</span>) %这里的end中没有东西</span><br><span class="line">&gt;&gt;&gt;print(<span class="string">'DEF'</span>)</span><br><span class="line">%则结果为</span><br><span class="line">ABCDEF</span><br><span class="line">%因为end的作用就是告诉<span class="keyword">print</span>，将<span class="keyword">print</span>自带</span><br><span class="line">的换行用end中指定的str代替</span><br></pre></td></tr></table></figure>
-<p>如果我将end中填入‘ ’空格</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">&gt;&gt;&gt;print(<span class="string">'ABC'</span>,end =<span class="string">' '</span>)</span><br><span class="line">&gt;&gt;&gt;print(<span class="string">'DEF'</span>)</span><br><span class="line">ABC DEF</span><br></pre></td></tr></table></figure>
-<p>如果我指定end中为其他数</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">&gt;&gt;&gt;print(<span class="string">'ABC'</span>,end =<span class="string">'123'</span>)</span><br><span class="line">&gt;&gt;&gt;print(<span class="string">'DEF'</span>)</span><br><span class="line">ABC123DEF</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>python</category>
-        <category>语法笔记</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>语法笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Python中 pip 的安装——windows系统</title>
     <url>/Python%E4%B8%AD%20pip%20%E7%9A%84%E5%AE%89%E8%A3%85%E2%80%94%E2%80%94windows%E7%B3%BB%E7%BB%9F.html</url>
     <content><![CDATA[<p>我的 Windows 环境下的 python 是没有 pip 文件的，所以想要实现 pip 命令就要手动安装pip 文件</p>
@@ -435,6 +409,32 @@ Did you mean &#39;conda create&#39;?</code></p>
       <tags>
         <tag>python</tag>
         <tag>error&amp;库</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python学习笔记_1：print中end的用法 print（‘’，end=&#39;&#39;）</title>
+    <url>/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_1%EF%BC%9Aprint%E4%B8%ADend%E7%9A%84%E7%94%A8%E6%B3%95%20print%EF%BC%88%E2%80%98%E2%80%99%EF%BC%8Cend=&#39;&#39;%EF%BC%89.html</url>
+    <content><![CDATA[<p>学了那么久的python，都没有过系统的总结一下知识点，所以我决定在这里出一次python知识点集合——Python学习笔记。<br><img src="https://img-blog.csdnimg.cn/20200302170928468.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<a id="more"></a>
+<p>哈哈哈哈，就当是自己随时可以查阅的笔记本了</p>
+<p>下面开始介绍第一知识点：</p>
+<p>print 中 end 的用法：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">%先让输出两个 str</span><br><span class="line">%则两个 str 一定经过一次 <span class="keyword">print</span> 的换行操作</span><br><span class="line">&gt;&gt;&gt;print(<span class="string">'ABC'</span>)</span><br><span class="line">&gt;&gt;&gt;print(<span class="string">'DEF'</span>)</span><br><span class="line">ABC</span><br><span class="line">DEF</span><br></pre></td></tr></table></figure>
+<p>如果我加上 “end”</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">&gt;&gt;&gt;print(<span class="string">'ABC'</span>,end =<span class="string">''</span>) %这里的end中没有东西</span><br><span class="line">&gt;&gt;&gt;print(<span class="string">'DEF'</span>)</span><br><span class="line">%则结果为</span><br><span class="line">ABCDEF</span><br><span class="line">%因为end的作用就是告诉<span class="keyword">print</span>，将<span class="keyword">print</span>自带</span><br><span class="line">的换行用end中指定的str代替</span><br></pre></td></tr></table></figure>
+<p>如果我将end中填入‘ ’空格</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">&gt;&gt;&gt;print(<span class="string">'ABC'</span>,end =<span class="string">' '</span>)</span><br><span class="line">&gt;&gt;&gt;print(<span class="string">'DEF'</span>)</span><br><span class="line">ABC DEF</span><br></pre></td></tr></table></figure>
+<p>如果我指定end中为其他数</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">&gt;&gt;&gt;print(<span class="string">'ABC'</span>,end =<span class="string">'123'</span>)</span><br><span class="line">&gt;&gt;&gt;print(<span class="string">'DEF'</span>)</span><br><span class="line">ABC123DEF</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>python</category>
+        <category>语法笔记</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>语法笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -617,31 +617,6 @@ Did you mean &#39;conda create&#39;?</code></p>
       </tags>
   </entry>
   <entry>
-    <title>Python学习笔记_8：set 函数的使用方法</title>
-    <url>/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_8%EF%BC%9Aset%20%E5%87%BD%E6%95%B0%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95.html</url>
-    <content><![CDATA[<p>前面我们介绍了python的列表，元组，dict。</p>
-<p>set就是我们所说的集合</p>
-<p>今天介绍一下set 函数的基本用法:</p>
-<p><strong>1、set的使用方法</strong></p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>I = set([<span class="number">3</span>,<span class="number">5</span>,<span class="number">2</span>,<span class="number">1</span>,<span class="number">4</span>])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(I)</span><br><span class="line">&#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>&#125;</span><br><span class="line">%set会自动将数字排序</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
-<p><strong>2、set自动合并相同元素</strong></p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>I = set([<span class="number">5</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">2</span>])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(I)</span><br><span class="line">&#123;<span class="number">2</span>,<span class="number">3</span>,<span class="number">5</span>&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>3、集合中元素是无序的</strong></p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>I = set([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>I[<span class="number">1</span>]</span><br><span class="line">%%就会报错</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"&lt;pyshell#14&gt;"</span>, line <span class="number">1</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">    I[<span class="number">1</span>]</span><br><span class="line">TypeError: <span class="string">'set'</span> object does <span class="keyword">not</span> support indexing</span><br></pre></td></tr></table></figure>
-<p><strong>4、集合 set 增减元素</strong></p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>I.add(<span class="number">5</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>I</span><br><span class="line">&#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>I.remove(<span class="number">5</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>I</span><br><span class="line">&#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>python</category>
-        <category>语法笔记</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>语法笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Python学习笔记_7：index() 和 dict() 的用法详解</title>
     <url>/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_7%EF%BC%9Aindex()%20%E5%92%8C%20dict()%20%E7%9A%84%E7%94%A8%E6%B3%95%E8%AF%A6%E8%A7%A3.html</url>
     <content><![CDATA[<p>前面的笔记中我详细介绍了列表和元组</p>
@@ -659,6 +634,31 @@ Did you mean &#39;conda create&#39;?</code></p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>people = [<span class="string">'东北大鹌鹑'</span>,<span class="string">'周淑怡'</span>,<span class="string">'刘某人'</span>,<span class="string">'胡歌'</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>mapping = [<span class="string">'小胖子'</span>,<span class="string">'大美女'</span>,<span class="string">'反向抽烟'</span>,<span class="string">'艺术家'</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(<span class="string">'周淑怡是%s'</span> %(mapping[people.index(<span class="string">'周淑怡'</span>)]))</span><br><span class="line">周淑怡是大美女</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(<span class="string">'胡歌是%s'</span> %(mapping[people.index(<span class="string">'胡歌'</span>)]))</span><br><span class="line">胡歌是艺术家</span><br></pre></td></tr></table></figure>
 
 <p><strong>总结：</strong><br>本来是想把 dict() 函数单独详细的说一下，但是写文章的时候突然想起来 index() 在这种情况下可以代替 dict() 的用法，而且 dict() 也比较简单，就在这里一起介绍了。</p>
+]]></content>
+      <categories>
+        <category>python</category>
+        <category>语法笔记</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>语法笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python学习笔记_8：set 函数的使用方法</title>
+    <url>/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_8%EF%BC%9Aset%20%E5%87%BD%E6%95%B0%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95.html</url>
+    <content><![CDATA[<p>前面我们介绍了python的列表，元组，dict。</p>
+<p>set就是我们所说的集合</p>
+<p>今天介绍一下set 函数的基本用法:</p>
+<p><strong>1、set的使用方法</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>I = set([<span class="number">3</span>,<span class="number">5</span>,<span class="number">2</span>,<span class="number">1</span>,<span class="number">4</span>])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(I)</span><br><span class="line">&#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>&#125;</span><br><span class="line">%set会自动将数字排序</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<p><strong>2、set自动合并相同元素</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>I = set([<span class="number">5</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">2</span>])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(I)</span><br><span class="line">&#123;<span class="number">2</span>,<span class="number">3</span>,<span class="number">5</span>&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>3、集合中元素是无序的</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>I = set([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>I[<span class="number">1</span>]</span><br><span class="line">%%就会报错</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"&lt;pyshell#14&gt;"</span>, line <span class="number">1</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">    I[<span class="number">1</span>]</span><br><span class="line">TypeError: <span class="string">'set'</span> object does <span class="keyword">not</span> support indexing</span><br></pre></td></tr></table></figure>
+<p><strong>4、集合 set 增减元素</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>I.add(<span class="number">5</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>I</span><br><span class="line">&#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>I.remove(<span class="number">5</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>I</span><br><span class="line">&#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>python</category>
@@ -727,6 +727,27 @@ Did you mean &#39;conda create&#39;?</code></p>
       </tags>
   </entry>
   <entry>
+    <title>Python的Scripts文件夹为空——已解决</title>
+    <url>/Python%E7%9A%84Scripts%E6%96%87%E4%BB%B6%E5%A4%B9%E4%B8%BA%E7%A9%BA%E2%80%94%E2%80%94%E5%B7%B2%E8%A7%A3%E5%86%B3.html</url>
+    <content><![CDATA[<p>如果有 windows 环境的 python 的话，很可能会出现 Scripts 文件夹为空，这样就无法正常在 cmd 正常使用 pip 命令。</p>
+<p><strong>解决方法：</strong></p>
+<p> cmd 中输入： <code>python -m ensurepip</code></p>
+<p><img src="https://img-blog.csdnimg.cn/20200313174634904.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<a id="more"></a>
+<p>文件夹下就出现 exe 文件</p>
+<p><img src="https://img-blog.csdnimg.cn/20200313174720149.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>问题解决。</p>
+]]></content>
+      <categories>
+        <category>python</category>
+        <category>error&amp;库</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>error&amp;库</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>VLFeat工具包下载</title>
     <url>/VLFeat%E5%B7%A5%E5%85%B7%E5%8C%85%E4%B8%8B%E8%BD%BD.html</url>
     <content><![CDATA[<p><strong>vlfeat 官方下载链接：</strong><a href="https://www.vlfeat.org/" target="_blank" rel="noopener">https://www.vlfeat.org/</a></p>
@@ -748,27 +769,6 @@ Did you mean &#39;conda create&#39;?</code></p>
       </categories>
       <tags>
         <tag>MATLAB</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python的Scripts文件夹为空——已解决</title>
-    <url>/Python%E7%9A%84Scripts%E6%96%87%E4%BB%B6%E5%A4%B9%E4%B8%BA%E7%A9%BA%E2%80%94%E2%80%94%E5%B7%B2%E8%A7%A3%E5%86%B3.html</url>
-    <content><![CDATA[<p>如果有 windows 环境的 python 的话，很可能会出现 Scripts 文件夹为空，这样就无法正常在 cmd 正常使用 pip 命令。</p>
-<p><strong>解决方法：</strong></p>
-<p> cmd 中输入： <code>python -m ensurepip</code></p>
-<p><img src="https://img-blog.csdnimg.cn/20200313174634904.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<a id="more"></a>
-<p>文件夹下就出现 exe 文件</p>
-<p><img src="https://img-blog.csdnimg.cn/20200313174720149.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>问题解决。</p>
-]]></content>
-      <categories>
-        <category>python</category>
-        <category>error&amp;库</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>error&amp;库</tag>
       </tags>
   </entry>
   <entry>
@@ -848,41 +848,6 @@ Did you mean &#39;conda create&#39;?</code></p>
       </tags>
   </entry>
   <entry>
-    <title>anaconda安装 pytorch——详解</title>
-    <url>/anaconda%E5%AE%89%E8%A3%85%20pytorch%E2%80%94%E2%80%94%E8%AF%A6%E8%A7%A3.html</url>
-    <content><![CDATA[<h2 id="事件前言："><a href="#事件前言：" class="headerlink" title="事件前言："></a>事件前言：</h2><p>今天凌晨2点多时清华镜像源还可以正常使用，但是刚刚我电脑却使用不了了</p>
-<blockquote>
-<p>使用中科大、阿里云等国内镜像的时候，一直报错：<br><code>Warning: &#39;https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/&#39; already in &#39;channels&#39; list, moving to the top</code></p>
-</blockquote>
-<p>无奈我只能自己下载了</p>
-<p><a href="https://download.pytorch.org/whl/torch_stable.html" target="_blank" rel="noopener">pytorch下载链接</a> &lt;———点击这里进入网站</p>
-<p><img src="https://img-blog.csdnimg.cn/20200316185114665.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<a id="more"></a>
-<h2 id="下载方法："><a href="#下载方法：" class="headerlink" title="下载方法："></a>下载方法：</h2><p>我需要下载两个文件： <code>torch-1.4</code> 和 <code>torchvision-0.4</code></p>
-<p><strong>torch 我选择</strong> <code>torch-1.4.0+cpu-cp36-cp36m-win_amd64.whl</code><br>（我的环境是 windows 下的 python3.6 ）<br><img src="https://img-blog.csdnimg.cn/20200316185343599.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p><strong>torchvision 我选择：</strong>  <code>torchvision-0.4.2+cpu-cp36-cp36m-win_amd64.whl</code><br><img src="https://img-blog.csdnimg.cn/20200316185712114.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>这个 whl 后缀的文件迅雷应该不能下载，所以等待谷歌慢慢下载吧</p>
-<h2 id="安装："><a href="#安装：" class="headerlink" title="安装："></a>安装：</h2><p>进入环境：</p>
-<blockquote>
-<p>输入安装 torch 的命令：<br>pip install C:\Users\27511\Desktop\torch-1.4.0+cpu-cp36-cp36m-win_amd64.whl</p>
-</blockquote>
-<p><img src="https://img-blog.csdnimg.cn/20200316190046223.png" alt="在这里插入图片描述"></p>
-<blockquote>
-<p>输入安装 torchvision 的命令：<br>pip install C:\Users\27511\Desktop\torchvision-0.4.2+cpu-cp36-cp36m-win_amd64.whl</p>
-</blockquote>
-<p><img src="https://img-blog.csdnimg.cn/20200316190159196.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>这样就安装成功了。</p>
-<p>注意：版本不能乱下载，不然可能会安装不了</p>
-<p>如果有同学对本文方法不明白的可以评论联系我。</p>
-]]></content>
-      <categories>
-        <category>python</category>
-        <category>error&amp;库</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>error&amp;库</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>anaconda 配置 yolov3 环境</title>
     <url>/anaconda%20%E9%85%8D%E7%BD%AE%20yolov3%20%E7%8E%AF%E5%A2%83.html</url>
     <content><![CDATA[<h2 id="1、-使用清华镜像创建环境"><a href="#1、-使用清华镜像创建环境" class="headerlink" title="1、 使用清华镜像创建环境"></a>1、 使用清华镜像创建环境</h2><p>输入：</p>
@@ -919,6 +884,41 @@ Did you mean &#39;conda create&#39;?</code></p>
       <tags>
         <tag>python</tag>
         <tag>机器视觉</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>anaconda安装 pytorch——详解</title>
+    <url>/anaconda%E5%AE%89%E8%A3%85%20pytorch%E2%80%94%E2%80%94%E8%AF%A6%E8%A7%A3.html</url>
+    <content><![CDATA[<h2 id="事件前言："><a href="#事件前言：" class="headerlink" title="事件前言："></a>事件前言：</h2><p>今天凌晨2点多时清华镜像源还可以正常使用，但是刚刚我电脑却使用不了了</p>
+<blockquote>
+<p>使用中科大、阿里云等国内镜像的时候，一直报错：<br><code>Warning: &#39;https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/&#39; already in &#39;channels&#39; list, moving to the top</code></p>
+</blockquote>
+<p>无奈我只能自己下载了</p>
+<p><a href="https://download.pytorch.org/whl/torch_stable.html" target="_blank" rel="noopener">pytorch下载链接</a> &lt;———点击这里进入网站</p>
+<p><img src="https://img-blog.csdnimg.cn/20200316185114665.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<a id="more"></a>
+<h2 id="下载方法："><a href="#下载方法：" class="headerlink" title="下载方法："></a>下载方法：</h2><p>我需要下载两个文件： <code>torch-1.4</code> 和 <code>torchvision-0.4</code></p>
+<p><strong>torch 我选择</strong> <code>torch-1.4.0+cpu-cp36-cp36m-win_amd64.whl</code><br>（我的环境是 windows 下的 python3.6 ）<br><img src="https://img-blog.csdnimg.cn/20200316185343599.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><strong>torchvision 我选择：</strong>  <code>torchvision-0.4.2+cpu-cp36-cp36m-win_amd64.whl</code><br><img src="https://img-blog.csdnimg.cn/20200316185712114.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>这个 whl 后缀的文件迅雷应该不能下载，所以等待谷歌慢慢下载吧</p>
+<h2 id="安装："><a href="#安装：" class="headerlink" title="安装："></a>安装：</h2><p>进入环境：</p>
+<blockquote>
+<p>输入安装 torch 的命令：<br>pip install C:\Users\27511\Desktop\torch-1.4.0+cpu-cp36-cp36m-win_amd64.whl</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/20200316190046223.png" alt="在这里插入图片描述"></p>
+<blockquote>
+<p>输入安装 torchvision 的命令：<br>pip install C:\Users\27511\Desktop\torchvision-0.4.2+cpu-cp36-cp36m-win_amd64.whl</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/20200316190159196.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>这样就安装成功了。</p>
+<p>注意：版本不能乱下载，不然可能会安装不了</p>
+<p>如果有同学对本文方法不明白的可以评论联系我。</p>
+]]></content>
+      <categories>
+        <category>python</category>
+        <category>error&amp;库</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>error&amp;库</tag>
       </tags>
   </entry>
   <entry>
