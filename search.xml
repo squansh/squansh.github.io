@@ -46,29 +46,6 @@
       </tags>
   </entry>
   <entry>
-    <title>ERROR Cannot uninstall &#39;xxx&#39;. It is a distutils installed project and thus we cannot accurately</title>
-    <url>/ERROR%EF%BC%9ACannot%20uninstall%20&#39;xxx&#39;.%20It%20is%20a%20distutils%20installed%20project%20and%20thus%20we%20cannot%20accurately.html</url>
-    <content><![CDATA[<p>今天安装 <code>serial</code> 时报错：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">ERROR: Cannot uninstall <span class="string">'PyYAML'</span>. It <span class="keyword">is</span> a distutils installed project <span class="keyword">and</span> thus we</span><br><span class="line">       cannot accurately determine which files belong to it which would lead to </span><br><span class="line">       only a partial uninstall .</span><br><span class="line">错误：无法卸载“ PyYAML”。 这是一个distutils安装的项目，因此我们</span><br><span class="line">        无法准确确定哪些文件属于该文件，这将导致</span><br><span class="line">        仅部分卸载</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
-<p>我的环境：win10、py3.6</p>
-<p>解决办法：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">报错 Cannot uninstall <span class="string">'abcd'</span>，那就 pip install --ignore-installed abcd</span><br></pre></td></tr></table></figure>
-
-<p>因为我报错 <code>Cannot uninstall &#39;PyYAML&#39;</code>，所以</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">pip install --ignore-installed pyyaml</span><br><span class="line"><span class="comment">#Successfully installed pyyaml-5.3.1</span></span><br><span class="line"><span class="string">'安装完成后,再下载自己想要下载的包'</span></span><br><span class="line">pip install serial</span><br><span class="line"><span class="comment">#Successfully installed iso8601-0.1.12 serial-0.0.97</span></span><br></pre></td></tr></table></figure>
-<p>就成功解决了。</p>
-]]></content>
-      <categories>
-        <category>python</category>
-        <category>error&amp;库</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>error&amp;库</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>MATLAB 的global函数（全局变量）—从python和MAT实例中详细解释</title>
     <url>/MATLAB%20%E7%9A%84global%E5%87%BD%E6%95%B0%EF%BC%88%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F%EF%BC%89%E2%80%94%E4%BB%8Epython%E5%92%8CMAT%E5%AE%9E%E4%BE%8B%E4%B8%AD%E8%AF%A6%E7%BB%86%E8%A7%A3%E9%87%8A.html</url>
     <content><![CDATA[<p>今天本来发布了用摄像头 gui 拍照的程序，然后有人私信我问其中的global函数的使用方法。</p>
@@ -121,20 +98,26 @@
       </tags>
   </entry>
   <entry>
-    <title>MATLAB安装USB Webcams工具箱出现‘error’</title>
-    <url>/MATLAB%E5%AE%89%E8%A3%85USB%20Webcams%E5%B7%A5%E5%85%B7%E7%AE%B1%E5%87%BA%E7%8E%B0%E2%80%98error%E2%80%99.html</url>
-    <content><![CDATA[<p>下载matlab的Support Package for USB Webcams</p>
-<p><img src="https://img-blog.csdnimg.cn/20200208215954945.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+    <title>ERROR Cannot uninstall &#39;xxx&#39;. It is a distutils installed project and thus we cannot accurately</title>
+    <url>/ERROR%EF%BC%9ACannot%20uninstall%20&#39;xxx&#39;.%20It%20is%20a%20distutils%20installed%20project%20and%20thus%20we%20cannot%20accurately.html</url>
+    <content><![CDATA[<p>今天安装 <code>serial</code> 时报错：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">ERROR: Cannot uninstall <span class="string">'PyYAML'</span>. It <span class="keyword">is</span> a distutils installed project <span class="keyword">and</span> thus we</span><br><span class="line">       cannot accurately determine which files belong to it which would lead to </span><br><span class="line">       only a partial uninstall .</span><br><span class="line">错误：无法卸载“ PyYAML”。 这是一个distutils安装的项目，因此我们</span><br><span class="line">        无法准确确定哪些文件属于该文件，这将导致</span><br><span class="line">        仅部分卸载</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
-<p>点击安装后出现错误，无法安装<br> receive the error “There was a problem downloading the Support Package”<br> 出现这种情况一般是因为电脑和工具箱的服务器连接错误，可能是防火墙阻止连接，可以暂时禁止防护软件再重新安装。<br> 在这里说一下：有些情况重新试几次就行，但是如果一直不行就可能是proxy、firewall的原因。<br>我经过一番折腾已经下载完成了：<br><img src="https://img-blog.csdnimg.cn/20200208224301292.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>对于proxy问题，大家可以找下相关文章。<br>对于firewall<br>如果正在运行firewall，需要绕过阻碍连接mathworks服务器。<br>mathworks安装程序需要联系以下端口和地址上的mathworks服务器：<br>登录：mathworks.com<br>服务.mathworks.com<br>TCP端口80和443<br>Firewall需要绕过两个端口上两个地址的阻碍连接，<br>这些服务器不使用静态IP地址，为动态IP地址。所以需要使用域名搜索。   </p>
-<p>如果有问题可以再联系我，也可以找相关文章，此篇文章会在以后遇到具体问题时再做详细更改。           </p>
+<p>我的环境：win10、py3.6</p>
+<p>解决办法：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">报错 Cannot uninstall <span class="string">'abcd'</span>，那就 pip install --ignore-installed abcd</span><br></pre></td></tr></table></figure>
+
+<p>因为我报错 <code>Cannot uninstall &#39;PyYAML&#39;</code>，所以</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">pip install --ignore-installed pyyaml</span><br><span class="line"><span class="comment">#Successfully installed pyyaml-5.3.1</span></span><br><span class="line"><span class="string">'安装完成后,再下载自己想要下载的包'</span></span><br><span class="line">pip install serial</span><br><span class="line"><span class="comment">#Successfully installed iso8601-0.1.12 serial-0.0.97</span></span><br></pre></td></tr></table></figure>
+<p>就成功解决了。</p>
 ]]></content>
       <categories>
-        <category>MATLAB</category>
+        <category>python</category>
+        <category>error&amp;库</category>
       </categories>
       <tags>
-        <tag>MATLAB</tag>
+        <tag>python</tag>
+        <tag>error&amp;库</tag>
       </tags>
   </entry>
   <entry>
@@ -167,6 +150,23 @@
       <tags>
         <tag>MATLAB</tag>
         <tag>语法笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>MATLAB安装USB Webcams工具箱出现‘error’</title>
+    <url>/MATLAB%E5%AE%89%E8%A3%85USB%20Webcams%E5%B7%A5%E5%85%B7%E7%AE%B1%E5%87%BA%E7%8E%B0%E2%80%98error%E2%80%99.html</url>
+    <content><![CDATA[<p>下载matlab的Support Package for USB Webcams</p>
+<p><img src="https://img-blog.csdnimg.cn/20200208215954945.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<a id="more"></a>
+<p>点击安装后出现错误，无法安装<br> receive the error “There was a problem downloading the Support Package”<br> 出现这种情况一般是因为电脑和工具箱的服务器连接错误，可能是防火墙阻止连接，可以暂时禁止防护软件再重新安装。<br> 在这里说一下：有些情况重新试几次就行，但是如果一直不行就可能是proxy、firewall的原因。<br>我经过一番折腾已经下载完成了：<br><img src="https://img-blog.csdnimg.cn/20200208224301292.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>对于proxy问题，大家可以找下相关文章。<br>对于firewall<br>如果正在运行firewall，需要绕过阻碍连接mathworks服务器。<br>mathworks安装程序需要联系以下端口和地址上的mathworks服务器：<br>登录：mathworks.com<br>服务.mathworks.com<br>TCP端口80和443<br>Firewall需要绕过两个端口上两个地址的阻碍连接，<br>这些服务器不使用静态IP地址，为动态IP地址。所以需要使用域名搜索。   </p>
+<p>如果有问题可以再联系我，也可以找相关文章，此篇文章会在以后遇到具体问题时再做详细更改。           </p>
+]]></content>
+      <categories>
+        <category>MATLAB</category>
+      </categories>
+      <tags>
+        <tag>MATLAB</tag>
       </tags>
   </entry>
   <entry>
@@ -353,6 +353,32 @@ Did you mean &#39;conda create&#39;?</code></p>
       </tags>
   </entry>
   <entry>
+    <title>Python学习笔记_1：print中end的用法 print（‘’，end=&#39;&#39;）</title>
+    <url>/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_1%EF%BC%9Aprint%E4%B8%ADend%E7%9A%84%E7%94%A8%E6%B3%95%20print%EF%BC%88%E2%80%98%E2%80%99%EF%BC%8Cend=&#39;&#39;%EF%BC%89.html</url>
+    <content><![CDATA[<p>学了那么久的python，都没有过系统的总结一下知识点，所以我决定在这里出一次python知识点集合——Python学习笔记。<br><img src="https://img-blog.csdnimg.cn/20200302170928468.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<a id="more"></a>
+<p>哈哈哈哈，就当是自己随时可以查阅的笔记本了</p>
+<p>下面开始介绍第一知识点：</p>
+<p>print 中 end 的用法：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">%先让输出两个 str</span><br><span class="line">%则两个 str 一定经过一次 <span class="keyword">print</span> 的换行操作</span><br><span class="line">&gt;&gt;&gt;print(<span class="string">'ABC'</span>)</span><br><span class="line">&gt;&gt;&gt;print(<span class="string">'DEF'</span>)</span><br><span class="line">ABC</span><br><span class="line">DEF</span><br></pre></td></tr></table></figure>
+<p>如果我加上 “end”</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">&gt;&gt;&gt;print(<span class="string">'ABC'</span>,end =<span class="string">''</span>) %这里的end中没有东西</span><br><span class="line">&gt;&gt;&gt;print(<span class="string">'DEF'</span>)</span><br><span class="line">%则结果为</span><br><span class="line">ABCDEF</span><br><span class="line">%因为end的作用就是告诉<span class="keyword">print</span>，将<span class="keyword">print</span>自带</span><br><span class="line">的换行用end中指定的str代替</span><br></pre></td></tr></table></figure>
+<p>如果我将end中填入‘ ’空格</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">&gt;&gt;&gt;print(<span class="string">'ABC'</span>,end =<span class="string">' '</span>)</span><br><span class="line">&gt;&gt;&gt;print(<span class="string">'DEF'</span>)</span><br><span class="line">ABC DEF</span><br></pre></td></tr></table></figure>
+<p>如果我指定end中为其他数</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">&gt;&gt;&gt;print(<span class="string">'ABC'</span>,end =<span class="string">'123'</span>)</span><br><span class="line">&gt;&gt;&gt;print(<span class="string">'DEF'</span>)</span><br><span class="line">ABC123DEF</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>python</category>
+        <category>语法笔记</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>语法笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Python中 pip 的安装——windows系统</title>
     <url>/Python%E4%B8%AD%20pip%20%E7%9A%84%E5%AE%89%E8%A3%85%E2%80%94%E2%80%94windows%E7%B3%BB%E7%BB%9F.html</url>
     <content><![CDATA[<p>我的 Windows 环境下的 python 是没有 pip 文件的，所以想要实现 pip 命令就要手动安装pip 文件</p>
@@ -409,32 +435,6 @@ Did you mean &#39;conda create&#39;?</code></p>
       <tags>
         <tag>python</tag>
         <tag>error&amp;库</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python学习笔记_1：print中end的用法 print（‘’，end=&#39;&#39;）</title>
-    <url>/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_1%EF%BC%9Aprint%E4%B8%ADend%E7%9A%84%E7%94%A8%E6%B3%95%20print%EF%BC%88%E2%80%98%E2%80%99%EF%BC%8Cend=&#39;&#39;%EF%BC%89.html</url>
-    <content><![CDATA[<p>学了那么久的python，都没有过系统的总结一下知识点，所以我决定在这里出一次python知识点集合——Python学习笔记。<br><img src="https://img-blog.csdnimg.cn/20200302170928468.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<a id="more"></a>
-<p>哈哈哈哈，就当是自己随时可以查阅的笔记本了</p>
-<p>下面开始介绍第一知识点：</p>
-<p>print 中 end 的用法：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">%先让输出两个 str</span><br><span class="line">%则两个 str 一定经过一次 <span class="keyword">print</span> 的换行操作</span><br><span class="line">&gt;&gt;&gt;print(<span class="string">'ABC'</span>)</span><br><span class="line">&gt;&gt;&gt;print(<span class="string">'DEF'</span>)</span><br><span class="line">ABC</span><br><span class="line">DEF</span><br></pre></td></tr></table></figure>
-<p>如果我加上 “end”</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">&gt;&gt;&gt;print(<span class="string">'ABC'</span>,end =<span class="string">''</span>) %这里的end中没有东西</span><br><span class="line">&gt;&gt;&gt;print(<span class="string">'DEF'</span>)</span><br><span class="line">%则结果为</span><br><span class="line">ABCDEF</span><br><span class="line">%因为end的作用就是告诉<span class="keyword">print</span>，将<span class="keyword">print</span>自带</span><br><span class="line">的换行用end中指定的str代替</span><br></pre></td></tr></table></figure>
-<p>如果我将end中填入‘ ’空格</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">&gt;&gt;&gt;print(<span class="string">'ABC'</span>,end =<span class="string">' '</span>)</span><br><span class="line">&gt;&gt;&gt;print(<span class="string">'DEF'</span>)</span><br><span class="line">ABC DEF</span><br></pre></td></tr></table></figure>
-<p>如果我指定end中为其他数</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">&gt;&gt;&gt;print(<span class="string">'ABC'</span>,end =<span class="string">'123'</span>)</span><br><span class="line">&gt;&gt;&gt;print(<span class="string">'DEF'</span>)</span><br><span class="line">ABC123DEF</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>python</category>
-        <category>语法笔记</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>语法笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -568,6 +568,28 @@ Did you mean &#39;conda create&#39;?</code></p>
       </tags>
   </entry>
   <entry>
+    <title>Python学习笔记_5：字符串格式化符号及进制转换</title>
+    <url>/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_5%EF%BC%9A%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%A0%BC%E5%BC%8F%E5%8C%96%E7%AC%A6%E5%8F%B7%E5%8F%8A%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2.html</url>
+    <content><![CDATA[<p>介绍下经常用得到的格式化字符</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">%c	：格式化字符及其ASCII码</span><br><span class="line">%s	：格式化字符串</span><br><span class="line">%d	：格式化整数</span><br><span class="line">%f	：可指定小数点精度</span><br><span class="line">%e	：用科学计数法表示小数</span><br><span class="line">%g	：根据值的的具体情况使用%f或%e</span><br><span class="line">%o	：八进制</span><br><span class="line">%x	：十六进制</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<hr>
+<p>简单的进制转换：<br>1、十六进制转换</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>I = input(<span class="string">'请输入一个数'</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>I = int(I)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(<span class="string">'%x'</span> %I)</span><br></pre></td></tr></table></figure>
+<p>2、八进制转换</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">I = input(<span class="string">'请输入一个数'</span>)</span><br><span class="line">I = int(I)</span><br><span class="line">print(<span class="string">'%o'</span> %I)</span><br></pre></td></tr></table></figure>
+<p>3、二进制转换</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">%%% python 中的二进制可以直接用 bin() 函数处理</span><br><span class="line">I = input(<span class="string">'请输入一个数'</span>)</span><br><span class="line">I = int(I)</span><br><span class="line">print(bin(I))</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>python</category>
+        <category>语法笔记</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>语法笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Python学习笔记_6：global 与 nanlacal 的区别</title>
     <url>/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_6%EF%BC%9Aglobal%20%E4%B8%8E%20nanlacal%20%E7%9A%84%E5%8C%BA%E5%88%AB.html</url>
     <content><![CDATA[<p>之前我在 matlab 的笔记里介绍过一次 global 的用法</p>
@@ -595,18 +617,21 @@ Did you mean &#39;conda create&#39;?</code></p>
       </tags>
   </entry>
   <entry>
-    <title>Python学习笔记_5：字符串格式化符号及进制转换</title>
-    <url>/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_5%EF%BC%9A%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%A0%BC%E5%BC%8F%E5%8C%96%E7%AC%A6%E5%8F%B7%E5%8F%8A%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2.html</url>
-    <content><![CDATA[<p>介绍下经常用得到的格式化字符</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">%c	：格式化字符及其ASCII码</span><br><span class="line">%s	：格式化字符串</span><br><span class="line">%d	：格式化整数</span><br><span class="line">%f	：可指定小数点精度</span><br><span class="line">%e	：用科学计数法表示小数</span><br><span class="line">%g	：根据值的的具体情况使用%f或%e</span><br><span class="line">%o	：八进制</span><br><span class="line">%x	：十六进制</span><br></pre></td></tr></table></figure>
+    <title>Python学习笔记_8：set 函数的使用方法</title>
+    <url>/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_8%EF%BC%9Aset%20%E5%87%BD%E6%95%B0%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95.html</url>
+    <content><![CDATA[<p>前面我们介绍了python的列表，元组，dict。</p>
+<p>set就是我们所说的集合</p>
+<p>今天介绍一下set 函数的基本用法:</p>
+<p><strong>1、set的使用方法</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>I = set([<span class="number">3</span>,<span class="number">5</span>,<span class="number">2</span>,<span class="number">1</span>,<span class="number">4</span>])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(I)</span><br><span class="line">&#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>&#125;</span><br><span class="line">%set会自动将数字排序</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
-<hr>
-<p>简单的进制转换：<br>1、十六进制转换</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>I = input(<span class="string">'请输入一个数'</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>I = int(I)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(<span class="string">'%x'</span> %I)</span><br></pre></td></tr></table></figure>
-<p>2、八进制转换</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">I = input(<span class="string">'请输入一个数'</span>)</span><br><span class="line">I = int(I)</span><br><span class="line">print(<span class="string">'%o'</span> %I)</span><br></pre></td></tr></table></figure>
-<p>3、二进制转换</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">%%% python 中的二进制可以直接用 bin() 函数处理</span><br><span class="line">I = input(<span class="string">'请输入一个数'</span>)</span><br><span class="line">I = int(I)</span><br><span class="line">print(bin(I))</span><br></pre></td></tr></table></figure>]]></content>
+<p><strong>2、set自动合并相同元素</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>I = set([<span class="number">5</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">2</span>])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(I)</span><br><span class="line">&#123;<span class="number">2</span>,<span class="number">3</span>,<span class="number">5</span>&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>3、集合中元素是无序的</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>I = set([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>I[<span class="number">1</span>]</span><br><span class="line">%%就会报错</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"&lt;pyshell#14&gt;"</span>, line <span class="number">1</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">    I[<span class="number">1</span>]</span><br><span class="line">TypeError: <span class="string">'set'</span> object does <span class="keyword">not</span> support indexing</span><br></pre></td></tr></table></figure>
+<p><strong>4、集合 set 增减元素</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>I.add(<span class="number">5</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>I</span><br><span class="line">&#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>I.remove(<span class="number">5</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>I</span><br><span class="line">&#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
       <categories>
         <category>python</category>
         <category>语法笔记</category>
@@ -634,31 +659,6 @@ Did you mean &#39;conda create&#39;?</code></p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>people = [<span class="string">'东北大鹌鹑'</span>,<span class="string">'周淑怡'</span>,<span class="string">'刘某人'</span>,<span class="string">'胡歌'</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>mapping = [<span class="string">'小胖子'</span>,<span class="string">'大美女'</span>,<span class="string">'反向抽烟'</span>,<span class="string">'艺术家'</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(<span class="string">'周淑怡是%s'</span> %(mapping[people.index(<span class="string">'周淑怡'</span>)]))</span><br><span class="line">周淑怡是大美女</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(<span class="string">'胡歌是%s'</span> %(mapping[people.index(<span class="string">'胡歌'</span>)]))</span><br><span class="line">胡歌是艺术家</span><br></pre></td></tr></table></figure>
 
 <p><strong>总结：</strong><br>本来是想把 dict() 函数单独详细的说一下，但是写文章的时候突然想起来 index() 在这种情况下可以代替 dict() 的用法，而且 dict() 也比较简单，就在这里一起介绍了。</p>
-]]></content>
-      <categories>
-        <category>python</category>
-        <category>语法笔记</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>语法笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python学习笔记_8：set 函数的使用方法</title>
-    <url>/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_8%EF%BC%9Aset%20%E5%87%BD%E6%95%B0%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95.html</url>
-    <content><![CDATA[<p>前面我们介绍了python的列表，元组，dict。</p>
-<p>set就是我们所说的集合</p>
-<p>今天介绍一下set 函数的基本用法:</p>
-<p><strong>1、set的使用方法</strong></p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>I = set([<span class="number">3</span>,<span class="number">5</span>,<span class="number">2</span>,<span class="number">1</span>,<span class="number">4</span>])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(I)</span><br><span class="line">&#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>&#125;</span><br><span class="line">%set会自动将数字排序</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
-<p><strong>2、set自动合并相同元素</strong></p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>I = set([<span class="number">5</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">2</span>])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(I)</span><br><span class="line">&#123;<span class="number">2</span>,<span class="number">3</span>,<span class="number">5</span>&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>3、集合中元素是无序的</strong></p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>I = set([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>I[<span class="number">1</span>]</span><br><span class="line">%%就会报错</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"&lt;pyshell#14&gt;"</span>, line <span class="number">1</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">    I[<span class="number">1</span>]</span><br><span class="line">TypeError: <span class="string">'set'</span> object does <span class="keyword">not</span> support indexing</span><br></pre></td></tr></table></figure>
-<p><strong>4、集合 set 增减元素</strong></p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>I.add(<span class="number">5</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>I</span><br><span class="line">&#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>I.remove(<span class="number">5</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>I</span><br><span class="line">&#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>python</category>
@@ -727,27 +727,6 @@ Did you mean &#39;conda create&#39;?</code></p>
       </tags>
   </entry>
   <entry>
-    <title>Python的Scripts文件夹为空——已解决</title>
-    <url>/Python%E7%9A%84Scripts%E6%96%87%E4%BB%B6%E5%A4%B9%E4%B8%BA%E7%A9%BA%E2%80%94%E2%80%94%E5%B7%B2%E8%A7%A3%E5%86%B3.html</url>
-    <content><![CDATA[<p>如果有 windows 环境的 python 的话，很可能会出现 Scripts 文件夹为空，这样就无法正常在 cmd 正常使用 pip 命令。</p>
-<p><strong>解决方法：</strong></p>
-<p> cmd 中输入： <code>python -m ensurepip</code></p>
-<p><img src="https://img-blog.csdnimg.cn/20200313174634904.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<a id="more"></a>
-<p>文件夹下就出现 exe 文件</p>
-<p><img src="https://img-blog.csdnimg.cn/20200313174720149.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>问题解决。</p>
-]]></content>
-      <categories>
-        <category>python</category>
-        <category>error&amp;库</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>error&amp;库</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>VLFeat工具包下载</title>
     <url>/VLFeat%E5%B7%A5%E5%85%B7%E5%8C%85%E4%B8%8B%E8%BD%BD.html</url>
     <content><![CDATA[<p><strong>vlfeat 官方下载链接：</strong><a href="https://www.vlfeat.org/" target="_blank" rel="noopener">https://www.vlfeat.org/</a></p>
@@ -769,6 +748,27 @@ Did you mean &#39;conda create&#39;?</code></p>
       </categories>
       <tags>
         <tag>MATLAB</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python的Scripts文件夹为空——已解决</title>
+    <url>/Python%E7%9A%84Scripts%E6%96%87%E4%BB%B6%E5%A4%B9%E4%B8%BA%E7%A9%BA%E2%80%94%E2%80%94%E5%B7%B2%E8%A7%A3%E5%86%B3.html</url>
+    <content><![CDATA[<p>如果有 windows 环境的 python 的话，很可能会出现 Scripts 文件夹为空，这样就无法正常在 cmd 正常使用 pip 命令。</p>
+<p><strong>解决方法：</strong></p>
+<p> cmd 中输入： <code>python -m ensurepip</code></p>
+<p><img src="https://img-blog.csdnimg.cn/20200313174634904.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<a id="more"></a>
+<p>文件夹下就出现 exe 文件</p>
+<p><img src="https://img-blog.csdnimg.cn/20200313174720149.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>问题解决。</p>
+]]></content>
+      <categories>
+        <category>python</category>
+        <category>error&amp;库</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>error&amp;库</tag>
       </tags>
   </entry>
   <entry>
@@ -819,45 +819,6 @@ Did you mean &#39;conda create&#39;?</code></p>
       </categories>
       <tags>
         <tag>win10</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>anaconda 配置 yolov3 环境</title>
-    <url>/anaconda%20%E9%85%8D%E7%BD%AE%20yolov3%20%E7%8E%AF%E5%A2%83.html</url>
-    <content><![CDATA[<h2 id="1、-使用清华镜像创建环境"><a href="#1、-使用清华镜像创建环境" class="headerlink" title="1、 使用清华镜像创建环境"></a>1、 使用清华镜像创建环境</h2><p>输入：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/</span><br><span class="line">conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/</span><br><span class="line">conda config --set show_channel_urls yes</span><br><span class="line">conda create -n yolo python=<span class="number">3.6</span></span><br></pre></td></tr></table></figure>
-<p>(忽略图中因为打错字母导致的报错…)</p>
-<p><img src="https://img-blog.csdnimg.cn/20200316001002423.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<a id="more"></a>
-<h2 id="2、进入yolo环境"><a href="#2、进入yolo环境" class="headerlink" title="2、进入yolo环境"></a>2、进入yolo环境</h2><p>输入：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">conda activate yolo</span><br></pre></td></tr></table></figure>
-<p><img src="https://img-blog.csdnimg.cn/20200316001211529.png" alt="在这里插入图片描述"></p>
-<h2 id="3、更换pip源下载"><a href="#3、更换pip源下载" class="headerlink" title="3、更换pip源下载"></a>3、更换pip源下载</h2><p>** 1、下载keras：**</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 不更换国内源的命令</span></span><br><span class="line"><span class="comment"># 超时失败是常有的事</span></span><br><span class="line">pip install keras==<span class="number">2.1</span><span class="number">.5</span> </span><br><span class="line"><span class="comment"># 更换国内源</span></span><br><span class="line">pip install -i https://pypi.tuna.tsinghua.edu.cn/simple keras==<span class="number">2.1</span><span class="number">.5</span></span><br><span class="line"><span class="comment"># pip install -i// + 链接 + //keras==2.1.5（keras的版本）</span></span><br></pre></td></tr></table></figure>
-
-<p><img src="https://img-blog.csdnimg.cn/20200316003557394.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong>2、下载 tensorflow ：</strong></p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">pip install -i https://pypi.tuna.tsinghua.edu.cn/simple tensorflow-gpu==<span class="number">1.6</span><span class="number">.0</span></span><br></pre></td></tr></table></figure>
-<p><img src="https://img-blog.csdnimg.cn/20200316004333255.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p><strong>3、下载 Pillow</strong></p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">pip install -i https://pypi.tuna.tsinghua.edu.cn/simple Pillow</span><br></pre></td></tr></table></figure>
-<p><img src="https://img-blog.csdnimg.cn/2020031600472232.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong>4、安装 matplotlib</strong></p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">pip install -i https://pypi.tuna.tsinghua.edu.cn/simple matplotlib</span><br></pre></td></tr></table></figure>
-<p><img src="https://img-blog.csdnimg.cn/20200316004849304.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong>5、下载 ffmpeg</strong></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip install -i https://pypi.tuna.tsinghua.edu.cn/simple ffmpeg</span><br></pre></td></tr></table></figure>
-
-<p>或</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free</span><br><span class="line">conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main</span><br><span class="line">conda config --set show_channel_urls yes</span><br><span class="line">conda install ffmpeg</span><br></pre></td></tr></table></figure>
-<p><img src="https://img-blog.csdnimg.cn/20200316005227363.png" alt="在这里插入图片描述"><br><strong>6、安装 opencv</strong></p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">pip install -i https://pypi.tuna.tsinghua.edu.cn/simple opencv-contrib-python</span><br></pre></td></tr></table></figure>
-<p><img src="https://img-blog.csdnimg.cn/20200316005544144.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-]]></content>
-      <categories>
-        <category>python</category>
-        <category>机器视觉</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>机器视觉</tag>
       </tags>
   </entry>
   <entry>
@@ -919,6 +880,45 @@ Did you mean &#39;conda create&#39;?</code></p>
       <tags>
         <tag>python</tag>
         <tag>error&amp;库</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>anaconda 配置 yolov3 环境</title>
+    <url>/anaconda%20%E9%85%8D%E7%BD%AE%20yolov3%20%E7%8E%AF%E5%A2%83.html</url>
+    <content><![CDATA[<h2 id="1、-使用清华镜像创建环境"><a href="#1、-使用清华镜像创建环境" class="headerlink" title="1、 使用清华镜像创建环境"></a>1、 使用清华镜像创建环境</h2><p>输入：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/</span><br><span class="line">conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/</span><br><span class="line">conda config --set show_channel_urls yes</span><br><span class="line">conda create -n yolo python=<span class="number">3.6</span></span><br></pre></td></tr></table></figure>
+<p>(忽略图中因为打错字母导致的报错…)</p>
+<p><img src="https://img-blog.csdnimg.cn/20200316001002423.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<a id="more"></a>
+<h2 id="2、进入yolo环境"><a href="#2、进入yolo环境" class="headerlink" title="2、进入yolo环境"></a>2、进入yolo环境</h2><p>输入：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">conda activate yolo</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/20200316001211529.png" alt="在这里插入图片描述"></p>
+<h2 id="3、更换pip源下载"><a href="#3、更换pip源下载" class="headerlink" title="3、更换pip源下载"></a>3、更换pip源下载</h2><p>** 1、下载keras：**</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 不更换国内源的命令</span></span><br><span class="line"><span class="comment"># 超时失败是常有的事</span></span><br><span class="line">pip install keras==<span class="number">2.1</span><span class="number">.5</span> </span><br><span class="line"><span class="comment"># 更换国内源</span></span><br><span class="line">pip install -i https://pypi.tuna.tsinghua.edu.cn/simple keras==<span class="number">2.1</span><span class="number">.5</span></span><br><span class="line"><span class="comment"># pip install -i// + 链接 + //keras==2.1.5（keras的版本）</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdnimg.cn/20200316003557394.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong>2、下载 tensorflow ：</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">pip install -i https://pypi.tuna.tsinghua.edu.cn/simple tensorflow-gpu==<span class="number">1.6</span><span class="number">.0</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/20200316004333255.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><strong>3、下载 Pillow</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">pip install -i https://pypi.tuna.tsinghua.edu.cn/simple Pillow</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/2020031600472232.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong>4、安装 matplotlib</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">pip install -i https://pypi.tuna.tsinghua.edu.cn/simple matplotlib</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/20200316004849304.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong>5、下载 ffmpeg</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip install -i https://pypi.tuna.tsinghua.edu.cn/simple ffmpeg</span><br></pre></td></tr></table></figure>
+
+<p>或</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free</span><br><span class="line">conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main</span><br><span class="line">conda config --set show_channel_urls yes</span><br><span class="line">conda install ffmpeg</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/20200316005227363.png" alt="在这里插入图片描述"><br><strong>6、安装 opencv</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">pip install -i https://pypi.tuna.tsinghua.edu.cn/simple opencv-contrib-python</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/20200316005544144.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+]]></content>
+      <categories>
+        <category>python</category>
+        <category>机器视觉</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>机器视觉</tag>
       </tags>
   </entry>
   <entry>
