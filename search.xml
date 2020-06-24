@@ -20,6 +20,32 @@
       </tags>
   </entry>
   <entry>
+    <title>Command “python setup.py egg_info” failed——完美解决</title>
+    <url>/Command%20%E2%80%9Cpython%20setup.py%20egg_info%E2%80%9D%20failed%E2%80%94%E2%80%94%E5%AE%8C%E7%BE%8E%E8%A7%A3%E5%86%B3.html</url>
+    <content><![CDATA[<p>用 ubuntu 安装 <code>django-mdeditor==0.1.13</code> 时报错：</p>
+<blockquote>
+<p>Command “python setup.py egg_info” failed with error code 1 in /tmp/pip-build-2XpM94/django-mdeditor/</p>
+</blockquote>
+<p>有人说是<code>setuptools</code>的版本太低，于是我镜像源下更新了一下： <code>pip install -i https://pypi.tuna.tsinghua.edu.cn/simple --upgrade setuptools</code></p>
+<p><img src="https://img-blog.csdnimg.cn/20200518185849980.png" alt="在这里插入图片描述"></p>
+<a id="more"></a>
+<p>完全没用</p>
+<p><img src="https://img-blog.csdnimg.cn/20200518185647662.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><strong>解决方法：</strong><code>pip3 install django-mdeditor==0.1.13</code></p>
+<p><img src="https://img-blog.csdnimg.cn/20200518185754776.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>问题解决，之前安装 Django 也是这种报错，<code>pip</code> 换成 <code>pip3</code> 就完全解决了</p>
+]]></content>
+      <categories>
+        <category>python</category>
+        <category>error&amp;库</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>error&amp;库</tag>
+        <tag>ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>ERROR Cannot uninstall &#39;xxx&#39;. It is a distutils installed project and thus we cannot accurately</title>
     <url>/ERROR%EF%BC%9ACannot%20uninstall%20&#39;xxx&#39;.%20It%20is%20a%20distutils%20installed%20project%20and%20thus%20we%20cannot%20accurately.html</url>
     <content><![CDATA[<p>今天安装 <code>serial</code> 时报错：</p>
@@ -40,23 +66,6 @@
       <tags>
         <tag>python</tag>
         <tag>error&amp;库</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>MATLAB安装USB Webcams工具箱出现‘error’</title>
-    <url>/MATLAB%E5%AE%89%E8%A3%85USB%20Webcams%E5%B7%A5%E5%85%B7%E7%AE%B1%E5%87%BA%E7%8E%B0%E2%80%98error%E2%80%99.html</url>
-    <content><![CDATA[<p>下载matlab的Support Package for USB Webcams</p>
-<p><img src="https://img-blog.csdnimg.cn/20200208215954945.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<a id="more"></a>
-<p>点击安装后出现错误，无法安装<br> receive the error “There was a problem downloading the Support Package”<br> 出现这种情况一般是因为电脑和工具箱的服务器连接错误，可能是防火墙阻止连接，可以暂时禁止防护软件再重新安装。<br> 在这里说一下：有些情况重新试几次就行，但是如果一直不行就可能是proxy、firewall的原因。<br>我经过一番折腾已经下载完成了：<br><img src="https://img-blog.csdnimg.cn/20200208224301292.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>对于proxy问题，大家可以找下相关文章。<br>对于firewall<br>如果正在运行firewall，需要绕过阻碍连接mathworks服务器。<br>mathworks安装程序需要联系以下端口和地址上的mathworks服务器：<br>登录：mathworks.com<br>服务.mathworks.com<br>TCP端口80和443<br>Firewall需要绕过两个端口上两个地址的阻碍连接，<br>这些服务器不使用静态IP地址，为动态IP地址。所以需要使用域名搜索。   </p>
-<p>如果有问题可以再联系我，也可以找相关文章，此篇文章会在以后遇到具体问题时再做详细更改。           </p>
-]]></content>
-      <categories>
-        <category>MATLAB</category>
-      </categories>
-      <tags>
-        <tag>MATLAB</tag>
       </tags>
   </entry>
   <entry>
@@ -112,39 +121,14 @@
       </tags>
   </entry>
   <entry>
-    <title>Command “python setup.py egg_info” failed——完美解决</title>
-    <url>/Command%20%E2%80%9Cpython%20setup.py%20egg_info%E2%80%9D%20failed%E2%80%94%E2%80%94%E5%AE%8C%E7%BE%8E%E8%A7%A3%E5%86%B3.html</url>
-    <content><![CDATA[<p>用 ubuntu 安装 <code>django-mdeditor==0.1.13</code> 时报错：</p>
-<blockquote>
-<p>Command “python setup.py egg_info” failed with error code 1 in /tmp/pip-build-2XpM94/django-mdeditor/</p>
-</blockquote>
-<p>有人说是<code>setuptools</code>的版本太低，于是我镜像源下更新了一下： <code>pip install -i https://pypi.tuna.tsinghua.edu.cn/simple --upgrade setuptools</code></p>
-<p><img src="https://img-blog.csdnimg.cn/20200518185849980.png" alt="在这里插入图片描述"></p>
+    <title>MATLAB安装USB Webcams工具箱出现‘error’</title>
+    <url>/MATLAB%E5%AE%89%E8%A3%85USB%20Webcams%E5%B7%A5%E5%85%B7%E7%AE%B1%E5%87%BA%E7%8E%B0%E2%80%98error%E2%80%99.html</url>
+    <content><![CDATA[<p>下载matlab的Support Package for USB Webcams</p>
+<p><img src="https://img-blog.csdnimg.cn/20200208215954945.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 <a id="more"></a>
-<p>完全没用</p>
-<p><img src="https://img-blog.csdnimg.cn/20200518185647662.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p><strong>解决方法：</strong><code>pip3 install django-mdeditor==0.1.13</code></p>
-<p><img src="https://img-blog.csdnimg.cn/20200518185754776.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>问题解决，之前安装 Django 也是这种报错，<code>pip</code> 换成 <code>pip3</code> 就完全解决了</p>
-]]></content>
-      <categories>
-        <category>python</category>
-        <category>error&amp;库</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>error&amp;库</tag>
-        <tag>ubuntu</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>MATLAB账户未关联到许可证—无法打开help文档—解决方法</title>
-    <url>/MATLAB%E8%B4%A6%E6%88%B7%E6%9C%AA%E5%85%B3%E8%81%94%E5%88%B0%E8%AE%B8%E5%8F%AF%E8%AF%81%E2%80%94%E6%97%A0%E6%B3%95%E6%89%93%E5%BC%80help%E6%96%87%E6%A1%A3%E2%80%94%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95.html</url>
-    <content><![CDATA[<p>今天在使用help命令时，需要参阅一些函数的help文档，却发现我的matlab无法关联到许可证<br><img src="https://img-blog.csdnimg.cn/20200211154400903.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<a id="more"></a>
-<p>对于一些朋友，只需要在命令行输入‘license’便可得到许可证编号。但我的matlab是破解版的，所以没有许可证。</p>
-<p>再参阅的国外论坛后，找到了解决方法。<br>下面就教大家如何解决：<br><img src="https://img-blog.csdnimg.cn/20200211154735579.png" alt="在这里插入图片描述"><br>点击‘预设项’—‘帮助’<br><img src="https://img-blog.csdnimg.cn/20200211155006810.png" alt="在这里插入图片描述"></p>
-<p>选择‘安装在本地’—‘在小窗口中’<br><img src="https://img-blog.csdnimg.cn/20200211155132806.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>即可解决问题，方法简单，只供破解版用户参阅。<br>有问题可联系我。</p>
+<p>点击安装后出现错误，无法安装<br> receive the error “There was a problem downloading the Support Package”<br> 出现这种情况一般是因为电脑和工具箱的服务器连接错误，可能是防火墙阻止连接，可以暂时禁止防护软件再重新安装。<br> 在这里说一下：有些情况重新试几次就行，但是如果一直不行就可能是proxy、firewall的原因。<br>我经过一番折腾已经下载完成了：<br><img src="https://img-blog.csdnimg.cn/20200208224301292.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>对于proxy问题，大家可以找下相关文章。<br>对于firewall<br>如果正在运行firewall，需要绕过阻碍连接mathworks服务器。<br>mathworks安装程序需要联系以下端口和地址上的mathworks服务器：<br>登录：mathworks.com<br>服务.mathworks.com<br>TCP端口80和443<br>Firewall需要绕过两个端口上两个地址的阻碍连接，<br>这些服务器不使用静态IP地址，为动态IP地址。所以需要使用域名搜索。   </p>
+<p>如果有问题可以再联系我，也可以找相关文章，此篇文章会在以后遇到具体问题时再做详细更改。           </p>
 ]]></content>
       <categories>
         <category>MATLAB</category>
@@ -200,6 +184,22 @@
 <p>输入 mex +文件名和后缀</p>
 <p>比如我这里需要运行名为 maxsubarray2D.cpp 的文件，</p>
 <p>所以我输入：<code>mex maxsubarray2D.cpp</code><br><img src="https://img-blog.csdnimg.cn/20200314232301967.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200314232508289.png" alt="在这里插入图片描述"><br>显示编译完成后就可以进行接下来的操作了。</p>
+]]></content>
+      <categories>
+        <category>MATLAB</category>
+      </categories>
+      <tags>
+        <tag>MATLAB</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>MATLAB账户未关联到许可证—无法打开help文档—解决方法</title>
+    <url>/MATLAB%E8%B4%A6%E6%88%B7%E6%9C%AA%E5%85%B3%E8%81%94%E5%88%B0%E8%AE%B8%E5%8F%AF%E8%AF%81%E2%80%94%E6%97%A0%E6%B3%95%E6%89%93%E5%BC%80help%E6%96%87%E6%A1%A3%E2%80%94%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95.html</url>
+    <content><![CDATA[<p>今天在使用help命令时，需要参阅一些函数的help文档，却发现我的matlab无法关联到许可证<br><img src="https://img-blog.csdnimg.cn/20200211154400903.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<a id="more"></a>
+<p>对于一些朋友，只需要在命令行输入‘license’便可得到许可证编号。但我的matlab是破解版的，所以没有许可证。</p>
+<p>再参阅的国外论坛后，找到了解决方法。<br>下面就教大家如何解决：<br><img src="https://img-blog.csdnimg.cn/20200211154735579.png" alt="在这里插入图片描述"><br>点击‘预设项’—‘帮助’<br><img src="https://img-blog.csdnimg.cn/20200211155006810.png" alt="在这里插入图片描述"></p>
+<p>选择‘安装在本地’—‘在小窗口中’<br><img src="https://img-blog.csdnimg.cn/20200211155132806.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>即可解决问题，方法简单，只供破解版用户参阅。<br>有问题可联系我。</p>
 ]]></content>
       <categories>
         <category>MATLAB</category>
@@ -281,6 +281,20 @@ Did you mean &#39;conda create&#39;?</code></p>
       </tags>
   </entry>
   <entry>
+    <title>Python99道经典练习题答案</title>
+    <url>/Python99%E9%81%93%E7%BB%8F%E5%85%B8%E7%BB%83%E4%B9%A0%E9%A2%98%E7%AD%94%E6%A1%88.html</url>
+    <content><![CDATA[<p>转载与百度文库：<br><a href="https://wenku.baidu.com/view/bc745bdaf6ec4afe04a1b0717fd5360cbb1a8d16.html" target="_blank" rel="noopener">https://wenku.baidu.com/view/bc745bdaf6ec4afe04a1b0717fd5360cbb1a8d16.html</a></p>
+]]></content>
+      <categories>
+        <category>python</category>
+        <category>入门</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>入门练习题</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Office2016与Visio2016不兼容——已解决</title>
     <url>/Office2016%E4%B8%8EVisio2016%E4%B8%8D%E5%85%BC%E5%AE%B9%E2%80%94%E2%80%94%E5%B7%B2%E8%A7%A3%E5%86%B3.html</url>
     <content><![CDATA[<p>很久之前为了写专利下载的Visio2016，平时也只用wps，没用过office。</p>
@@ -336,20 +350,6 @@ Did you mean &#39;conda create&#39;?</code></p>
       </categories>
       <tags>
         <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python99道经典练习题答案</title>
-    <url>/Python99%E9%81%93%E7%BB%8F%E5%85%B8%E7%BB%83%E4%B9%A0%E9%A2%98%E7%AD%94%E6%A1%88.html</url>
-    <content><![CDATA[<p>转载与百度文库：<br><a href="https://wenku.baidu.com/view/bc745bdaf6ec4afe04a1b0717fd5360cbb1a8d16.html" target="_blank" rel="noopener">https://wenku.baidu.com/view/bc745bdaf6ec4afe04a1b0717fd5360cbb1a8d16.html</a></p>
-]]></content>
-      <categories>
-        <category>python</category>
-        <category>入门</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>入门练习题</tag>
       </tags>
   </entry>
   <entry>
@@ -568,28 +568,6 @@ Did you mean &#39;conda create&#39;?</code></p>
       </tags>
   </entry>
   <entry>
-    <title>Python学习笔记_5：字符串格式化符号及进制转换</title>
-    <url>/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_5%EF%BC%9A%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%A0%BC%E5%BC%8F%E5%8C%96%E7%AC%A6%E5%8F%B7%E5%8F%8A%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2.html</url>
-    <content><![CDATA[<p>介绍下经常用得到的格式化字符</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">%c	：格式化字符及其ASCII码</span><br><span class="line">%s	：格式化字符串</span><br><span class="line">%d	：格式化整数</span><br><span class="line">%f	：可指定小数点精度</span><br><span class="line">%e	：用科学计数法表示小数</span><br><span class="line">%g	：根据值的的具体情况使用%f或%e</span><br><span class="line">%o	：八进制</span><br><span class="line">%x	：十六进制</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
-<hr>
-<p>简单的进制转换：<br>1、十六进制转换</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>I = input(<span class="string">'请输入一个数'</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>I = int(I)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(<span class="string">'%x'</span> %I)</span><br></pre></td></tr></table></figure>
-<p>2、八进制转换</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">I = input(<span class="string">'请输入一个数'</span>)</span><br><span class="line">I = int(I)</span><br><span class="line">print(<span class="string">'%o'</span> %I)</span><br></pre></td></tr></table></figure>
-<p>3、二进制转换</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">%%% python 中的二进制可以直接用 bin() 函数处理</span><br><span class="line">I = input(<span class="string">'请输入一个数'</span>)</span><br><span class="line">I = int(I)</span><br><span class="line">print(bin(I))</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>python</category>
-        <category>语法笔记</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>语法笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Python学习笔记_6：global 与 nanlacal 的区别</title>
     <url>/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_6%EF%BC%9Aglobal%20%E4%B8%8E%20nanlacal%20%E7%9A%84%E5%8C%BA%E5%88%AB.html</url>
     <content><![CDATA[<p>之前我在 matlab 的笔记里介绍过一次 global 的用法</p>
@@ -607,6 +585,28 @@ Did you mean &#39;conda create&#39;?</code></p>
 <p>PDD：你怎么把我给整没了呢？？？<br><img src="https://img-blog.csdnimg.cn/20200306152038752.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>哈哈哈哈，皮一下<br><img src="https://img-blog.csdnimg.cn/20200306152417290.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>从上面的例子可以看到：</p>
 <p>我们一般在某函数的内部函数中使用 nonlocal 函数来修改这个函数的局部变量，而不会改变整个代码的全局变量，nonlocal 用途还算比较广泛的。</p>
 ]]></content>
+      <categories>
+        <category>python</category>
+        <category>语法笔记</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>语法笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python学习笔记_5：字符串格式化符号及进制转换</title>
+    <url>/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_5%EF%BC%9A%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%A0%BC%E5%BC%8F%E5%8C%96%E7%AC%A6%E5%8F%B7%E5%8F%8A%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2.html</url>
+    <content><![CDATA[<p>介绍下经常用得到的格式化字符</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">%c	：格式化字符及其ASCII码</span><br><span class="line">%s	：格式化字符串</span><br><span class="line">%d	：格式化整数</span><br><span class="line">%f	：可指定小数点精度</span><br><span class="line">%e	：用科学计数法表示小数</span><br><span class="line">%g	：根据值的的具体情况使用%f或%e</span><br><span class="line">%o	：八进制</span><br><span class="line">%x	：十六进制</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<hr>
+<p>简单的进制转换：<br>1、十六进制转换</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>I = input(<span class="string">'请输入一个数'</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>I = int(I)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(<span class="string">'%x'</span> %I)</span><br></pre></td></tr></table></figure>
+<p>2、八进制转换</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">I = input(<span class="string">'请输入一个数'</span>)</span><br><span class="line">I = int(I)</span><br><span class="line">print(<span class="string">'%o'</span> %I)</span><br></pre></td></tr></table></figure>
+<p>3、二进制转换</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">%%% python 中的二进制可以直接用 bin() 函数处理</span><br><span class="line">I = input(<span class="string">'请输入一个数'</span>)</span><br><span class="line">I = int(I)</span><br><span class="line">print(bin(I))</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>python</category>
         <category>语法笔记</category>
@@ -642,6 +642,31 @@ Did you mean &#39;conda create&#39;?</code></p>
       <tags>
         <tag>python</tag>
         <tag>语法笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python安装 chardet</title>
+    <url>/Python%E5%AE%89%E8%A3%85%20chardet.html</url>
+    <content><![CDATA[<p>Chardet：通用字符编码检测器</p>
+<p>chardet 3.0.4官网链接<a href="https://pypi.org/project/chardet/#files" target="_blank" rel="noopener">https://pypi.org/project/chardet/#files</a></p>
+<p><img src="https://img-blog.csdnimg.cn/20200309201404769.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<a id="more"></a>
+<p>下载—&gt;解压文件后，找到chardet文件夹</p>
+<p><img src="https://img-blog.csdnimg.cn/20200309203606459.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>复制在python的安装路径下的 Lib 文件夹内即可</p>
+<p>部分同学的 Lib 文件夹下有 site-packages 文件夹，则最好将 chardet 复制在 site-packages 文件夹内</p>
+<p>pycharm 和 anaconda 都可以这样安装（不会使用 pip 的同学）</p>
+<p><img src="https://img-blog.csdnimg.cn/20200309204210131.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>然后 chardet 就可以正常使了</p>
+<p><img src="https://img-blog.csdnimg.cn/2020030921003628.png" alt="在这里插入图片描述"></p>
+]]></content>
+      <categories>
+        <category>python</category>
+        <category>error&amp;库</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>error&amp;库</tag>
       </tags>
   </entry>
   <entry>
@@ -702,52 +727,6 @@ Did you mean &#39;conda create&#39;?</code></p>
       </tags>
   </entry>
   <entry>
-    <title>Python安装 chardet</title>
-    <url>/Python%E5%AE%89%E8%A3%85%20chardet.html</url>
-    <content><![CDATA[<p>Chardet：通用字符编码检测器</p>
-<p>chardet 3.0.4官网链接<a href="https://pypi.org/project/chardet/#files" target="_blank" rel="noopener">https://pypi.org/project/chardet/#files</a></p>
-<p><img src="https://img-blog.csdnimg.cn/20200309201404769.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<a id="more"></a>
-<p>下载—&gt;解压文件后，找到chardet文件夹</p>
-<p><img src="https://img-blog.csdnimg.cn/20200309203606459.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>复制在python的安装路径下的 Lib 文件夹内即可</p>
-<p>部分同学的 Lib 文件夹下有 site-packages 文件夹，则最好将 chardet 复制在 site-packages 文件夹内</p>
-<p>pycharm 和 anaconda 都可以这样安装（不会使用 pip 的同学）</p>
-<p><img src="https://img-blog.csdnimg.cn/20200309204210131.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>然后 chardet 就可以正常使了</p>
-<p><img src="https://img-blog.csdnimg.cn/2020030921003628.png" alt="在这里插入图片描述"></p>
-]]></content>
-      <categories>
-        <category>python</category>
-        <category>error&amp;库</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>error&amp;库</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python的Scripts文件夹为空——已解决</title>
-    <url>/Python%E7%9A%84Scripts%E6%96%87%E4%BB%B6%E5%A4%B9%E4%B8%BA%E7%A9%BA%E2%80%94%E2%80%94%E5%B7%B2%E8%A7%A3%E5%86%B3.html</url>
-    <content><![CDATA[<p>如果有 windows 环境的 python 的话，很可能会出现 Scripts 文件夹为空，这样就无法正常在 cmd 正常使用 pip 命令。</p>
-<p><strong>解决方法：</strong></p>
-<p> cmd 中输入： <code>python -m ensurepip</code></p>
-<p><img src="https://img-blog.csdnimg.cn/20200313174634904.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<a id="more"></a>
-<p>文件夹下就出现 exe 文件</p>
-<p><img src="https://img-blog.csdnimg.cn/20200313174720149.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>问题解决。</p>
-]]></content>
-      <categories>
-        <category>python</category>
-        <category>error&amp;库</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>error&amp;库</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>VLFeat工具包下载</title>
     <url>/VLFeat%E5%B7%A5%E5%85%B7%E5%8C%85%E4%B8%8B%E8%BD%BD.html</url>
     <content><![CDATA[<p><strong>vlfeat 官方下载链接：</strong><a href="https://www.vlfeat.org/" target="_blank" rel="noopener">https://www.vlfeat.org/</a></p>
@@ -769,6 +748,27 @@ Did you mean &#39;conda create&#39;?</code></p>
       </categories>
       <tags>
         <tag>MATLAB</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python的Scripts文件夹为空——已解决</title>
+    <url>/Python%E7%9A%84Scripts%E6%96%87%E4%BB%B6%E5%A4%B9%E4%B8%BA%E7%A9%BA%E2%80%94%E2%80%94%E5%B7%B2%E8%A7%A3%E5%86%B3.html</url>
+    <content><![CDATA[<p>如果有 windows 环境的 python 的话，很可能会出现 Scripts 文件夹为空，这样就无法正常在 cmd 正常使用 pip 命令。</p>
+<p><strong>解决方法：</strong></p>
+<p> cmd 中输入： <code>python -m ensurepip</code></p>
+<p><img src="https://img-blog.csdnimg.cn/20200313174634904.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<a id="more"></a>
+<p>文件夹下就出现 exe 文件</p>
+<p><img src="https://img-blog.csdnimg.cn/20200313174720149.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>问题解决。</p>
+]]></content>
+      <categories>
+        <category>python</category>
+        <category>error&amp;库</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>error&amp;库</tag>
       </tags>
   </entry>
   <entry>
@@ -796,32 +796,6 @@ Did you mean &#39;conda create&#39;?</code></p>
       </tags>
   </entry>
   <entry>
-    <title>WIN10 未安装任何音频驱动 扬声器有个小红叉（已解决）</title>
-    <url>/WIN10%20%E6%9C%AA%E5%AE%89%E8%A3%85%E4%BB%BB%E4%BD%95%E9%9F%B3%E9%A2%91%E9%A9%B1%E5%8A%A8%20%E6%89%AC%E5%A3%B0%E5%99%A8%E6%9C%89%E4%B8%AA%E5%B0%8F%E7%BA%A2%E5%8F%89%EF%BC%88%E5%B7%B2%E8%A7%A3%E5%86%B3%EF%BC%89.html</url>
-    <content><![CDATA[<p>经历了无数次的下载安装各种驱动，无数次重启，几乎试了全网所有的方法都是不行，最后使用了国外论坛的方法终于成功了</p>
-<p><img src="https://img-blog.csdnimg.cn/20200205210158898.png" alt="这是我电脑现在的情况，问题已经完全解决了，太激动了哈哈"></p>
-<p>此方法必须要先重启电脑，重启后立刻进行此操作！！</p>
-<p>我当时右击扬声器图标，选择打开声音设置</p>
-<a id="more"></a>
-<p><img src="https://img-blog.csdnimg.cn/20200205210716557.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>在这个声音面板一直往下翻</p>
-<p><img src="https://img-blog.csdnimg.cn/20200205211020704.png" alt=""></p>
-<p>打开：轻松访问音频设置</p>
-<p><img src="https://img-blog.csdnimg.cn/20200205211107866.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="选择更改设备或应用音量，然后慢慢等着"></p>
-<p>选择更改设备或应用音量，等一会就行然后</p>
-<p>声音面板界面的输出设备就应该显示了输出设备为扬声器</p>
-<p><img src="https://img-blog.csdnimg.cn/20200205211722980.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>我的未安装任何音频输出设备就这样解决了。</p>
-<p>欢迎大家提问，如果能帮到的就会回复大家。</p>
-]]></content>
-      <categories>
-        <category>win10</category>
-      </categories>
-      <tags>
-        <tag>win10</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Win10自带的虚拟机如何打开—Hyper-v</title>
     <url>/Win10%E8%87%AA%E5%B8%A6%E7%9A%84%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%A6%82%E4%BD%95%E6%89%93%E5%BC%80%E2%80%94Hyper-v.html</url>
     <content><![CDATA[<p>作为一个程序员电脑里面怎么能没有安装虚拟机呢…</p>
@@ -839,6 +813,32 @@ Did you mean &#39;conda create&#39;?</code></p>
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line">.\bcdedit /<span class="built_in">set</span> hypervisorlaunchtype <span class="keyword">auto</span></span><br></pre></td></tr></table></figure>
 <p><img src="https://img-blog.csdnimg.cn/20200222223623274.png" alt="在这里插入图片描述"><br>显示操作成功完成即可</p>
 <p>最后结果：<br><img src="https://img-blog.csdnimg.cn/2020022222372689.png" alt="在这里插入图片描述"><br>有需要 openSUSE 资源的朋友可以找我，压缩资源我电脑里还是有的。</p>
+]]></content>
+      <categories>
+        <category>win10</category>
+      </categories>
+      <tags>
+        <tag>win10</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>WIN10 未安装任何音频驱动 扬声器有个小红叉（已解决）</title>
+    <url>/WIN10%20%E6%9C%AA%E5%AE%89%E8%A3%85%E4%BB%BB%E4%BD%95%E9%9F%B3%E9%A2%91%E9%A9%B1%E5%8A%A8%20%E6%89%AC%E5%A3%B0%E5%99%A8%E6%9C%89%E4%B8%AA%E5%B0%8F%E7%BA%A2%E5%8F%89%EF%BC%88%E5%B7%B2%E8%A7%A3%E5%86%B3%EF%BC%89.html</url>
+    <content><![CDATA[<p>经历了无数次的下载安装各种驱动，无数次重启，几乎试了全网所有的方法都是不行，最后使用了国外论坛的方法终于成功了</p>
+<p><img src="https://img-blog.csdnimg.cn/20200205210158898.png" alt="这是我电脑现在的情况，问题已经完全解决了，太激动了哈哈"></p>
+<p>此方法必须要先重启电脑，重启后立刻进行此操作！！</p>
+<p>我当时右击扬声器图标，选择打开声音设置</p>
+<a id="more"></a>
+<p><img src="https://img-blog.csdnimg.cn/20200205210716557.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>在这个声音面板一直往下翻</p>
+<p><img src="https://img-blog.csdnimg.cn/20200205211020704.png" alt=""></p>
+<p>打开：轻松访问音频设置</p>
+<p><img src="https://img-blog.csdnimg.cn/20200205211107866.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="选择更改设备或应用音量，然后慢慢等着"></p>
+<p>选择更改设备或应用音量，等一会就行然后</p>
+<p>声音面板界面的输出设备就应该显示了输出设备为扬声器</p>
+<p><img src="https://img-blog.csdnimg.cn/20200205211722980.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>我的未安装任何音频输出设备就这样解决了。</p>
+<p>欢迎大家提问，如果能帮到的就会回复大家。</p>
 ]]></content>
       <categories>
         <category>win10</category>
@@ -887,6 +887,34 @@ Did you mean &#39;conda create&#39;?</code></p>
       </tags>
   </entry>
   <entry>
+    <title>cpu运行gpu上的pytorch 报错AssertionErrortorch not compiled with cuda enabled——已解决</title>
+    <url>/cpu%E8%BF%90%E8%A1%8Cgpu%E4%B8%8A%E7%9A%84pytorch%20%E6%8A%A5%E9%94%99%EF%BC%9AAssertionErrortorch%20not%20compiled%20with%20cuda%20enabled%E2%80%94%E2%80%94%E5%B7%B2%E8%A7%A3%E5%86%B3.html</url>
+    <content><![CDATA[<p>感觉今天介绍的这种方法可以解决所有这种报错出现的问题</p>
+<h2 id="事件发生："><a href="#事件发生：" class="headerlink" title="事件发生："></a>事件发生：</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">报错：AssertionError:torch <span class="keyword">not</span> compiled <span class="keyword">with</span> cuda enabled</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdnimg.cn/20200409104210488.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<a id="more"></a>
+<h2 id="解决方法："><a href="#解决方法：" class="headerlink" title="解决方法："></a>解决方法：</h2><p>后来看到这个代码</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">parser.add_argument(<span class="string">'--test_device'</span>, default=<span class="string">"cuda:0"</span>, type=str,</span><br><span class="line">                    help=<span class="string">'cuda:0 or cpu'</span>)</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/20200409104356554.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>把 cuda 换成 cpu</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">parser.add_argument(<span class="string">'--test_device'</span>, default=<span class="string">"cpu:0"</span>, type=str,</span><br><span class="line">                    help=<span class="string">'cuda:0 or cpu'</span>)</span><br><span class="line">                    </span><br><span class="line">%上面的 default=<span class="string">"cuda:0"</span> 改成 default=<span class="string">"cpu:0"</span>，</span><br><span class="line">下面的 help=<span class="string">'cuda:0 or cpu'</span> 因为定义了可以使用 cpu 所以就不用改了</span><br></pre></td></tr></table></figure>
+<p>当然也可以改成：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">parser.add_argument(<span class="string">'--test_device'</span>, default=<span class="string">"cpu:0"</span>, type=str,</span><br><span class="line">                    help=<span class="string">'cpu:0'</span>)</span><br><span class="line">parser.add_argument(<span class="string">'--test_device'</span>, default=<span class="string">"cuda:0 or cpu"</span>, type=str,</span><br><span class="line">                    help=<span class="string">'cuda:0 or cpu'</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h2><p><strong>总结一下就是：出现的 cuda 全部换成 cpu 就可以运行！！！</strong></p>
+<h2 id="这种方法应该适用于这种报错："><a href="#这种方法应该适用于这种报错：" class="headerlink" title="这种方法应该适用于这种报错："></a>这种方法应该适用于这种报错：</h2><p>为了尝试这种方法是不是适用于很多情况，我找了也出现这种报错的一位博主尝试，果然可以解决。</p>
+]]></content>
+      <categories>
+        <category>python</category>
+        <category>error&amp;库</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>error&amp;库</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>anaconda安装 pytorch——详解</title>
     <url>/anaconda%E5%AE%89%E8%A3%85%20pytorch%E2%80%94%E2%80%94%E8%AF%A6%E8%A7%A3.html</url>
     <content><![CDATA[<h2 id="事件前言："><a href="#事件前言：" class="headerlink" title="事件前言："></a>事件前言：</h2><p>今天凌晨2点多时清华镜像源还可以正常使用，但是刚刚我电脑却使用不了了</p>
@@ -922,23 +950,27 @@ Did you mean &#39;conda create&#39;?</code></p>
       </tags>
   </entry>
   <entry>
-    <title>cpu运行gpu上的pytorch 报错AssertionErrortorch not compiled with cuda enabled——已解决</title>
-    <url>/cpu%E8%BF%90%E8%A1%8Cgpu%E4%B8%8A%E7%9A%84pytorch%20%E6%8A%A5%E9%94%99%EF%BC%9AAssertionErrortorch%20not%20compiled%20with%20cuda%20enabled%E2%80%94%E2%80%94%E5%B7%B2%E8%A7%A3%E5%86%B3.html</url>
-    <content><![CDATA[<p>感觉今天介绍的这种方法可以解决所有这种报错出现的问题</p>
-<h2 id="事件发生："><a href="#事件发生：" class="headerlink" title="事件发生："></a>事件发生：</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">报错：AssertionError:torch <span class="keyword">not</span> compiled <span class="keyword">with</span> cuda enabled</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://img-blog.csdnimg.cn/20200409104210488.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+    <title>module &#39;tensorflow&#39; has no attribute &#39;get_default_graph&#39;</title>
+    <url>/module%20&#39;tensorflow&#39;%20has%20no%20attribute%20&#39;get_default_graph&#39;.html</url>
+    <content><![CDATA[<p>参考：<a href="https://blog.csdn.net/u014466109/article/details/88877321?depth_1-utm_source=distribute.pc_relevant.none-task&amp;utm_source=distribute.pc_relevant.none-task" target="_blank" rel="noopener">https://blog.csdn.net/u014466109/article/details/88877321?depth_1-utm_source=distribute.pc_relevant.none-task&amp;utm_source=distribute.pc_relevant.none-task</a></p>
+<h2 id="事件经过："><a href="#事件经过：" class="headerlink" title="事件经过："></a>事件经过：</h2><p>现在已经是凌晨一点半，从昨天下午开始在 windows 的 anaconda 配置 yolov3 的训练环境，一直出各种问题，很烦。</p>
+<p>两小时前遇到这个问题：<br><code>https://blog.csdn.net/u014466109/article/details/88877321?depth_1-utm_source=distribute.pc_relevant.none-task&amp;utm_source=distribute.pc_relevant.none-task</code></p>
+<p>参照各种方法，tensorflow 和其他库删了再重新下载。</p>
 <a id="more"></a>
-<h2 id="解决方法："><a href="#解决方法：" class="headerlink" title="解决方法："></a>解决方法：</h2><p>后来看到这个代码</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">parser.add_argument(<span class="string">'--test_device'</span>, default=<span class="string">"cuda:0"</span>, type=str,</span><br><span class="line">                    help=<span class="string">'cuda:0 or cpu'</span>)</span><br></pre></td></tr></table></figure>
-<p><img src="https://img-blog.csdnimg.cn/20200409104356554.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>把 cuda 换成 cpu</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">parser.add_argument(<span class="string">'--test_device'</span>, default=<span class="string">"cpu:0"</span>, type=str,</span><br><span class="line">                    help=<span class="string">'cuda:0 or cpu'</span>)</span><br><span class="line">                    </span><br><span class="line">%上面的 default=<span class="string">"cuda:0"</span> 改成 default=<span class="string">"cpu:0"</span>，</span><br><span class="line">下面的 help=<span class="string">'cuda:0 or cpu'</span> 因为定义了可以使用 cpu 所以就不用改了</span><br></pre></td></tr></table></figure>
-<p>当然也可以改成：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">parser.add_argument(<span class="string">'--test_device'</span>, default=<span class="string">"cpu:0"</span>, type=str,</span><br><span class="line">                    help=<span class="string">'cpu:0'</span>)</span><br><span class="line">parser.add_argument(<span class="string">'--test_device'</span>, default=<span class="string">"cuda:0 or cpu"</span>, type=str,</span><br><span class="line">                    help=<span class="string">'cuda:0 or cpu'</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="报错原因："><a href="#报错原因：" class="headerlink" title="报错原因："></a>报错原因：</h2><p><strong>直到看到上述的文章</strong></p>
+<p>使用keras和tensorflow做深度学习的时候，python3.6报了这个错误，这个问题源自于keras和TensorFlow的版本过高导致模块不存在或者已经更改不再兼容</p>
+<h2 id="解决方法："><a href="#解决方法：" class="headerlink" title="解决方法："></a>解决方法：</h2><p>先把 TensorFlow 和 keras 都卸载再重新安装</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">pip uninstall tensorflow  <span class="comment"># 卸载tensorflow</span></span><br><span class="line">pip uninstall keras  <span class="comment"># 卸载keras</span></span><br></pre></td></tr></table></figure>
+<p>清华镜像下载：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 下载 keras==2.0.9</span></span><br><span class="line">pip install -i https://pypi.tuna.tsinghua.edu.cn/simple keras==2.0.9</span><br><span class="line"><span class="comment"># 下载 tensorflow==1.2.0</span></span><br><span class="line">pip install -i https://pypi.tuna.tsinghua.edu.cn/simple tensorflow==1.2.0</span><br></pre></td></tr></table></figure>
 
-<h2 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h2><p><strong>总结一下就是：出现的 cuda 全部换成 cpu 就可以运行！！！</strong></p>
-<h2 id="这种方法应该适用于这种报错："><a href="#这种方法应该适用于这种报错：" class="headerlink" title="这种方法应该适用于这种报错："></a>这种方法应该适用于这种报错：</h2><p>为了尝试这种方法是不是适用于很多情况，我找了也出现这种报错的一位博主尝试，果然可以解决。</p>
+<h2 id="感受："><a href="#感受：" class="headerlink" title="感受："></a>感受：</h2><p><img src="https://img-blog.csdnimg.cn/20200317012850971.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>我的 yolov3配置文件成功转换成keras适用的h5文件了</p>
+<p>真的本来都想把 anaconda 卸载重新安装了</p>
+<p>多谢上述博主提供的方法</p>
+<p>这件事也显示了各个版本之间的 兼容 与 矛盾</p>
+<p>版本的选择真的很重要</p>
+<p>————————————————————————————————————<br>如果有使用 yolov3 算法中遇到各种问题的朋友可以评论你的问题，我几乎把所有能遇到的问题都遇到了，应该可以给予帮助</p>
 ]]></content>
       <categories>
         <category>python</category>
@@ -947,26 +979,6 @@ Did you mean &#39;conda create&#39;?</code></p>
       <tags>
         <tag>python</tag>
         <tag>error&amp;库</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>matlab创建下载进度条</title>
-    <url>/matlab%E5%88%9B%E5%BB%BA%E4%B8%8B%E8%BD%BD%E8%BF%9B%E5%BA%A6%E6%9D%A1.html</url>
-    <content><![CDATA[<blockquote>
-<p>最近玩GUI玩的比较多，想分享一些好玩的东西，就从最简单的开始吧</p>
-</blockquote>
-<p>大家都知道matlab的进度条吧，这里实现了创建进度条，并且当进度条达到100%时就关闭进度条界面</p>
-<a id="more"></a>
-
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">state = <span class="number">0</span>;                                 </span><br><span class="line">h = waitbar(<span class="number">0</span>, <span class="string">'请等待...'</span>, <span class="string">'Name'</span>, <span class="string">'进度条'</span>, <span class="string">'CreateCancelBtn'</span>, ...</span><br><span class="line">    <span class="string">'state = 1; delete(h); clear h'</span>);       </span><br><span class="line">h1 = findall(h, <span class="string">'style'</span>, <span class="string">'pushbutton'</span>);     </span><br><span class="line">set(h1, <span class="string">'string'</span>, <span class="string">'取消'</span>, <span class="string">'fontsize'</span>, <span class="number">10</span>)   </span><br><span class="line"><span class="keyword">for</span> i = <span class="number">1</span> : <span class="number">100</span>                             </span><br><span class="line">    waitbar(i / <span class="number">100</span>, h, [<span class="string">'进度完成'</span> num2str(i) <span class="string">'%'</span>]);</span><br><span class="line">    pause(<span class="number">0.1</span>)</span><br><span class="line">    <span class="keyword">if</span> state                                </span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">    end</span><br><span class="line">end</span><br><span class="line"><span class="keyword">if</span> exist(<span class="string">'h'</span>) == <span class="number">1</span>     </span><br><span class="line">    delete(h); </span><br><span class="line">end</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://img-blog.csdnimg.cn/2020040909231571.png" alt="在这里插入图片描述"></p>
-]]></content>
-      <categories>
-        <category>MATLAB</category>
-      </categories>
-      <tags>
-        <tag>MATLAB</tag>
       </tags>
   </entry>
   <entry>
@@ -1025,27 +1037,56 @@ Did you mean &#39;conda create&#39;?</code></p>
       </tags>
   </entry>
   <entry>
-    <title>module &#39;tensorflow&#39; has no attribute &#39;get_default_graph&#39;</title>
-    <url>/module%20&#39;tensorflow&#39;%20has%20no%20attribute%20&#39;get_default_graph&#39;.html</url>
-    <content><![CDATA[<p>参考：<a href="https://blog.csdn.net/u014466109/article/details/88877321?depth_1-utm_source=distribute.pc_relevant.none-task&amp;utm_source=distribute.pc_relevant.none-task" target="_blank" rel="noopener">https://blog.csdn.net/u014466109/article/details/88877321?depth_1-utm_source=distribute.pc_relevant.none-task&amp;utm_source=distribute.pc_relevant.none-task</a></p>
-<h2 id="事件经过："><a href="#事件经过：" class="headerlink" title="事件经过："></a>事件经过：</h2><p>现在已经是凌晨一点半，从昨天下午开始在 windows 的 anaconda 配置 yolov3 的训练环境，一直出各种问题，很烦。</p>
-<p>两小时前遇到这个问题：<br><code>https://blog.csdn.net/u014466109/article/details/88877321?depth_1-utm_source=distribute.pc_relevant.none-task&amp;utm_source=distribute.pc_relevant.none-task</code></p>
-<p>参照各种方法，tensorflow 和其他库删了再重新下载。</p>
+    <title>python实现人数识别目标识别</title>
+    <url>/python%E5%AE%9E%E7%8E%B0%E4%BA%BA%E6%95%B0%E8%AF%86%E5%88%AB%E7%9B%AE%E6%A0%87%E8%AF%86%E5%88%AB.html</url>
+    <content><![CDATA[<p>python 实现 yolo 人数识别或目标识别：<a href="https://blog.csdn.net/qq_45504119/article/details/105033492" target="_blank" rel="noopener">https://blog.csdn.net/qq_45504119/article/details/105033492</a></p>
+]]></content>
+      <categories>
+        <category>python</category>
+        <category>机器视觉</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>机器视觉</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>matlab创建下载进度条</title>
+    <url>/matlab%E5%88%9B%E5%BB%BA%E4%B8%8B%E8%BD%BD%E8%BF%9B%E5%BA%A6%E6%9D%A1.html</url>
+    <content><![CDATA[<blockquote>
+<p>最近玩GUI玩的比较多，想分享一些好玩的东西，就从最简单的开始吧</p>
+</blockquote>
+<p>大家都知道matlab的进度条吧，这里实现了创建进度条，并且当进度条达到100%时就关闭进度条界面</p>
 <a id="more"></a>
-<h2 id="报错原因："><a href="#报错原因：" class="headerlink" title="报错原因："></a>报错原因：</h2><p><strong>直到看到上述的文章</strong></p>
-<p>使用keras和tensorflow做深度学习的时候，python3.6报了这个错误，这个问题源自于keras和TensorFlow的版本过高导致模块不存在或者已经更改不再兼容</p>
-<h2 id="解决方法："><a href="#解决方法：" class="headerlink" title="解决方法："></a>解决方法：</h2><p>先把 TensorFlow 和 keras 都卸载再重新安装</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">pip uninstall tensorflow  <span class="comment"># 卸载tensorflow</span></span><br><span class="line">pip uninstall keras  <span class="comment"># 卸载keras</span></span><br></pre></td></tr></table></figure>
-<p>清华镜像下载：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 下载 keras==2.0.9</span></span><br><span class="line">pip install -i https://pypi.tuna.tsinghua.edu.cn/simple keras==2.0.9</span><br><span class="line"><span class="comment"># 下载 tensorflow==1.2.0</span></span><br><span class="line">pip install -i https://pypi.tuna.tsinghua.edu.cn/simple tensorflow==1.2.0</span><br></pre></td></tr></table></figure>
 
-<h2 id="感受："><a href="#感受：" class="headerlink" title="感受："></a>感受：</h2><p><img src="https://img-blog.csdnimg.cn/20200317012850971.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>我的 yolov3配置文件成功转换成keras适用的h5文件了</p>
-<p>真的本来都想把 anaconda 卸载重新安装了</p>
-<p>多谢上述博主提供的方法</p>
-<p>这件事也显示了各个版本之间的 兼容 与 矛盾</p>
-<p>版本的选择真的很重要</p>
-<p>————————————————————————————————————<br>如果有使用 yolov3 算法中遇到各种问题的朋友可以评论你的问题，我几乎把所有能遇到的问题都遇到了，应该可以给予帮助</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">state = <span class="number">0</span>;                                 </span><br><span class="line">h = waitbar(<span class="number">0</span>, <span class="string">'请等待...'</span>, <span class="string">'Name'</span>, <span class="string">'进度条'</span>, <span class="string">'CreateCancelBtn'</span>, ...</span><br><span class="line">    <span class="string">'state = 1; delete(h); clear h'</span>);       </span><br><span class="line">h1 = findall(h, <span class="string">'style'</span>, <span class="string">'pushbutton'</span>);     </span><br><span class="line">set(h1, <span class="string">'string'</span>, <span class="string">'取消'</span>, <span class="string">'fontsize'</span>, <span class="number">10</span>)   </span><br><span class="line"><span class="keyword">for</span> i = <span class="number">1</span> : <span class="number">100</span>                             </span><br><span class="line">    waitbar(i / <span class="number">100</span>, h, [<span class="string">'进度完成'</span> num2str(i) <span class="string">'%'</span>]);</span><br><span class="line">    pause(<span class="number">0.1</span>)</span><br><span class="line">    <span class="keyword">if</span> state                                </span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">    end</span><br><span class="line">end</span><br><span class="line"><span class="keyword">if</span> exist(<span class="string">'h'</span>) == <span class="number">1</span>     </span><br><span class="line">    delete(h); </span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdnimg.cn/2020040909231571.png" alt="在这里插入图片描述"></p>
+]]></content>
+      <categories>
+        <category>MATLAB</category>
+      </categories>
+      <tags>
+        <tag>MATLAB</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>pytorch 安装过程出现： No module named &#39;tools.nnwrap&#39;——已解决</title>
+    <url>/pytorch%20%E5%AE%89%E8%A3%85%E8%BF%87%E7%A8%8B%E5%87%BA%E7%8E%B0%EF%BC%9A%20No%20module%20named%20&#39;tools.nnwrap&#39;%E2%80%94%E2%80%94%E5%B7%B2%E8%A7%A3%E5%86%B3.html</url>
+    <content><![CDATA[<blockquote>
+<p>环境：win10、py3.6</p>
+</blockquote>
+<p>可以先参考下面这个博文：<br><a href="https://blog.csdn.net/qq_45504119/article/details/104905471" target="_blank" rel="noopener">安装 torch 详细解决方法</a></p>
+<p>这篇文章是我之前写的，后来重装系统，忘了没安装 torch，所以报错，里面文件下载和安装说的很详细。</p>
+<a id="more"></a>
+<h2 id="事件发生："><a href="#事件发生：" class="headerlink" title="事件发生："></a>事件发生：</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">pip install torch</span><br><span class="line"></span><br><span class="line">报错：</span><br><span class="line">ModuleNotFoundError: No module named <span class="string">'tools.nnwrap'</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdnimg.cn/20200409110528138.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2 id="准备文件："><a href="#准备文件：" class="headerlink" title="准备文件："></a>准备文件：</h2><p>我需要下载两个文件： <code>torch-1.4</code> 和 <code>torchvision-0.4</code></p>
+<p><code>torch</code> 我选择 <code>torch-1.4.0+cpu-cp36-cp36m-win_amd64.whl</code></p>
+<p><code>torchvision</code> 我选择： <code>torchvision-0.4.2+cpu-cp36-cp36m-win_amd64.whl</code></p>
+<p><strong>下载方法参考上面的链接</strong></p>
+<h2 id="解决方法："><a href="#解决方法：" class="headerlink" title="解决方法："></a>解决方法：</h2><p>直接：<code>pip install -i</code> 安装文件，具体方法参考上文链接就可以。</p>
 ]]></content>
       <categories>
         <category>python</category>
@@ -1080,20 +1121,6 @@ Did you mean &#39;conda create&#39;?</code></p>
       <tags>
         <tag>python</tag>
         <tag>error&amp;库</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>python实现人数识别目标识别</title>
-    <url>/python%E5%AE%9E%E7%8E%B0%E4%BA%BA%E6%95%B0%E8%AF%86%E5%88%AB%E7%9B%AE%E6%A0%87%E8%AF%86%E5%88%AB.html</url>
-    <content><![CDATA[<p>python 实现 yolo 人数识别或目标识别：<a href="https://blog.csdn.net/qq_45504119/article/details/105033492" target="_blank" rel="noopener">https://blog.csdn.net/qq_45504119/article/details/105033492</a></p>
-]]></content>
-      <categories>
-        <category>python</category>
-        <category>机器视觉</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>机器视觉</tag>
       </tags>
   </entry>
   <entry>
@@ -1134,30 +1161,37 @@ Did you mean &#39;conda create&#39;?</code></p>
       </tags>
   </entry>
   <entry>
-    <title>pytorch 安装过程出现： No module named &#39;tools.nnwrap&#39;——已解决</title>
-    <url>/pytorch%20%E5%AE%89%E8%A3%85%E8%BF%87%E7%A8%8B%E5%87%BA%E7%8E%B0%EF%BC%9A%20No%20module%20named%20&#39;tools.nnwrap&#39;%E2%80%94%E2%80%94%E5%B7%B2%E8%A7%A3%E5%86%B3.html</url>
-    <content><![CDATA[<blockquote>
-<p>环境：win10、py3.6</p>
+    <title>人头录音原理及解释</title>
+    <url>/%E4%BA%BA%E5%A4%B4%E5%BD%95%E9%9F%B3%E5%8E%9F%E7%90%86%E5%8F%8A%E8%A7%A3%E9%87%8A.html</url>
+    <content><![CDATA[<p>简介：</p>
+<p>本文简单介绍了环绕声基础知识，还介绍了各种双声道虚拟环绕声（多声道）的技术。最近突然对虚拟环绕声感兴趣，整理了一下相关知识。</p>
+<ol>
+<li>何为环绕声<br>普通的立体声只能分清左右两个方向的声音，而环绕声还能让人声音的前后左右各个方位，更有空间感仿佛置身于现场。常见的环绕声主要有 5.1 声道与 7.1 声道两种，要重现环绕声也相应的需要 6 个或者 8 个音箱。<a id="more"></a>
+电影中最常见的环绕声格式是杜比数字和 DTS，两者是竞争对手关系，电影 DVD 中一般包含有其中一种或者两种音轨都有。此外，这两种格式也有多个不同的版本，这里就不作详细介绍。</li>
+</ol>
+<p>除了这两种格式之外，部分蓝光光盘也提供 LPCM 格式的音轨，这是一种未经压缩的音频格式，体积最大。压缩后的音频解码成 PCM 格式才能播放，所以这种格式无需解码。理论上 LPCM 格式无压缩音质好，无需解码，是最理想的格式，但由于光盘容量是有限的，音频体积大会挤占视频的空间。可以计算 96kHz 采样率，24 位采样精度，7.1 声道的 LPCM 音轨每秒数据量是</p>
+<blockquote>
+<p>96k * (24 / 8) * 8 = 2.3MB</p>
 </blockquote>
-<p>可以先参考下面这个博文：<br><a href="https://blog.csdn.net/qq_45504119/article/details/104905471" target="_blank" rel="noopener">安装 torch 详细解决方法</a></p>
-<p>这篇文章是我之前写的，后来重装系统，忘了没安装 torch，所以报错，里面文件下载和安装说的很详细。</p>
-<a id="more"></a>
-<h2 id="事件发生："><a href="#事件发生：" class="headerlink" title="事件发生："></a>事件发生：</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">pip install torch</span><br><span class="line"></span><br><span class="line">报错：</span><br><span class="line">ModuleNotFoundError: No module named <span class="string">'tools.nnwrap'</span></span><br></pre></td></tr></table></figure>
-
-<p><img src="https://img-blog.csdnimg.cn/20200409110528138.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<h2 id="准备文件："><a href="#准备文件：" class="headerlink" title="准备文件："></a>准备文件：</h2><p>我需要下载两个文件： <code>torch-1.4</code> 和 <code>torchvision-0.4</code></p>
-<p><code>torch</code> 我选择 <code>torch-1.4.0+cpu-cp36-cp36m-win_amd64.whl</code></p>
-<p><code>torchvision</code> 我选择： <code>torchvision-0.4.2+cpu-cp36-cp36m-win_amd64.whl</code></p>
-<p><strong>下载方法参考上面的链接</strong></p>
-<h2 id="解决方法："><a href="#解决方法：" class="headerlink" title="解决方法："></a>解决方法：</h2><p>直接：<code>pip install -i</code> 安装文件，具体方法参考上文链接就可以。</p>
+<p>那么一部 90 分钟的电影仅音频就占用了约 12.4 GB 空间，而单面蓝光光盘才 25GB。折中办法是无损压缩，类似于 zip 文件解压后可以 100% 还原成压缩前的文件，杜比和 DTS 都推出了相应的音频格式，分别叫杜比 TrueHD 和 DTS-HD Master Audio。这两种格式除了需要解码之外，和 LPCM 音质没有区别。</p>
+<p>说到无损压缩我们常见的音乐中还有 APE 和 FLAC。APE 不支持多声道，FLAC 可以支持，理论上也可以用于电影光盘，但是没有商业化产品支持，所以没有得到应用。FLAC 是免费、开源的音频格式，但目前还没有电影公司采用，没有播放器、解码器以及音响设备支持。网上已有字幕组使用 FLAC 制作多声道的电影文件，目前只能在电脑上软件解码。</p>
+<p>回放环绕声的方法：</p>
+<p>多声道音箱。需要多个音箱，而且摆位要正确，但效果最好。<br>多单元耳机。多个扬声器单元放在一个耳机上，产品很少。<br>虚拟环绕声。经过算法处理成立体声，用普通耳机回放，下面将详细介绍。<br>2. 虚拟环绕声<br>这里只讨论把多声道音频经过算法处理变成立体声的虚拟环绕声，还有一类是把立体声音频经过算法处理使其具有空间感（很多音效宣传具有此功能）的技术，个人觉得后者无意义只能算是一种音效。</p>
+<p><img src="https://img-blog.csdnimg.cn/2020051421502336.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="HRTF 示意图，来源于维基百科"></p>
+<p>虚拟环绕声都是基于 HRTF（Head Related Transfer Functions）头部相关传输函数来实现的，只是各家的算法以及测量数据有差异，效果也就各不相同。关于 HRTF 引用数码多上的简单介绍：人耳在接收到音源发出的声音时，人的耳廓、耳道、头盖骨、肩部等对声波的折射、绕射和衍射以及鼓膜接收到的信息会被大脑所接受，大脑通过经验来对声音的方位进行判断。根据这一原理，通过信号处理的数学方法，我们构建了 HRTF（Head Related Transfer Functions）头部相关传输函数，根据多组的滤波器来虚拟实现人耳接收到的“位置信息”。关于 HRTF 的详细原理，数码多上同样有一篇文章 HRTF音频3D定位技术综述。有了这个基础知识，我们就可以分析各种各样的虚拟环绕声相关技术。</p>
+<p>2.1 人头录音（Dummy head recording）<br>一般录制环绕声音频需要使用多个麦克风，例如 5.1 声道至少需要 5 个麦克风，而一般音乐是双声道两个麦克风。人头录音也是使用两个麦克风录音，但是模拟了人头听音的效果，相当于把两个麦克风放在人的耳朵里面。因为就算是多声道的音箱，人最终都是靠两个耳朵来听，所以在最理想的情况下人头录音是可以达到真实环绕声效果的。但是现实都是不完美的，首先人头录音要求回放时必须使用耳机（录音时麦克风也是放在耳朵里），保证声音没有串扰；其次每个人身体有差异，大脑对声音的判断也不同，录音不可能按照每个人去完美适配。这就造成了人头录音，包括下面提到的虚拟环绕声技术，效果都不如多声道音箱理想。</p>
+<p>2.2 游戏 3D 音效<br>很多游戏也有 3D 音效，计算游戏场景中多个音源（脚步声、远处动物等等）与环境相互作用的效果（反射、阻碍等等）得出游戏中玩家所在位置的全方位声音，这个声音可以认为是环绕声的，然后这个声音经过 HRTF 处理得到立体声输出，当然也可以直接编码成杜比或 DTS 输出到外部多声道音箱。创新的 EAX 以及以前的 Aureal 3D 音效就是属于这一类。</p>
+<p>2.3 虚拟环绕声回放<br>很多厂家有类似的技术，例如 Dolby Headphone、DTS Surround Sensation、索尼 Virtualphones Technology 等等，都是把多声道的各种格式音频（杜比/DTS/LPCM等）解码并经过自家的基于 HRTF 的处理技术转换成立体声，然后用户可以使用耳机回放。下面简单介绍一下两种常见场景：</p>
+<p>视频播放器集成 HRTF 插件。就是视频播放器解码完多声道音频后，再经过 HRTF 处理成立体声输出。例如 PotPlayer 里面有一个音频输出选项叫“虚拟环绕（HRTF）”，PowerDVD 也带有 Dolby Headphone 插件。<br>外部解码器。杜比/DTS/LPCM 等多声道音轨通过光纤或 HDMI 输出到带有虚拟环绕声处理功能的解码器播放，然后输出到耳机。例如搭载有 Dolby Headphone 的游戏耳机，索尼的 MDR-DS 系列搭载有 Virtualphones Technology 技术的耳机。<br>3. 总结<br>总的来说，靠谱的虚拟环绕声技术都是通过把原始多声道音频经过 HRTF 处理得到的，比直接 downmix 到双声道空间感要强，但感觉还是不太自然，效果最好的还是多声道音箱。如果想体验 Dolby Headphone 的效果，这篇文章里面提供有在线试听 5.1 channel audio through ordinary headphones using MPC-HC。</p>
+<p>转载请注明出处：<a href="http://www.cnblogs.com/imouto/archive/2013/03/13/virtual-surround-sound-explained.html" target="_blank" rel="noopener">http://www.cnblogs.com/imouto/archive/2013/03/13/virtual-surround-sound-explained.html</a></p>
+<p>本文外部镜像：<a href="http://oteku.blogspot.com/2013/03/virtual-surround-sound-explained.html" target="_blank" rel="noopener">http://oteku.blogspot.com/2013/03/virtual-surround-sound-explained.html</a></p>
+<p>文章出处：<a href="https://www.cnblogs.com/imouto/archive/2013/03/13/virtual-surround-sound-explained.html" target="_blank" rel="noopener">https://www.cnblogs.com/imouto/archive/2013/03/13/virtual-surround-sound-explained.html</a></p>
 ]]></content>
       <categories>
-        <category>python</category>
-        <category>error&amp;库</category>
+        <category>硬件</category>
       </categories>
       <tags>
-        <tag>python</tag>
-        <tag>error&amp;库</tag>
+        <tag>硬件</tag>
       </tags>
   </entry>
   <entry>
@@ -1194,82 +1228,6 @@ Did you mean &#39;conda create&#39;?</code></p>
       </categories>
       <tags>
         <tag>MATLAB</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>人头录音原理及解释</title>
-    <url>/%E4%BA%BA%E5%A4%B4%E5%BD%95%E9%9F%B3%E5%8E%9F%E7%90%86%E5%8F%8A%E8%A7%A3%E9%87%8A.html</url>
-    <content><![CDATA[<p>简介：</p>
-<p>本文简单介绍了环绕声基础知识，还介绍了各种双声道虚拟环绕声（多声道）的技术。最近突然对虚拟环绕声感兴趣，整理了一下相关知识。</p>
-<ol>
-<li>何为环绕声<br>普通的立体声只能分清左右两个方向的声音，而环绕声还能让人声音的前后左右各个方位，更有空间感仿佛置身于现场。常见的环绕声主要有 5.1 声道与 7.1 声道两种，要重现环绕声也相应的需要 6 个或者 8 个音箱。<a id="more"></a>
-电影中最常见的环绕声格式是杜比数字和 DTS，两者是竞争对手关系，电影 DVD 中一般包含有其中一种或者两种音轨都有。此外，这两种格式也有多个不同的版本，这里就不作详细介绍。</li>
-</ol>
-<p>除了这两种格式之外，部分蓝光光盘也提供 LPCM 格式的音轨，这是一种未经压缩的音频格式，体积最大。压缩后的音频解码成 PCM 格式才能播放，所以这种格式无需解码。理论上 LPCM 格式无压缩音质好，无需解码，是最理想的格式，但由于光盘容量是有限的，音频体积大会挤占视频的空间。可以计算 96kHz 采样率，24 位采样精度，7.1 声道的 LPCM 音轨每秒数据量是</p>
-<blockquote>
-<p>96k * (24 / 8) * 8 = 2.3MB</p>
-</blockquote>
-<p>那么一部 90 分钟的电影仅音频就占用了约 12.4 GB 空间，而单面蓝光光盘才 25GB。折中办法是无损压缩，类似于 zip 文件解压后可以 100% 还原成压缩前的文件，杜比和 DTS 都推出了相应的音频格式，分别叫杜比 TrueHD 和 DTS-HD Master Audio。这两种格式除了需要解码之外，和 LPCM 音质没有区别。</p>
-<p>说到无损压缩我们常见的音乐中还有 APE 和 FLAC。APE 不支持多声道，FLAC 可以支持，理论上也可以用于电影光盘，但是没有商业化产品支持，所以没有得到应用。FLAC 是免费、开源的音频格式，但目前还没有电影公司采用，没有播放器、解码器以及音响设备支持。网上已有字幕组使用 FLAC 制作多声道的电影文件，目前只能在电脑上软件解码。</p>
-<p>回放环绕声的方法：</p>
-<p>多声道音箱。需要多个音箱，而且摆位要正确，但效果最好。<br>多单元耳机。多个扬声器单元放在一个耳机上，产品很少。<br>虚拟环绕声。经过算法处理成立体声，用普通耳机回放，下面将详细介绍。<br>2. 虚拟环绕声<br>这里只讨论把多声道音频经过算法处理变成立体声的虚拟环绕声，还有一类是把立体声音频经过算法处理使其具有空间感（很多音效宣传具有此功能）的技术，个人觉得后者无意义只能算是一种音效。</p>
-<p><img src="https://img-blog.csdnimg.cn/2020051421502336.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="HRTF 示意图，来源于维基百科"></p>
-<p>虚拟环绕声都是基于 HRTF（Head Related Transfer Functions）头部相关传输函数来实现的，只是各家的算法以及测量数据有差异，效果也就各不相同。关于 HRTF 引用数码多上的简单介绍：人耳在接收到音源发出的声音时，人的耳廓、耳道、头盖骨、肩部等对声波的折射、绕射和衍射以及鼓膜接收到的信息会被大脑所接受，大脑通过经验来对声音的方位进行判断。根据这一原理，通过信号处理的数学方法，我们构建了 HRTF（Head Related Transfer Functions）头部相关传输函数，根据多组的滤波器来虚拟实现人耳接收到的“位置信息”。关于 HRTF 的详细原理，数码多上同样有一篇文章 HRTF音频3D定位技术综述。有了这个基础知识，我们就可以分析各种各样的虚拟环绕声相关技术。</p>
-<p>2.1 人头录音（Dummy head recording）<br>一般录制环绕声音频需要使用多个麦克风，例如 5.1 声道至少需要 5 个麦克风，而一般音乐是双声道两个麦克风。人头录音也是使用两个麦克风录音，但是模拟了人头听音的效果，相当于把两个麦克风放在人的耳朵里面。因为就算是多声道的音箱，人最终都是靠两个耳朵来听，所以在最理想的情况下人头录音是可以达到真实环绕声效果的。但是现实都是不完美的，首先人头录音要求回放时必须使用耳机（录音时麦克风也是放在耳朵里），保证声音没有串扰；其次每个人身体有差异，大脑对声音的判断也不同，录音不可能按照每个人去完美适配。这就造成了人头录音，包括下面提到的虚拟环绕声技术，效果都不如多声道音箱理想。</p>
-<p>2.2 游戏 3D 音效<br>很多游戏也有 3D 音效，计算游戏场景中多个音源（脚步声、远处动物等等）与环境相互作用的效果（反射、阻碍等等）得出游戏中玩家所在位置的全方位声音，这个声音可以认为是环绕声的，然后这个声音经过 HRTF 处理得到立体声输出，当然也可以直接编码成杜比或 DTS 输出到外部多声道音箱。创新的 EAX 以及以前的 Aureal 3D 音效就是属于这一类。</p>
-<p>2.3 虚拟环绕声回放<br>很多厂家有类似的技术，例如 Dolby Headphone、DTS Surround Sensation、索尼 Virtualphones Technology 等等，都是把多声道的各种格式音频（杜比/DTS/LPCM等）解码并经过自家的基于 HRTF 的处理技术转换成立体声，然后用户可以使用耳机回放。下面简单介绍一下两种常见场景：</p>
-<p>视频播放器集成 HRTF 插件。就是视频播放器解码完多声道音频后，再经过 HRTF 处理成立体声输出。例如 PotPlayer 里面有一个音频输出选项叫“虚拟环绕（HRTF）”，PowerDVD 也带有 Dolby Headphone 插件。<br>外部解码器。杜比/DTS/LPCM 等多声道音轨通过光纤或 HDMI 输出到带有虚拟环绕声处理功能的解码器播放，然后输出到耳机。例如搭载有 Dolby Headphone 的游戏耳机，索尼的 MDR-DS 系列搭载有 Virtualphones Technology 技术的耳机。<br>3. 总结<br>总的来说，靠谱的虚拟环绕声技术都是通过把原始多声道音频经过 HRTF 处理得到的，比直接 downmix 到双声道空间感要强，但感觉还是不太自然，效果最好的还是多声道音箱。如果想体验 Dolby Headphone 的效果，这篇文章里面提供有在线试听 5.1 channel audio through ordinary headphones using MPC-HC。</p>
-<p>转载请注明出处：<a href="http://www.cnblogs.com/imouto/archive/2013/03/13/virtual-surround-sound-explained.html" target="_blank" rel="noopener">http://www.cnblogs.com/imouto/archive/2013/03/13/virtual-surround-sound-explained.html</a></p>
-<p>本文外部镜像：<a href="http://oteku.blogspot.com/2013/03/virtual-surround-sound-explained.html" target="_blank" rel="noopener">http://oteku.blogspot.com/2013/03/virtual-surround-sound-explained.html</a></p>
-<p>文章出处：<a href="https://www.cnblogs.com/imouto/archive/2013/03/13/virtual-surround-sound-explained.html" target="_blank" rel="noopener">https://www.cnblogs.com/imouto/archive/2013/03/13/virtual-surround-sound-explained.html</a></p>
-]]></content>
-      <categories>
-        <category>硬件</category>
-      </categories>
-      <tags>
-        <tag>硬件</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>关于yolo配合硬件的小结——个人笔记</title>
-    <url>/%E5%85%B3%E4%BA%8Eyolo%E9%85%8D%E5%90%88%E7%A1%AC%E4%BB%B6%E7%9A%84%E5%B0%8F%E7%BB%93%E2%80%94%E2%80%94%E4%B8%AA%E4%BA%BA%E7%AC%94%E8%AE%B0.html</url>
-    <content><![CDATA[<p>这个纯属个人笔记了——完全是怕忘<br>很久没有写博客，也不太知道想写什么，最近玩的东西比较多：esp8266做wifi杀手、配合esp32搭建了个简易的网络摄像头，改yolo玩的一阵子，入手几个红外模块，现在正在玩 USART HMI。</p>
-<p>今天用yolo和红外编码打开空调的时候，因为yolo是不停的循环调用摄像头识别人数的</p>
-<a id="more"></a>
-<blockquote>
-<p>说到这里感觉最近还是有很多可以写的东西的，不过学校快开学了，我过阵子抽时间把最近学到的都写一下吧。</p>
-</blockquote>
-<p>所以它就第一次识别人数后进入红外编码打开空调，然后第二次识别满足人数要求时，又调用红外编码模块进行打开空调的操作，搞得空调一直响…所以我想当它第一次满足条件A，继续循环再满足条件A时暂时不进入A中，直到满足条件B后，如果出现满足条件A的情况才能进入A。所以我想起来之前写的关于global语句的使用。</p>
-<p>贴代码：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">逻辑关系很简单，但是移植的时候出了点小毛病</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line">xunhuan = <span class="number">2</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">dakai</span><span class="params">()</span>:</span></span><br><span class="line">        <span class="keyword">global</span> xunhuan</span><br><span class="line">        <span class="keyword">while</span> xunhuan ==<span class="number">1</span>:</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            print(xunhuan)</span><br><span class="line">            print(<span class="string">'123456'</span>)</span><br><span class="line">            xunhuan = <span class="number">1</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">guanbi</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">global</span> xunhuan</span><br><span class="line">    <span class="keyword">while</span> xunhuan == <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        print(xunhuan)</span><br><span class="line">        print(<span class="string">'abcdef'</span>)</span><br><span class="line">        xunhuan = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> <span class="number">1</span>:</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> xunhuan ==<span class="number">1</span>:</span><br><span class="line">        xunhuan =<span class="number">1</span></span><br><span class="line">    <span class="keyword">if</span> xunhuan ==<span class="number">0</span>:</span><br><span class="line">      xunhuan = <span class="number">0</span></span><br><span class="line">    a=input(<span class="string">'输入人数：'</span>)</span><br><span class="line">    a=int(a)</span><br><span class="line">    <span class="keyword">if</span> a&gt;=<span class="number">3</span>:</span><br><span class="line">        dakai()</span><br><span class="line">    time.sleep(<span class="number">5</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> a&lt;=<span class="number">2</span>:</span><br><span class="line">        guanbi()</span><br><span class="line">    time.sleep(<span class="number">5</span>)</span><br></pre></td></tr></table></figure>
-<p>移植到yolo时移植出现global语句的错误，最后把xunhuan的定义加在了yolo.py的class外面才成功<br><img src="https://img-blog.csdnimg.cn/20200503114812548.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>最近玩yolo还是蛮多的，结合硬件玩了好多东西，最近学校课复习完之后再慢慢分享出来吧。</p>
-]]></content>
-      <categories>
-        <category>python</category>
-        <category>机器视觉</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>机器视觉</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>如何创建可直接修改后缀来改变格式的文档</title>
-    <url>/%E5%A6%82%E4%BD%95%E5%88%9B%E5%BB%BA%E5%8F%AF%E7%9B%B4%E6%8E%A5%E4%BF%AE%E6%94%B9%E5%90%8E%E7%BC%80%E6%9D%A5%E6%94%B9%E5%8F%98%E6%A0%BC%E5%BC%8F%E7%9A%84%E6%96%87%E6%A1%A3.html</url>
-    <content><![CDATA[<p>程序员应该都知道，我们新建一个文本文档后</p>
-<p>可以直接改变文本的后缀来创建相应的文件</p>
-<p>最熟悉不过的就是 python 了，直接新建一个文本，‘txt’ 后缀改为 ‘py’</p>
-<p>再用IDLE打开再省事不过了</p>
-<p>但我今天重装系统后发现新建的文本不显示后缀，我也没法改：</p>
-<a id="more"></a>
-<p><img src="https://img-blog.csdnimg.cn/20200224174108439.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p><strong>**在这里记录一下如何操作：</strong><br>1、打开‘电脑’—&gt;’查看’—&gt;‘选项’**<br><img src="https://img-blog.csdnimg.cn/20200224174842735.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt=""><br><strong>2、‘查看’—&gt;取消选择’隐藏已知文件类型的拓展名’</strong><br><img src="https://img-blog.csdnimg.cn/20200224175153420.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>然后就可以正常操作了<br><img src="https://img-blog.csdnimg.cn/20200224175553276.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/2020022417560399.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>请无视其他无关文件和字幕….<br>请无视其他无关文件和字幕…<br>请无视其他无关文件和字幕…<br>(重要的无视说三遍！！！)</p>
-]]></content>
-      <categories>
-        <category>win10</category>
-      </categories>
-      <tags>
-        <tag>win10</tag>
       </tags>
   </entry>
   <entry>
@@ -1312,6 +1270,48 @@ Did you mean &#39;conda create&#39;?</code></p>
       </categories>
       <tags>
         <tag>MATLAB</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>关于yolo配合硬件的小结——个人笔记</title>
+    <url>/%E5%85%B3%E4%BA%8Eyolo%E9%85%8D%E5%90%88%E7%A1%AC%E4%BB%B6%E7%9A%84%E5%B0%8F%E7%BB%93%E2%80%94%E2%80%94%E4%B8%AA%E4%BA%BA%E7%AC%94%E8%AE%B0.html</url>
+    <content><![CDATA[<p>这个纯属个人笔记了——完全是怕忘<br>很久没有写博客，也不太知道想写什么，最近玩的东西比较多：esp8266做wifi杀手、配合esp32搭建了个简易的网络摄像头，改yolo玩的一阵子，入手几个红外模块，现在正在玩 USART HMI。</p>
+<p>今天用yolo和红外编码打开空调的时候，因为yolo是不停的循环调用摄像头识别人数的</p>
+<a id="more"></a>
+<blockquote>
+<p>说到这里感觉最近还是有很多可以写的东西的，不过学校快开学了，我过阵子抽时间把最近学到的都写一下吧。</p>
+</blockquote>
+<p>所以它就第一次识别人数后进入红外编码打开空调，然后第二次识别满足人数要求时，又调用红外编码模块进行打开空调的操作，搞得空调一直响…所以我想当它第一次满足条件A，继续循环再满足条件A时暂时不进入A中，直到满足条件B后，如果出现满足条件A的情况才能进入A。所以我想起来之前写的关于global语句的使用。</p>
+<p>贴代码：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">逻辑关系很简单，但是移植的时候出了点小毛病</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line">xunhuan = <span class="number">2</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">dakai</span><span class="params">()</span>:</span></span><br><span class="line">        <span class="keyword">global</span> xunhuan</span><br><span class="line">        <span class="keyword">while</span> xunhuan ==<span class="number">1</span>:</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            print(xunhuan)</span><br><span class="line">            print(<span class="string">'123456'</span>)</span><br><span class="line">            xunhuan = <span class="number">1</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">guanbi</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">global</span> xunhuan</span><br><span class="line">    <span class="keyword">while</span> xunhuan == <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        print(xunhuan)</span><br><span class="line">        print(<span class="string">'abcdef'</span>)</span><br><span class="line">        xunhuan = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> <span class="number">1</span>:</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> xunhuan ==<span class="number">1</span>:</span><br><span class="line">        xunhuan =<span class="number">1</span></span><br><span class="line">    <span class="keyword">if</span> xunhuan ==<span class="number">0</span>:</span><br><span class="line">      xunhuan = <span class="number">0</span></span><br><span class="line">    a=input(<span class="string">'输入人数：'</span>)</span><br><span class="line">    a=int(a)</span><br><span class="line">    <span class="keyword">if</span> a&gt;=<span class="number">3</span>:</span><br><span class="line">        dakai()</span><br><span class="line">    time.sleep(<span class="number">5</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> a&lt;=<span class="number">2</span>:</span><br><span class="line">        guanbi()</span><br><span class="line">    time.sleep(<span class="number">5</span>)</span><br></pre></td></tr></table></figure>
+<p>移植到yolo时移植出现global语句的错误，最后把xunhuan的定义加在了yolo.py的class外面才成功<br><img src="https://img-blog.csdnimg.cn/20200503114812548.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>最近玩yolo还是蛮多的，结合硬件玩了好多东西，最近学校课复习完之后再慢慢分享出来吧。</p>
+]]></content>
+      <categories>
+        <category>python</category>
+        <category>机器视觉</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>机器视觉</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>如何创建可直接修改后缀来改变格式的文档</title>
+    <url>/%E5%A6%82%E4%BD%95%E5%88%9B%E5%BB%BA%E5%8F%AF%E7%9B%B4%E6%8E%A5%E4%BF%AE%E6%94%B9%E5%90%8E%E7%BC%80%E6%9D%A5%E6%94%B9%E5%8F%98%E6%A0%BC%E5%BC%8F%E7%9A%84%E6%96%87%E6%A1%A3.html</url>
+    <content><![CDATA[<p>程序员应该都知道，我们新建一个文本文档后</p>
+<p>可以直接改变文本的后缀来创建相应的文件</p>
+<p>最熟悉不过的就是 python 了，直接新建一个文本，‘txt’ 后缀改为 ‘py’</p>
+<p>再用IDLE打开再省事不过了</p>
+<p>但我今天重装系统后发现新建的文本不显示后缀，我也没法改：</p>
+<a id="more"></a>
+<p><img src="https://img-blog.csdnimg.cn/20200224174108439.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><strong>**在这里记录一下如何操作：</strong><br>1、打开‘电脑’—&gt;’查看’—&gt;‘选项’**<br><img src="https://img-blog.csdnimg.cn/20200224174842735.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt=""><br><strong>2、‘查看’—&gt;取消选择’隐藏已知文件类型的拓展名’</strong><br><img src="https://img-blog.csdnimg.cn/20200224175153420.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>然后就可以正常操作了<br><img src="https://img-blog.csdnimg.cn/20200224175553276.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/2020022417560399.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>请无视其他无关文件和字幕….<br>请无视其他无关文件和字幕…<br>请无视其他无关文件和字幕…<br>(重要的无视说三遍！！！)</p>
+]]></content>
+      <categories>
+        <category>win10</category>
+      </categories>
+      <tags>
+        <tag>win10</tag>
       </tags>
   </entry>
   <entry>
@@ -1482,6 +1482,58 @@ Did you mean &#39;conda create&#39;?</code></p>
       </tags>
   </entry>
   <entry>
+    <title>教女朋友一周学会 python 爬虫_1</title>
+    <url>/%E6%95%99%E5%A5%B3%E6%9C%8B%E5%8F%8B%E4%B8%80%E5%91%A8%E5%AD%A6%E4%BC%9A%20python%20%E7%88%AC%E8%99%AB_1.html</url>
+    <content><![CDATA[<p>今天开始我将简单介绍一下网络爬虫，并开始带大家学习如何写爬虫</p>
+<p><strong>一、爬虫介绍</strong></p>
+<p> <strong>1、什么是爬虫？</strong></p>
+<p>你可以把互联网想想成一个巨大的蜘蛛网，而爬虫就是一个小蜘蛛在网的各个节点中穿梭。   就像探测机器一样，基本操作就是模拟人去浏览各个网站，浏览数据，查看信息。</p>
+<a id="more"></a>
+<p> <strong>2、爬虫可以做什么？</strong></p>
+<p><strong>（1）抢火车票：</strong></p>
+<p>这应该是爬虫行业中使用量最大，很多抢票软件每秒对12306扫数千数万次。</p>
+<p><strong>（2）刷浏览量：</strong></p>
+<p>爬虫重灾区应该是微博无疑了，爬虫代码指向微博的某一个接口，可以获取用户的微博列表，微博动态，等等信息。</p>
+<p>有的人用爬虫指挥机器人，来打开某人的微博进行点赞、评论或留言。也就是微博上所谓的僵尸粉（去年某坤微博转发过亿次还记得吗）。</p>
+<p>还有很多更“好玩”的用处，这里就不废话了</p>
+<p><strong>二、正式开始学习</strong></p>
+<p>想写爬虫，首先要了解 URL：</p>
+<p>统一资源定位符（Universal Resource Locator），简单说就是表示资源的地址（我们说某个网站的网址就是 URL）。</p>
+<p><strong>1、urllib.request.urlopen（）函数</strong></p>
+<blockquote>
+<p><strong>urllib 是一个软件包，收集了几个用于处理URL的模块 ：</strong><br>.<br><strong>urllib.request ： 用于打开和阅读URL</strong><br>.<br><strong>urllib.error ： 包含由引发的异常 urllib.request</strong><br>.<br><strong>urllib.parse ： 用于解析URL</strong><br>.<br><strong>urllib.robotparser ： 用于解析robots.txt文件</strong></p>
+</blockquote>
+<p><strong>urllib.request—用于打开URL的可扩展库</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">urllib.request.urlopen（url，data = <span class="literal">None</span>，[ timeout，] *，cafile = <span class="literal">None</span>，capath = <span class="literal">None</span>，cadefault = <span class="literal">False</span>，context = <span class="literal">None</span> ）</span><br><span class="line"><span class="comment">##打开url，字符串或 Request 对象</span></span><br></pre></td></tr></table></figure>
+<p>data：访问URL时传输的数据</p>
+<p>timeout：参数以秒为单位，检测是否超时</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Time：2020/03/11 1:07</span></span><br><span class="line"><span class="comment"># environment:IDLE</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> urllib.request</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>response=urllib.request.urlopen(<span class="string">"http://www.baidu.com"</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>type(response)</span><br><span class="line">&lt;<span class="class"><span class="keyword">class</span> '<span class="title">http</span>.<span class="title">client</span>.<span class="title">HTTPResponse</span>'&gt;</span></span><br><span class="line"><span class="class"># 返回 <span class="title">HTTPResponse</span> 类型数据</span></span><br></pre></td></tr></table></figure>
+<hr>
+<p><strong>2、实例检测某网站的编码</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> chardet</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> urllib.request</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>url = input(<span class="string">'input address：'</span>)</span><br><span class="line"><span class="comment"># 输入网址</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>response = urllib.request.urlopen(url)</span><br><span class="line"><span class="comment"># urllib.request.urlopen信息传给response</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>infor = response.read()</span><br><span class="line"><span class="comment"># 返回获取到的页面内容</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>encode = chardet.detect(infor)[<span class="string">'encoding'</span>]</span><br><span class="line">&gt;&gt;&gt;print(encode)</span><br><span class="line">input address：http://www.baidu.com</span><br><span class="line">utf<span class="number">-8</span></span><br></pre></td></tr></table></figure>
+<hr>
+<p><strong>3、检测网站状态</strong></p>
+<p>“200”则说明网站正常</p>
+<p>“404”就说明不正常</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> urllib.request</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>response=urllib.request.urlopen(<span class="string">"http://www.baidu.com"</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>code=response.getcode()</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(code)</span><br><span class="line"><span class="number">200</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<hr>
+<hr>
+<p>今天晚上一直看 LOL 直播，现在有点撑不住了，都凌晨一点半了</p>
+<p>早起还要上网课</p>
+<p>上完网课再更</p>
+]]></content>
+      <categories>
+        <category>python</category>
+        <category>爬虫</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>爬虫</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>教女友学会python+yolov3调用笔记本摄像头——实时进行识别</title>
     <url>/%E6%95%99%E5%A5%B3%E5%8F%8B%E5%AD%A6%E4%BC%9Apython+yolov3%E8%B0%83%E7%94%A8%E7%AC%94%E8%AE%B0%E6%9C%AC%E6%91%84%E5%83%8F%E5%A4%B4%E2%80%94%E2%80%94%E5%AE%9E%E6%97%B6%E8%BF%9B%E8%A1%8C%E8%AF%86%E5%88%AB.html</url>
     <content><![CDATA[<blockquote>
@@ -1536,55 +1588,132 @@ Did you mean &#39;conda create&#39;?</code></p>
       </tags>
   </entry>
   <entry>
-    <title>教女朋友一周学会 python 爬虫_1</title>
-    <url>/%E6%95%99%E5%A5%B3%E6%9C%8B%E5%8F%8B%E4%B8%80%E5%91%A8%E5%AD%A6%E4%BC%9A%20python%20%E7%88%AC%E8%99%AB_1.html</url>
-    <content><![CDATA[<p>今天开始我将简单介绍一下网络爬虫，并开始带大家学习如何写爬虫</p>
-<p><strong>一、爬虫介绍</strong></p>
-<p> <strong>1、什么是爬虫？</strong></p>
-<p>你可以把互联网想想成一个巨大的蜘蛛网，而爬虫就是一个小蜘蛛在网的各个节点中穿梭。   就像探测机器一样，基本操作就是模拟人去浏览各个网站，浏览数据，查看信息。</p>
-<a id="more"></a>
-<p> <strong>2、爬虫可以做什么？</strong></p>
-<p><strong>（1）抢火车票：</strong></p>
-<p>这应该是爬虫行业中使用量最大，很多抢票软件每秒对12306扫数千数万次。</p>
-<p><strong>（2）刷浏览量：</strong></p>
-<p>爬虫重灾区应该是微博无疑了，爬虫代码指向微博的某一个接口，可以获取用户的微博列表，微博动态，等等信息。</p>
-<p>有的人用爬虫指挥机器人，来打开某人的微博进行点赞、评论或留言。也就是微博上所谓的僵尸粉（去年某坤微博转发过亿次还记得吗）。</p>
-<p>还有很多更“好玩”的用处，这里就不废话了</p>
-<p><strong>二、正式开始学习</strong></p>
-<p>想写爬虫，首先要了解 URL：</p>
-<p>统一资源定位符（Universal Resource Locator），简单说就是表示资源的地址（我们说某个网站的网址就是 URL）。</p>
-<p><strong>1、urllib.request.urlopen（）函数</strong></p>
-<blockquote>
-<p><strong>urllib 是一个软件包，收集了几个用于处理URL的模块 ：</strong><br>.<br><strong>urllib.request ： 用于打开和阅读URL</strong><br>.<br><strong>urllib.error ： 包含由引发的异常 urllib.request</strong><br>.<br><strong>urllib.parse ： 用于解析URL</strong><br>.<br><strong>urllib.robotparser ： 用于解析robots.txt文件</strong></p>
+    <title>教女朋友学会用ESP8266实现wifi杀手——有固件</title>
+    <url>/%E6%95%99%E5%A5%B3%E6%9C%8B%E5%8F%8B%E5%AD%A6%E4%BC%9A%E7%94%A8ESP8266%E5%AE%9E%E7%8E%B0wifi%E6%9D%80%E6%89%8B%E2%80%94%E2%80%94%E6%9C%89%E5%9B%BA%E4%BB%B6.html</url>
+    <content><![CDATA[<blockquote>
+<p>固件来自大神：FengMo<br>固件下载地址：<a href="https://download.csdn.net/download/qq_45504119/12407789" target="_blank" rel="noopener">https://download.csdn.net/download/qq_45504119/12407789</a><br>也可以加我的交流群，我会在群里分享出来哦：977947271<br>2020/5/30：<br>近日每天都有十几个很明显的小号加群，而且有的大号进群竟然打广告和卖不良物品，经我和群友讨论后，加群需要正确填写我的CSDN账号昵称，只是为了过滤一些不好的人。</p>
 </blockquote>
-<p><strong>urllib.request—用于打开URL的可扩展库</strong></p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">urllib.request.urlopen（url，data = <span class="literal">None</span>，[ timeout，] *，cafile = <span class="literal">None</span>，capath = <span class="literal">None</span>，cadefault = <span class="literal">False</span>，context = <span class="literal">None</span> ）</span><br><span class="line"><span class="comment">##打开url，字符串或 Request 对象</span></span><br></pre></td></tr></table></figure>
-<p>data：访问URL时传输的数据</p>
-<p>timeout：参数以秒为单位，检测是否超时</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Time：2020/03/11 1:07</span></span><br><span class="line"><span class="comment"># environment:IDLE</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> urllib.request</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>response=urllib.request.urlopen(<span class="string">"http://www.baidu.com"</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>type(response)</span><br><span class="line">&lt;<span class="class"><span class="keyword">class</span> '<span class="title">http</span>.<span class="title">client</span>.<span class="title">HTTPResponse</span>'&gt;</span></span><br><span class="line"><span class="class"># 返回 <span class="title">HTTPResponse</span> 类型数据</span></span><br></pre></td></tr></table></figure>
-<hr>
-<p><strong>2、实例检测某网站的编码</strong></p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> chardet</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> urllib.request</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>url = input(<span class="string">'input address：'</span>)</span><br><span class="line"><span class="comment"># 输入网址</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>response = urllib.request.urlopen(url)</span><br><span class="line"><span class="comment"># urllib.request.urlopen信息传给response</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>infor = response.read()</span><br><span class="line"><span class="comment"># 返回获取到的页面内容</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>encode = chardet.detect(infor)[<span class="string">'encoding'</span>]</span><br><span class="line">&gt;&gt;&gt;print(encode)</span><br><span class="line">input address：http://www.baidu.com</span><br><span class="line">utf<span class="number">-8</span></span><br></pre></td></tr></table></figure>
-<hr>
-<p><strong>3、检测网站状态</strong></p>
-<p>“200”则说明网站正常</p>
-<p>“404”就说明不正常</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> urllib.request</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>response=urllib.request.urlopen(<span class="string">"http://www.baidu.com"</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>code=response.getcode()</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(code)</span><br><span class="line"><span class="number">200</span></span><br></pre></td></tr></table></figure>
-
-<hr>
-<hr>
-<hr>
-<p>今天晚上一直看 LOL 直播，现在有点撑不住了，都凌晨一点半了</p>
-<p>早起还要上网课</p>
-<p>上完网课再更</p>
+<a id="more"></a>
+<h1 id="事件前言"><a href="#事件前言" class="headerlink" title="事件前言"></a>事件前言</h1><p>前阵子我自己翻 tb 的时候发现一个esp8266模块还挺好玩的，于是20多块入手了一个esp8266模块<br><img src="https://img-blog.csdnimg.cn/20200511084858957.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>这里给大家提个醒，esp8266本身可以用于智能家电和WiFi杀手，但是仅限于二代，三代不能用作WiFi杀手，所以大家买的时候要问下客服哦。</p>
+<p><strong>友情提醒</strong>：后来我在 “拼朵朵” 上面看到有卖不到十元的esp8266，大家有兴趣的可以买着玩，不过不知道性能行不行，新手可以试试。</p>
+<h2 id="如何下载固件"><a href="#如何下载固件" class="headerlink" title="如何下载固件"></a>如何下载固件</h2><p>大家把 esp8266 模块连接电脑之后，解压我给的 esp8266 固件文件</p>
+<p><strong>1、安装驱动</strong><br>打开驱动文件<br><img src="https://img-blog.csdnimg.cn/20200511091038960.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>运行 <code>CH341SER.EXE</code>，同时确保 esp8266 模块已经连接电脑<br><img src="https://img-blog.csdnimg.cn/20200511091122964.png" alt="在这里插入图片描述"></p>
+<p>点击安装<br><img src="https://img-blog.csdnimg.cn/20200511091341503.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200511091422210.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>如果弹出驱动安装失败，肯定是电脑和esp8266没有正确连接，就请打开 控制面板中的设备管理器，看看有没有端口显示</p>
+<p><img src="https://img-blog.csdnimg.cn/20200511091538265.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><strong>2、导入固件</strong><br>运行 <code>ESP8266Flasher.exe</code>，<br><img src="https://img-blog.csdnimg.cn/20200511091741296.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>选择设备管理器中查到的端口号，我这里是 COM3<br><img src="https://img-blog.csdnimg.cn/20200511091946617.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>选择 <code>Config</code> 并导入固件 <code>Wi-PWN.ino.CH.bin</code> 的地址</p>
+<p>我这里是：<code>C:\Users\27511\Desktop\ESP8266\固件\Wi-PWN.ino.CH.bin</code><br><img src="https://img-blog.csdnimg.cn/20200511092113641.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>点击 <code>Advanced</code> ，其中 <code>Baudrate</code> 可在 esp8266 的背面找到具体数值，我这里是 9600<br><img src="https://img-blog.csdnimg.cn/20200511092456457.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong>3、烧录</strong><br>好了之后，现在回到工具的operation这个页面也就是第一个页面，点击 <code>Flash</code><br><img src="https://img-blog.csdnimg.cn/2020051109281540.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>稍微等一等，直到光条拉满，就说明固件下载好了<br><img src="https://img-blog.csdnimg.cn/20200511100310789.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2 id="手机连接wifi进行XX操作"><a href="#手机连接wifi进行XX操作" class="headerlink" title="手机连接wifi进行XX操作"></a>手机连接wifi进行XX操作</h2><p>手机应该可以搜到一个新的wifi,而且没有密码的，连接此网络，并浏览器登录地址：192.168.4.1<br><img src="https://img-blog.csdnimg.cn/20200511123134386.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200511123202986.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>点击接受，会自动给一个新的wifi登录密码，一般是：<code>rootaccess</code></p>
+<p><img src="https://img-blog.csdnimg.cn/20200511123316340.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>点击继续之后会让我们重新连接<br><img src="https://img-blog.csdnimg.cn/20200511123438258.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>回到手机连接重新输入密码连接此网络，再登录 <code>192.168.4.1</code>，就可以进行钓鱼操作了</p>
+<p><img src="https://img-blog.csdnimg.cn/20200511123531529.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200511123544901.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<blockquote>
+<p>在这里提醒大家，此博文操作完全是技术分享，钓鱼操作请大家使用自己家的 wifi 或手机热点为对象，请勿因一己私利或单纯觉得好玩对别人造成麻烦。<br>.<br>下一个博文我会给大家分享如何用python暴力破解wifi密码，也只是纯技术分享，请大家勿用于非法操作<br>.<br>有兴趣的朋友可以进我的交流群，或者评论邮箱</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>硬件</category>
+      </categories>
+      <tags>
+        <tag>硬件</tag>
+        <tag>ESP8266</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>新手如何使用anaconda（python）—简单介绍</title>
+    <url>/%E6%96%B0%E6%89%8B%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8anaconda%EF%BC%88python%EF%BC%89%E2%80%94%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D.html</url>
+    <content><![CDATA[<p>我之前用 python 的 IDLE 去写代码，但是在深度学习的部分，代码频频报错，因为 python 的很多库都没有，而自己去下载的话速度极其的慢。</p>
+<p>所以下载 anaconda 了， anaconda 里已经下载了很多库（虽然依然没有我想要的库），但相比单单一个 python 软件便好用许多。</p>
+<p>这里介绍一下新手如何快速使用 anaconda（我也是刚接触 python，好在比C简单多了，和 matlab 又很像）：</p>
+<a id="more"></a>
+<p>我们在：</p>
+<p>清华镜像下载   anaconda（下载过程看我另一篇博文）：<br><a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/" target="_blank" rel="noopener">https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/</a></p>
+<p>安装好了之后</p>
+<p><img src="https://img-blog.csdnimg.cn/20200217161343829.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>开始界面应该有这些东西，不过我们需要的一般只有 Jupyter Notebook 和  Anaconda Prompt。</p>
+<p>Jupyter Notebook 可以当作 python 来用，只是界面不同。 Anaconda Prompt 就是和windows 的 cmd 差不多。</p>
+<p><img src="https://img-blog.csdnimg.cn/20200217162002355.png" alt="在这里插入图片描述"></p>
+<p>在prompt里输入python，则就会显示python的版本，我这里是3.6.5。</p>
+<p>并进入python的编程环境：</p>
+<p><img src="https://img-blog.csdnimg.cn/20200217163039966.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>不过最好不要在这里写代码吧，因为…上图就是教训呀！（新手不懂。。。）</p>
+<p>回归正题：<br>代码一般都在Jupyter Notebook里写<br>这里打开Jupyter Notebook</p>
+<p><img src="https://img-blog.csdnimg.cn/2020021716330039.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200217163404727.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>电脑会自动打开网页 jupyter , anaconda中的python就是个web程序。在这里就可以开始python之旅了。上图现实的打开文件路径，可以打开里面储存的文件。</p>
+<p><img src="https://img-blog.csdnimg.cn/20200217164043772.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>点击new按钮就可以创建新的text file 和folder.</p>
+<p>打开text:</p>
+<p><img src="https://img-blog.csdnimg.cn/2020021716452081.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">就可以编辑文字和代码。</p>
+<p>点击 python 3 就可以正常的进行代码的编写了，下面随手写了个新手代码，按住shift+Enter就可以运行代码了。</p>
+<p><img src="https://img-blog.csdnimg.cn/20200217165201133.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>我也是个新手，因为 MATLAB 项目的需要所以转战 python。</p>
+<p>接下来我会继续更新 MATLAB 项目的部分，也会开始python爬虫的编写。</p>
+<p>欢迎各位指正错误。</p>
 ]]></content>
       <categories>
         <category>python</category>
-        <category>爬虫</category>
+        <category>入门</category>
       </categories>
       <tags>
         <tag>python</tag>
-        <tag>爬虫</tag>
+        <tag>anaconda</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>运行SSD-TensorFlow报错：tensorflow.python.framework.errors_impl.NotFoundError：</title>
+    <url>/%E8%BF%90%E8%A1%8CSSD-TensorFlow%E6%8A%A5%E9%94%99%EF%BC%9Atensorflow.python.framework.errors_impl.NotFoundError%EF%BC%9A.html</url>
+    <content><![CDATA[<p>玩了很久的 yolo，今天下载了 SSD-TensorFlow 的代码，不过在运行的时候出现了一点问题</p>
+<p>官方的介绍是运行：<code>jupyter notebook notebooks/ssd_notebook.ipynb</code></p>
+<p>但是在 <code>jupyter notebook</code> 中运行多有不便，我就将代码复制在了下面文件夹里，与 <code>ssd_notebook.ipynb</code> 放在了一块，可是出现报错：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">tensorflow.python.framework.errors_impl.NotFoundError: FindFirstFile failed <span class="keyword">for</span></span><br><span class="line">…/checkpoints:ϵͳ\udcd5Ҳ\udcbb\udcb5\udcbdָ\udcb6\udca8\udcb5\udcc4·\udcbe\udcb6\udca1\udca3 </span><br><span class="line">; No such process</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<p><img src="https://img-blog.csdnimg.cn/20200506152235306.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>可以看到：在 <code>demo_test.py</code> 的大概15、42、73行的位置，路径全都写错了</p>
+<p><img src="https://img-blog.csdnimg.cn/20200506153032938.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><img src="https://img-blog.csdnimg.cn/20200506153046666.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><img src="https://img-blog.csdnimg.cn/20200506153053557.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>以43行为例将：<code>ckpt_filename = &#39;.../checkpoints/ssd_300_vgg.ckpt&#39;</code> 改为：<code>ckpt_filename = &#39;./checkpoints/ssd_300_vgg.ckpt&#39;</code></p>
+<p><img src="https://img-blog.csdnimg.cn/20200506153309230.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>而且有一点要注意，我这里路径写的是相对路径，也就是从我 <code>demo_test.py</code> 所在的位置到 <code>checkpoints</code> 文件所在的相对位置，所以很明显路径需要添加东西，或者我直接将  <code>demo_test.py</code> 文件放在主文件夹下面即可：</p>
+<p><img src="https://img-blog.csdnimg.cn/20200506153618543.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h2><p><strong>1、将路径前面的点删除至只留下一个</strong></p>
+<p><strong>2、注意相对路径，否则会报同样的错误</strong></p>
+<hr>
+<blockquote>
+<p>题外话：<br>我也只是个学生，做项目的时候刚好看到 yolo 了，就玩了一阵子，现在准备玩 ssd ，这些只是很简单的东西，之后我会慢慢的把我做的比较深入的东西写出来(说实话…一般没人看)，我准备创建一个开源项目的交流群。<br>我本身很菜，但是玩过一些开源的项目，本身电气专业，也喜欢自己用单片机做东西，现在自己发过论文、国际发明专利、国内发明专利。马上准备考研了，也希望能遇到一些大佬，给些指点，也可以大家一起讨论问题，解决问题。<br>群号：977947271</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/20200506154001109.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+]]></content>
+      <categories>
+        <category>python</category>
+        <category>机器视觉</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>机器视觉</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>运行sh文件报错：python3 command not found——已解决</title>
+    <url>/%E8%BF%90%E8%A1%8Csh%E6%96%87%E4%BB%B6%E6%8A%A5%E9%94%99%EF%BC%9Apython3%EF%BC%9A%20command%20not%20found%E2%80%94%E2%80%94%E5%B7%B2%E8%A7%A3%E5%86%B3.html</url>
+    <content><![CDATA[<p>我使用windows下的 anaconda 运行 sh 文件时报错：<code>python3: command not found</code></p>
+<p>可是我就是在 anaconda 配置的 python3.6 环境下运行的 sh 文件啊</p>
+<p>网上没有找的任何有效的解决方法</p>
+<p>后来我打开 sh 文件看了下代码：<br>（把 sh 后缀改成 txt 后缀就可以打开文件）</p>
+<a id="more"></a>
+<p><img src="https://img-blog.csdnimg.cn/20200316145609226.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>发现框住的那一行代码不就是我们平时运行 py 文件的命令嘛</p>
+<p>所以我把它改成：<code>python -u train.py \</code></p>
+<p><img src="https://img-blog.csdnimg.cn/20200316145810476.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>结果就可以正常运行了。</p>
+<p>我已经解决了问题，如果有对这种操作有任何问题的可以评论</p>
+]]></content>
+      <categories>
+        <category>python</category>
+        <category>error&amp;库</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>error&amp;库</tag>
       </tags>
   </entry>
   <entry>
@@ -1688,135 +1817,6 @@ Did you mean &#39;conda create&#39;?</code></p>
 <h2 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h2><p>以上过程皆为刚刚我亲自操作，全程没有任何问题</p>
 <p>如果有朋友对这篇文章的任何内容感到不明白的请及时评论提出问题，我怕时间一久我也会忘，想要资料的直接评论你们的联系方式就行，我有时间会回复的。</p>
 <p>这个暂时告一段落，接下来我会在 matlab 中找一些算法去实现同样的功能，有兴趣的朋友可以评论一下一起探讨。</p>
-]]></content>
-      <categories>
-        <category>python</category>
-        <category>机器视觉</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>机器视觉</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>教女朋友学会用ESP8266实现wifi杀手——有固件</title>
-    <url>/%E6%95%99%E5%A5%B3%E6%9C%8B%E5%8F%8B%E5%AD%A6%E4%BC%9A%E7%94%A8ESP8266%E5%AE%9E%E7%8E%B0wifi%E6%9D%80%E6%89%8B%E2%80%94%E2%80%94%E6%9C%89%E5%9B%BA%E4%BB%B6.html</url>
-    <content><![CDATA[<blockquote>
-<p>固件来自大神：FengMo<br>固件下载地址：<a href="https://download.csdn.net/download/qq_45504119/12407789" target="_blank" rel="noopener">https://download.csdn.net/download/qq_45504119/12407789</a><br>也可以加我的交流群，我会在群里分享出来哦：977947271<br>2020/5/30：<br>近日每天都有十几个很明显的小号加群，而且有的大号进群竟然打广告和卖不良物品，经我和群友讨论后，加群需要正确填写我的CSDN账号昵称，只是为了过滤一些不好的人。</p>
-</blockquote>
-<a id="more"></a>
-<h1 id="事件前言"><a href="#事件前言" class="headerlink" title="事件前言"></a>事件前言</h1><p>前阵子我自己翻 tb 的时候发现一个esp8266模块还挺好玩的，于是20多块入手了一个esp8266模块<br><img src="https://img-blog.csdnimg.cn/20200511084858957.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>这里给大家提个醒，esp8266本身可以用于智能家电和WiFi杀手，但是仅限于二代，三代不能用作WiFi杀手，所以大家买的时候要问下客服哦。</p>
-<p><strong>友情提醒</strong>：后来我在 “拼朵朵” 上面看到有卖不到十元的esp8266，大家有兴趣的可以买着玩，不过不知道性能行不行，新手可以试试。</p>
-<h2 id="如何下载固件"><a href="#如何下载固件" class="headerlink" title="如何下载固件"></a>如何下载固件</h2><p>大家把 esp8266 模块连接电脑之后，解压我给的 esp8266 固件文件</p>
-<p><strong>1、安装驱动</strong><br>打开驱动文件<br><img src="https://img-blog.csdnimg.cn/20200511091038960.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>运行 <code>CH341SER.EXE</code>，同时确保 esp8266 模块已经连接电脑<br><img src="https://img-blog.csdnimg.cn/20200511091122964.png" alt="在这里插入图片描述"></p>
-<p>点击安装<br><img src="https://img-blog.csdnimg.cn/20200511091341503.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200511091422210.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>如果弹出驱动安装失败，肯定是电脑和esp8266没有正确连接，就请打开 控制面板中的设备管理器，看看有没有端口显示</p>
-<p><img src="https://img-blog.csdnimg.cn/20200511091538265.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p><strong>2、导入固件</strong><br>运行 <code>ESP8266Flasher.exe</code>，<br><img src="https://img-blog.csdnimg.cn/20200511091741296.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>选择设备管理器中查到的端口号，我这里是 COM3<br><img src="https://img-blog.csdnimg.cn/20200511091946617.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>选择 <code>Config</code> 并导入固件 <code>Wi-PWN.ino.CH.bin</code> 的地址</p>
-<p>我这里是：<code>C:\Users\27511\Desktop\ESP8266\固件\Wi-PWN.ino.CH.bin</code><br><img src="https://img-blog.csdnimg.cn/20200511092113641.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>点击 <code>Advanced</code> ，其中 <code>Baudrate</code> 可在 esp8266 的背面找到具体数值，我这里是 9600<br><img src="https://img-blog.csdnimg.cn/20200511092456457.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong>3、烧录</strong><br>好了之后，现在回到工具的operation这个页面也就是第一个页面，点击 <code>Flash</code><br><img src="https://img-blog.csdnimg.cn/2020051109281540.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>稍微等一等，直到光条拉满，就说明固件下载好了<br><img src="https://img-blog.csdnimg.cn/20200511100310789.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<h2 id="手机连接wifi进行XX操作"><a href="#手机连接wifi进行XX操作" class="headerlink" title="手机连接wifi进行XX操作"></a>手机连接wifi进行XX操作</h2><p>手机应该可以搜到一个新的wifi,而且没有密码的，连接此网络，并浏览器登录地址：192.168.4.1<br><img src="https://img-blog.csdnimg.cn/20200511123134386.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200511123202986.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>点击接受，会自动给一个新的wifi登录密码，一般是：<code>rootaccess</code></p>
-<p><img src="https://img-blog.csdnimg.cn/20200511123316340.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>点击继续之后会让我们重新连接<br><img src="https://img-blog.csdnimg.cn/20200511123438258.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>回到手机连接重新输入密码连接此网络，再登录 <code>192.168.4.1</code>，就可以进行钓鱼操作了</p>
-<p><img src="https://img-blog.csdnimg.cn/20200511123531529.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200511123544901.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<blockquote>
-<p>在这里提醒大家，此博文操作完全是技术分享，钓鱼操作请大家使用自己家的 wifi 或手机热点为对象，请勿因一己私利或单纯觉得好玩对别人造成麻烦。<br>.<br>下一个博文我会给大家分享如何用python暴力破解wifi密码，也只是纯技术分享，请大家勿用于非法操作<br>.<br>有兴趣的朋友可以进我的交流群，或者评论邮箱</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>硬件</category>
-      </categories>
-      <tags>
-        <tag>硬件</tag>
-        <tag>ESP8266</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>新手如何使用anaconda（python）—简单介绍</title>
-    <url>/%E6%96%B0%E6%89%8B%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8anaconda%EF%BC%88python%EF%BC%89%E2%80%94%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D.html</url>
-    <content><![CDATA[<p>我之前用 python 的 IDLE 去写代码，但是在深度学习的部分，代码频频报错，因为 python 的很多库都没有，而自己去下载的话速度极其的慢。</p>
-<p>所以下载 anaconda 了， anaconda 里已经下载了很多库（虽然依然没有我想要的库），但相比单单一个 python 软件便好用许多。</p>
-<p>这里介绍一下新手如何快速使用 anaconda（我也是刚接触 python，好在比C简单多了，和 matlab 又很像）：</p>
-<a id="more"></a>
-<p>我们在：</p>
-<p>清华镜像下载   anaconda（下载过程看我另一篇博文）：<br><a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/" target="_blank" rel="noopener">https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/</a></p>
-<p>安装好了之后</p>
-<p><img src="https://img-blog.csdnimg.cn/20200217161343829.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>开始界面应该有这些东西，不过我们需要的一般只有 Jupyter Notebook 和  Anaconda Prompt。</p>
-<p>Jupyter Notebook 可以当作 python 来用，只是界面不同。 Anaconda Prompt 就是和windows 的 cmd 差不多。</p>
-<p><img src="https://img-blog.csdnimg.cn/20200217162002355.png" alt="在这里插入图片描述"></p>
-<p>在prompt里输入python，则就会显示python的版本，我这里是3.6.5。</p>
-<p>并进入python的编程环境：</p>
-<p><img src="https://img-blog.csdnimg.cn/20200217163039966.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>不过最好不要在这里写代码吧，因为…上图就是教训呀！（新手不懂。。。）</p>
-<p>回归正题：<br>代码一般都在Jupyter Notebook里写<br>这里打开Jupyter Notebook</p>
-<p><img src="https://img-blog.csdnimg.cn/2020021716330039.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200217163404727.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>电脑会自动打开网页 jupyter , anaconda中的python就是个web程序。在这里就可以开始python之旅了。上图现实的打开文件路径，可以打开里面储存的文件。</p>
-<p><img src="https://img-blog.csdnimg.cn/20200217164043772.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>点击new按钮就可以创建新的text file 和folder.</p>
-<p>打开text:</p>
-<p><img src="https://img-blog.csdnimg.cn/2020021716452081.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">就可以编辑文字和代码。</p>
-<p>点击 python 3 就可以正常的进行代码的编写了，下面随手写了个新手代码，按住shift+Enter就可以运行代码了。</p>
-<p><img src="https://img-blog.csdnimg.cn/20200217165201133.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>我也是个新手，因为 MATLAB 项目的需要所以转战 python。</p>
-<p>接下来我会继续更新 MATLAB 项目的部分，也会开始python爬虫的编写。</p>
-<p>欢迎各位指正错误。</p>
-]]></content>
-      <categories>
-        <category>python</category>
-        <category>入门</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>anaconda</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>运行sh文件报错：python3 command not found——已解决</title>
-    <url>/%E8%BF%90%E8%A1%8Csh%E6%96%87%E4%BB%B6%E6%8A%A5%E9%94%99%EF%BC%9Apython3%EF%BC%9A%20command%20not%20found%E2%80%94%E2%80%94%E5%B7%B2%E8%A7%A3%E5%86%B3.html</url>
-    <content><![CDATA[<p>我使用windows下的 anaconda 运行 sh 文件时报错：<code>python3: command not found</code></p>
-<p>可是我就是在 anaconda 配置的 python3.6 环境下运行的 sh 文件啊</p>
-<p>网上没有找的任何有效的解决方法</p>
-<p>后来我打开 sh 文件看了下代码：<br>（把 sh 后缀改成 txt 后缀就可以打开文件）</p>
-<a id="more"></a>
-<p><img src="https://img-blog.csdnimg.cn/20200316145609226.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>发现框住的那一行代码不就是我们平时运行 py 文件的命令嘛</p>
-<p>所以我把它改成：<code>python -u train.py \</code></p>
-<p><img src="https://img-blog.csdnimg.cn/20200316145810476.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>结果就可以正常运行了。</p>
-<p>我已经解决了问题，如果有对这种操作有任何问题的可以评论</p>
-]]></content>
-      <categories>
-        <category>python</category>
-        <category>error&amp;库</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>error&amp;库</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>运行SSD-TensorFlow报错：tensorflow.python.framework.errors_impl.NotFoundError：</title>
-    <url>/%E8%BF%90%E8%A1%8CSSD-TensorFlow%E6%8A%A5%E9%94%99%EF%BC%9Atensorflow.python.framework.errors_impl.NotFoundError%EF%BC%9A.html</url>
-    <content><![CDATA[<p>玩了很久的 yolo，今天下载了 SSD-TensorFlow 的代码，不过在运行的时候出现了一点问题</p>
-<p>官方的介绍是运行：<code>jupyter notebook notebooks/ssd_notebook.ipynb</code></p>
-<p>但是在 <code>jupyter notebook</code> 中运行多有不便，我就将代码复制在了下面文件夹里，与 <code>ssd_notebook.ipynb</code> 放在了一块，可是出现报错：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">tensorflow.python.framework.errors_impl.NotFoundError: FindFirstFile failed <span class="keyword">for</span></span><br><span class="line">…/checkpoints:ϵͳ\udcd5Ҳ\udcbb\udcb5\udcbdָ\udcb6\udca8\udcb5\udcc4·\udcbe\udcb6\udca1\udca3 </span><br><span class="line">; No such process</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
-<p><img src="https://img-blog.csdnimg.cn/20200506152235306.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>可以看到：在 <code>demo_test.py</code> 的大概15、42、73行的位置，路径全都写错了</p>
-<p><img src="https://img-blog.csdnimg.cn/20200506153032938.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p><img src="https://img-blog.csdnimg.cn/20200506153046666.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p><img src="https://img-blog.csdnimg.cn/20200506153053557.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>以43行为例将：<code>ckpt_filename = &#39;.../checkpoints/ssd_300_vgg.ckpt&#39;</code> 改为：<code>ckpt_filename = &#39;./checkpoints/ssd_300_vgg.ckpt&#39;</code></p>
-<p><img src="https://img-blog.csdnimg.cn/20200506153309230.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>而且有一点要注意，我这里路径写的是相对路径，也就是从我 <code>demo_test.py</code> 所在的位置到 <code>checkpoints</code> 文件所在的相对位置，所以很明显路径需要添加东西，或者我直接将  <code>demo_test.py</code> 文件放在主文件夹下面即可：</p>
-<p><img src="https://img-blog.csdnimg.cn/20200506153618543.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<h2 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h2><p><strong>1、将路径前面的点删除至只留下一个</strong></p>
-<p><strong>2、注意相对路径，否则会报同样的错误</strong></p>
-<hr>
-<blockquote>
-<p>题外话：<br>我也只是个学生，做项目的时候刚好看到 yolo 了，就玩了一阵子，现在准备玩 ssd ，这些只是很简单的东西，之后我会慢慢的把我做的比较深入的东西写出来(说实话…一般没人看)，我准备创建一个开源项目的交流群。<br>我本身很菜，但是玩过一些开源的项目，本身电气专业，也喜欢自己用单片机做东西，现在自己发过论文、国际发明专利、国内发明专利。马上准备考研了，也希望能遇到一些大佬，给些指点，也可以大家一起讨论问题，解决问题。<br>群号：977947271</p>
-</blockquote>
-<p><img src="https://img-blog.csdnimg.cn/20200506154001109.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 ]]></content>
       <categories>
         <category>python</category>
