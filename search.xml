@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>Anaconda镜像下载地址</title>
-    <url>/Anaconda%E9%95%9C%E5%83%8F%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80.html</url>
+    <url>/resume/Anaconda%E9%95%9C%E5%83%8F%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80.html</url>
     <content><![CDATA[<p>清华大学镜像：<a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/" target="_blank" rel="noopener">https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/</a><br><img src="https://img-blog.csdnimg.cn/20200217154416803.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 <a id="more"></a>
 <p>这里建议大家下载这里画圈的版本，是python3.6的Windows版本。</p>
@@ -21,7 +21,7 @@
   </entry>
   <entry>
     <title>Command “python setup.py egg_info” failed——完美解决</title>
-    <url>/Command%20%E2%80%9Cpython%20setup.py%20egg_info%E2%80%9D%20failed%E2%80%94%E2%80%94%E5%AE%8C%E7%BE%8E%E8%A7%A3%E5%86%B3.html</url>
+    <url>/resume/Command%20%E2%80%9Cpython%20setup.py%20egg_info%E2%80%9D%20failed%E2%80%94%E2%80%94%E5%AE%8C%E7%BE%8E%E8%A7%A3%E5%86%B3.html</url>
     <content><![CDATA[<p>用 ubuntu 安装 <code>django-mdeditor==0.1.13</code> 时报错：</p>
 <blockquote>
 <p>Command “python setup.py egg_info” failed with error code 1 in /tmp/pip-build-2XpM94/django-mdeditor/</p>
@@ -47,7 +47,7 @@
   </entry>
   <entry>
     <title>ERROR Cannot uninstall &#39;xxx&#39;. It is a distutils installed project and thus we cannot accurately</title>
-    <url>/ERROR%EF%BC%9ACannot%20uninstall%20&#39;xxx&#39;.%20It%20is%20a%20distutils%20installed%20project%20and%20thus%20we%20cannot%20accurately.html</url>
+    <url>/resume/ERROR%EF%BC%9ACannot%20uninstall%20&#39;xxx&#39;.%20It%20is%20a%20distutils%20installed%20project%20and%20thus%20we%20cannot%20accurately.html</url>
     <content><![CDATA[<p>今天安装 <code>serial</code> 时报错：</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">ERROR: Cannot uninstall <span class="string">'PyYAML'</span>. It <span class="keyword">is</span> a distutils installed project <span class="keyword">and</span> thus we</span><br><span class="line">       cannot accurately determine which files belong to it which would lead to </span><br><span class="line">       only a partial uninstall .</span><br><span class="line">错误：无法卸载“ PyYAML”。 这是一个distutils安装的项目，因此我们</span><br><span class="line">        无法准确确定哪些文件属于该文件，这将导致</span><br><span class="line">        仅部分卸载</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
@@ -70,7 +70,7 @@
   </entry>
   <entry>
     <title>MATLAB 的global函数（全局变量）—从python和MAT实例中详细解释</title>
-    <url>/MATLAB%20%E7%9A%84global%E5%87%BD%E6%95%B0%EF%BC%88%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F%EF%BC%89%E2%80%94%E4%BB%8Epython%E5%92%8CMAT%E5%AE%9E%E4%BE%8B%E4%B8%AD%E8%AF%A6%E7%BB%86%E8%A7%A3%E9%87%8A.html</url>
+    <url>/resume/MATLAB%20%E7%9A%84global%E5%87%BD%E6%95%B0%EF%BC%88%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F%EF%BC%89%E2%80%94%E4%BB%8Epython%E5%92%8CMAT%E5%AE%9E%E4%BE%8B%E4%B8%AD%E8%AF%A6%E7%BB%86%E8%A7%A3%E9%87%8A.html</url>
     <content><![CDATA[<p>今天本来发布了用摄像头 gui 拍照的程序，然后有人私信我问其中的global函数的使用方法。</p>
 <p>我想了一下，就以摄像头拍照为例子去解释一下这个函数的用法吧。</p>
 <p>但是首先用python中的一个小例子来说明一下：</p>
@@ -122,7 +122,7 @@
   </entry>
   <entry>
     <title>MATLAB安装USB Webcams工具箱出现‘error’</title>
-    <url>/MATLAB%E5%AE%89%E8%A3%85USB%20Webcams%E5%B7%A5%E5%85%B7%E7%AE%B1%E5%87%BA%E7%8E%B0%E2%80%98error%E2%80%99.html</url>
+    <url>/resume/MATLAB%E5%AE%89%E8%A3%85USB%20Webcams%E5%B7%A5%E5%85%B7%E7%AE%B1%E5%87%BA%E7%8E%B0%E2%80%98error%E2%80%99.html</url>
     <content><![CDATA[<p>下载matlab的Support Package for USB Webcams</p>
 <p><img src="https://img-blog.csdnimg.cn/20200208215954945.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 <a id="more"></a>
@@ -139,7 +139,7 @@
   </entry>
   <entry>
     <title>MATLAB自适应直方图均衡—adapthisteq</title>
-    <url>/MATLAB%E8%87%AA%E9%80%82%E5%BA%94%E7%9B%B4%E6%96%B9%E5%9B%BE%E5%9D%87%E8%A1%A1%E2%80%94adapthisteq.html</url>
+    <url>/resume/MATLAB%E8%87%AA%E9%80%82%E5%BA%94%E7%9B%B4%E6%96%B9%E5%9B%BE%E5%9D%87%E8%A1%A1%E2%80%94adapthisteq.html</url>
     <content><![CDATA[<p>今天写调用摄像头处理图像函数，用到了adapthisteq函数，顺便对adapthisteq函数做了一些总结。</p>
 <p>adapthisteq：适应直方图均衡化对比度限制器。通过转换强度图像中的值来改变图像的对比度。</p>
 <p>histeq：自适应直方图均衡。</p>
@@ -171,7 +171,7 @@
   </entry>
   <entry>
     <title>Matlab如何打开c++文件</title>
-    <url>/Matlab%E5%A6%82%E4%BD%95%E6%89%93%E5%BC%80c++%E6%96%87%E4%BB%B6.html</url>
+    <url>/resume/Matlab%E5%A6%82%E4%BD%95%E6%89%93%E5%BC%80c++%E6%96%87%E4%BB%B6.html</url>
     <content><![CDATA[<p>最近在尝试视觉分析的项目</p>
 <p>总是会遇到一些cpp文件需要在matlab中运行，在这里记录一下操作</p>
 <p><strong>1、命令行输入</strong> ：<code>mex -setup</code></p>
@@ -194,7 +194,7 @@
   </entry>
   <entry>
     <title>MATLAB账户未关联到许可证—无法打开help文档—解决方法</title>
-    <url>/MATLAB%E8%B4%A6%E6%88%B7%E6%9C%AA%E5%85%B3%E8%81%94%E5%88%B0%E8%AE%B8%E5%8F%AF%E8%AF%81%E2%80%94%E6%97%A0%E6%B3%95%E6%89%93%E5%BC%80help%E6%96%87%E6%A1%A3%E2%80%94%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95.html</url>
+    <url>/resume/MATLAB%E8%B4%A6%E6%88%B7%E6%9C%AA%E5%85%B3%E8%81%94%E5%88%B0%E8%AE%B8%E5%8F%AF%E8%AF%81%E2%80%94%E6%97%A0%E6%B3%95%E6%89%93%E5%BC%80help%E6%96%87%E6%A1%A3%E2%80%94%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95.html</url>
     <content><![CDATA[<p>今天在使用help命令时，需要参阅一些函数的help文档，却发现我的matlab无法关联到许可证<br><img src="https://img-blog.csdnimg.cn/20200211154400903.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 <a id="more"></a>
 <p>对于一些朋友，只需要在命令行输入‘license’便可得到许可证编号。但我的matlab是破解版的，所以没有许可证。</p>
@@ -210,7 +210,7 @@
   </entry>
   <entry>
     <title>ModuleNotFoundError：No module named “ckeditor”</title>
-    <url>/ModuleNotFoundError%EF%BC%9ANo%20module%20named%20%E2%80%9Cckeditor%E2%80%9D.html</url>
+    <url>/resume/ModuleNotFoundError%EF%BC%9ANo%20module%20named%20%E2%80%9Cckeditor%E2%80%9D.html</url>
     <content><![CDATA[<p><img src="https://img-blog.csdnimg.cn/20200518195810898.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 <a id="more"></a>
 <p>我使用 <code>pip3 install ckeditor Collecting ckeditor</code> 安装也报错</p>
@@ -229,7 +229,7 @@ Collecting django-ckeditor</code></p>
   </entry>
   <entry>
     <title>No command &#39;conda creat&#39;——解决方法</title>
-    <url>/No%20command%20&#39;conda%20creat&#39;%E2%80%94%E2%80%94%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95.html</url>
+    <url>/resume/No%20command%20&#39;conda%20creat&#39;%E2%80%94%E2%80%94%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95.html</url>
     <content><![CDATA[<p>在 anacond 中创建一个新的环境python3.6：</p>
 <blockquote>
 <p>输入:<br><code>conda create -n yolo python=3.6</code></p>
@@ -262,7 +262,7 @@ Did you mean &#39;conda create&#39;?</code></p>
   </entry>
   <entry>
     <title>No module named &#39;pkg_resources&#39;解决方法</title>
-    <url>/No%20module%20named%20&#39;pkg_resources&#39;%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95.html</url>
+    <url>/resume/No%20module%20named%20&#39;pkg_resources&#39;%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95.html</url>
     <content><![CDATA[<blockquote>
 <p>No module named ‘pkg_resources’</p>
 </blockquote>
@@ -282,7 +282,7 @@ Did you mean &#39;conda create&#39;?</code></p>
   </entry>
   <entry>
     <title>Python99道经典练习题答案</title>
-    <url>/Python99%E9%81%93%E7%BB%8F%E5%85%B8%E7%BB%83%E4%B9%A0%E9%A2%98%E7%AD%94%E6%A1%88.html</url>
+    <url>/resume/Python99%E9%81%93%E7%BB%8F%E5%85%B8%E7%BB%83%E4%B9%A0%E9%A2%98%E7%AD%94%E6%A1%88.html</url>
     <content><![CDATA[<p>转载与百度文库：<br><a href="https://wenku.baidu.com/view/bc745bdaf6ec4afe04a1b0717fd5360cbb1a8d16.html" target="_blank" rel="noopener">https://wenku.baidu.com/view/bc745bdaf6ec4afe04a1b0717fd5360cbb1a8d16.html</a></p>
 ]]></content>
       <categories>
@@ -296,7 +296,7 @@ Did you mean &#39;conda create&#39;?</code></p>
   </entry>
   <entry>
     <title>Office2016与Visio2016不兼容——已解决</title>
-    <url>/Office2016%E4%B8%8EVisio2016%E4%B8%8D%E5%85%BC%E5%AE%B9%E2%80%94%E2%80%94%E5%B7%B2%E8%A7%A3%E5%86%B3.html</url>
+    <url>/resume/Office2016%E4%B8%8EVisio2016%E4%B8%8D%E5%85%BC%E5%AE%B9%E2%80%94%E2%80%94%E5%B7%B2%E8%A7%A3%E5%86%B3.html</url>
     <content><![CDATA[<p>很久之前为了写专利下载的Visio2016，平时也只用wps，没用过office。</p>
 <p>最近安装 office 时提示：</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">很抱歉，无法安装office，因为您的计算机上已经安装了office程序：</span><br><span class="line"></span><br><span class="line">Microsoft Office <span class="number">32</span>-bit Components <span class="number">2016</span></span><br><span class="line">Microsoft Visio Professional <span class="number">2016</span></span><br><span class="line"></span><br><span class="line"><span class="number">32</span>位和<span class="number">64</span>位版本的Office程序不兼容，因此您一次只能安装一种类型。</span><br><span class="line">请尝试安装<span class="number">64</span>位版本的Office，或卸载其他<span class="number">64</span>位Office程序，然后再尝试此安装。</span><br></pre></td></tr></table></figure>
@@ -327,7 +327,7 @@ Did you mean &#39;conda create&#39;?</code></p>
   </entry>
   <entry>
     <title>Python 官方的中文文档</title>
-    <url>/Python%20%E5%AE%98%E6%96%B9%E7%9A%84%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3.html</url>
+    <url>/resume/Python%20%E5%AE%98%E6%96%B9%E7%9A%84%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3.html</url>
     <content><![CDATA[<p>今天打开Python documentation 查阅函数使用方法，像往常一样，我打开了百度翻译</p>
 <p>突发奇想，要不上网找找有没有哪位大佬翻译好的中文文档，发现python官网上竟然发布了python的中文文档….(python初学者表示之前真的不知道)</p>
 <p>Python官方文档链接：<a href="https://docs.python.org/zh-cn/3/" target="_blank" rel="noopener">https://docs.python.org/zh-cn/3/</a></p>
@@ -354,7 +354,7 @@ Did you mean &#39;conda create&#39;?</code></p>
   </entry>
   <entry>
     <title>Python中 pip 的安装——windows系统</title>
-    <url>/Python%E4%B8%AD%20pip%20%E7%9A%84%E5%AE%89%E8%A3%85%E2%80%94%E2%80%94windows%E7%B3%BB%E7%BB%9F.html</url>
+    <url>/resume/Python%E4%B8%AD%20pip%20%E7%9A%84%E5%AE%89%E8%A3%85%E2%80%94%E2%80%94windows%E7%B3%BB%E7%BB%9F.html</url>
     <content><![CDATA[<p>我的 Windows 环境下的 python 是没有 pip 文件的，所以想要实现 pip 命令就要手动安装pip 文件</p>
 <p>这篇和接下来的文章我会演示　windows 系统下的 “IDLE” 安装 pip 可能遇到的所有问题</p>
 <p><strong>pip 20.0.2官方下载地址</strong>：<a href="https://pypi.org/project/pip/#description" target="_blank" rel="noopener">https://pypi.org/project/pip/#description</a></p>
@@ -413,7 +413,7 @@ Did you mean &#39;conda create&#39;?</code></p>
   </entry>
   <entry>
     <title>Python学习笔记_1：print中end的用法 print（‘’，end=&#39;&#39;）</title>
-    <url>/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_1%EF%BC%9Aprint%E4%B8%ADend%E7%9A%84%E7%94%A8%E6%B3%95%20print%EF%BC%88%E2%80%98%E2%80%99%EF%BC%8Cend=&#39;&#39;%EF%BC%89.html</url>
+    <url>/resume/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_1%EF%BC%9Aprint%E4%B8%ADend%E7%9A%84%E7%94%A8%E6%B3%95%20print%EF%BC%88%E2%80%98%E2%80%99%EF%BC%8Cend=&#39;&#39;%EF%BC%89.html</url>
     <content><![CDATA[<p>学了那么久的python，都没有过系统的总结一下知识点，所以我决定在这里出一次python知识点集合——Python学习笔记。<br><img src="https://img-blog.csdnimg.cn/20200302170928468.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 <a id="more"></a>
 <p>哈哈哈哈，就当是自己随时可以查阅的笔记本了</p>
@@ -439,7 +439,7 @@ Did you mean &#39;conda create&#39;?</code></p>
   </entry>
   <entry>
     <title>Python学习笔记_2：判断str类型的函数</title>
-    <url>/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_2%EF%BC%9A%E5%88%A4%E6%96%ADstr%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%87%BD%E6%95%B0.html</url>
+    <url>/resume/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_2%EF%BC%9A%E5%88%A4%E6%96%ADstr%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%87%BD%E6%95%B0.html</url>
     <content><![CDATA[<p>相信大家都喜欢表情包吧</p>
 <p>话说学习Python一定要坚持，持之以恒，万事开头难嘛</p>
 <p><img src="https://img-blog.csdnimg.cn/2020030218253379.png" alt="在这里插入图片描述"></p>
@@ -483,7 +483,7 @@ Did you mean &#39;conda create&#39;?</code></p>
   </entry>
   <entry>
     <title>Python学习笔记_3：python 列表的使用方法—详细</title>
-    <url>/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_3%EF%BC%9Apython%20%E5%88%97%E8%A1%A8%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%E2%80%94%E8%AF%A6%E7%BB%86.html</url>
+    <url>/resume/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_3%EF%BC%9Apython%20%E5%88%97%E8%A1%A8%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%E2%80%94%E8%AF%A6%E7%BB%86.html</url>
     <content><![CDATA[<p>今天已经开始了第三个 python 的笔记了</p>
 <p>我想开始介绍一下列表的一些使用方法</p>
 <p>“列表”是什么？？</p>
@@ -535,7 +535,7 @@ Did you mean &#39;conda create&#39;?</code></p>
   </entry>
   <entry>
     <title>Python学习笔记_4列表和元组的区别</title>
-    <url>/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_4%EF%BC%9A%E5%88%97%E8%A1%A8%E5%92%8C%E5%85%83%E7%BB%84%E7%9A%84%E5%8C%BA%E5%88%AB.html</url>
+    <url>/resume/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_4%EF%BC%9A%E5%88%97%E8%A1%A8%E5%92%8C%E5%85%83%E7%BB%84%E7%9A%84%E5%8C%BA%E5%88%AB.html</url>
     <content><![CDATA[<p>上节我主要详细的介绍了一下列表的用法</p>
 <p>突然想起来需要说一下列表和元组的区别,所以这篇文章就简洁点,以文字为主</p>
 <p><strong>列表:存放的是暂时的元素,可以更改,增添</strong></p>
@@ -569,7 +569,7 @@ Did you mean &#39;conda create&#39;?</code></p>
   </entry>
   <entry>
     <title>Python学习笔记_6：global 与 nanlacal 的区别</title>
-    <url>/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_6%EF%BC%9Aglobal%20%E4%B8%8E%20nanlacal%20%E7%9A%84%E5%8C%BA%E5%88%AB.html</url>
+    <url>/resume/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_6%EF%BC%9Aglobal%20%E4%B8%8E%20nanlacal%20%E7%9A%84%E5%8C%BA%E5%88%AB.html</url>
     <content><![CDATA[<p>之前我在 matlab 的笔记里介绍过一次 global 的用法</p>
 <p>这次在 python 中介绍下 global 和 nanlacal 的区别</p>
 <p><strong>global 函数：</strong></p>
@@ -596,7 +596,7 @@ Did you mean &#39;conda create&#39;?</code></p>
   </entry>
   <entry>
     <title>Python学习笔记_5：字符串格式化符号及进制转换</title>
-    <url>/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_5%EF%BC%9A%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%A0%BC%E5%BC%8F%E5%8C%96%E7%AC%A6%E5%8F%B7%E5%8F%8A%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2.html</url>
+    <url>/resume/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_5%EF%BC%9A%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%A0%BC%E5%BC%8F%E5%8C%96%E7%AC%A6%E5%8F%B7%E5%8F%8A%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2.html</url>
     <content><![CDATA[<p>介绍下经常用得到的格式化字符</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">%c	：格式化字符及其ASCII码</span><br><span class="line">%s	：格式化字符串</span><br><span class="line">%d	：格式化整数</span><br><span class="line">%f	：可指定小数点精度</span><br><span class="line">%e	：用科学计数法表示小数</span><br><span class="line">%g	：根据值的的具体情况使用%f或%e</span><br><span class="line">%o	：八进制</span><br><span class="line">%x	：十六进制</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
@@ -618,7 +618,7 @@ Did you mean &#39;conda create&#39;?</code></p>
   </entry>
   <entry>
     <title>Python学习笔记_7：index() 和 dict() 的用法详解</title>
-    <url>/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_7%EF%BC%9Aindex()%20%E5%92%8C%20dict()%20%E7%9A%84%E7%94%A8%E6%B3%95%E8%AF%A6%E8%A7%A3.html</url>
+    <url>/resume/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_7%EF%BC%9Aindex()%20%E5%92%8C%20dict()%20%E7%9A%84%E7%94%A8%E6%B3%95%E8%AF%A6%E8%A7%A3.html</url>
     <content><![CDATA[<p>前面的笔记中我详细介绍了列表和元组</p>
 <p><strong>当我们需要列表中某一元素的相应位置时</strong></p>
 <p>就要提到 <strong>index()</strong> 这个神奇的函数了</p>
@@ -646,7 +646,7 @@ Did you mean &#39;conda create&#39;?</code></p>
   </entry>
   <entry>
     <title>Python安装 chardet</title>
-    <url>/Python%E5%AE%89%E8%A3%85%20chardet.html</url>
+    <url>/resume/Python%E5%AE%89%E8%A3%85%20chardet.html</url>
     <content><![CDATA[<p>Chardet：通用字符编码检测器</p>
 <p>chardet 3.0.4官网链接<a href="https://pypi.org/project/chardet/#files" target="_blank" rel="noopener">https://pypi.org/project/chardet/#files</a></p>
 <p><img src="https://img-blog.csdnimg.cn/20200309201404769.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
@@ -671,7 +671,7 @@ Did you mean &#39;conda create&#39;?</code></p>
   </entry>
   <entry>
     <title>Python学习笔记_8：set 函数的使用方法</title>
-    <url>/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_8%EF%BC%9Aset%20%E5%87%BD%E6%95%B0%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95.html</url>
+    <url>/resume/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_8%EF%BC%9Aset%20%E5%87%BD%E6%95%B0%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95.html</url>
     <content><![CDATA[<p>前面我们介绍了python的列表，元组，dict。</p>
 <p>set就是我们所说的集合</p>
 <p>今天介绍一下set 函数的基本用法:</p>
@@ -696,7 +696,7 @@ Did you mean &#39;conda create&#39;?</code></p>
   </entry>
   <entry>
     <title>Python学习笔记_9：class 类定义的属性与方法——详解</title>
-    <url>/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_9%EF%BC%9Aclass%20%E7%B1%BB%E5%AE%9A%E4%B9%89%E7%9A%84%E5%B1%9E%E6%80%A7%E4%B8%8E%E6%96%B9%E6%B3%95%E2%80%94%E2%80%94%E8%AF%A6%E8%A7%A3.html</url>
+    <url>/resume/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_9%EF%BC%9Aclass%20%E7%B1%BB%E5%AE%9A%E4%B9%89%E7%9A%84%E5%B1%9E%E6%80%A7%E4%B8%8E%E6%96%B9%E6%B3%95%E2%80%94%E2%80%94%E8%AF%A6%E8%A7%A3.html</url>
     <content><![CDATA[<p>对很多没有其他语言基础的初学者来说，可能学到 python 的类定义的时候会苦恼很久</p>
 <p>但，无论我们遇到什么困难，也不要怕，微笑着面对他，消除恐惧的最好办法就是面对恐惧，坚持，才是胜利，加油，奥利给！！！</p>
 <p><img src="https://img-blog.csdnimg.cn/20200308134728646.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
@@ -728,7 +728,7 @@ Did you mean &#39;conda create&#39;?</code></p>
   </entry>
   <entry>
     <title>VLFeat工具包下载</title>
-    <url>/VLFeat%E5%B7%A5%E5%85%B7%E5%8C%85%E4%B8%8B%E8%BD%BD.html</url>
+    <url>/resume/VLFeat%E5%B7%A5%E5%85%B7%E5%8C%85%E4%B8%8B%E8%BD%BD.html</url>
     <content><![CDATA[<p><strong>vlfeat 官方下载链接：</strong><a href="https://www.vlfeat.org/" target="_blank" rel="noopener">https://www.vlfeat.org/</a></p>
 <p>运用于计算机视觉算法专业图像的理解和局部特征提取和匹配。算法包括Fisher向量，VLAD，SIFT，MSER，k均值，分层k均值，聚集信息瓶颈，SLIC超像素，快速移位超像素，大规模SVM训练等。它是用C编写的，以提高效率和兼容性，并带有MATLAB的接口（易于使用）和详细的文档。</p>
 <p>点击直接下载压缩包，不过下载速度可能会有点慢,可以使用迅雷下载</p>
@@ -752,7 +752,7 @@ Did you mean &#39;conda create&#39;?</code></p>
   </entry>
   <entry>
     <title>Python的Scripts文件夹为空——已解决</title>
-    <url>/Python%E7%9A%84Scripts%E6%96%87%E4%BB%B6%E5%A4%B9%E4%B8%BA%E7%A9%BA%E2%80%94%E2%80%94%E5%B7%B2%E8%A7%A3%E5%86%B3.html</url>
+    <url>/resume/Python%E7%9A%84Scripts%E6%96%87%E4%BB%B6%E5%A4%B9%E4%B8%BA%E7%A9%BA%E2%80%94%E2%80%94%E5%B7%B2%E8%A7%A3%E5%86%B3.html</url>
     <content><![CDATA[<p>如果有 windows 环境的 python 的话，很可能会出现 Scripts 文件夹为空，这样就无法正常在 cmd 正常使用 pip 命令。</p>
 <p><strong>解决方法：</strong></p>
 <p> cmd 中输入： <code>python -m ensurepip</code></p>
@@ -773,7 +773,7 @@ Did you mean &#39;conda create&#39;?</code></p>
   </entry>
   <entry>
     <title>ValueError Dimension 0 in both shapes must be equal</title>
-    <url>/ValueError%EF%BC%9ADimension%200%20in%20both%20shapes%20must%20be%20equal.html</url>
+    <url>/resume/ValueError%EF%BC%9ADimension%200%20in%20both%20shapes%20must%20be%20equal.html</url>
     <content><![CDATA[<p>今天重新训练yolo的时候出现了这个报错</p>
 <blockquote>
 <p>ValueError: Dimension 0 in both shapes must be equal, but are 1 and 21. Shapes are [1,1,1024,24] and [21,1024,1,1]. for ‘Assign_360’ (op: ‘Assign’) with input shapes: [1,1,1024,24], [21,1024,1,1].</p>
@@ -797,7 +797,7 @@ Did you mean &#39;conda create&#39;?</code></p>
   </entry>
   <entry>
     <title>Win10自带的虚拟机如何打开—Hyper-v</title>
-    <url>/Win10%E8%87%AA%E5%B8%A6%E7%9A%84%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%A6%82%E4%BD%95%E6%89%93%E5%BC%80%E2%80%94Hyper-v.html</url>
+    <url>/resume/Win10%E8%87%AA%E5%B8%A6%E7%9A%84%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%A6%82%E4%BD%95%E6%89%93%E5%BC%80%E2%80%94Hyper-v.html</url>
     <content><![CDATA[<p>作为一个程序员电脑里面怎么能没有安装虚拟机呢…</p>
 <p>我之前装的虚拟机是VMware，配置的环境是openSUSE（大多数程序员好像用Ubuntu）</p>
 <p>作为电气工程的学生，我也不了解程序员界的行情…..这些事情也无从考究</p>
@@ -823,7 +823,7 @@ Did you mean &#39;conda create&#39;?</code></p>
   </entry>
   <entry>
     <title>WIN10 未安装任何音频驱动 扬声器有个小红叉（已解决）</title>
-    <url>/WIN10%20%E6%9C%AA%E5%AE%89%E8%A3%85%E4%BB%BB%E4%BD%95%E9%9F%B3%E9%A2%91%E9%A9%B1%E5%8A%A8%20%E6%89%AC%E5%A3%B0%E5%99%A8%E6%9C%89%E4%B8%AA%E5%B0%8F%E7%BA%A2%E5%8F%89%EF%BC%88%E5%B7%B2%E8%A7%A3%E5%86%B3%EF%BC%89.html</url>
+    <url>/resume/WIN10%20%E6%9C%AA%E5%AE%89%E8%A3%85%E4%BB%BB%E4%BD%95%E9%9F%B3%E9%A2%91%E9%A9%B1%E5%8A%A8%20%E6%89%AC%E5%A3%B0%E5%99%A8%E6%9C%89%E4%B8%AA%E5%B0%8F%E7%BA%A2%E5%8F%89%EF%BC%88%E5%B7%B2%E8%A7%A3%E5%86%B3%EF%BC%89.html</url>
     <content><![CDATA[<p>经历了无数次的下载安装各种驱动，无数次重启，几乎试了全网所有的方法都是不行，最后使用了国外论坛的方法终于成功了</p>
 <p><img src="https://img-blog.csdnimg.cn/20200205210158898.png" alt="这是我电脑现在的情况，问题已经完全解决了，太激动了哈哈"></p>
 <p>此方法必须要先重启电脑，重启后立刻进行此操作！！</p>
@@ -849,7 +849,7 @@ Did you mean &#39;conda create&#39;?</code></p>
   </entry>
   <entry>
     <title>anaconda 配置 yolov3 环境</title>
-    <url>/anaconda%20%E9%85%8D%E7%BD%AE%20yolov3%20%E7%8E%AF%E5%A2%83.html</url>
+    <url>/resume/anaconda%20%E9%85%8D%E7%BD%AE%20yolov3%20%E7%8E%AF%E5%A2%83.html</url>
     <content><![CDATA[<h2 id="1、-使用清华镜像创建环境"><a href="#1、-使用清华镜像创建环境" class="headerlink" title="1、 使用清华镜像创建环境"></a>1、 使用清华镜像创建环境</h2><p>输入：</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/</span><br><span class="line">conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/</span><br><span class="line">conda config --set show_channel_urls yes</span><br><span class="line">conda create -n yolo python=<span class="number">3.6</span></span><br></pre></td></tr></table></figure>
 <p>(忽略图中因为打错字母导致的报错…)</p>
@@ -888,7 +888,7 @@ Did you mean &#39;conda create&#39;?</code></p>
   </entry>
   <entry>
     <title>cpu运行gpu上的pytorch 报错AssertionErrortorch not compiled with cuda enabled——已解决</title>
-    <url>/cpu%E8%BF%90%E8%A1%8Cgpu%E4%B8%8A%E7%9A%84pytorch%20%E6%8A%A5%E9%94%99%EF%BC%9AAssertionErrortorch%20not%20compiled%20with%20cuda%20enabled%E2%80%94%E2%80%94%E5%B7%B2%E8%A7%A3%E5%86%B3.html</url>
+    <url>/resume/cpu%E8%BF%90%E8%A1%8Cgpu%E4%B8%8A%E7%9A%84pytorch%20%E6%8A%A5%E9%94%99%EF%BC%9AAssertionErrortorch%20not%20compiled%20with%20cuda%20enabled%E2%80%94%E2%80%94%E5%B7%B2%E8%A7%A3%E5%86%B3.html</url>
     <content><![CDATA[<p>感觉今天介绍的这种方法可以解决所有这种报错出现的问题</p>
 <h2 id="事件发生："><a href="#事件发生：" class="headerlink" title="事件发生："></a>事件发生：</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">报错：AssertionError:torch <span class="keyword">not</span> compiled <span class="keyword">with</span> cuda enabled</span><br></pre></td></tr></table></figure>
 
@@ -916,7 +916,7 @@ Did you mean &#39;conda create&#39;?</code></p>
   </entry>
   <entry>
     <title>anaconda安装 pytorch——详解</title>
-    <url>/anaconda%E5%AE%89%E8%A3%85%20pytorch%E2%80%94%E2%80%94%E8%AF%A6%E8%A7%A3.html</url>
+    <url>/resume/anaconda%E5%AE%89%E8%A3%85%20pytorch%E2%80%94%E2%80%94%E8%AF%A6%E8%A7%A3.html</url>
     <content><![CDATA[<h2 id="事件前言："><a href="#事件前言：" class="headerlink" title="事件前言："></a>事件前言：</h2><p>今天凌晨2点多时清华镜像源还可以正常使用，但是刚刚我电脑却使用不了了</p>
 <blockquote>
 <p>使用中科大、阿里云等国内镜像的时候，一直报错：<br><code>Warning: &#39;https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/&#39; already in &#39;channels&#39; list, moving to the top</code></p>
@@ -951,7 +951,7 @@ Did you mean &#39;conda create&#39;?</code></p>
   </entry>
   <entry>
     <title>module &#39;tensorflow&#39; has no attribute &#39;get_default_graph&#39;</title>
-    <url>/module%20&#39;tensorflow&#39;%20has%20no%20attribute%20&#39;get_default_graph&#39;.html</url>
+    <url>/resume/module%20&#39;tensorflow&#39;%20has%20no%20attribute%20&#39;get_default_graph&#39;.html</url>
     <content><![CDATA[<p>参考：<a href="https://blog.csdn.net/u014466109/article/details/88877321?depth_1-utm_source=distribute.pc_relevant.none-task&amp;utm_source=distribute.pc_relevant.none-task" target="_blank" rel="noopener">https://blog.csdn.net/u014466109/article/details/88877321?depth_1-utm_source=distribute.pc_relevant.none-task&amp;utm_source=distribute.pc_relevant.none-task</a></p>
 <h2 id="事件经过："><a href="#事件经过：" class="headerlink" title="事件经过："></a>事件经过：</h2><p>现在已经是凌晨一点半，从昨天下午开始在 windows 的 anaconda 配置 yolov3 的训练环境，一直出各种问题，很烦。</p>
 <p>两小时前遇到这个问题：<br><code>https://blog.csdn.net/u014466109/article/details/88877321?depth_1-utm_source=distribute.pc_relevant.none-task&amp;utm_source=distribute.pc_relevant.none-task</code></p>
@@ -983,7 +983,7 @@ Did you mean &#39;conda create&#39;?</code></p>
   </entry>
   <entry>
     <title>labelimg使用方法：如何标注图片</title>
-    <url>/labelimg%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%EF%BC%9A%E5%A6%82%E4%BD%95%E6%A0%87%E6%B3%A8%E5%9B%BE%E7%89%87.html</url>
+    <url>/resume/labelimg%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%EF%BC%9A%E5%A6%82%E4%BD%95%E6%A0%87%E6%B3%A8%E5%9B%BE%E7%89%87.html</url>
     <content><![CDATA[<p>labelimg 是一款专门用于贴标签的软件</p>
 <h2 id="如何下载-labelimg："><a href="#如何下载-labelimg：" class="headerlink" title="如何下载 labelimg："></a>如何下载 labelimg：</h2><p><strong>1、anaconda 中下载：</strong></p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip install -i https://pypi.tuna.tsinghua.edu.cn/simple labelimg</span><br></pre></td></tr></table></figure>
@@ -1038,7 +1038,7 @@ Did you mean &#39;conda create&#39;?</code></p>
   </entry>
   <entry>
     <title>python实现人数识别目标识别</title>
-    <url>/python%E5%AE%9E%E7%8E%B0%E4%BA%BA%E6%95%B0%E8%AF%86%E5%88%AB%E7%9B%AE%E6%A0%87%E8%AF%86%E5%88%AB.html</url>
+    <url>/resume/python%E5%AE%9E%E7%8E%B0%E4%BA%BA%E6%95%B0%E8%AF%86%E5%88%AB%E7%9B%AE%E6%A0%87%E8%AF%86%E5%88%AB.html</url>
     <content><![CDATA[<p>python 实现 yolo 人数识别或目标识别：<a href="https://blog.csdn.net/qq_45504119/article/details/105033492" target="_blank" rel="noopener">https://blog.csdn.net/qq_45504119/article/details/105033492</a></p>
 ]]></content>
       <categories>
@@ -1052,7 +1052,7 @@ Did you mean &#39;conda create&#39;?</code></p>
   </entry>
   <entry>
     <title>matlab创建下载进度条</title>
-    <url>/matlab%E5%88%9B%E5%BB%BA%E4%B8%8B%E8%BD%BD%E8%BF%9B%E5%BA%A6%E6%9D%A1.html</url>
+    <url>/resume/matlab%E5%88%9B%E5%BB%BA%E4%B8%8B%E8%BD%BD%E8%BF%9B%E5%BA%A6%E6%9D%A1.html</url>
     <content><![CDATA[<blockquote>
 <p>最近玩GUI玩的比较多，想分享一些好玩的东西，就从最简单的开始吧</p>
 </blockquote>
@@ -1072,7 +1072,7 @@ Did you mean &#39;conda create&#39;?</code></p>
   </entry>
   <entry>
     <title>pytorch 安装过程出现： No module named &#39;tools.nnwrap&#39;——已解决</title>
-    <url>/pytorch%20%E5%AE%89%E8%A3%85%E8%BF%87%E7%A8%8B%E5%87%BA%E7%8E%B0%EF%BC%9A%20No%20module%20named%20&#39;tools.nnwrap&#39;%E2%80%94%E2%80%94%E5%B7%B2%E8%A7%A3%E5%86%B3.html</url>
+    <url>/resume/pytorch%20%E5%AE%89%E8%A3%85%E8%BF%87%E7%A8%8B%E5%87%BA%E7%8E%B0%EF%BC%9A%20No%20module%20named%20&#39;tools.nnwrap&#39;%E2%80%94%E2%80%94%E5%B7%B2%E8%A7%A3%E5%86%B3.html</url>
     <content><![CDATA[<blockquote>
 <p>环境：win10、py3.6</p>
 </blockquote>
@@ -1099,7 +1099,7 @@ Did you mean &#39;conda create&#39;?</code></p>
   </entry>
   <entry>
     <title>python 使用镜像安装库时提示 Warning——已解决</title>
-    <url>/python%20%E4%BD%BF%E7%94%A8%E9%95%9C%E5%83%8F%E5%AE%89%E8%A3%85%E5%BA%93%E6%97%B6%E6%8F%90%E7%A4%BA%20Warning%E2%80%94%E2%80%94%E5%B7%B2%E8%A7%A3%E5%86%B3.html</url>
+    <url>/resume/python%20%E4%BD%BF%E7%94%A8%E9%95%9C%E5%83%8F%E5%AE%89%E8%A3%85%E5%BA%93%E6%97%B6%E6%8F%90%E7%A4%BA%20Warning%E2%80%94%E2%80%94%E5%B7%B2%E8%A7%A3%E5%86%B3.html</url>
     <content><![CDATA[<h2 id="事件起因："><a href="#事件起因：" class="headerlink" title="事件起因："></a>事件起因：</h2><p><img src="https://img-blog.csdnimg.cn/20200318014810411.png" alt="在这里插入图片描述"></p>
 <p>看这张图，使用清华镜像时提示 warning：<br><code>Warning: &#39;https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/&#39; already in &#39;channels&#39; list, moving to the top</code></p>
 <a id="more"></a>
@@ -1125,7 +1125,7 @@ Did you mean &#39;conda create&#39;?</code></p>
   </entry>
   <entry>
     <title>python绝对兼容的库配置——机器学习</title>
-    <url>/python%E7%BB%9D%E5%AF%B9%E5%85%BC%E5%AE%B9%E7%9A%84%E5%BA%93%E9%85%8D%E7%BD%AE%E2%80%94%E2%80%94%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0.html</url>
+    <url>/resume/python%E7%BB%9D%E5%AF%B9%E5%85%BC%E5%AE%B9%E7%9A%84%E5%BA%93%E9%85%8D%E7%BD%AE%E2%80%94%E2%80%94%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0.html</url>
     <content><![CDATA[<p>先给大家推荐一个：<a href="https://docs.floydhub.com/guides/environments/" target="_blank" rel="noopener">深度学习环境兼容性配置</a></p>
 <p>接下来记录一下我的 python 库的版本，以免以后我自己搞错了…</p>
 <a id="more"></a>
@@ -1142,7 +1142,7 @@ Did you mean &#39;conda create&#39;?</code></p>
   </entry>
   <entry>
     <title>python绝对兼容的库配置——机器学习&amp;爬虫</title>
-    <url>/python%E7%BB%9D%E5%AF%B9%E5%85%BC%E5%AE%B9%E7%9A%84%E5%BA%93%E9%85%8D%E7%BD%AE%E2%80%94%E2%80%94%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0&amp;%E7%88%AC%E8%99%AB.html</url>
+    <url>/resume/python%E7%BB%9D%E5%AF%B9%E5%85%BC%E5%AE%B9%E7%9A%84%E5%BA%93%E9%85%8D%E7%BD%AE%E2%80%94%E2%80%94%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0&amp;%E7%88%AC%E8%99%AB.html</url>
     <content><![CDATA[<blockquote>
 <p> <strong>Time: 2020/4/1   15:01</strong></p>
 </blockquote>
@@ -1162,7 +1162,7 @@ Did you mean &#39;conda create&#39;?</code></p>
   </entry>
   <entry>
     <title>人头录音原理及解释</title>
-    <url>/%E4%BA%BA%E5%A4%B4%E5%BD%95%E9%9F%B3%E5%8E%9F%E7%90%86%E5%8F%8A%E8%A7%A3%E9%87%8A.html</url>
+    <url>/resume/%E4%BA%BA%E5%A4%B4%E5%BD%95%E9%9F%B3%E5%8E%9F%E7%90%86%E5%8F%8A%E8%A7%A3%E9%87%8A.html</url>
     <content><![CDATA[<p>简介：</p>
 <p>本文简单介绍了环绕声基础知识，还介绍了各种双声道虚拟环绕声（多声道）的技术。最近突然对虚拟环绕声感兴趣，整理了一下相关知识。</p>
 <ol>
@@ -1196,7 +1196,7 @@ Did you mean &#39;conda create&#39;?</code></p>
   </entry>
   <entry>
     <title>使用MATLAB调用摄像头并拍照—详细代码</title>
-    <url>/%E4%BD%BF%E7%94%A8MATLAB%E8%B0%83%E7%94%A8%E6%91%84%E5%83%8F%E5%A4%B4%E5%B9%B6%E6%8B%8D%E7%85%A7%E2%80%94%E8%AF%A6%E7%BB%86%E4%BB%A3%E7%A0%81.html</url>
+    <url>/resume/%E4%BD%BF%E7%94%A8MATLAB%E8%B0%83%E7%94%A8%E6%91%84%E5%83%8F%E5%A4%B4%E5%B9%B6%E6%8B%8D%E7%85%A7%E2%80%94%E8%AF%A6%E7%BB%86%E4%BB%A3%E7%A0%81.html</url>
     <content><![CDATA[<blockquote>
 <p>大家也可以加我的交流群，所有资料我会在群里分享出来哦：977947271<br>2020/5/30：</p>
 </blockquote>
@@ -1232,7 +1232,7 @@ Did you mean &#39;conda create&#39;?</code></p>
   </entry>
   <entry>
     <title>如何使用MATLAB调用摄像头—代码详解</title>
-    <url>/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8MATLAB%E8%B0%83%E7%94%A8%E6%91%84%E5%83%8F%E5%A4%B4%E2%80%94%E4%BB%A3%E7%A0%81%E8%AF%A6%E8%A7%A3.html</url>
+    <url>/resume/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8MATLAB%E8%B0%83%E7%94%A8%E6%91%84%E5%83%8F%E5%A4%B4%E2%80%94%E4%BB%A3%E7%A0%81%E8%AF%A6%E8%A7%A3.html</url>
     <content><![CDATA[<blockquote>
 <p>大家也可以加我的交流群，所有资料我会在群里分享出来哦：977947271</p>
 <p>2020/5/30：</p>
@@ -1274,7 +1274,7 @@ Did you mean &#39;conda create&#39;?</code></p>
   </entry>
   <entry>
     <title>关于yolo配合硬件的小结——个人笔记</title>
-    <url>/%E5%85%B3%E4%BA%8Eyolo%E9%85%8D%E5%90%88%E7%A1%AC%E4%BB%B6%E7%9A%84%E5%B0%8F%E7%BB%93%E2%80%94%E2%80%94%E4%B8%AA%E4%BA%BA%E7%AC%94%E8%AE%B0.html</url>
+    <url>/resume/%E5%85%B3%E4%BA%8Eyolo%E9%85%8D%E5%90%88%E7%A1%AC%E4%BB%B6%E7%9A%84%E5%B0%8F%E7%BB%93%E2%80%94%E2%80%94%E4%B8%AA%E4%BA%BA%E7%AC%94%E8%AE%B0.html</url>
     <content><![CDATA[<p>这个纯属个人笔记了——完全是怕忘<br>很久没有写博客，也不太知道想写什么，最近玩的东西比较多：esp8266做wifi杀手、配合esp32搭建了个简易的网络摄像头，改yolo玩的一阵子，入手几个红外模块，现在正在玩 USART HMI。</p>
 <p>今天用yolo和红外编码打开空调的时候，因为yolo是不停的循环调用摄像头识别人数的</p>
 <a id="more"></a>
@@ -1297,7 +1297,7 @@ Did you mean &#39;conda create&#39;?</code></p>
   </entry>
   <entry>
     <title>如何创建可直接修改后缀来改变格式的文档</title>
-    <url>/%E5%A6%82%E4%BD%95%E5%88%9B%E5%BB%BA%E5%8F%AF%E7%9B%B4%E6%8E%A5%E4%BF%AE%E6%94%B9%E5%90%8E%E7%BC%80%E6%9D%A5%E6%94%B9%E5%8F%98%E6%A0%BC%E5%BC%8F%E7%9A%84%E6%96%87%E6%A1%A3.html</url>
+    <url>/resume/%E5%A6%82%E4%BD%95%E5%88%9B%E5%BB%BA%E5%8F%AF%E7%9B%B4%E6%8E%A5%E4%BF%AE%E6%94%B9%E5%90%8E%E7%BC%80%E6%9D%A5%E6%94%B9%E5%8F%98%E6%A0%BC%E5%BC%8F%E7%9A%84%E6%96%87%E6%A1%A3.html</url>
     <content><![CDATA[<p>程序员应该都知道，我们新建一个文本文档后</p>
 <p>可以直接改变文本的后缀来创建相应的文件</p>
 <p>最熟悉不过的就是 python 了，直接新建一个文本，‘txt’ 后缀改为 ‘py’</p>
@@ -1316,7 +1316,7 @@ Did you mean &#39;conda create&#39;?</code></p>
   </entry>
   <entry>
     <title>安装Mathtype后无法使用——已解决</title>
-    <url>/%E5%AE%89%E8%A3%85Mathtype%E5%90%8E%E6%97%A0%E6%B3%95%E4%BD%BF%E7%94%A8%E2%80%94%E2%80%94%E5%B7%B2%E8%A7%A3%E5%86%B3.html</url>
+    <url>/resume/%E5%AE%89%E8%A3%85Mathtype%E5%90%8E%E6%97%A0%E6%B3%95%E4%BD%BF%E7%94%A8%E2%80%94%E2%80%94%E5%B7%B2%E8%A7%A3%E5%86%B3.html</url>
     <content><![CDATA[<h2 id="事件背景："><a href="#事件背景：" class="headerlink" title="事件背景："></a>事件背景：</h2><blockquote>
 <p>word 中安装 mathtype 后无法正常使用，总是提示文件未找到等报错？？？</p>
 </blockquote>
@@ -1364,7 +1364,7 @@ Did you mean &#39;conda create&#39;?</code></p>
   </entry>
   <entry>
     <title>怎么下载网页在线视频</title>
-    <url>/%E6%80%8E%E4%B9%88%E4%B8%8B%E8%BD%BD%E7%BD%91%E9%A1%B5%E5%9C%A8%E7%BA%BF%E8%A7%86%E9%A2%91.html</url>
+    <url>/resume/%E6%80%8E%E4%B9%88%E4%B8%8B%E8%BD%BD%E7%BD%91%E9%A1%B5%E5%9C%A8%E7%BA%BF%E8%A7%86%E9%A2%91.html</url>
     <content><![CDATA[<p>在线看视频多少会有些卡顿，所以就可以将视频先下载下来之后看</p>
 <p>但对我而言，大部分视频都是在线甚至很小众的</p>
 <p>单独拿B站等大型网站来说，我们可以使用“硕鼠”等</p>
@@ -1401,7 +1401,7 @@ Did you mean &#39;conda create&#39;?</code></p>
   </entry>
   <entry>
     <title>教女友学会keras-yolov3目标检测详解——适合新手</title>
-    <url>/%E6%95%99%E5%A5%B3%E5%8F%8B%E5%AD%A6%E4%BC%9Akeras-yolov3%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B%E8%AF%A6%E8%A7%A3%E2%80%94%E2%80%94%E9%80%82%E5%90%88%E6%96%B0%E6%89%8B.html</url>
+    <url>/resume/%E6%95%99%E5%A5%B3%E5%8F%8B%E5%AD%A6%E4%BC%9Akeras-yolov3%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B%E8%AF%A6%E8%A7%A3%E2%80%94%E2%80%94%E9%80%82%E5%90%88%E6%96%B0%E6%89%8B.html</url>
     <content><![CDATA[<blockquote>
 <p>现在网上能找到的博客我现在看起来很明白，虽然讲的很详细，但是对于几天前的我真的看不明白，因为新手会遇到各种各样毫无征兆的问题，所以我决定写一篇面向新手的如何去使用 yolo 和如何去做自己的数据集来训练属于自己的模型。因为我也是新手，所以不说原理，只谈操作方法。</p>
 </blockquote>
@@ -1483,7 +1483,7 @@ Did you mean &#39;conda create&#39;?</code></p>
   </entry>
   <entry>
     <title>教女朋友一周学会 python 爬虫_1</title>
-    <url>/%E6%95%99%E5%A5%B3%E6%9C%8B%E5%8F%8B%E4%B8%80%E5%91%A8%E5%AD%A6%E4%BC%9A%20python%20%E7%88%AC%E8%99%AB_1.html</url>
+    <url>/resume/%E6%95%99%E5%A5%B3%E6%9C%8B%E5%8F%8B%E4%B8%80%E5%91%A8%E5%AD%A6%E4%BC%9A%20python%20%E7%88%AC%E8%99%AB_1.html</url>
     <content><![CDATA[<p>今天开始我将简单介绍一下网络爬虫，并开始带大家学习如何写爬虫</p>
 <p><strong>一、爬虫介绍</strong></p>
 <p> <strong>1、什么是爬虫？</strong></p>
@@ -1535,7 +1535,7 @@ Did you mean &#39;conda create&#39;?</code></p>
   </entry>
   <entry>
     <title>教女友学会python+yolov3调用笔记本摄像头——实时进行识别</title>
-    <url>/%E6%95%99%E5%A5%B3%E5%8F%8B%E5%AD%A6%E4%BC%9Apython+yolov3%E8%B0%83%E7%94%A8%E7%AC%94%E8%AE%B0%E6%9C%AC%E6%91%84%E5%83%8F%E5%A4%B4%E2%80%94%E2%80%94%E5%AE%9E%E6%97%B6%E8%BF%9B%E8%A1%8C%E8%AF%86%E5%88%AB.html</url>
+    <url>/resume/%E6%95%99%E5%A5%B3%E5%8F%8B%E5%AD%A6%E4%BC%9Apython+yolov3%E8%B0%83%E7%94%A8%E7%AC%94%E8%AE%B0%E6%9C%AC%E6%91%84%E5%83%8F%E5%A4%B4%E2%80%94%E2%80%94%E5%AE%9E%E6%97%B6%E8%BF%9B%E8%A1%8C%E8%AF%86%E5%88%AB.html</url>
     <content><![CDATA[<blockquote>
 <p>我终于回来啦，快一个月没有正式写博客了<br>最近忙着把老师交给我的项目完成，又从老师经费里白嫖了好多好玩的硬件，网课都没咋听，今天介绍完这个小点，马上就要准备看模电了<br>其实我做项目时完全从0开始，所接触的东西也是零零散散的，我想表达的东西用面向新手的方式写出来，之后开始介绍软硬件结合的东西。<br>也可以加我的交流群，所有资料我会在群里分享出来哦：977947271<br>2020/5/30：<br>近日每天都有十几个很明显的小号加群，而且有的大号进群竟然打广告和卖不良物品，经我和群友讨论后，加群需要1元钱，但是进群后我会将钱退还给大家，只是为了过滤一些不好的人。</p>
 </blockquote>
@@ -1589,7 +1589,7 @@ Did you mean &#39;conda create&#39;?</code></p>
   </entry>
   <entry>
     <title>教女朋友学会用ESP8266实现wifi杀手——有固件</title>
-    <url>/%E6%95%99%E5%A5%B3%E6%9C%8B%E5%8F%8B%E5%AD%A6%E4%BC%9A%E7%94%A8ESP8266%E5%AE%9E%E7%8E%B0wifi%E6%9D%80%E6%89%8B%E2%80%94%E2%80%94%E6%9C%89%E5%9B%BA%E4%BB%B6.html</url>
+    <url>/resume/%E6%95%99%E5%A5%B3%E6%9C%8B%E5%8F%8B%E5%AD%A6%E4%BC%9A%E7%94%A8ESP8266%E5%AE%9E%E7%8E%B0wifi%E6%9D%80%E6%89%8B%E2%80%94%E2%80%94%E6%9C%89%E5%9B%BA%E4%BB%B6.html</url>
     <content><![CDATA[<blockquote>
 <p>固件来自大神：FengMo<br>固件下载地址：<a href="https://download.csdn.net/download/qq_45504119/12407789" target="_blank" rel="noopener">https://download.csdn.net/download/qq_45504119/12407789</a><br>也可以加我的交流群，我会在群里分享出来哦：977947271<br>2020/5/30：<br>近日每天都有十几个很明显的小号加群，而且有的大号进群竟然打广告和卖不良物品，经我和群友讨论后，加群需要正确填写我的CSDN账号昵称，只是为了过滤一些不好的人。</p>
 </blockquote>
@@ -1620,7 +1620,7 @@ Did you mean &#39;conda create&#39;?</code></p>
   </entry>
   <entry>
     <title>新手如何使用anaconda（python）—简单介绍</title>
-    <url>/%E6%96%B0%E6%89%8B%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8anaconda%EF%BC%88python%EF%BC%89%E2%80%94%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D.html</url>
+    <url>/resume/%E6%96%B0%E6%89%8B%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8anaconda%EF%BC%88python%EF%BC%89%E2%80%94%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D.html</url>
     <content><![CDATA[<p>我之前用 python 的 IDLE 去写代码，但是在深度学习的部分，代码频频报错，因为 python 的很多库都没有，而自己去下载的话速度极其的慢。</p>
 <p>所以下载 anaconda 了， anaconda 里已经下载了很多库（虽然依然没有我想要的库），但相比单单一个 python 软件便好用许多。</p>
 <p>这里介绍一下新手如何快速使用 anaconda（我也是刚接触 python，好在比C简单多了，和 matlab 又很像）：</p>
@@ -1660,7 +1660,7 @@ Did you mean &#39;conda create&#39;?</code></p>
   </entry>
   <entry>
     <title>运行SSD-TensorFlow报错：tensorflow.python.framework.errors_impl.NotFoundError：</title>
-    <url>/%E8%BF%90%E8%A1%8CSSD-TensorFlow%E6%8A%A5%E9%94%99%EF%BC%9Atensorflow.python.framework.errors_impl.NotFoundError%EF%BC%9A.html</url>
+    <url>/resume/%E8%BF%90%E8%A1%8CSSD-TensorFlow%E6%8A%A5%E9%94%99%EF%BC%9Atensorflow.python.framework.errors_impl.NotFoundError%EF%BC%9A.html</url>
     <content><![CDATA[<p>玩了很久的 yolo，今天下载了 SSD-TensorFlow 的代码，不过在运行的时候出现了一点问题</p>
 <p>官方的介绍是运行：<code>jupyter notebook notebooks/ssd_notebook.ipynb</code></p>
 <p>但是在 <code>jupyter notebook</code> 中运行多有不便，我就将代码复制在了下面文件夹里，与 <code>ssd_notebook.ipynb</code> 放在了一块，可是出现报错：</p>
@@ -1694,7 +1694,7 @@ Did you mean &#39;conda create&#39;?</code></p>
   </entry>
   <entry>
     <title>运行sh文件报错：python3 command not found——已解决</title>
-    <url>/%E8%BF%90%E8%A1%8Csh%E6%96%87%E4%BB%B6%E6%8A%A5%E9%94%99%EF%BC%9Apython3%EF%BC%9A%20command%20not%20found%E2%80%94%E2%80%94%E5%B7%B2%E8%A7%A3%E5%86%B3.html</url>
+    <url>/resume/%E8%BF%90%E8%A1%8Csh%E6%96%87%E4%BB%B6%E6%8A%A5%E9%94%99%EF%BC%9Apython3%EF%BC%9A%20command%20not%20found%E2%80%94%E2%80%94%E5%B7%B2%E8%A7%A3%E5%86%B3.html</url>
     <content><![CDATA[<p>我使用windows下的 anaconda 运行 sh 文件时报错：<code>python3: command not found</code></p>
 <p>可是我就是在 anaconda 配置的 python3.6 环境下运行的 sh 文件啊</p>
 <p>网上没有找的任何有效的解决方法</p>
@@ -1718,7 +1718,7 @@ Did you mean &#39;conda create&#39;?</code></p>
   </entry>
   <entry>
     <title>教女朋友学会用win10+yolov3+python训练自己的模型</title>
-    <url>/%E6%95%99%E5%A5%B3%E6%9C%8B%E5%8F%8B%E5%AD%A6%E4%BC%9A%E7%94%A8win10+yolov3+python%E8%AE%AD%E7%BB%83%E8%87%AA%E5%B7%B1%E7%9A%84%E6%A8%A1%E5%9E%8B.html</url>
+    <url>/resume/%E6%95%99%E5%A5%B3%E6%9C%8B%E5%8F%8B%E5%AD%A6%E4%BC%9A%E7%94%A8win10+yolov3+python%E8%AE%AD%E7%BB%83%E8%87%AA%E5%B7%B1%E7%9A%84%E6%A8%A1%E5%9E%8B.html</url>
     <content><![CDATA[<blockquote>
 <p>times：2020/3/23<br>操作系统：win10<br>环境：python 3.6<br>因为我之前把所有内容写在一篇文章里非常的乱，所以本文主线是训练自己的 yolo.h5 去识别图像中的人，所有小细节的操作，我都在文中添加了链接，新手的话需要注意看一下。<br>// 有任何的问题都可以直接评论，还有资料的话直接留言邮箱，说明问题//<br>//也可以评论下加下微信询问//<br>大家一起加油学习yolo，之后我会再出一篇详细介绍yolo代码的文章<br>新创建的小小交流群：977947271 想要资料的也可以在群里要哦<br>2020/5/30：</p>
 </blockquote>
@@ -1829,7 +1829,7 @@ Did you mean &#39;conda create&#39;?</code></p>
   </entry>
   <entry>
     <title>鱼C论坛小甲鱼Python课后题</title>
-    <url>/%E9%B1%BCC%E8%AE%BA%E5%9D%9B%E5%B0%8F%E7%94%B2%E9%B1%BCPython%E8%AF%BE%E5%90%8E%E9%A2%98.html</url>
+    <url>/resume/%E9%B1%BCC%E8%AE%BA%E5%9D%9B%E5%B0%8F%E7%94%B2%E9%B1%BCPython%E8%AF%BE%E5%90%8E%E9%A2%98.html</url>
     <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">本人是从小甲鱼的python视频一步步过来的</span><br><span class="line">所以刚看到小甲鱼的课后题库就转载过来和大家分享</span><br><span class="line">如有侵权，请联系删除</span><br></pre></td></tr></table></figure>
 
 
