@@ -1,3 +1,6 @@
+body {
+  background: url("/images/donghua.jpeg");
+}
 .sidebar {
   left: -15rem;
   width: 15rem;
