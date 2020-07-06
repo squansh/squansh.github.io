@@ -4,10 +4,6 @@ body {
   background-attachment: fixed;
   background-position: 50% 50%;
   background-size: cover;
-  -webkit-background-size: cover;
-  -o-background-size: cover;
-  -moz-background-size: cover;
-  -ms-background-size: cover;
 /*这是设置底部文字, 看个人需要修改*/
 }
 body #footer > div > div {
