@@ -1,5 +1,17 @@
 body {
-  background: url("/images/cover7.jpg");
+  background: url("/images/qianxun.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 50% 50%;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+/*这是设置底部文字, 看个人需要修改*/
+}
+body #footer > div > div {
+  color: #eee;
 }
 .sidebar {
   left: -15rem;
