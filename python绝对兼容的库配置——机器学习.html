@@ -1,751 +1,697 @@
+
 <!DOCTYPE html>
-
-
 <html lang="zh-CN">
-
-
+    
 <head>
-  <meta charset="utf-8" />
-   
-  <meta name="keywords" content="python,matlab,yolo,yolov3,java,go,c++,c#" />
-   
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-  <title>
-    python绝对兼容的库配置——机器学习 |  孙全胜의Space
-  </title>
-  <meta name="generator" content="hexo-theme-ayer">
-  
-  <link rel="shortcut icon" href="/bitbug_favicon.ico" />
-  
-  
-<link rel="stylesheet" href="/dist/main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="孙全胜의Space">
+    <title>python绝对兼容的库配置——机器学习 - 孙全胜의Space</title>
+    <meta name="author" content="squansh">
+    
+        <meta name="keywords" content="python,matlab,yolo,yolov3,java,go,c++,c#,">
+    
+    
+    
+        
+            <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
+        
+    
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"squansh","sameAs":["https://github.com/","http://stackoverflow.com/users","https://twitter.com/","https://facebook.com/","https://plus.google.com/","https://www.linkedin.com/profile/","mailto"]},"articleBody":"先给大家推荐一个：深度学习环境兼容性配置\n接下来记录一下我的 python 库的版本，以免以后我自己搞错了…\n\n123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112113114115116117118119120121122123124125126127128129130131132133134135136137138139140141142143144145146147148149150151152153154155156157158159160161162163164165166167168169170171172173174175176177178179180181182183184185186187188189190191192193194195196197198199200201202203204205206207208209210211212213214215216217218Package                            Version---------------------------------- ------------eras                              2.2.0absl-py                            0.9.0alabaster                          0.7.10anaconda-client                    1.6.14anaconda-navigator                 1.8.7anaconda-project                   0.8.2asn1crypto                         0.24.0astor                              0.8.1astroid                            1.6.3astropy                            3.0.2attrs                              18.1.0Babel                              2.5.3backcall                           0.1.0backports.shutil-get-terminal-size 1.0.0backports.weakref                  1.0rc1beautifulsoup4                     4.6.0bitarray                           0.8.1bkcharts                           0.2blaze                              0.11.3bleach                             1.5.0bokeh                              0.12.16boto                               2.48.0Bottleneck                         1.2.1certifi                            2019.11.28cffi                               1.11.5chardet                            3.0.4click                              6.7cloudpickle                        0.5.3clyent                             1.2.2colorama                           0.3.9comtypes                           1.1.4conda                              4.8.3conda-build                        3.10.5conda-package-handling             1.6.0conda-verify                       2.0.0contextlib2                        0.5.5cryptography                       2.8cycler                             0.10.0Cython                             0.28.2cytoolz                            0.9.0.1dask                               0.17.5datashape                          0.5.4decorator                          4.3.0distributed                        1.21.8docutils                           0.14entrypoints                        0.2.3et-xmlfile                         1.0.1fastcache                          1.0.2ffmpeg                             1.4filelock                           3.0.4Flask                              1.0.2Flask-Cors                         3.0.4gast                               0.2.2gevent                             1.3.0glob2                              0.6greenlet                           0.4.13grpcio                             1.27.2h5py                               2.8.0heapdict                           1.0.0html5lib                           0.9999999idna                               2.6imageio                            2.3.0imagesize                          1.0.0ipykernel                          4.8.2ipython                            6.4.0ipython-genutils                   0.2.0ipywidgets                         7.2.1isort                              4.3.4itsdangerous                       0.24jdcal                              1.4jedi                               0.12.0Jinja2                             2.10jsonschema                         2.6.0jupyter                            1.0.0jupyter-client                     5.2.3jupyter-console                    5.2.0jupyter-core                       4.4.0jupyterlab                         0.32.1jupyterlab-launcher                0.10.5Keras                              2.2.4Keras-Applications                 1.0.8Keras-Preprocessing                1.1.0kiwisolver                         1.0.1labelImg                           1.8.3lazy-object-proxy                  1.3.1llvmlite                           0.23.1locket                             0.2.0lxml                               4.2.1Markdown                           3.1.1MarkupSafe                         1.0matplotlib                         2.2.2mccabe                             0.6.1menuinst                           1.4.14mistune                            0.8.3mkl-fft                            1.0.0mkl-random                         1.0.1more-itertools                     4.1.0mpmath                             1.0.0msgpack-python                     0.5.6multipledispatch                   0.5.0navigator-updater                  0.2.1nbconvert                          5.3.1nbformat                           4.4.0networkx                           2.1nltk                               3.3nose                               1.3.7notebook                           5.5.0numba                              0.38.0numexpr                            2.6.5numpy                              1.18.2numpydoc                           0.8.0odo                                0.5.1olefile                            0.45.1opencv-contrib-python              4.2.0.32openpyxl                           2.5.3packaging                          17.1pandas                             0.23.0pandocfilters                      1.4.2parso                              0.2.0partd                              0.3.8path.py                            11.0.1pathlib2                           2.3.2patsy                              0.5.0pep8                               1.7.1pickleshare                        0.7.4Pillow                             5.1.0pip                                20.0.2pkginfo                            1.4.2pluggy                             0.6.0ply                                3.11prompt-toolkit                     1.0.15protobuf                           3.11.4psutil                             5.4.5py                                 1.5.3pycodestyle                        2.4.0pycosat                            0.6.3pycparser                          2.18pycrypto                           2.6.1pycurl                             7.43.0.5pyflakes                           1.6.0Pygments                           2.2.0pylint                             1.8.4pyodbc                             4.0.23pyOpenSSL                          18.0.0pyparsing                          2.2.0PyQt5                              5.14.1PyQt5-sip                          12.7.1PySocks                            1.6.8pytest                             3.5.1pytest-arraydiff                   0.2pytest-astropy                     0.3.0pytest-doctestplus                 0.1.3pytest-openfiles                   0.3.0pytest-remotedata                  0.2.1python-dateutil                    2.7.3pytz                               2018.4PyWavelets                         0.5.2pywin32                            223pywinpty                           0.5.1PyYAML                             3.12pyzmq                              17.0.0QtAwesome                          0.4.4qtconsole                          4.3.1QtPy                               1.4.1requests                           2.18.4rope                               0.10.7ruamel-yaml                        0.15.35scikit-image                       0.13.1scikit-learn                       0.19.1scipy                              1.4.1seaborn                            0.8.1Send2Trash                         1.5.0setuptools                         39.1.0simplegeneric                      0.8.1singledispatch                     3.4.0.3six                                1.11.0snowballstemmer                    1.2.1sortedcollections                  0.6.1sortedcontainers                   1.5.10Sphinx                             1.7.4sphinxcontrib-websupport           1.0.1spyder                             3.2.8SQLAlchemy                         1.2.7statsmodels                        0.9.0sympy                              1.1.1tables                             3.4.3TBB                                0.1tblib                              1.3.2tensorboard                        1.12.2tensorflow                         1.12.0tensorflow-base                    0.0.0.post2tensorflow-gpu\t\t\t\t\t   2.1.0\ttermcolor                          1.1.0terminado                          0.8.1testpath                           0.3.1toolz                              0.9.0tornado                            5.0.2tqdm                               4.43.0traitlets                          4.3.2typing                             3.6.4unicodecsv                         0.14.1urllib3                            1.22wcwidth                            0.1.7webencodings                       0.5.1Werkzeug                           0.14.1wheel                              0.31.1widgetsnbextension                 3.2.1win-inet-pton                      1.0.1win-unicode-console                0.5wincertstore                       0.2wrapt                              1.10.11xlrd                               1.1.0XlsxWriter                         1.0.4xlwings                            0.11.8xlwt                               1.3.0zict                               0.1.3\n","dateCreated":"2020-06-17T19:16:52+08:00","dateModified":"2020-06-17T19:19:41+08:00","datePublished":"2020-06-17T19:16:52+08:00","description":"先给大家推荐一个：深度学习环境兼容性配置\n接下来记录一下我的 python 库的版本，以免以后我自己搞错了…","headline":"python绝对兼容的库配置——机器学习","image":[],"mainEntityOfPage":{"@type":"WebPage","@id":"https://squansh.top/python%E7%BB%9D%E5%AF%B9%E5%85%BC%E5%AE%B9%E7%9A%84%E5%BA%93%E9%85%8D%E7%BD%AE%E2%80%94%E2%80%94%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0.html"},"publisher":{"@type":"Organization","name":"squansh","sameAs":["https://github.com/","http://stackoverflow.com/users","https://twitter.com/","https://facebook.com/","https://plus.google.com/","https://www.linkedin.com/profile/","mailto"]},"url":"https://squansh.top/python%E7%BB%9D%E5%AF%B9%E5%85%BC%E5%AE%B9%E7%9A%84%E5%BA%93%E9%85%8D%E7%BD%AE%E2%80%94%E2%80%94%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0.html","keywords":"python, 机器视觉"}</script>
+    <meta name="description" content="先给大家推荐一个：深度学习环境兼容性配置 接下来记录一下我的 python 库的版本，以免以后我自己搞错了…">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="python绝对兼容的库配置——机器学习">
+<meta property="og:url" content="https://squansh.top/python%E7%BB%9D%E5%AF%B9%E5%85%BC%E5%AE%B9%E7%9A%84%E5%BA%93%E9%85%8D%E7%BD%AE%E2%80%94%E2%80%94%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0.html">
+<meta property="og:site_name" content="孙全胜의Space">
+<meta property="og:description" content="先给大家推荐一个：深度学习环境兼容性配置 接下来记录一下我的 python 库的版本，以免以后我自己搞错了…">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-06-17T11:16:52.000Z">
+<meta property="article:modified_time" content="2020-06-17T11:19:41.014Z">
+<meta property="article:author" content="squansh">
+<meta property="article:tag" content="python">
+<meta property="article:tag" content="机器视觉">
+<meta name="twitter:card" content="summary">
+    
+    
+        
+    
+    
+    
+    
+    
+    <!--STYLES-->
+    
+<link rel="stylesheet" href="/assets/css/all.css">
 
-  
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/css/remixicon.min.css">
+    
+<link rel="stylesheet" href="/assets/css/jquery.fancybox.css">
 
-  
-<link rel="stylesheet" href="/css/custom.css">
+    
+<link rel="stylesheet" href="/assets/css/thumbs.css">
 
-  
-  
-<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+    
+<link rel="stylesheet" href="/assets/css/tranquilpeak.css">
 
-  
-  
+    <!--STYLES END-->
+    
 
-    <script type="text/javascript">
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    
 
-        ga('create', 'UA-168079169-1', 'auto');
-        ga('send', 'pageview');
-
-        </script>
-
-
-
-  
-    <script>
-        var _hmt = _hmt || [];
-        (function() {
-            var hm = document.createElement("script");
-            hm.src = "https://hm.baidu.com/hm.js?6101cdb197f4b6300cb90fa7e51accec";
-            var s = document.getElementsByTagName("script")[0];
-            s.parentNode.insertBefore(hm, s);
-        })();
-        </script>
-
-
-
-
-<link rel="alternate" href="/atom.xml" title="孙全胜의Space" type="application/atom+xml">
+    
+        
+    
 </head>
 
-</html>
+    <body>
+        <div id="blog">
+            <!-- Define author's picture -->
 
-<body>
-  
-  <canvas width="1777" height="841" style="position: fixed; left: 0px; top: 0px; z-index: 999; pointer-events: none;"></canvas>
-  
-  <div id="app">
-    <main class="content on">
-      <section class="outer">
-  <article id="post-python绝对兼容的库配置——机器学习" class="article article-type-post" itemscope
-  itemprop="blogPost" data-scroll-reveal>
-
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  python绝对兼容的库配置——机器学习
-</h1>
- 
-
-    </header>
-    
 
     
-    <div class="article-meta">
-      <a href="/python%E7%BB%9D%E5%AF%B9%E5%85%BC%E5%AE%B9%E7%9A%84%E5%BA%93%E9%85%8D%E7%BD%AE%E2%80%94%E2%80%94%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0.html" class="article-date">
-  <time datetime="2020-06-17T11:16:52.000Z" itemprop="datePublished">2020-06-17</time>
-</a>
-      
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/python/">python</a> / <a class="article-category-link" href="/categories/python/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89/">机器视觉</a>
-  </div>
 
-      
-      
-<div class="word_count">
-    <span class="post-time">
-        <span class="post-meta-item-icon">
-            <i class="ri-quill-pen-line"></i>
-            <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">723</span>
-        </span>
-    </span>
-
-    <span class="post-time">
-        &nbsp; | &nbsp;
-        <span class="post-meta-item-icon">
-            <i class="ri-book-open-line"></i>
-            <span class="post-meta-item-text"> 阅读时长≈</span>
-            <span class="post-count">4 分钟</span>
-        </span>
-    </span>
-</div>
-
-      
+<header id="header" data-behavior="4">
+    <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+    <div class="header-title">
+        <a
+            class="header-title-link"
+            href="/%20"
+            aria-label=""
+        >
+            孙全胜의Space
+        </a>
     </div>
     
+        
+            <a
+                class="header-right-picture "
+                href="#about"
+                aria-label="Open the link: /#about"
+            >
+        
+        
+        </a>
+    
+</header>
 
+            <!-- Define author's picture -->
+
+
+<nav id="sidebar" data-behavior="4">
+    <div class="sidebar-container">
+        
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/"
+                            
+                            rel="noopener"
+                            title="Home"
+                        >
+                        <i class="sidebar-button-icon fa fa-home" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Home</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/all-categories"
+                            
+                            rel="noopener"
+                            title="Categories"
+                        >
+                        <i class="sidebar-button-icon fa fa-bookmark" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Categories</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/all-tags"
+                            
+                            rel="noopener"
+                            title="Tags"
+                        >
+                        <i class="sidebar-button-icon fa fa-tags" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Tags</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/all-archives"
+                            
+                            rel="noopener"
+                            title="Archives"
+                        >
+                        <i class="sidebar-button-icon fa fa-archive" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Archives</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link open-algolia-search"
+                            href="#search"
+                            
+                            rel="noopener"
+                            title="Search"
+                        >
+                        <i class="sidebar-button-icon fa fa-search" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Search</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="#about"
+                            
+                            rel="noopener"
+                            title="About"
+                        >
+                        <i class="sidebar-button-icon fa fa-question" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">About</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="https://github.com/"
+                            
+                                target="_blank"
+                            
+                            rel="noopener"
+                            title="GitHub"
+                        >
+                        <i class="sidebar-button-icon fab fa-github" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">GitHub</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="http://stackoverflow.com/users"
+                            
+                                target="_blank"
+                            
+                            rel="noopener"
+                            title="Stack Overflow"
+                        >
+                        <i class="sidebar-button-icon fab fa-stack-overflow" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Stack Overflow</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="https://twitter.com/"
+                            
+                                target="_blank"
+                            
+                            rel="noopener"
+                            title="Twitter"
+                        >
+                        <i class="sidebar-button-icon fab fa-twitter" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Twitter</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="https://facebook.com/"
+                            
+                                target="_blank"
+                            
+                            rel="noopener"
+                            title="Facebook"
+                        >
+                        <i class="sidebar-button-icon fab fa-facebook" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Facebook</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="https://plus.google.com/"
+                            
+                                target="_blank"
+                            
+                            rel="noopener"
+                            title="Google +"
+                        >
+                        <i class="sidebar-button-icon fab fa-google-plus" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Google +</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="https://www.linkedin.com/profile/"
+                            
+                                target="_blank"
+                            
+                            rel="noopener"
+                            title="LinkedIn"
+                        >
+                        <i class="sidebar-button-icon fab fa-linkedin" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">LinkedIn</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/mailto"
+                            
+                            rel="noopener"
+                            title="Mail"
+                        >
+                        <i class="sidebar-button-icon fa fa-envelope" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Mail</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/atom.xml"
+                            
+                            rel="noopener"
+                            title="RSS"
+                        >
+                        <i class="sidebar-button-icon fa fa-rss" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">RSS</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+    </div>
+</nav>
+
+            
+            <div id="main" data-behavior="4"
+                 class="
+                        hasCoverMetaIn
+                        ">
+                
+<article class="post">
     
     
-
-
+        <div class="post-header main-content-wrap text-left">
+    
+        <h1 class="post-title">
+            python绝对兼容的库配置——机器学习
+        </h1>
+    
+    
+        <div class="post-meta">
+    <time datetime="2020-06-17T19:16:52+08:00">
+	
+		    6月 17, 2020
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/python/">python</a>, <a class="category-link" href="/categories/python/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89/">机器视觉</a>
 
 
     
+</div>
 
     
-    <div class="article-entry" itemprop="articleBody">
-      
-      
+</div>
 
-      
-      <p>先给大家推荐一个：<a href="https://docs.floydhub.com/guides/environments/" target="_blank" rel="noopener">深度学习环境兼容性配置</a></p>
+    
+    <div class="post-content markdown">
+        <div class="main-content-wrap">
+            <p>先给大家推荐一个：<a href="https://docs.floydhub.com/guides/environments/" target="_blank" rel="noopener">深度学习环境兼容性配置</a></p>
 <p>接下来记录一下我的 python 库的版本，以免以后我自己搞错了…</p>
 <a id="more"></a>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br></pre></td><td class="code"><pre><span class="line">Package                            Version</span><br><span class="line">---------------------------------- -----------</span><br><span class="line">-eras                              <span class="number">2.2</span><span class="number">.0</span></span><br><span class="line">absl-py                            <span class="number">0.9</span><span class="number">.0</span></span><br><span class="line">alabaster                          <span class="number">0.7</span><span class="number">.10</span></span><br><span class="line">anaconda-client                    <span class="number">1.6</span><span class="number">.14</span></span><br><span class="line">anaconda-navigator                 <span class="number">1.8</span><span class="number">.7</span></span><br><span class="line">anaconda-project                   <span class="number">0.8</span><span class="number">.2</span></span><br><span class="line">asn1crypto                         <span class="number">0.24</span><span class="number">.0</span></span><br><span class="line">astor                              <span class="number">0.8</span><span class="number">.1</span></span><br><span class="line">astroid                            <span class="number">1.6</span><span class="number">.3</span></span><br><span class="line">astropy                            <span class="number">3.0</span><span class="number">.2</span></span><br><span class="line">attrs                              <span class="number">18.1</span><span class="number">.0</span></span><br><span class="line">Babel                              <span class="number">2.5</span><span class="number">.3</span></span><br><span class="line">backcall                           <span class="number">0.1</span><span class="number">.0</span></span><br><span class="line">backports.shutil-<span class="built_in">get</span>-terminal-<span class="built_in">size</span> <span class="number">1.0</span><span class="number">.0</span></span><br><span class="line">backports.weakref                  <span class="number">1.0</span>rc1</span><br><span class="line">beautifulsoup4                     <span class="number">4.6</span><span class="number">.0</span></span><br><span class="line">bitarray                           <span class="number">0.8</span><span class="number">.1</span></span><br><span class="line">bkcharts                           <span class="number">0.2</span></span><br><span class="line">blaze                              <span class="number">0.11</span><span class="number">.3</span></span><br><span class="line">bleach                             <span class="number">1.5</span><span class="number">.0</span></span><br><span class="line">bokeh                              <span class="number">0.12</span><span class="number">.16</span></span><br><span class="line">boto                               <span class="number">2.48</span><span class="number">.0</span></span><br><span class="line">Bottleneck                         <span class="number">1.2</span><span class="number">.1</span></span><br><span class="line">certifi                            <span class="number">2019.11</span><span class="number">.28</span></span><br><span class="line">cffi                               <span class="number">1.11</span><span class="number">.5</span></span><br><span class="line">chardet                            <span class="number">3.0</span><span class="number">.4</span></span><br><span class="line"><span class="built_in">click</span>                              <span class="number">6.7</span></span><br><span class="line">cloudpickle                        <span class="number">0.5</span><span class="number">.3</span></span><br><span class="line">clyent                             <span class="number">1.2</span><span class="number">.2</span></span><br><span class="line">colorama                           <span class="number">0.3</span><span class="number">.9</span></span><br><span class="line">comtypes                           <span class="number">1.1</span><span class="number">.4</span></span><br><span class="line">conda                              <span class="number">4.8</span><span class="number">.3</span></span><br><span class="line">conda-build                        <span class="number">3.10</span><span class="number">.5</span></span><br><span class="line">conda-package-handling             <span class="number">1.6</span><span class="number">.0</span></span><br><span class="line">conda-verify                       <span class="number">2.0</span><span class="number">.0</span></span><br><span class="line">contextlib2                        <span class="number">0.5</span><span class="number">.5</span></span><br><span class="line">cryptography                       <span class="number">2.8</span></span><br><span class="line">cycler                             <span class="number">0.10</span><span class="number">.0</span></span><br><span class="line">Cython                             <span class="number">0.28</span><span class="number">.2</span></span><br><span class="line">cytoolz                            <span class="number">0.9</span><span class="number">.0</span><span class="number">.1</span></span><br><span class="line">dask                               <span class="number">0.17</span><span class="number">.5</span></span><br><span class="line">datashape                          <span class="number">0.5</span><span class="number">.4</span></span><br><span class="line">decorator                          <span class="number">4.3</span><span class="number">.0</span></span><br><span class="line">distributed                        <span class="number">1.21</span><span class="number">.8</span></span><br><span class="line">docutils                           <span class="number">0.14</span></span><br><span class="line">entrypoints                        <span class="number">0.2</span><span class="number">.3</span></span><br><span class="line">et-xmlfile                         <span class="number">1.0</span><span class="number">.1</span></span><br><span class="line">fastcache                          <span class="number">1.0</span><span class="number">.2</span></span><br><span class="line">ffmpeg                             <span class="number">1.4</span></span><br><span class="line">filelock                           <span class="number">3.0</span><span class="number">.4</span></span><br><span class="line">Flask                              <span class="number">1.0</span><span class="number">.2</span></span><br><span class="line">Flask-Cors                         <span class="number">3.0</span><span class="number">.4</span></span><br><span class="line">gast                               <span class="number">0.2</span><span class="number">.2</span></span><br><span class="line">gevent                             <span class="number">1.3</span><span class="number">.0</span></span><br><span class="line">glob2                              <span class="number">0.6</span></span><br><span class="line">greenlet                           <span class="number">0.4</span><span class="number">.13</span></span><br><span class="line">grpcio                             <span class="number">1.27</span><span class="number">.2</span></span><br><span class="line">h5py                               <span class="number">2.8</span><span class="number">.0</span></span><br><span class="line">heapdict                           <span class="number">1.0</span><span class="number">.0</span></span><br><span class="line">html5lib                           <span class="number">0.9999999</span></span><br><span class="line">idna                               <span class="number">2.6</span></span><br><span class="line">imageio                            <span class="number">2.3</span><span class="number">.0</span></span><br><span class="line">imagesize                          <span class="number">1.0</span><span class="number">.0</span></span><br><span class="line">ipykernel                          <span class="number">4.8</span><span class="number">.2</span></span><br><span class="line">ipython                            <span class="number">6.4</span><span class="number">.0</span></span><br><span class="line">ipython-genutils                   <span class="number">0.2</span><span class="number">.0</span></span><br><span class="line">ipywidgets                         <span class="number">7.2</span><span class="number">.1</span></span><br><span class="line">isort                              <span class="number">4.3</span><span class="number">.4</span></span><br><span class="line">itsdangerous                       <span class="number">0.24</span></span><br><span class="line">jdcal                              <span class="number">1.4</span></span><br><span class="line">jedi                               <span class="number">0.12</span><span class="number">.0</span></span><br><span class="line">Jinja2                             <span class="number">2.10</span></span><br><span class="line">jsonschema                         <span class="number">2.6</span><span class="number">.0</span></span><br><span class="line">jupyter                            <span class="number">1.0</span><span class="number">.0</span></span><br><span class="line">jupyter-client                     <span class="number">5.2</span><span class="number">.3</span></span><br><span class="line">jupyter-console                    <span class="number">5.2</span><span class="number">.0</span></span><br><span class="line">jupyter-core                       <span class="number">4.4</span><span class="number">.0</span></span><br><span class="line">jupyterlab                         <span class="number">0.32</span><span class="number">.1</span></span><br><span class="line">jupyterlab-launcher                <span class="number">0.10</span><span class="number">.5</span></span><br><span class="line">Keras                              <span class="number">2.2</span><span class="number">.4</span></span><br><span class="line">Keras-Applications                 <span class="number">1.0</span><span class="number">.8</span></span><br><span class="line">Keras-Preprocessing                <span class="number">1.1</span><span class="number">.0</span></span><br><span class="line">kiwisolver                         <span class="number">1.0</span><span class="number">.1</span></span><br><span class="line">labelImg                           <span class="number">1.8</span><span class="number">.3</span></span><br><span class="line">lazy-object-proxy                  <span class="number">1.3</span><span class="number">.1</span></span><br><span class="line">llvmlite                           <span class="number">0.23</span><span class="number">.1</span></span><br><span class="line">locket                             <span class="number">0.2</span><span class="number">.0</span></span><br><span class="line">lxml                               <span class="number">4.2</span><span class="number">.1</span></span><br><span class="line">Markdown                           <span class="number">3.1</span><span class="number">.1</span></span><br><span class="line">MarkupSafe                         <span class="number">1.0</span></span><br><span class="line">matplotlib                         <span class="number">2.2</span><span class="number">.2</span></span><br><span class="line">mccabe                             <span class="number">0.6</span><span class="number">.1</span></span><br><span class="line">menuinst                           <span class="number">1.4</span><span class="number">.14</span></span><br><span class="line">mistune                            <span class="number">0.8</span><span class="number">.3</span></span><br><span class="line">mkl-fft                            <span class="number">1.0</span><span class="number">.0</span></span><br><span class="line">mkl-<span class="built_in">random</span>                         <span class="number">1.0</span><span class="number">.1</span></span><br><span class="line">more-itertools                     <span class="number">4.1</span><span class="number">.0</span></span><br><span class="line">mpmath                             <span class="number">1.0</span><span class="number">.0</span></span><br><span class="line">msgpack-python                     <span class="number">0.5</span><span class="number">.6</span></span><br><span class="line">multipledispatch                   <span class="number">0.5</span><span class="number">.0</span></span><br><span class="line">navigator-updater                  <span class="number">0.2</span><span class="number">.1</span></span><br><span class="line">nbconvert                          <span class="number">5.3</span><span class="number">.1</span></span><br><span class="line">nbformat                           <span class="number">4.4</span><span class="number">.0</span></span><br><span class="line">networkx                           <span class="number">2.1</span></span><br><span class="line">nltk                               <span class="number">3.3</span></span><br><span class="line">nose                               <span class="number">1.3</span><span class="number">.7</span></span><br><span class="line">notebook                           <span class="number">5.5</span><span class="number">.0</span></span><br><span class="line">numba                              <span class="number">0.38</span><span class="number">.0</span></span><br><span class="line">numexpr                            <span class="number">2.6</span><span class="number">.5</span></span><br><span class="line">numpy                              <span class="number">1.18</span><span class="number">.2</span></span><br><span class="line">numpydoc                           <span class="number">0.8</span><span class="number">.0</span></span><br><span class="line">odo                                <span class="number">0.5</span><span class="number">.1</span></span><br><span class="line">olefile                            <span class="number">0.45</span><span class="number">.1</span></span><br><span class="line">opencv-contrib-python              <span class="number">4.2</span><span class="number">.0</span><span class="number">.32</span></span><br><span class="line">openpyxl                           <span class="number">2.5</span><span class="number">.3</span></span><br><span class="line">packaging                          <span class="number">17.1</span></span><br><span class="line">pandas                             <span class="number">0.23</span><span class="number">.0</span></span><br><span class="line">pandocfilters                      <span class="number">1.4</span><span class="number">.2</span></span><br><span class="line">parso                              <span class="number">0.2</span><span class="number">.0</span></span><br><span class="line">partd                              <span class="number">0.3</span><span class="number">.8</span></span><br><span class="line">path.py                            <span class="number">11.0</span><span class="number">.1</span></span><br><span class="line">pathlib2                           <span class="number">2.3</span><span class="number">.2</span></span><br><span class="line">patsy                              <span class="number">0.5</span><span class="number">.0</span></span><br><span class="line">pep8                               <span class="number">1.7</span><span class="number">.1</span></span><br><span class="line">pickleshare                        <span class="number">0.7</span><span class="number">.4</span></span><br><span class="line">Pillow                             <span class="number">5.1</span><span class="number">.0</span></span><br><span class="line">pip                                <span class="number">20.0</span><span class="number">.2</span></span><br><span class="line">pkginfo                            <span class="number">1.4</span><span class="number">.2</span></span><br><span class="line">pluggy                             <span class="number">0.6</span><span class="number">.0</span></span><br><span class="line">ply                                <span class="number">3.11</span></span><br><span class="line">prompt-toolkit                     <span class="number">1.0</span><span class="number">.15</span></span><br><span class="line">protobuf                           <span class="number">3.11</span><span class="number">.4</span></span><br><span class="line">psutil                             <span class="number">5.4</span><span class="number">.5</span></span><br><span class="line">py                                 <span class="number">1.5</span><span class="number">.3</span></span><br><span class="line">pycodestyle                        <span class="number">2.4</span><span class="number">.0</span></span><br><span class="line">pycosat                            <span class="number">0.6</span><span class="number">.3</span></span><br><span class="line">pycparser                          <span class="number">2.18</span></span><br><span class="line">pycrypto                           <span class="number">2.6</span><span class="number">.1</span></span><br><span class="line">pycurl                             <span class="number">7.43</span><span class="number">.0</span><span class="number">.5</span></span><br><span class="line">pyflakes                           <span class="number">1.6</span><span class="number">.0</span></span><br><span class="line">Pygments                           <span class="number">2.2</span><span class="number">.0</span></span><br><span class="line">pylint                             <span class="number">1.8</span><span class="number">.4</span></span><br><span class="line">pyodbc                             <span class="number">4.0</span><span class="number">.23</span></span><br><span class="line">pyOpenSSL                          <span class="number">18.0</span><span class="number">.0</span></span><br><span class="line">pyparsing                          <span class="number">2.2</span><span class="number">.0</span></span><br><span class="line">PyQt5                              <span class="number">5.14</span><span class="number">.1</span></span><br><span class="line">PyQt5-sip                          <span class="number">12.7</span><span class="number">.1</span></span><br><span class="line">PySocks                            <span class="number">1.6</span><span class="number">.8</span></span><br><span class="line">pytest                             <span class="number">3.5</span><span class="number">.1</span></span><br><span class="line">pytest-arraydiff                   <span class="number">0.2</span></span><br><span class="line">pytest-astropy                     <span class="number">0.3</span><span class="number">.0</span></span><br><span class="line">pytest-doctestplus                 <span class="number">0.1</span><span class="number">.3</span></span><br><span class="line">pytest-openfiles                   <span class="number">0.3</span><span class="number">.0</span></span><br><span class="line">pytest-remotedata                  <span class="number">0.2</span><span class="number">.1</span></span><br><span class="line">python-dateutil                    <span class="number">2.7</span><span class="number">.3</span></span><br><span class="line">pytz                               <span class="number">2018.4</span></span><br><span class="line">PyWavelets                         <span class="number">0.5</span><span class="number">.2</span></span><br><span class="line">pywin32                            <span class="number">223</span></span><br><span class="line">pywinpty                           <span class="number">0.5</span><span class="number">.1</span></span><br><span class="line">PyYAML                             <span class="number">3.12</span></span><br><span class="line">pyzmq                              <span class="number">17.0</span><span class="number">.0</span></span><br><span class="line">QtAwesome                          <span class="number">0.4</span><span class="number">.4</span></span><br><span class="line">qtconsole                          <span class="number">4.3</span><span class="number">.1</span></span><br><span class="line">QtPy                               <span class="number">1.4</span><span class="number">.1</span></span><br><span class="line">requests                           <span class="number">2.18</span><span class="number">.4</span></span><br><span class="line">rope                               <span class="number">0.10</span><span class="number">.7</span></span><br><span class="line">ruamel-yaml                        <span class="number">0.15</span><span class="number">.35</span></span><br><span class="line">scikit-<span class="built_in">image</span>                       <span class="number">0.13</span><span class="number">.1</span></span><br><span class="line">scikit-learn                       <span class="number">0.19</span><span class="number">.1</span></span><br><span class="line">scipy                              <span class="number">1.4</span><span class="number">.1</span></span><br><span class="line">seaborn                            <span class="number">0.8</span><span class="number">.1</span></span><br><span class="line">Send2Trash                         <span class="number">1.5</span><span class="number">.0</span></span><br><span class="line">setuptools                         <span class="number">39.1</span><span class="number">.0</span></span><br><span class="line">simplegeneric                      <span class="number">0.8</span><span class="number">.1</span></span><br><span class="line">singledispatch                     <span class="number">3.4</span><span class="number">.0</span><span class="number">.3</span></span><br><span class="line">six                                <span class="number">1.11</span><span class="number">.0</span></span><br><span class="line">snowballstemmer                    <span class="number">1.2</span><span class="number">.1</span></span><br><span class="line">sortedcollections                  <span class="number">0.6</span><span class="number">.1</span></span><br><span class="line">sortedcontainers                   <span class="number">1.5</span><span class="number">.10</span></span><br><span class="line">Sphinx                             <span class="number">1.7</span><span class="number">.4</span></span><br><span class="line">sphinxcontrib-websupport           <span class="number">1.0</span><span class="number">.1</span></span><br><span class="line">spyder                             <span class="number">3.2</span><span class="number">.8</span></span><br><span class="line">SQLAlchemy                         <span class="number">1.2</span><span class="number">.7</span></span><br><span class="line">statsmodels                        <span class="number">0.9</span><span class="number">.0</span></span><br><span class="line">sympy                              <span class="number">1.1</span><span class="number">.1</span></span><br><span class="line">tables                             <span class="number">3.4</span><span class="number">.3</span></span><br><span class="line">TBB                                <span class="number">0.1</span></span><br><span class="line">tblib                              <span class="number">1.3</span><span class="number">.2</span></span><br><span class="line">tensorboard                        <span class="number">1.12</span><span class="number">.2</span></span><br><span class="line">tensorflow                         <span class="number">1.12</span><span class="number">.0</span></span><br><span class="line">tensorflow-base                    <span class="number">0.0</span><span class="number">.0</span>.post2</span><br><span class="line">tensorflow-gpu					   <span class="number">2.1</span><span class="number">.0</span>	</span><br><span class="line">termcolor                          <span class="number">1.1</span><span class="number">.0</span></span><br><span class="line">terminado                          <span class="number">0.8</span><span class="number">.1</span></span><br><span class="line">testpath                           <span class="number">0.3</span><span class="number">.1</span></span><br><span class="line">toolz                              <span class="number">0.9</span><span class="number">.0</span></span><br><span class="line">tornado                            <span class="number">5.0</span><span class="number">.2</span></span><br><span class="line">tqdm                               <span class="number">4.43</span><span class="number">.0</span></span><br><span class="line">traitlets                          <span class="number">4.3</span><span class="number">.2</span></span><br><span class="line">typing                             <span class="number">3.6</span><span class="number">.4</span></span><br><span class="line">unicodecsv                         <span class="number">0.14</span><span class="number">.1</span></span><br><span class="line">urllib3                            <span class="number">1.22</span></span><br><span class="line">wcwidth                            <span class="number">0.1</span><span class="number">.7</span></span><br><span class="line">webencodings                       <span class="number">0.5</span><span class="number">.1</span></span><br><span class="line">Werkzeug                           <span class="number">0.14</span><span class="number">.1</span></span><br><span class="line">wheel                              <span class="number">0.31</span><span class="number">.1</span></span><br><span class="line">widgetsnbextension                 <span class="number">3.2</span><span class="number">.1</span></span><br><span class="line">win-inet-pton                      <span class="number">1.0</span><span class="number">.1</span></span><br><span class="line">win-unicode-console                <span class="number">0.5</span></span><br><span class="line">wincertstore                       <span class="number">0.2</span></span><br><span class="line">wrapt                              <span class="number">1.10</span><span class="number">.11</span></span><br><span class="line">xlrd                               <span class="number">1.1</span><span class="number">.0</span></span><br><span class="line">XlsxWriter                         <span class="number">1.0</span><span class="number">.4</span></span><br><span class="line">xlwings                            <span class="number">0.11</span><span class="number">.8</span></span><br><span class="line">xlwt                               <span class="number">1.3</span><span class="number">.0</span></span><br><span class="line">zict                               <span class="number">0.1</span><span class="number">.3</span></span><br></pre></td></tr></table></figure>
 
-      
-      <!-- reward -->
-      
+            
+
+
+        </div>
     </div>
-    
-    
-      <!-- copyright -->
-      
-        <div class="declare">
-          <ul class="post-copyright">
-            <li>
-              <i class="ri-copyright-line"></i>
-              <strong>版权声明： </strong>
-              本博客所有文章除特别声明外，著作权归作者所有。转载请注明出处！
+    <div id="post-footer" class="post-footer main-content-wrap">
+        
+            <div class="post-footer-tags">
+                <span class="text-color-light text-small">TAGGED IN</span><br/>
+                
+    <a class="tag tag--primary tag--small t-link" href="/tags/python/" rel="tag">python</a> <a class="tag tag--primary tag--small t-link" href="/tags/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89/" rel="tag">机器视觉</a>
+
+            </div>
+        
+        
+            <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    
+                <a
+                    class="post-action-btn btn btn--default tooltip--top"
+                    href="/%E6%95%99%E5%A5%B3%E6%9C%8B%E5%8F%8B%E5%AD%A6%E4%BC%9A%E7%94%A8win10+yolov3+python%E8%AE%AD%E7%BB%83%E8%87%AA%E5%B7%B1%E7%9A%84%E6%A8%A1%E5%9E%8B.html"
+                    data-tooltip="教女朋友学会用win10+yolov3+python训练自己的模型"
+                    aria-label="PREVIOUS: 教女朋友学会用win10+yolov3+python训练自己的模型"
+                >
+                    
+                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                        <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
+                    </a>
             </li>
-          </ul>
-        </div>
+            <li class="post-action">
+                
+                    
+                <a
+                    class="post-action-btn btn btn--default tooltip--top"
+                    href="/labelimg%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%EF%BC%9A%E5%A6%82%E4%BD%95%E6%A0%87%E6%B3%A8%E5%9B%BE%E7%89%87.html"
+                    data-tooltip="labelimg使用方法：如何标注图片"
+                    aria-label="NEXT: labelimg使用方法：如何标注图片"
+                >
+                    
+                        <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a
+                class="post-action-btn btn btn--default btn-open-shareoptions"
+                href="#btn-open-shareoptions"
+                aria-label="Share this post"
+            >
+                <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </a>
+        </li>
         
-    <footer class="article-footer">
-      
-          
-<div class="share-btn">
-      <span class="share-sns share-outer">
-        <i class="ri-share-forward-line"></i>
-        分享
-      </span>
-      <div class="share-wrap">
-        <i class="arrow"></i>
-        <div class="share-icons">
-          
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="ri-weibo-fill"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="ri-wechat-fill"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="ri-qq-fill"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="ri-douban-line"></i>
-          </a>
-          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a> -->
-          
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="ri-facebook-circle-fill"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="ri-twitter-fill"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="ri-google-fill"></i>
-          </a>
-        </div>
-      </div>
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://squansh.top/python%E7%BB%9D%E5%AF%B9%E5%85%BC%E5%AE%B9%E7%9A%84%E5%BA%93%E9%85%8D%E7%BD%AE%E2%80%94%E2%80%94%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0.html"
+                    title="Share on Facebook"
+                    aria-label="Share on Facebook"
+                >
+                    <i class="fab fa-facebook" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://twitter.com/intent/tweet?text=https://squansh.top/python%E7%BB%9D%E5%AF%B9%E5%85%BC%E5%AE%B9%E7%9A%84%E5%BA%93%E9%85%8D%E7%BD%AE%E2%80%94%E2%80%94%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0.html"
+                    title="Share on Twitter"
+                    aria-label="Share on Twitter"
+                >
+                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://plus.google.com/share?url=https://squansh.top/python%E7%BB%9D%E5%AF%B9%E5%85%BC%E5%AE%B9%E7%9A%84%E5%BA%93%E9%85%8D%E7%BD%AE%E2%80%94%E2%80%94%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0.html"
+                    title="Share on Google+"
+                    aria-label="Share on Google+"
+                >
+                    <i class="fab fa-google-plus" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+        
+            
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#" aria-label="Back to top">
+            
+                <i class="fa fa-list" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
 </div>
 
-<div class="wx-share-modal">
-    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://squansh.top/python%E7%BB%9D%E5%AF%B9%E5%85%BC%E5%AE%B9%E7%9A%84%E5%BA%93%E9%85%8D%E7%BD%AE%E2%80%94%E2%80%94%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0.html" alt="微信分享二维码">
+
+        
+        
+            
+        
     </div>
-</div>
-
-<div id="share-mask"></div>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89/" rel="tag">机器视觉</a></li></ul>
-
-
-    </footer>
-
-  </div>
-
-  
-  
-  <nav class="article-nav">
-    
-      <a href="/%E6%95%99%E5%A5%B3%E6%9C%8B%E5%8F%8B%E5%AD%A6%E4%BC%9A%E7%94%A8win10+yolov3+python%E8%AE%AD%E7%BB%83%E8%87%AA%E5%B7%B1%E7%9A%84%E6%A8%A1%E5%9E%8B.html" class="article-nav-link">
-        <strong class="article-nav-caption">上一篇</strong>
-        <div class="article-nav-title">
-          
-            教女朋友学会用win10+yolov3+python训练自己的模型
-          
-        </div>
-      </a>
-    
-    
-      <a href="/labelimg%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%EF%BC%9A%E5%A6%82%E4%BD%95%E6%A0%87%E6%B3%A8%E5%9B%BE%E7%89%87.html" class="article-nav-link">
-        <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">labelimg使用方法：如何标注图片</div>
-      </a>
-    
-  </nav>
-
-
-  
-
-  
-  
-<!-- valine评论 -->
-<div id="vcomments-box">
-    <div id="vcomments">
-    </div>
-</div>
-<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-<script src='https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js'></script>
-<script>
-    new Valine({
-        el: '#vcomments',
-        app_id: 'bMSQYcOX9RQgHRwGmc2xl2iY-9Nh9j0Va',
-        app_key: 'fhWrk4asGBlMT45CQdjPoEx4',
-        path: window.location.pathname,
-        notify: true,
-        verify: true,
-        avatar: 'monsterid',
-        placeholder: '给我的文章加点评论吧~',
-        recordIP: true
-    });
-    const infoEle = document.querySelector('#vcomments .info');
-    if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
-        infoEle.childNodes.forEach(function (item) {
-            item.parentNode.removeChild(item);
-        });
-    }
-</script>
-<style>
-    #vcomments-box {
-        padding: 5px 30px;
-    }
-
-    @media screen and (max-width: 800px) {
-        #vcomments-box {
-            padding: 5px 0px;
-        }
-    }
-
-    #vcomments-box #vcomments {
-        background-color: #fff;
-    }
-
-    .v .vlist .vcard .vh {
-        padding-right: 20px;
-    }
-
-    .v .vlist .vcard {
-        padding-left: 10px;
-    }
-</style>
-
-  
-
-  
-  
-  
-  
-  
-
 </article>
-</section>
-      <footer class="footer">
-  <div class="outer">
-    <ul>
-      <li>
-        <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
-        <script>
-            var now = new Date();
-            function createtime() {
-                var grt= new Date("06/01/2020 00:00:00");//在此处修改你的建站时间，格式：月/日/年 时:分:秒
-                now.setTime(now.getTime()+250);
-                days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
-                hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
-                if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
-                mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
-                seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
-                snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
-                document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 ";
-                document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
-            }
-        setInterval("createtime()",250);
-        </script>
-      </li>
-    </ul>
-    <ul>
-      <li>
-        Copyrights &copy;
-        2020
-        <i class="ri-heart-fill heart_icon"></i> squansh
-      </li>
-    </ul>
-    <ul>
-      <li>
-        
-        
-        <span>
-  <span><i class="ri-user-3-fill"></i>访问人数:<span id="busuanzi_value_site_uv"></span></s>
-  <span class="division">|</span>
-  <span><i class="ri-eye-fill"></i>浏览次数:<span id="busuanzi_value_page_pv"></span></span>
-</span>
-        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-        
-      </li>
-    </ul>
-    <ul>
-      
-    </ul>
-    <ul>
-      <li>
-        <!-- cnzz统计 -->
-        
-        <script type="text/javascript" src="https://s4.cnzz.com/z_stat.php?id=1278953980&web_id=1278953980"></script>
-        
-      </li>
-    </ul>
-  </div>
+
+
+
+                <footer id="footer" class="main-content-wrap">
+    <span class="copyrights">
+        Copyrights &copy; 2020 squansh. All Rights Reserved.
+    </span>
 </footer>
 
-
-
-      <div class="float_btns">
-        <div class="totop" id="totop">
-  <i class="ri-arrow-up-line"></i>
+            </div>
+            
+                <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+                    <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    
+                <a
+                    class="post-action-btn btn btn--default tooltip--top"
+                    href="/%E6%95%99%E5%A5%B3%E6%9C%8B%E5%8F%8B%E5%AD%A6%E4%BC%9A%E7%94%A8win10+yolov3+python%E8%AE%AD%E7%BB%83%E8%87%AA%E5%B7%B1%E7%9A%84%E6%A8%A1%E5%9E%8B.html"
+                    data-tooltip="教女朋友学会用win10+yolov3+python训练自己的模型"
+                    aria-label="PREVIOUS: 教女朋友学会用win10+yolov3+python训练自己的模型"
+                >
+                    
+                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                        <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
+                    </a>
+            </li>
+            <li class="post-action">
+                
+                    
+                <a
+                    class="post-action-btn btn btn--default tooltip--top"
+                    href="/labelimg%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%EF%BC%9A%E5%A6%82%E4%BD%95%E6%A0%87%E6%B3%A8%E5%9B%BE%E7%89%87.html"
+                    data-tooltip="labelimg使用方法：如何标注图片"
+                    aria-label="NEXT: labelimg使用方法：如何标注图片"
+                >
+                    
+                        <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a
+                class="post-action-btn btn btn--default btn-open-shareoptions"
+                href="#btn-open-shareoptions"
+                aria-label="Share this post"
+            >
+                <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </a>
+        </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://squansh.top/python%E7%BB%9D%E5%AF%B9%E5%85%BC%E5%AE%B9%E7%9A%84%E5%BA%93%E9%85%8D%E7%BD%AE%E2%80%94%E2%80%94%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0.html"
+                    title="Share on Facebook"
+                    aria-label="Share on Facebook"
+                >
+                    <i class="fab fa-facebook" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://twitter.com/intent/tweet?text=https://squansh.top/python%E7%BB%9D%E5%AF%B9%E5%85%BC%E5%AE%B9%E7%9A%84%E5%BA%93%E9%85%8D%E7%BD%AE%E2%80%94%E2%80%94%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0.html"
+                    title="Share on Twitter"
+                    aria-label="Share on Twitter"
+                >
+                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://plus.google.com/share?url=https://squansh.top/python%E7%BB%9D%E5%AF%B9%E5%85%BC%E5%AE%B9%E7%9A%84%E5%BA%93%E9%85%8D%E7%BD%AE%E2%80%94%E2%80%94%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0.html"
+                    title="Share on Google+"
+                    aria-label="Share on Google+"
+                >
+                    <i class="fab fa-google-plus" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+        
+            
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#" aria-label="Back to top">
+            
+                <i class="fa fa-list" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
 </div>
 
-<div class="todark" id="todark">
-  <i class="ri-moon-line"></i>
-</div>
 
-      </div>
-    </main>
-    <aside class="sidebar on">
-      <button class="navbar-toggle"></button>
-<nav class="navbar">
-  
-  <div class="logo">
-    <a href="/"><img src="/images/photo_side.svg" alt="孙全胜의Space"></a>
-  </div>
-  
-  <ul class="nav nav-main">
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/">Home</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/archives">archives</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/categories/">categories</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/tags">tags</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="https://quan_sheng_sun.gitee.io/resume" target="_blank" rel="noopener">resume</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="https://jq.qq.com/?_wv=1027&k=KyptBBmy" target="_blank" rel="noopener">QQ</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="https://www.zhihu.com/people/jes331" target="_blank" rel="noopener">知乎</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="https://weibo.com/5600672195" target="_blank" rel="noopener">微博</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="https://blog.csdn.net/qq_45504119" target="_blank" rel="noopener">CSDN</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="mailto:squansh@163.com">E-mail</a>
-    </li>
-    
-  </ul>
-</nav>
-<nav class="navbar navbar-bottom">
-  <ul class="nav">
-    <li class="nav-item">
-      
-      <a class="nav-item-link nav-item-search"  title="搜索">
-        <i class="ri-search-line"></i>
-      </a>
-      
-      
-      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
-        <i class="ri-rss-line"></i>
-      </a>
-      
-    </li>
-  </ul>
-</nav>
-<div class="search-form-wrap">
-  <div class="local-search local-search-plugin">
-  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
-  <div id="local-search-result" class="local-search-result"></div>
-</div>
-</div>
-
-<script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=5uyif1eoo9j&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=33&amp;s=341&amp;bv=85" async="async"></script>
-    </aside>
-    <!--浏览器搞笑标题-->
-    <script type="text/javascript" src="/js/FunnyTitle.js"></script>
-    <script>
-      if (window.matchMedia("(max-width: 768px)").matches) {
-        document.querySelector('.content').classList.remove('on');
-        document.querySelector('.sidebar').classList.remove('on');
-      }
-    </script>
-    <div id="mask"></div>
-
-<!-- #reward -->
-<div id="reward">
-  <span class="close"><i class="ri-close-line"></i></span>
-  <p class="reward-p"><i class="ri-cup-line"></i></p>
-  <div class="reward-box">
-    
-    
-  </div>
-</div>
-    
-<script src="/js/jquery-2.0.3.min.js"></script>
-
-
-<script src="/js/lazyload.min.js"></script>
-
-<!-- Subtitle -->
-
-<script>
-  try {
-    var typed = new Typed("#subtitle", {
-      strings: ['情愫', '竟短暂', '犹如骚人墨客笔下的烟花'],
-      startDelay: 0,
-      typeSpeed: 400,
-      loop: true,
-      backSpeed: 150,
-      showCursor: true
-    });
-  } catch (err) {
-    console.log(err)
-  }
-</script>
-
-<!-- Tocbot -->
-
-
-<script src="/js/tocbot.min.js"></script>
-
-<script>
-  tocbot.init({
-    tocSelector: '.tocbot',
-    contentSelector: '.article-entry',
-    headingSelector: 'h1, h2, h3, h4, h5, h6',
-    hasInnerContainers: true,
-    scrollSmooth: true,
-    scrollContainer: 'main',
-    positionFixedSelector: '.tocbot',
-    positionFixedClass: 'is-position-fixed',
-    fixedSidebarOffset: 'auto'
-  });
-</script>
-
-<script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css">
-<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js"></script>
-
-<script src="/dist/main.js"></script>
-
-<!-- ImageViewer -->
-
-<!-- Root element of PhotoSwipe. Must have class pswp. -->
-<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-
-    <!-- Background of PhotoSwipe. 
-         It's a separate element as animating opacity is faster than rgba(). -->
-    <div class="pswp__bg"></div>
-
-    <!-- Slides wrapper with overflow:hidden. -->
-    <div class="pswp__scroll-wrap">
-
-        <!-- Container that holds slides. 
-            PhotoSwipe keeps only 3 of them in the DOM to save memory.
-            Don't modify these 3 pswp__item elements, data is added later on. -->
-        <div class="pswp__container">
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-        </div>
-
-        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
-        <div class="pswp__ui pswp__ui--hidden">
-
-            <div class="pswp__top-bar">
-
-                <!--  Controls are self-explanatory. Order can be changed. -->
-
-                <div class="pswp__counter"></div>
-
-                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-
-                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
-
-                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-
-                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-
-                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
-                <!-- element will get class pswp__preloader--active when preloader is running -->
-                <div class="pswp__preloader">
-                    <div class="pswp__preloader__icn">
-                        <div class="pswp__preloader__cut">
-                            <div class="pswp__preloader__donut"></div>
-                        </div>
-                    </div>
                 </div>
-            </div>
-
-            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                <div class="pswp__share-tooltip"></div>
-            </div>
-
-            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-            </button>
-
-            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-            </button>
-
-            <div class="pswp__caption">
-                <div class="pswp__caption__center"></div>
-            </div>
-
-        </div>
-
+                
+    <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+        <i id="btn-close-shareoptions" class="fa fa-times"></i>
+        <ul class="share-options">
+            
+                
+                
+                <li class="share-option">
+                    <a
+                        class="share-option-btn"
+                        target="new"
+                        href="https://www.facebook.com/sharer/sharer.php?u=https://squansh.top/python%E7%BB%9D%E5%AF%B9%E5%85%BC%E5%AE%B9%E7%9A%84%E5%BA%93%E9%85%8D%E7%BD%AE%E2%80%94%E2%80%94%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0.html"
+                        aria-label="Share on Facebook"
+                    >
+                        <i class="fab fa-facebook" aria-hidden="true"></i><span>Share on Facebook</span>
+                    </a>
+                </li>
+            
+                
+                
+                <li class="share-option">
+                    <a
+                        class="share-option-btn"
+                        target="new"
+                        href="https://twitter.com/intent/tweet?text=https://squansh.top/python%E7%BB%9D%E5%AF%B9%E5%85%BC%E5%AE%B9%E7%9A%84%E5%BA%93%E9%85%8D%E7%BD%AE%E2%80%94%E2%80%94%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0.html"
+                        aria-label="Share on Twitter"
+                    >
+                        <i class="fab fa-twitter" aria-hidden="true"></i><span>Share on Twitter</span>
+                    </a>
+                </li>
+            
+                
+                
+                <li class="share-option">
+                    <a
+                        class="share-option-btn"
+                        target="new"
+                        href="https://plus.google.com/share?url=https://squansh.top/python%E7%BB%9D%E5%AF%B9%E5%85%BC%E5%AE%B9%E7%9A%84%E5%BA%93%E9%85%8D%E7%BD%AE%E2%80%94%E2%80%94%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0.html"
+                        aria-label="Share on Google+"
+                    >
+                        <i class="fab fa-google-plus" aria-hidden="true"></i><span>Share on Google+</span>
+                    </a>
+                </li>
+            
+        </ul>
     </div>
 
+
+            
+        </div>
+        
+
+
+<div id="about">
+    <div id="about-card">
+        <div id="about-btn-close">
+            <i class="fa fa-times"></i>
+        </div>
+        
+            <h4 id="about-card-name">squansh</h4>
+        
+            <div id="about-card-bio"><p>author.bio</p>
+</div>
+        
+        
+            <div id="about-card-job">
+                <i class="fa fa-briefcase"></i>
+                <br/>
+                <p>author.job</p>
+
+            </div>
+        
+        
+    </div>
 </div>
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css">
-<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+        
+        
+<div id="cover" style="background-image:url('/assets/images/cover.jpg');"></div>
+        <!--SCRIPTS-->
 
-<script>
-    function viewer_init() {
-        let pswpElement = document.querySelectorAll('.pswp')[0];
-        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+<script src="/assets/js/jquery.js"></script>
 
-        $imgArr.forEach(($em, i) => {
-            $em.onclick = () => {
-                // slider展开状态
-                // todo: 这样不好，后面改成状态
-                if (document.querySelector('.left-col.show')) return
-                let items = []
-                $imgArr.forEach(($em2, i2) => {
-                    let img = $em2.getAttribute('data-idx', i2)
-                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
-                    let title = $em2.getAttribute('alt')
-                    // 获得原图尺寸
-                    const image = new Image()
-                    image.src = src
-                    items.push({
-                        src: src,
-                        w: image.width || $em2.width,
-                        h: image.height || $em2.height,
-                        title: title
-                    })
-                })
-                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
-                    index: parseInt(i)
-                });
-                gallery.init()
-            }
-        })
-    }
-    viewer_init()
-</script>
 
-<!-- MathJax -->
+<script src="/assets/js/jquery.fancybox.js"></script>
 
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-      tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-      }
-  });
 
-  MathJax.Hub.Queue(function() {
-      var all = MathJax.Hub.getAllJax(), i;
-      for(i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-      }
-  });
-</script>
+<script src="/assets/js/thumbs.js"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.6/unpacked/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script>
-  var ayerConfig = {
-    mathjax: true
-  }
-</script>
 
-<!-- Katex -->
+<script src="/assets/js/tranquilpeak.js"></script>
+
+<!--SCRIPTS END-->
 
 
     
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css">
-        <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"></script>
-        
-    
-
-
-<!-- busuanzi  -->
-
-
-<script src="/js/busuanzi-2.3.pure.min.js"></script>
-
-
-<!-- ClickLove -->
-
-
-<script src="/js/clickLove.js"></script>
-
-
-<!-- ClickBoom -->
-
-
-<script src="/js/clickBoom.js"></script>
-
-
-<!-- CodeCopy -->
-
-
-<link rel="stylesheet" href="/css/clipboard.css">
-
-<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
-<script>
-  function wait(callback, seconds) {
-    var timelag = null;
-    timelag = window.setTimeout(callback, seconds);
-  }
-  !function (e, t, a) {
-    var initCopyCode = function(){
-      var copyHtml = '';
-      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
-      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
-      copyHtml += '</button>';
-      $(".highlight .code pre").before(copyHtml);
-      $(".article pre code").before(copyHtml);
-      var clipboard = new ClipboardJS('.btn-copy', {
-        target: function(trigger) {
-          return trigger.nextElementSibling;
-        }
-      });
-      clipboard.on('success', function(e) {
-        let $btn = $(e.trigger);
-        $btn.addClass('copied');
-        let $icon = $($btn.find('i'));
-        $icon.removeClass('ri-file-copy-2-line');
-        $icon.addClass('ri-checkbox-circle-line');
-        let $span = $($btn.find('span'));
-        $span[0].innerText = 'COPIED';
-        
-        wait(function () { // 等待两秒钟后恢复
-          $icon.removeClass('ri-checkbox-circle-line');
-          $icon.addClass('ri-file-copy-2-line');
-          $span[0].innerText = 'COPY';
-        }, 2000);
-      });
-      clipboard.on('error', function(e) {
-        e.clearSelection();
-        let $btn = $(e.trigger);
-        $btn.addClass('copy-failed');
-        let $icon = $($btn.find('i'));
-        $icon.removeClass('ri-file-copy-2-line');
-        $icon.addClass('ri-time-line');
-        let $span = $($btn.find('span'));
-        $span[0].innerText = 'COPY FAILED';
-        
-        wait(function () { // 等待两秒钟后恢复
-          $icon.removeClass('ri-time-line');
-          $icon.addClass('ri-file-copy-2-line');
-          $span[0].innerText = 'COPY';
-        }, 2000);
-      });
-    }
-    initCopyCode();
-  }(window, document);
-</script>
 
 
 
-    
-  </div>
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/haruto.model.json"},"display":{"position":"right","width":260,"height":520},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 
+    <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/haruto.model.json"},"display":{"position":"right","width":260,"height":520},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 </html>
