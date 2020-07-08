@@ -1,0 +1,819 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="孙全胜의Space">
+    <title>教女朋友学会用win10+yolov3+python训练自己的模型 - 孙全胜의Space</title>
+    <meta name="author" content="squansh">
+    
+        <meta name="keywords" content="python,matlab,yolo,yolov3,java,go,c++,c#,">
+    
+    
+    
+        
+            <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
+        
+    
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"squansh","sameAs":["https://github.com/","http://stackoverflow.com/users","https://twitter.com/","https://facebook.com/","https://plus.google.com/","https://www.linkedin.com/profile/","mailto"]},"articleBody":"\ntimes：2020/3/23操作系统：win10环境：python 3.6因为我之前把所有内容写在一篇文章里非常的乱，所以本文主线是训练自己的 yolo.h5 去识别图像中的人，所有小细节的操作，我都在文中添加了链接，新手的话需要注意看一下。// 有任何的问题都可以直接评论，还有资料的话直接留言邮箱，说明问题////也可以评论下加下微信询问//大家一起加油学习yolo，之后我会再出一篇详细介绍yolo代码的文章新创建的小小交流群：977947271 想要资料的也可以在群里要哦2020/5/30：\n\n如果你是 yolo 小白，或者环境配置等一直报错，请先参阅上一篇博文：keras-yolov3目标检测详解——适合新手 (环境配置、用官方权重识别自己的图片)\n\n本文目的：前面有篇文章说的是利用官方的权重直接识别自己的图片，我也展示了识别的效果。\n今天我介绍一下如何创建自己的数据集去训练属于自己的 model\n前提准备：1、配置好环境的 python、anaconda 或 pycharm\n2、labelimg 软件：下载方法： labelimg的下载与使用\n3、准备一些图片，创建训练需要的 VOC 文件\n（1） 官方的VOC2007下载链接：voc2007下载链接，可以从这里找需要的图片，或者一些有基础的朋友可以写爬虫去爬一些图片\n（2） voc2007百度网盘下载链接：\n12链接：https://pan.baidu.com/s/18wqRTZDSz5NQEtvq0u0a1g 提取码：hexy\n（3） 可以自己准备图片，不过最好准备多一点..\n正式训练步骤：一、准备自己的voc2007数据集\n先用 pycharm 或 spyder 打开 keras-yolo3 文件夹，用 pycharm 或 spyder 是为了看文件夹更方便，直接在 anaconda 里运行也是可以的\n1、打开文件夹\n先按照这篇文章的步骤操作：keras-yolov3目标检测详解——适合新手\n完成后打开的文件夹应该是这样的：\n\n2、新建voc2007数据集（存放自己的图片及标注信息）\n新建的文件夹：如下\n\nImageSets 文件夹下还有个名为  Main  的小文件夹\n\n12345678VOCdevkit&#123;\t\t\tVOC2007&#123;\tAnnotations\t\t\t\t\t\tImageSets&#123;main&#125;\t\t\t\t\t\tJPEGImages\t&#125;\t\t\t\t\t\t\t\t\t\t\t\t\t\t&#125;虽然表达的很丑，但是上面有图，应该还是可以看明白的注意：文件夹的名称必须和上面展示的一样，这是 yolo 默认的\t  不然还需要改代码才行\n\n3、用labelimg软件对自己的图片进行信息标注\n—-labelimg 的使用方法：labelimg 下载和标注 xlm 文件\n\n想要训练自己的模型就要学会 labelimg 的使用，实在不想学的…就评论一下邮箱，我直接把我标注好的 VOC2007 文件夹打包发给你们吧\n\n（1）需要训练的图片放在 JPEGImages 里面：\n\n\n（2）labelimg 标注的 xlm 文件放在 Annotations 里面：\n\n\n4、在 VOC2007  里新建一个 py 文件\n我这里取名 voc.py\n\nvoc.py 的代码：\n12345678910111213141516171819202122232425262728293031323334353637import osimport randomtrainval_percent = 0.2 #测试集占0.2train_percent = 0.8    #训练集占0.8xmlfilepath = 'Annotations'txtsavepath = 'ImageSets\\Main'total_xml = os.listdir(xmlfilepath)num = len(total_xml)list = range(num)tv = int(num * trainval_percent)tr = int(tv * train_percent)trainval = random.sample(list, tv)train = random.sample(trainval, tr)ftrainval = open('ImageSets/Main/trainval.txt', 'w')ftest = open('ImageSets/Main/test.txt', 'w')ftrain = open('ImageSets/Main/train.txt', 'w')fval = open('ImageSets/Main/val.txt', 'w')for i in list:    name = total_xml[i][:-4] + '\\n'    if i in trainval:        ftrainval.write(name)        if i in train:            ftest.write(name)        else:            fval.write(name)    else:        ftrain.write(name)ftrainval.close()ftrain.close()fval.close()ftest.close()直接复制以上代码即可\n然后运行 voc.py 文件\n运行成功的话 mian 文件夹里会多了四个 txt 文件\n\n完成以上所有步骤，VOC 的处理就完成了\n.\n二、进行训练前的最后准备\n1、修改 voc_annotation.py 文件并运行\n更改这里的  classes 的数量，你voc2007里标注了哪几种，你就留哪几种就行\n\n比如我的 voc 中只标注了 “person”，那我只留下“person”，然后再运行一下就行\n\n运行完成后会多出这几个 txt 文件\n\n2、修改 model_data\n将 coco_classes.txt 和 voc_classes.txt 中也只留下VOC2007 中所标注的那个类型\n\n比如我标注的只有 “person”\n那我只留下“person”\n\n\n3、修改 yolo3.cfg\n大概在 610、696 和 783 行的位置，把 classes 的数值都改为 1\n\n\n4、添加官方权重\n按照上篇博文步骤进行的朋友应该下载好了 yolov3.weights 文件并转为了 yolo.h5 文件\n附上上篇博文的链接（里面有下载链接和转化方法）：keras-yolov3目标检测详解——适合新手\n将 yolo.h5 改名为 yolo_weights.h5\n\n\n5、新建 logs 文件夹存放训练的 权重文件\n\n6、开始训练\n在 keras-yolo3-master 文件夹下新建 一个名为 trainyolo.py  的文件\n为什么不用 源文件中的train.py呢？？（因为我运行的时候一直出现库的报错…建议按照我的方法来）\ntrainyolo.py 的代码(直接复制即可)：\n123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112113114115116117118119120121122123124125126127128129130131132133134135136137138139140141142143144145146147148149150151152153154155156157158159160161162163164165166167168169170171172173174175176177178179180181182183184185186import numpy as npimport tensorflow as tfimport keras.backend as Kfrom keras.layers import Input, Lambdafrom keras.models import Modelfrom keras.optimizers import Adamfrom keras.callbacks import TensorBoard, ModelCheckpoint, ReduceLROnPlateau, EarlyStoppingfrom yolo3.model import yolo_bodyfrom yolo3.model import yolo_lossfrom keras.backend.tensorflow_backend import set_sessionfrom yolo3.utils import get_random_datadef get_classes(classes_path):    '''loads the classes'''    with open(classes_path) as f:        class_names = f.readlines()    class_names = [c.strip() for c in class_names]    return class_namesdef get_anchors(anchors_path):    '''loads the anchors from a file'''    with open(anchors_path) as f:        anchors = f.readline()    anchors = [float(x) for x in anchors.split(',')]    return np.array(anchors).reshape(-1, 2)def data_generator(annotation_lines, batch_size, input_shape, anchors, num_classes):    '''data generator for fit_generator'''    n = len(annotation_lines)    i = 0    while True:        image_data = []        box_data = []        for b in range(batch_size):            if i==0:                np.random.shuffle(annotation_lines)            image, box = get_random_data(annotation_lines[i], input_shape, random=True)            image_data.append(image)            box_data.append(box)            i = (i+1) % n        image_data = np.array(image_data)        box_data = np.array(box_data)        y_true = preprocess_true_boxes(box_data, input_shape, anchors, num_classes)        yield [image_data, *y_true], np.zeros(batch_size)def preprocess_true_boxes(true_boxes, input_shape, anchors, num_classes):    assert (true_boxes[..., 4]&lt;num_classes).all(), 'class id must be less than num_classes'        num_layers = len(anchors)//3     anchor_mask = [[6,7,8], [3,4,5], [0,1,2]] if num_layers==3 else [[3,4,5], [1,2,3]]    true_boxes = np.array(true_boxes, dtype='float32')    input_shape = np.array(input_shape, dtype='int32') # 416,416    boxes_xy = (true_boxes[..., 0:2] + true_boxes[..., 2:4]) // 2    boxes_wh = true_boxes[..., 2:4] - true_boxes[..., 0:2]    true_boxes[..., 0:2] = boxes_xy/input_shape[:]    true_boxes[..., 2:4] = boxes_wh/input_shape[:]    m = true_boxes.shape[0]    grid_shapes = [input_shape//&#123;0:32, 1:16, 2:8&#125;[l] for l in range(num_layers)]    y_true = [np.zeros((m,grid_shapes[l][0],grid_shapes[l][1],len(anchor_mask[l]),5+num_classes),        dtype='float32') for l in range(num_layers)]    anchors = np.expand_dims(anchors, 0)    anchor_maxes = anchors / 2.    anchor_mins = -anchor_maxes    valid_mask = boxes_wh[..., 0]&gt;0    for b in range(m):        wh = boxes_wh[b, valid_mask[b]]        if len(wh)==0: continue        wh = np.expand_dims(wh, -2)        box_maxes = wh / 2.        box_mins = -box_maxes        intersect_mins = np.maximum(box_mins, anchor_mins)        intersect_maxes = np.minimum(box_maxes, anchor_maxes)        intersect_wh = np.maximum(intersect_maxes - intersect_mins, 0.)        intersect_area = intersect_wh[..., 0] * intersect_wh[..., 1]        box_area = wh[..., 0] * wh[..., 1]        anchor_area = anchors[..., 0] * anchors[..., 1]        iou = intersect_area / (box_area + anchor_area - intersect_area)        best_anchor = np.argmax(iou, axis=-1)        for t, n in enumerate(best_anchor):            for l in range(num_layers):                if n in anchor_mask[l]:                    i = np.floor(true_boxes[b,t,0]*grid_shapes[l][1]).astype('int32')                    j = np.floor(true_boxes[b,t,1]*grid_shapes[l][0]).astype('int32')                    k = anchor_mask[l].index(n)                    c = true_boxes[b,t, 4].astype('int32')                    y_true[l][b, j, i, k, 0:4] = true_boxes[b,t, 0:4]                    y_true[l][b, j, i, k, 4] = 1                    y_true[l][b, j, i, k, 5+c] = 1    return y_trueconfig = tf.ConfigProto()config.gpu_options.allocator_type = 'BFC'config.gpu_options.per_process_gpu_memory_fraction = 0.7config.gpu_options.allow_growth = Trueset_session(tf.Session(config=config)) if __name__ == \"__main__\":    annotation_path = '2007_train.txt'    classes_path = 'model_data/voc_classes.txt'        anchors_path = 'model_data/yolo_anchors.txt'    weights_path = 'model_data/yolo_weights.h5'    class_names = get_classes(classes_path)    anchors = get_anchors(anchors_path)    num_classes = len(class_names)    num_anchors = len(anchors)    log_dir = 'logs/'    input_shape = (416,416)    K.clear_session()    image_input = Input(shape=(None, None, 3))    h, w = input_shape    print('Create YOLOv3 model with &#123;&#125; anchors and &#123;&#125; classes.'.format(num_anchors, num_classes))    model_body = yolo_body(image_input, num_anchors//3, num_classes)        print('Load weights &#123;&#125;.'.format(weights_path))    model_body.load_weights(weights_path, by_name=True, skip_mismatch=True)        y_true = [Input(shape=(h//&#123;0:32, 1:16, 2:8&#125;[l], w//&#123;0:32, 1:16, 2:8&#125;[l], \\        num_anchors//3, num_classes+5)) for l in range(3)]    loss_input = [*model_body.output, *y_true]    model_loss = Lambda(yolo_loss, output_shape=(1,), name='yolo_loss',        arguments=&#123;'anchors': anchors, 'num_classes': num_classes, 'ignore_thresh': 0.5&#125;)(loss_input)    model = Model([model_body.input, *y_true], model_loss)    freeze_layers = 249    for i in range(freeze_layers): model_body.layers[i].trainable = False    print('Freeze the first &#123;&#125; layers of total &#123;&#125; layers.'.format(freeze_layers, len(model_body.layers)))    logging = TensorBoard(log_dir=log_dir)    checkpoint = ModelCheckpoint(log_dir + 'ep&#123;epoch:03d&#125;-loss&#123;loss:.3f&#125;-val_loss&#123;val_loss:.3f&#125;.h5',        monitor='val_loss', save_weights_only=True, save_best_only=False, period=2)    reduce_lr = ReduceLROnPlateau(monitor='val_loss', factor=0.5, patience=2, verbose=1)    early_stopping = EarlyStopping(monitor='val_loss', min_delta=0, patience=6, verbose=1)    val_split = 0.2    with open(annotation_path) as f:        lines = f.readlines()    np.random.seed(10101)    np.random.shuffle(lines)    np.random.seed(None)    num_val = int(len(lines)*val_split)    num_train = len(lines) - num_val        if True:        model.compile(optimizer=Adam(lr=1e-3), loss=&#123;            'yolo_loss': lambda y_true, y_pred: y_pred&#125;)        batch_size = 1        print('Train on &#123;&#125; samples, val on &#123;&#125; samples, with batch size &#123;&#125;.'.format(num_train, num_val, batch_size))        model.fit_generator(data_generator(lines[:num_train], batch_size, input_shape, anchors, num_classes),                steps_per_epoch=max(1, num_train//batch_size),                validation_data=data_generator(lines[num_train:], batch_size, input_shape, anchors, num_classes),                validation_steps=max(1, num_val//batch_size),                epochs=50,                initial_epoch=0,                callbacks=[logging, checkpoint])        model.save_weights(log_dir + 'trained_weights_stage_1.h5')    for i in range(freeze_layers): model_body.layers[i].trainable = True    if True:        model.compile(optimizer=Adam(lr=1e-4), loss=&#123;            'yolo_loss': lambda y_true, y_pred: y_pred&#125;)        batch_size = 1        print('Train on &#123;&#125; samples, val on &#123;&#125; samples, with batch size &#123;&#125;.'.format(num_train, num_val, batch_size))        model.fit_generator(data_generator(lines[:num_train], batch_size, input_shape, anchors, num_classes),                steps_per_epoch=max(1, num_train//batch_size),                validation_data=data_generator(lines[num_train:], batch_size, input_shape, anchors, num_classes),                validation_steps=max(1, num_val//batch_size),                epochs=100,                initial_epoch=50,                callbacks=[logging, checkpoint])        model.save_weights(log_dir + 'last1.h5')\n然后运行trainyolo.py 的代码\n\n成功开始训练，训练时间比较长，需要耐心等待\n..\n训练完成：因为我的电脑配置比较差，所以训练了很长很长时间，这是我前几天训练的结果\n\n训练好的权重都放在 logs 文件夹下的 000 文件夹里：\n\n按理说训练会经过两个阶段，且自动从一堆 loss 中选则出 loss最低的文件(应该是 earlystop函数的作用)：\n应该就是下面的框选的这两个 h5文件，都可以使用\n\n使用的方法就和前面那篇博文操作一样了（用这个h5权重模型去识别自己图片），下面给大家展示一下我训练的模型的结果吧\n\n\n对比使用官方的权重文件来说，我的模型可以仅仅识别出图片中的人体，而且识别效果还不赖，感觉还不错吧  哈哈哈\n总结：以上过程皆为刚刚我亲自操作，全程没有任何问题\n如果有朋友对这篇文章的任何内容感到不明白的请及时评论提出问题，我怕时间一久我也会忘，想要资料的直接评论你们的联系方式就行，我有时间会回复的。\n这个暂时告一段落，接下来我会在 matlab 中找一些算法去实现同样的功能，有兴趣的朋友可以评论一下一起探讨。\n","dateCreated":"2020-06-17T19:18:54+08:00","dateModified":"2020-07-08T10:54:42+08:00","datePublished":"2020-06-17T19:18:54+08:00","description":"\ntimes：2020/3/23操作系统：win10环境：python 3.6因为我之前把所有内容写在一篇文章里非常的乱，所以本文主线是训练自己的 yolo.h5 去识别图像中的人，所有小细节的操作，我都在文中添加了链接，新手的话需要注意看一下。// 有任何的问题都可以直接评论，还有资料的话直接留言邮箱，说明问题////也可以评论下加下微信询问//大家一起加油学习yolo，之后我会再出一篇详细介绍yolo代码的文章新创建的小小交流群：977947271 想要资料的也可以在群里要哦2020/5/30：\n\n如果你是 yolo 小白，或者环境配置等一直报错，请先参阅上一篇博文：keras-yolov3目标检测详解——适合新手 (环境配置、用官方权重识别自己的图片)","headline":"教女朋友学会用win10+yolov3+python训练自己的模型","image":[],"mainEntityOfPage":{"@type":"WebPage","@id":"https://squansh.top/%E6%95%99%E5%A5%B3%E6%9C%8B%E5%8F%8B%E5%AD%A6%E4%BC%9A%E7%94%A8win10+yolov3+python%E8%AE%AD%E7%BB%83%E8%87%AA%E5%B7%B1%E7%9A%84%E6%A8%A1%E5%9E%8B.html"},"publisher":{"@type":"Organization","name":"squansh","sameAs":["https://github.com/","http://stackoverflow.com/users","https://twitter.com/","https://facebook.com/","https://plus.google.com/","https://www.linkedin.com/profile/","mailto"]},"url":"https://squansh.top/%E6%95%99%E5%A5%B3%E6%9C%8B%E5%8F%8B%E5%AD%A6%E4%BC%9A%E7%94%A8win10+yolov3+python%E8%AE%AD%E7%BB%83%E8%87%AA%E5%B7%B1%E7%9A%84%E6%A8%A1%E5%9E%8B.html","keywords":"python, 机器视觉"}</script>
+    <meta name="description" content="times：2020&#x2F;3&#x2F;23操作系统：win10环境：python 3.6因为我之前把所有内容写在一篇文章里非常的乱，所以本文主线是训练自己的 yolo.h5 去识别图像中的人，所有小细节的操作，我都在文中添加了链接，新手的话需要注意看一下。&#x2F;&#x2F; 有任何的问题都可以直接评论，还有资料的话直接留言邮箱，说明问题&#x2F;&#x2F;&#x2F;&#x2F;也可以评论下加下微信询问&#x2F;&#x2F;大家一起加油学习yolo，之后我会再出一篇详细介绍">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="教女朋友学会用win10+yolov3+python训练自己的模型">
+<meta property="og:url" content="https://squansh.top/%E6%95%99%E5%A5%B3%E6%9C%8B%E5%8F%8B%E5%AD%A6%E4%BC%9A%E7%94%A8win10+yolov3+python%E8%AE%AD%E7%BB%83%E8%87%AA%E5%B7%B1%E7%9A%84%E6%A8%A1%E5%9E%8B.html">
+<meta property="og:site_name" content="孙全胜의Space">
+<meta property="og:description" content="times：2020&#x2F;3&#x2F;23操作系统：win10环境：python 3.6因为我之前把所有内容写在一篇文章里非常的乱，所以本文主线是训练自己的 yolo.h5 去识别图像中的人，所有小细节的操作，我都在文中添加了链接，新手的话需要注意看一下。&#x2F;&#x2F; 有任何的问题都可以直接评论，还有资料的话直接留言邮箱，说明问题&#x2F;&#x2F;&#x2F;&#x2F;也可以评论下加下微信询问&#x2F;&#x2F;大家一起加油学习yolo，之后我会再出一篇详细介绍">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200323190223242.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200323194549165.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200323201423401.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200323195853955.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200323200108855.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200323200132768.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200323200159422.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200323201211208.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/2020032320220362.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200323203028861.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200323203328943.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200323213806877.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200323203712506.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200323203936905.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200323203955552.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200323205031301.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/202003232052127.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200323205103807.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200323213125140.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200323213046688.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/2020032321335393.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/2020032321563349.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200323220016562.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200323220244528.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200323220350578.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200323221119292.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200323221200911.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70">
+<meta property="article:published_time" content="2020-06-17T11:18:54.000Z">
+<meta property="article:modified_time" content="2020-07-08T02:54:42.586Z">
+<meta property="article:author" content="squansh">
+<meta property="article:tag" content="python">
+<meta property="article:tag" content="机器视觉">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20200323190223242.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70">
+    
+    
+        
+    
+    
+    
+    
+    
+    <!--STYLES-->
+    
+<link rel="stylesheet" href="/assets/css/all.css">
+
+    
+<link rel="stylesheet" href="/assets/css/jquery.fancybox.css">
+
+    
+<link rel="stylesheet" href="/assets/css/thumbs.css">
+
+    
+<link rel="stylesheet" href="/assets/css/tranquilpeak.css">
+
+    <!--STYLES END-->
+    
+
+    
+
+    
+        
+    
+</head>
+
+    <body>
+        <div id="blog">
+            <!-- Define author's picture -->
+
+
+    
+
+<header id="header" data-behavior="4">
+    <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+    <div class="header-title">
+        <a
+            class="header-title-link"
+            href="/%20"
+            aria-label=""
+        >
+            孙全胜의Space
+        </a>
+    </div>
+    
+        
+            <a
+                class="header-right-picture "
+                href="#about"
+                aria-label="Öffne den Link: /#about"
+            >
+        
+        
+        </a>
+    
+</header>
+
+            <!-- Define author's picture -->
+
+
+<nav id="sidebar" data-behavior="4">
+    <div class="sidebar-container">
+        
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/"
+                            
+                            rel="noopener"
+                            title="Home"
+                        >
+                        <i class="sidebar-button-icon fa fa-home" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Home</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/all-categories"
+                            
+                            rel="noopener"
+                            title="Kategorien"
+                        >
+                        <i class="sidebar-button-icon fa fa-bookmark" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Kategorien</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/all-tags"
+                            
+                            rel="noopener"
+                            title="Tags"
+                        >
+                        <i class="sidebar-button-icon fa fa-tags" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Tags</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/all-archives"
+                            
+                            rel="noopener"
+                            title="Archiv"
+                        >
+                        <i class="sidebar-button-icon fa fa-archive" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Archiv</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link open-algolia-search"
+                            href="#search"
+                            
+                            rel="noopener"
+                            title="Suche"
+                        >
+                        <i class="sidebar-button-icon fa fa-search" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Suche</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="#about"
+                            
+                            rel="noopener"
+                            title="Über"
+                        >
+                        <i class="sidebar-button-icon fa fa-question" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Über</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="https://github.com/"
+                            
+                                target="_blank"
+                            
+                            rel="noopener"
+                            title="GitHub"
+                        >
+                        <i class="sidebar-button-icon fab fa-github" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">GitHub</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="http://stackoverflow.com/users"
+                            
+                                target="_blank"
+                            
+                            rel="noopener"
+                            title="Stack Overflow"
+                        >
+                        <i class="sidebar-button-icon fab fa-stack-overflow" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Stack Overflow</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="https://twitter.com/"
+                            
+                                target="_blank"
+                            
+                            rel="noopener"
+                            title="Twitter"
+                        >
+                        <i class="sidebar-button-icon fab fa-twitter" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Twitter</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="https://facebook.com/"
+                            
+                                target="_blank"
+                            
+                            rel="noopener"
+                            title="Facebook"
+                        >
+                        <i class="sidebar-button-icon fab fa-facebook" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Facebook</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="https://plus.google.com/"
+                            
+                                target="_blank"
+                            
+                            rel="noopener"
+                            title="Google Plus"
+                        >
+                        <i class="sidebar-button-icon fab fa-google-plus" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Google Plus</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="https://www.linkedin.com/profile/"
+                            
+                                target="_blank"
+                            
+                            rel="noopener"
+                            title="LinkedIn"
+                        >
+                        <i class="sidebar-button-icon fab fa-linkedin" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">LinkedIn</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/mailto"
+                            
+                            rel="noopener"
+                            title="E-Mail"
+                        >
+                        <i class="sidebar-button-icon fa fa-envelope" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">E-Mail</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/atom.xml"
+                            
+                            rel="noopener"
+                            title="RSS"
+                        >
+                        <i class="sidebar-button-icon fa fa-rss" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">RSS</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+    </div>
+</nav>
+
+            
+            <div id="main" data-behavior="4"
+                 class="
+                        hasCoverMetaIn
+                        ">
+                
+<article class="post">
+    
+    
+        <div class="post-header main-content-wrap text-left">
+    
+        <h1 class="post-title">
+            教女朋友学会用win10+yolov3+python训练自己的模型
+        </h1>
+    
+    
+        <div class="post-meta">
+    <time datetime="2020-06-17T19:18:54+08:00">
+	
+		    17 6月 2020
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/python/">python</a>, <a class="category-link" href="/categories/python/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89/">机器视觉</a>
+
+
+    
+</div>
+
+    
+</div>
+
+    
+    <div class="post-content markdown">
+        <div class="main-content-wrap">
+            <blockquote>
+<p>times：2020/3/23<br>操作系统：win10<br>环境：python 3.6<br>因为我之前把所有内容写在一篇文章里非常的乱，所以本文主线是训练自己的 yolo.h5 去识别图像中的人，所有小细节的操作，我都在文中添加了链接，新手的话需要注意看一下。<br>// 有任何的问题都可以直接评论，还有资料的话直接留言邮箱，说明问题//<br>//也可以评论下加下微信询问//<br>大家一起加油学习yolo，之后我会再出一篇详细介绍yolo代码的文章<br>新创建的小小交流群：977947271 想要资料的也可以在群里要哦<br>2020/5/30：</p>
+</blockquote>
+<p>如果你是 yolo 小白，或者环境配置等一直报错，请先参阅上一篇博文：<a href="https://blog.csdn.net/qq_45504119/article/details/105033492" target="_blank" rel="noopener">keras-yolov3目标检测详解——适合新手</a> (环境配置、用官方权重识别自己的图片)</p>
+<a id="more"></a>
+<h2 id="本文目的："><a href="#本文目的：" class="headerlink" title="本文目的："></a>本文目的：</h2><p>前面有篇文章说的是利用官方的权重直接识别自己的图片，我也展示了识别的效果。</p>
+<p>今天我介绍一下如何创建自己的数据集去训练属于自己的 <code>model</code></p>
+<h2 id="前提准备："><a href="#前提准备：" class="headerlink" title="前提准备："></a>前提准备：</h2><p><strong>1、配置好环境的 python、anaconda 或 pycharm</strong></p>
+<p><strong>2、labelimg 软件：下载方法：</strong> <a href="https://blog.csdn.net/qq_45504119/article/details/105038483" target="_blank" rel="noopener">labelimg的下载与使用</a></p>
+<p><strong>3、准备一些图片，创建训练需要的 VOC 文件</strong></p>
+<p><strong>（1）</strong> 官方的VOC2007下载链接：<a href="http://host.robots.ox.ac.uk/pascal/VOC/voc2007/VOCtrainval_06-Nov-2007.tar" target="_blank" rel="noopener">voc2007下载链接</a>，可以从这里找需要的图片，或者一些有基础的朋友可以写爬虫去爬一些图片</p>
+<p><strong>（2）</strong> voc2007百度网盘下载链接：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">链接：https:<span class="comment">//pan.baidu.com/s/18wqRTZDSz5NQEtvq0u0a1g </span></span><br><span class="line">提取码：hexy</span><br></pre></td></tr></table></figure>
+<p><strong>（3）</strong> 可以自己准备图片，不过最好准备多一点<br>.<br>.</p>
+<h2 id="正式训练步骤："><a href="#正式训练步骤：" class="headerlink" title="正式训练步骤："></a>正式训练步骤：</h2><p><strong>一、准备自己的voc2007数据集</strong></p>
+<p>先用 pycharm 或 spyder 打开 keras-yolo3 文件夹，用 pycharm 或 spyder 是为了看文件夹更方便，直接在 anaconda 里运行也是可以的</p>
+<p><strong>1、打开文件夹</strong></p>
+<p>先按照这篇文章的步骤操作：<a href="https://blog.csdn.net/qq_45504119/article/details/105033492" target="_blank" rel="noopener">keras-yolov3目标检测详解——适合新手</a></p>
+<p>完成后打开的文件夹应该是这样的：</p>
+<p><img src="https://img-blog.csdnimg.cn/20200323190223242.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><strong>2、新建voc2007数据集（存放自己的图片及标注信息）</strong></p>
+<p>新建的文件夹：如下</p>
+<p><img src="https://img-blog.csdnimg.cn/20200323194549165.png" alt="在这里插入图片描述"></p>
+<p><code>ImageSets</code> 文件夹下还有个名为  <code>Main</code>  的小文件夹</p>
+<p><img src="https://img-blog.csdnimg.cn/20200323201423401.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">VOCdevkit&#123;</span><br><span class="line">			VOC2007&#123;	Annotations</span><br><span class="line">						ImageSets&#123;main&#125;</span><br><span class="line">						JPEGImages	&#125;				</span><br><span class="line">										&#125;</span><br><span class="line">虽然表达的很丑，但是上面有图，应该还是可以看明白的</span><br><span class="line">注意：文件夹的名称必须和上面展示的一样，这是 yolo 默认的</span><br><span class="line">	  不然还需要改代码才行</span><br></pre></td></tr></table></figure>
+
+<p><strong>3、用labelimg软件对自己的图片进行信息标注</strong></p>
+<p>—-<strong>labelimg 的使用方法：</strong><a href="https://blog.csdn.net/qq_45504119/article/details/105038483" target="_blank" rel="noopener">labelimg 下载和标注 xlm 文件</a></p>
+<blockquote>
+<p>想要训练自己的模型就要学会 labelimg 的使用，实在不想学的…就评论一下邮箱，我直接把我标注好的 VOC2007 文件夹打包发给你们吧</p>
+</blockquote>
+<p>（1）需要训练的图片放在 <code>JPEGImages</code> 里面：</p>
+<p><img src="https://img-blog.csdnimg.cn/20200323195853955.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><img src="https://img-blog.csdnimg.cn/20200323200108855.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>（2）labelimg 标注的 xlm 文件放在 <code>Annotations</code> 里面：</p>
+<p><img src="https://img-blog.csdnimg.cn/20200323200132768.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><img src="https://img-blog.csdnimg.cn/20200323200159422.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><strong>4、在 VOC2007  里新建一个 py 文件</strong></p>
+<p><strong>我这里取名 voc.py</strong></p>
+<p><img src="https://img-blog.csdnimg.cn/20200323201211208.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><strong>voc.py 的代码：</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> random</span><br><span class="line"></span><br><span class="line">trainval_percent = <span class="number">0.2</span> <span class="comment">#测试集占0.2</span></span><br><span class="line">train_percent = <span class="number">0.8</span>    <span class="comment">#训练集占0.8</span></span><br><span class="line">xmlfilepath = <span class="string">'Annotations'</span></span><br><span class="line">txtsavepath = <span class="string">'ImageSets\Main'</span></span><br><span class="line">total_xml = os.listdir(xmlfilepath)</span><br><span class="line"></span><br><span class="line">num = len(total_xml)</span><br><span class="line">list = range(num)</span><br><span class="line">tv = int(num * trainval_percent)</span><br><span class="line">tr = int(tv * train_percent)</span><br><span class="line">trainval = random.sample(list, tv)</span><br><span class="line">train = random.sample(trainval, tr)</span><br><span class="line"></span><br><span class="line">ftrainval = open(<span class="string">'ImageSets/Main/trainval.txt'</span>, <span class="string">'w'</span>)</span><br><span class="line">ftest = open(<span class="string">'ImageSets/Main/test.txt'</span>, <span class="string">'w'</span>)</span><br><span class="line">ftrain = open(<span class="string">'ImageSets/Main/train.txt'</span>, <span class="string">'w'</span>)</span><br><span class="line">fval = open(<span class="string">'ImageSets/Main/val.txt'</span>, <span class="string">'w'</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> list:</span><br><span class="line">    name = total_xml[i][:<span class="number">-4</span>] + <span class="string">'\n'</span></span><br><span class="line">    <span class="keyword">if</span> i <span class="keyword">in</span> trainval:</span><br><span class="line">        ftrainval.write(name)</span><br><span class="line">        <span class="keyword">if</span> i <span class="keyword">in</span> train:</span><br><span class="line">            ftest.write(name)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            fval.write(name)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        ftrain.write(name)</span><br><span class="line"></span><br><span class="line">ftrainval.close()</span><br><span class="line">ftrain.close()</span><br><span class="line">fval.close()</span><br><span class="line">ftest.close()</span><br><span class="line">直接复制以上代码即可</span><br></pre></td></tr></table></figure>
+<p><strong>然后运行 voc.py 文件</strong></p>
+<p><strong>运行成功的话 mian 文件夹里会多了四个 txt 文件</strong></p>
+<p><img src="https://img-blog.csdnimg.cn/2020032320220362.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><strong>完成以上所有步骤，VOC 的处理就完成了</strong></p>
+<p>.</p>
+<p><strong>二、进行训练前的最后准备</strong></p>
+<p><strong>1、修改 <code>voc_annotation.py</code> 文件并运行</strong></p>
+<p>更改这里的  classes 的数量，你voc2007里标注了哪几种，你就留哪几种就行</p>
+<p><img src="https://img-blog.csdnimg.cn/20200323203028861.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>比如我的 voc 中只标注了 “person”，那我只留下“person”，然后再运行一下就行</p>
+<p><img src="https://img-blog.csdnimg.cn/20200323203328943.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>运行完成后会多出这几个 txt 文件</p>
+<p><img src="https://img-blog.csdnimg.cn/20200323213806877.png" alt="在这里插入图片描述"></p>
+<p><strong>2、修改 model_data</strong></p>
+<p>将 coco_classes.txt 和 voc_classes.txt 中也只留下VOC2007 中所标注的那个类型</p>
+<p><img src="https://img-blog.csdnimg.cn/20200323203712506.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>比如我标注的只有 “person”</p>
+<p>那我只留下“person”</p>
+<p><img src="https://img-blog.csdnimg.cn/20200323203936905.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><img src="https://img-blog.csdnimg.cn/20200323203955552.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><strong>3、修改 yolo3.cfg</strong></p>
+<p>大概在 610、696 和 783 行的位置，把 classes 的数值都改为 1</p>
+<p><img src="https://img-blog.csdnimg.cn/20200323205031301.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><img src="https://img-blog.csdnimg.cn/202003232052127.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><img src="https://img-blog.csdnimg.cn/20200323205103807.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong>4、添加官方权重</strong></p>
+<p>按照上篇博文步骤进行的朋友应该下载好了 <code>yolov3.weights</code> 文件并转为了 <code>yolo.h5</code> 文件</p>
+<p>附上上篇博文的链接（里面有下载链接和转化方法）：<a href="https://blog.csdn.net/qq_45504119/article/details/105033492" target="_blank" rel="noopener">keras-yolov3目标检测详解——适合新手</a></p>
+<p>将 <code>yolo.h5</code> 改名为 <code>yolo_weights.h5</code></p>
+<p><img src="https://img-blog.csdnimg.cn/20200323213125140.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><img src="https://img-blog.csdnimg.cn/20200323213046688.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><strong>5、新建 logs 文件夹存放训练的 权重文件</strong></p>
+<p><img src="https://img-blog.csdnimg.cn/2020032321335393.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><strong>6、开始训练</strong></p>
+<p>在 <code>keras-yolo3-master</code> 文件夹下新建 一个名为 <code>trainyolo.py</code>  的文件</p>
+<p>为什么不用 源文件中的train.py呢？？（因为我运行的时候一直出现库的报错…建议按照我的方法来）</p>
+<p><code>trainyolo.py</code> 的代码(直接复制即可)：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf</span><br><span class="line"><span class="keyword">import</span> keras.backend <span class="keyword">as</span> K</span><br><span class="line"><span class="keyword">from</span> keras.layers <span class="keyword">import</span> Input, Lambda</span><br><span class="line"><span class="keyword">from</span> keras.models <span class="keyword">import</span> Model</span><br><span class="line"><span class="keyword">from</span> keras.optimizers <span class="keyword">import</span> Adam</span><br><span class="line"><span class="keyword">from</span> keras.callbacks <span class="keyword">import</span> TensorBoard, ModelCheckpoint, ReduceLROnPlateau, EarlyStopping</span><br><span class="line"><span class="keyword">from</span> yolo3.model <span class="keyword">import</span> yolo_body</span><br><span class="line"><span class="keyword">from</span> yolo3.model <span class="keyword">import</span> yolo_loss</span><br><span class="line"><span class="keyword">from</span> keras.backend.tensorflow_backend <span class="keyword">import</span> set_session</span><br><span class="line"><span class="keyword">from</span> yolo3.utils <span class="keyword">import</span> get_random_data</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_classes</span><span class="params">(classes_path)</span>:</span></span><br><span class="line">    <span class="string">'''loads the classes'''</span></span><br><span class="line">    <span class="keyword">with</span> open(classes_path) <span class="keyword">as</span> f:</span><br><span class="line">        class_names = f.readlines()</span><br><span class="line">    class_names = [c.strip() <span class="keyword">for</span> c <span class="keyword">in</span> class_names]</span><br><span class="line">    <span class="keyword">return</span> class_names</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_anchors</span><span class="params">(anchors_path)</span>:</span></span><br><span class="line">    <span class="string">'''loads the anchors from a file'''</span></span><br><span class="line">    <span class="keyword">with</span> open(anchors_path) <span class="keyword">as</span> f:</span><br><span class="line">        anchors = f.readline()</span><br><span class="line">    anchors = [float(x) <span class="keyword">for</span> x <span class="keyword">in</span> anchors.split(<span class="string">','</span>)]</span><br><span class="line">    <span class="keyword">return</span> np.array(anchors).reshape(<span class="number">-1</span>, <span class="number">2</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">data_generator</span><span class="params">(annotation_lines, batch_size, input_shape, anchors, num_classes)</span>:</span></span><br><span class="line">    <span class="string">'''data generator for fit_generator'''</span></span><br><span class="line">    n = len(annotation_lines)</span><br><span class="line">    i = <span class="number">0</span></span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        image_data = []</span><br><span class="line">        box_data = []</span><br><span class="line">        <span class="keyword">for</span> b <span class="keyword">in</span> range(batch_size):</span><br><span class="line">            <span class="keyword">if</span> i==<span class="number">0</span>:</span><br><span class="line">                np.random.shuffle(annotation_lines)</span><br><span class="line">            image, box = get_random_data(annotation_lines[i], input_shape, random=<span class="literal">True</span>)</span><br><span class="line">            image_data.append(image)</span><br><span class="line">            box_data.append(box)</span><br><span class="line">            i = (i+<span class="number">1</span>) % n</span><br><span class="line">        image_data = np.array(image_data)</span><br><span class="line">        box_data = np.array(box_data)</span><br><span class="line">        y_true = preprocess_true_boxes(box_data, input_shape, anchors, num_classes)</span><br><span class="line">        <span class="keyword">yield</span> [image_data, *y_true], np.zeros(batch_size)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">preprocess_true_boxes</span><span class="params">(true_boxes, input_shape, anchors, num_classes)</span>:</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">assert</span> (true_boxes[..., <span class="number">4</span>]&lt;num_classes).all(), <span class="string">'class id must be less than num_classes'</span></span><br><span class="line">    </span><br><span class="line">    num_layers = len(anchors)//<span class="number">3</span> </span><br><span class="line">    anchor_mask = [[<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>], [<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>], [<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>]] <span class="keyword">if</span> num_layers==<span class="number">3</span> <span class="keyword">else</span> [[<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>], [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]]</span><br><span class="line"></span><br><span class="line">    true_boxes = np.array(true_boxes, dtype=<span class="string">'float32'</span>)</span><br><span class="line">    input_shape = np.array(input_shape, dtype=<span class="string">'int32'</span>) <span class="comment"># 416,416</span></span><br><span class="line">    boxes_xy = (true_boxes[..., <span class="number">0</span>:<span class="number">2</span>] + true_boxes[..., <span class="number">2</span>:<span class="number">4</span>]) // <span class="number">2</span></span><br><span class="line">    boxes_wh = true_boxes[..., <span class="number">2</span>:<span class="number">4</span>] - true_boxes[..., <span class="number">0</span>:<span class="number">2</span>]</span><br><span class="line">    true_boxes[..., <span class="number">0</span>:<span class="number">2</span>] = boxes_xy/input_shape[:]</span><br><span class="line">    true_boxes[..., <span class="number">2</span>:<span class="number">4</span>] = boxes_wh/input_shape[:]</span><br><span class="line"></span><br><span class="line">    m = true_boxes.shape[<span class="number">0</span>]</span><br><span class="line">    grid_shapes = [input_shape//&#123;<span class="number">0</span>:<span class="number">32</span>, <span class="number">1</span>:<span class="number">16</span>, <span class="number">2</span>:<span class="number">8</span>&#125;[l] <span class="keyword">for</span> l <span class="keyword">in</span> range(num_layers)]</span><br><span class="line">    y_true = [np.zeros((m,grid_shapes[l][<span class="number">0</span>],grid_shapes[l][<span class="number">1</span>],len(anchor_mask[l]),<span class="number">5</span>+num_classes),</span><br><span class="line">        dtype=<span class="string">'float32'</span>) <span class="keyword">for</span> l <span class="keyword">in</span> range(num_layers)]</span><br><span class="line">    anchors = np.expand_dims(anchors, <span class="number">0</span>)</span><br><span class="line">    anchor_maxes = anchors / <span class="number">2.</span></span><br><span class="line">    anchor_mins = -anchor_maxes</span><br><span class="line">    valid_mask = boxes_wh[..., <span class="number">0</span>]&gt;<span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> b <span class="keyword">in</span> range(m):</span><br><span class="line">        wh = boxes_wh[b, valid_mask[b]]</span><br><span class="line">        <span class="keyword">if</span> len(wh)==<span class="number">0</span>: <span class="keyword">continue</span></span><br><span class="line">        wh = np.expand_dims(wh, <span class="number">-2</span>)</span><br><span class="line">        box_maxes = wh / <span class="number">2.</span></span><br><span class="line">        box_mins = -box_maxes</span><br><span class="line"></span><br><span class="line">        intersect_mins = np.maximum(box_mins, anchor_mins)</span><br><span class="line">        intersect_maxes = np.minimum(box_maxes, anchor_maxes)</span><br><span class="line">        intersect_wh = np.maximum(intersect_maxes - intersect_mins, <span class="number">0.</span>)</span><br><span class="line">        intersect_area = intersect_wh[..., <span class="number">0</span>] * intersect_wh[..., <span class="number">1</span>]</span><br><span class="line">        box_area = wh[..., <span class="number">0</span>] * wh[..., <span class="number">1</span>]</span><br><span class="line">        anchor_area = anchors[..., <span class="number">0</span>] * anchors[..., <span class="number">1</span>]</span><br><span class="line">        iou = intersect_area / (box_area + anchor_area - intersect_area)</span><br><span class="line">        best_anchor = np.argmax(iou, axis=<span class="number">-1</span>)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> t, n <span class="keyword">in</span> enumerate(best_anchor):</span><br><span class="line">            <span class="keyword">for</span> l <span class="keyword">in</span> range(num_layers):</span><br><span class="line">                <span class="keyword">if</span> n <span class="keyword">in</span> anchor_mask[l]:</span><br><span class="line">                    i = np.floor(true_boxes[b,t,<span class="number">0</span>]*grid_shapes[l][<span class="number">1</span>]).astype(<span class="string">'int32'</span>)</span><br><span class="line">                    j = np.floor(true_boxes[b,t,<span class="number">1</span>]*grid_shapes[l][<span class="number">0</span>]).astype(<span class="string">'int32'</span>)</span><br><span class="line">                    k = anchor_mask[l].index(n)</span><br><span class="line">                    c = true_boxes[b,t, <span class="number">4</span>].astype(<span class="string">'int32'</span>)</span><br><span class="line">                    y_true[l][b, j, i, k, <span class="number">0</span>:<span class="number">4</span>] = true_boxes[b,t, <span class="number">0</span>:<span class="number">4</span>]</span><br><span class="line">                    y_true[l][b, j, i, k, <span class="number">4</span>] = <span class="number">1</span></span><br><span class="line">                    y_true[l][b, j, i, k, <span class="number">5</span>+c] = <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> y_true</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">config = tf.ConfigProto()</span><br><span class="line">config.gpu_options.allocator_type = <span class="string">'BFC'</span></span><br><span class="line">config.gpu_options.per_process_gpu_memory_fraction = <span class="number">0.7</span></span><br><span class="line">config.gpu_options.allow_growth = <span class="literal">True</span></span><br><span class="line">set_session(tf.Session(config=config)) </span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    annotation_path = <span class="string">'2007_train.txt'</span></span><br><span class="line">    classes_path = <span class="string">'model_data/voc_classes.txt'</span>    </span><br><span class="line">    anchors_path = <span class="string">'model_data/yolo_anchors.txt'</span></span><br><span class="line">    weights_path = <span class="string">'model_data/yolo_weights.h5'</span></span><br><span class="line">    class_names = get_classes(classes_path)</span><br><span class="line">    anchors = get_anchors(anchors_path)</span><br><span class="line">    num_classes = len(class_names)</span><br><span class="line">    num_anchors = len(anchors)</span><br><span class="line">    log_dir = <span class="string">'logs/'</span></span><br><span class="line">    input_shape = (<span class="number">416</span>,<span class="number">416</span>)</span><br><span class="line"></span><br><span class="line">    K.clear_session()</span><br><span class="line"></span><br><span class="line">    image_input = Input(shape=(<span class="literal">None</span>, <span class="literal">None</span>, <span class="number">3</span>))</span><br><span class="line">    h, w = input_shape</span><br><span class="line"></span><br><span class="line">    print(<span class="string">'Create YOLOv3 model with &#123;&#125; anchors and &#123;&#125; classes.'</span>.format(num_anchors, num_classes))</span><br><span class="line">    model_body = yolo_body(image_input, num_anchors//<span class="number">3</span>, num_classes)</span><br><span class="line">    </span><br><span class="line">    print(<span class="string">'Load weights &#123;&#125;.'</span>.format(weights_path))</span><br><span class="line">    model_body.load_weights(weights_path, by_name=<span class="literal">True</span>, skip_mismatch=<span class="literal">True</span>)</span><br><span class="line">    </span><br><span class="line">    y_true = [Input(shape=(h//&#123;<span class="number">0</span>:<span class="number">32</span>, <span class="number">1</span>:<span class="number">16</span>, <span class="number">2</span>:<span class="number">8</span>&#125;[l], w//&#123;<span class="number">0</span>:<span class="number">32</span>, <span class="number">1</span>:<span class="number">16</span>, <span class="number">2</span>:<span class="number">8</span>&#125;[l], \</span><br><span class="line">        num_anchors//<span class="number">3</span>, num_classes+<span class="number">5</span>)) <span class="keyword">for</span> l <span class="keyword">in</span> range(<span class="number">3</span>)]</span><br><span class="line"></span><br><span class="line">    loss_input = [*model_body.output, *y_true]</span><br><span class="line">    model_loss = Lambda(yolo_loss, output_shape=(<span class="number">1</span>,), name=<span class="string">'yolo_loss'</span>,</span><br><span class="line">        arguments=&#123;<span class="string">'anchors'</span>: anchors, <span class="string">'num_classes'</span>: num_classes, <span class="string">'ignore_thresh'</span>: <span class="number">0.5</span>&#125;)(loss_input)</span><br><span class="line"></span><br><span class="line">    model = Model([model_body.input, *y_true], model_loss)</span><br><span class="line"></span><br><span class="line">    freeze_layers = <span class="number">249</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(freeze_layers): model_body.layers[i].trainable = <span class="literal">False</span></span><br><span class="line">    print(<span class="string">'Freeze the first &#123;&#125; layers of total &#123;&#125; layers.'</span>.format(freeze_layers, len(model_body.layers)))</span><br><span class="line"></span><br><span class="line">    logging = TensorBoard(log_dir=log_dir)</span><br><span class="line">    checkpoint = ModelCheckpoint(log_dir + <span class="string">'ep&#123;epoch:03d&#125;-loss&#123;loss:.3f&#125;-val_loss&#123;val_loss:.3f&#125;.h5'</span>,</span><br><span class="line">        monitor=<span class="string">'val_loss'</span>, save_weights_only=<span class="literal">True</span>, save_best_only=<span class="literal">False</span>, period=<span class="number">2</span>)</span><br><span class="line">    reduce_lr = ReduceLROnPlateau(monitor=<span class="string">'val_loss'</span>, factor=<span class="number">0.5</span>, patience=<span class="number">2</span>, verbose=<span class="number">1</span>)</span><br><span class="line">    early_stopping = EarlyStopping(monitor=<span class="string">'val_loss'</span>, min_delta=<span class="number">0</span>, patience=<span class="number">6</span>, verbose=<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">    val_split = <span class="number">0.2</span></span><br><span class="line">    <span class="keyword">with</span> open(annotation_path) <span class="keyword">as</span> f:</span><br><span class="line">        lines = f.readlines()</span><br><span class="line">    np.random.seed(<span class="number">10101</span>)</span><br><span class="line">    np.random.shuffle(lines)</span><br><span class="line">    np.random.seed(<span class="literal">None</span>)</span><br><span class="line">    num_val = int(len(lines)*val_split)</span><br><span class="line">    num_train = len(lines) - num_val</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> <span class="literal">True</span>:</span><br><span class="line">        model.compile(optimizer=Adam(lr=<span class="number">1e-3</span>), loss=&#123;</span><br><span class="line">            <span class="string">'yolo_loss'</span>: <span class="keyword">lambda</span> y_true, y_pred: y_pred&#125;)</span><br><span class="line"></span><br><span class="line">        batch_size = <span class="number">1</span></span><br><span class="line">        print(<span class="string">'Train on &#123;&#125; samples, val on &#123;&#125; samples, with batch size &#123;&#125;.'</span>.format(num_train, num_val, batch_size))</span><br><span class="line">        model.fit_generator(data_generator(lines[:num_train], batch_size, input_shape, anchors, num_classes),</span><br><span class="line">                steps_per_epoch=max(<span class="number">1</span>, num_train//batch_size),</span><br><span class="line">                validation_data=data_generator(lines[num_train:], batch_size, input_shape, anchors, num_classes),</span><br><span class="line">                validation_steps=max(<span class="number">1</span>, num_val//batch_size),</span><br><span class="line">                epochs=<span class="number">50</span>,</span><br><span class="line">                initial_epoch=<span class="number">0</span>,</span><br><span class="line">                callbacks=[logging, checkpoint])</span><br><span class="line">        model.save_weights(log_dir + <span class="string">'trained_weights_stage_1.h5'</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(freeze_layers): model_body.layers[i].trainable = <span class="literal">True</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> <span class="literal">True</span>:</span><br><span class="line">        model.compile(optimizer=Adam(lr=<span class="number">1e-4</span>), loss=&#123;</span><br><span class="line">            <span class="string">'yolo_loss'</span>: <span class="keyword">lambda</span> y_true, y_pred: y_pred&#125;)</span><br><span class="line"></span><br><span class="line">        batch_size = <span class="number">1</span></span><br><span class="line">        print(<span class="string">'Train on &#123;&#125; samples, val on &#123;&#125; samples, with batch size &#123;&#125;.'</span>.format(num_train, num_val, batch_size))</span><br><span class="line">        model.fit_generator(data_generator(lines[:num_train], batch_size, input_shape, anchors, num_classes),</span><br><span class="line">                steps_per_epoch=max(<span class="number">1</span>, num_train//batch_size),</span><br><span class="line">                validation_data=data_generator(lines[num_train:], batch_size, input_shape, anchors, num_classes),</span><br><span class="line">                validation_steps=max(<span class="number">1</span>, num_val//batch_size),</span><br><span class="line">                epochs=<span class="number">100</span>,</span><br><span class="line">                initial_epoch=<span class="number">50</span>,</span><br><span class="line">                callbacks=[logging, checkpoint])</span><br><span class="line">        model.save_weights(log_dir + <span class="string">'last1.h5'</span>)</span><br></pre></td></tr></table></figure>
+<p>然后运行<code>trainyolo.py</code> 的代码</p>
+<p><img src="https://img-blog.csdnimg.cn/2020032321563349.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><strong>成功开始训练，训练时间比较长，需要耐心等待</strong></p>
+<p>.<br>.</p>
+<h2 id="训练完成："><a href="#训练完成：" class="headerlink" title="训练完成："></a>训练完成：</h2><p>因为我的电脑配置比较差，所以训练了很长很长时间，这是我前几天训练的结果</p>
+<p><img src="https://img-blog.csdnimg.cn/20200323220016562.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>训练好的权重都放在 logs 文件夹下的 000 文件夹里：</p>
+<p><img src="https://img-blog.csdnimg.cn/20200323220244528.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>按理说训练会经过两个阶段，且自动从一堆 loss 中选则出 loss最低的文件(应该是 earlystop函数的作用)：</p>
+<p>应该就是下面的框选的这两个 h5文件，都可以使用</p>
+<p><img src="https://img-blog.csdnimg.cn/20200323220350578.png" alt="在这里插入图片描述"></p>
+<p>使用的方法就和前面那篇博文操作一样了（用这个h5权重模型去识别自己图片），下面给大家展示一下我训练的模型的结果吧</p>
+<p><img src="https://img-blog.csdnimg.cn/20200323221119292.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><img src="https://img-blog.csdnimg.cn/20200323221200911.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>对比使用官方的权重文件来说，我的模型可以仅仅识别出图片中的人体，而且识别效果还不赖，感觉还不错吧  哈哈哈</p>
+<h2 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h2><p>以上过程皆为刚刚我亲自操作，全程没有任何问题</p>
+<p>如果有朋友对这篇文章的任何内容感到不明白的请及时评论提出问题，我怕时间一久我也会忘，想要资料的直接评论你们的联系方式就行，我有时间会回复的。</p>
+<p>这个暂时告一段落，接下来我会在 matlab 中找一些算法去实现同样的功能，有兴趣的朋友可以评论一下一起探讨。</p>
+
+            
+
+
+        </div>
+    </div>
+    <div id="post-footer" class="post-footer main-content-wrap">
+        
+            <div class="post-footer-tags">
+                <span class="text-color-light text-small">GETAGGT IN</span><br/>
+                
+    <a class="tag tag--primary tag--small t-link" href="/tags/python/" rel="tag">python</a> <a class="tag tag--primary tag--small t-link" href="/tags/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89/" rel="tag">机器视觉</a>
+
+            </div>
+        
+        
+            <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    
+                <a
+                    class="post-action-btn btn btn--default tooltip--top"
+                    href="/python%E7%BB%9D%E5%AF%B9%E5%85%BC%E5%AE%B9%E7%9A%84%E5%BA%93%E9%85%8D%E7%BD%AE%E2%80%94%E2%80%94%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0&%E7%88%AC%E8%99%AB.html"
+                    data-tooltip="python绝对兼容的库配置——机器学习&amp;爬虫"
+                    aria-label="FRÜHER: python绝对兼容的库配置——机器学习&amp;爬虫"
+                >
+                    
+                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                        <span class="hide-xs hide-sm text-small icon-ml">FRÜHER</span>
+                    </a>
+            </li>
+            <li class="post-action">
+                
+                    
+                <a
+                    class="post-action-btn btn btn--default tooltip--top"
+                    href="/python%E7%BB%9D%E5%AF%B9%E5%85%BC%E5%AE%B9%E7%9A%84%E5%BA%93%E9%85%8D%E7%BD%AE%E2%80%94%E2%80%94%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0.html"
+                    data-tooltip="python绝对兼容的库配置——机器学习"
+                    aria-label="NÄCHSTER: python绝对兼容的库配置——机器学习"
+                >
+                    
+                        <span class="hide-xs hide-sm text-small icon-mr">NÄCHSTER</span>
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a
+                class="post-action-btn btn btn--default btn-open-shareoptions"
+                href="#btn-open-shareoptions"
+                aria-label="Diesen Beitrag teilen"
+            >
+                <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </a>
+        </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://squansh.top/%E6%95%99%E5%A5%B3%E6%9C%8B%E5%8F%8B%E5%AD%A6%E4%BC%9A%E7%94%A8win10+yolov3+python%E8%AE%AD%E7%BB%83%E8%87%AA%E5%B7%B1%E7%9A%84%E6%A8%A1%E5%9E%8B.html"
+                    title="Teilen auf Facebook"
+                    aria-label="Teilen auf Facebook"
+                >
+                    <i class="fab fa-facebook" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://twitter.com/intent/tweet?text=https://squansh.top/%E6%95%99%E5%A5%B3%E6%9C%8B%E5%8F%8B%E5%AD%A6%E4%BC%9A%E7%94%A8win10+yolov3+python%E8%AE%AD%E7%BB%83%E8%87%AA%E5%B7%B1%E7%9A%84%E6%A8%A1%E5%9E%8B.html"
+                    title="Teilen auf Twitter"
+                    aria-label="Teilen auf Twitter"
+                >
+                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://plus.google.com/share?url=https://squansh.top/%E6%95%99%E5%A5%B3%E6%9C%8B%E5%8F%8B%E5%AD%A6%E4%BC%9A%E7%94%A8win10+yolov3+python%E8%AE%AD%E7%BB%83%E8%87%AA%E5%B7%B1%E7%9A%84%E6%A8%A1%E5%9E%8B.html"
+                    title="Teilen auf Google Plus"
+                    aria-label="Teilen auf Google Plus"
+                >
+                    <i class="fab fa-google-plus" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+        
+            
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#" aria-label="Nach oben">
+            
+                <i class="fa fa-list" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+        
+        
+            
+        
+    </div>
+</article>
+
+
+
+                <footer id="footer" class="main-content-wrap">
+    <span class="copyrights">
+        Copyrights &copy; 2020 squansh. All Rights Reserved.
+    </span>
+</footer>
+
+            </div>
+            
+                <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+                    <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    
+                <a
+                    class="post-action-btn btn btn--default tooltip--top"
+                    href="/python%E7%BB%9D%E5%AF%B9%E5%85%BC%E5%AE%B9%E7%9A%84%E5%BA%93%E9%85%8D%E7%BD%AE%E2%80%94%E2%80%94%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0&%E7%88%AC%E8%99%AB.html"
+                    data-tooltip="python绝对兼容的库配置——机器学习&amp;爬虫"
+                    aria-label="FRÜHER: python绝对兼容的库配置——机器学习&amp;爬虫"
+                >
+                    
+                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                        <span class="hide-xs hide-sm text-small icon-ml">FRÜHER</span>
+                    </a>
+            </li>
+            <li class="post-action">
+                
+                    
+                <a
+                    class="post-action-btn btn btn--default tooltip--top"
+                    href="/python%E7%BB%9D%E5%AF%B9%E5%85%BC%E5%AE%B9%E7%9A%84%E5%BA%93%E9%85%8D%E7%BD%AE%E2%80%94%E2%80%94%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0.html"
+                    data-tooltip="python绝对兼容的库配置——机器学习"
+                    aria-label="NÄCHSTER: python绝对兼容的库配置——机器学习"
+                >
+                    
+                        <span class="hide-xs hide-sm text-small icon-mr">NÄCHSTER</span>
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a
+                class="post-action-btn btn btn--default btn-open-shareoptions"
+                href="#btn-open-shareoptions"
+                aria-label="Diesen Beitrag teilen"
+            >
+                <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </a>
+        </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://squansh.top/%E6%95%99%E5%A5%B3%E6%9C%8B%E5%8F%8B%E5%AD%A6%E4%BC%9A%E7%94%A8win10+yolov3+python%E8%AE%AD%E7%BB%83%E8%87%AA%E5%B7%B1%E7%9A%84%E6%A8%A1%E5%9E%8B.html"
+                    title="Teilen auf Facebook"
+                    aria-label="Teilen auf Facebook"
+                >
+                    <i class="fab fa-facebook" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://twitter.com/intent/tweet?text=https://squansh.top/%E6%95%99%E5%A5%B3%E6%9C%8B%E5%8F%8B%E5%AD%A6%E4%BC%9A%E7%94%A8win10+yolov3+python%E8%AE%AD%E7%BB%83%E8%87%AA%E5%B7%B1%E7%9A%84%E6%A8%A1%E5%9E%8B.html"
+                    title="Teilen auf Twitter"
+                    aria-label="Teilen auf Twitter"
+                >
+                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://plus.google.com/share?url=https://squansh.top/%E6%95%99%E5%A5%B3%E6%9C%8B%E5%8F%8B%E5%AD%A6%E4%BC%9A%E7%94%A8win10+yolov3+python%E8%AE%AD%E7%BB%83%E8%87%AA%E5%B7%B1%E7%9A%84%E6%A8%A1%E5%9E%8B.html"
+                    title="Teilen auf Google Plus"
+                    aria-label="Teilen auf Google Plus"
+                >
+                    <i class="fab fa-google-plus" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+        
+            
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#" aria-label="Nach oben">
+            
+                <i class="fa fa-list" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+                </div>
+                
+    <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+        <i id="btn-close-shareoptions" class="fa fa-times"></i>
+        <ul class="share-options">
+            
+                
+                
+                <li class="share-option">
+                    <a
+                        class="share-option-btn"
+                        target="new"
+                        href="https://www.facebook.com/sharer/sharer.php?u=https://squansh.top/%E6%95%99%E5%A5%B3%E6%9C%8B%E5%8F%8B%E5%AD%A6%E4%BC%9A%E7%94%A8win10+yolov3+python%E8%AE%AD%E7%BB%83%E8%87%AA%E5%B7%B1%E7%9A%84%E6%A8%A1%E5%9E%8B.html"
+                        aria-label="Teilen auf Facebook"
+                    >
+                        <i class="fab fa-facebook" aria-hidden="true"></i><span>Teilen auf Facebook</span>
+                    </a>
+                </li>
+            
+                
+                
+                <li class="share-option">
+                    <a
+                        class="share-option-btn"
+                        target="new"
+                        href="https://twitter.com/intent/tweet?text=https://squansh.top/%E6%95%99%E5%A5%B3%E6%9C%8B%E5%8F%8B%E5%AD%A6%E4%BC%9A%E7%94%A8win10+yolov3+python%E8%AE%AD%E7%BB%83%E8%87%AA%E5%B7%B1%E7%9A%84%E6%A8%A1%E5%9E%8B.html"
+                        aria-label="Teilen auf Twitter"
+                    >
+                        <i class="fab fa-twitter" aria-hidden="true"></i><span>Teilen auf Twitter</span>
+                    </a>
+                </li>
+            
+                
+                
+                <li class="share-option">
+                    <a
+                        class="share-option-btn"
+                        target="new"
+                        href="https://plus.google.com/share?url=https://squansh.top/%E6%95%99%E5%A5%B3%E6%9C%8B%E5%8F%8B%E5%AD%A6%E4%BC%9A%E7%94%A8win10+yolov3+python%E8%AE%AD%E7%BB%83%E8%87%AA%E5%B7%B1%E7%9A%84%E6%A8%A1%E5%9E%8B.html"
+                        aria-label="Teilen auf Google Plus"
+                    >
+                        <i class="fab fa-google-plus" aria-hidden="true"></i><span>Teilen auf Google Plus</span>
+                    </a>
+                </li>
+            
+        </ul>
+    </div>
+
+
+            
+        </div>
+        
+
+
+<div id="about">
+    <div id="about-card">
+        <div id="about-btn-close">
+            <i class="fa fa-times"></i>
+        </div>
+        
+            <h4 id="about-card-name">squansh</h4>
+        
+            <div id="about-card-bio"><p>author.bio</p>
+</div>
+        
+        
+            <div id="about-card-job">
+                <i class="fa fa-briefcase"></i>
+                <br/>
+                <p>author.job</p>
+
+            </div>
+        
+        
+    </div>
+</div>
+
+        
+        
+<div id="cover" style="background-image:url('/assets/images/cover.jpg');"></div>
+        <!--SCRIPTS-->
+
+<script src="/assets/js/jquery.js"></script>
+
+
+<script src="/assets/js/jquery.fancybox.js"></script>
+
+
+<script src="/assets/js/thumbs.js"></script>
+
+
+<script src="/assets/js/tranquilpeak.js"></script>
+
+<!--SCRIPTS END-->
+
+
+    
+
+
+
+
+    <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/haruto.model.json"},"display":{"position":"right","width":260,"height":520},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>

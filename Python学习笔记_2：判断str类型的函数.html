@@ -1,0 +1,728 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="孙全胜의Space">
+    <title>Python学习笔记_2：判断str类型的函数 - 孙全胜의Space</title>
+    <meta name="author" content="squansh">
+    
+        <meta name="keywords" content="python,matlab,yolo,yolov3,java,go,c++,c#,">
+    
+    
+    
+        
+            <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
+        
+    
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"squansh","sameAs":["https://github.com/","http://stackoverflow.com/users","https://twitter.com/","https://facebook.com/","https://plus.google.com/","https://www.linkedin.com/profile/","mailto"]},"articleBody":"相信大家都喜欢表情包吧\n话说学习Python一定要坚持，持之以恒，万事开头难嘛\n\n哈哈，稍微皮一下\n\n经过整理\n今天给大家介绍一下 python 中可以判断 str 类型的函数：\n1、isdigit： 判断 str 是否为数字 \n1234567&gt;&gt;&gt; I = '123'&gt;&gt;&gt; print(I.isdigit())&gt;&gt;&gt; if I.isdigit():&gt;&gt;&gt;\t\tprint('yes')%输出结果为Trueyes\n\n2、isalpha：判断 str 是否为字母\n1234567&gt;&gt;&gt; I = 'Abc'&gt;&gt;&gt; print(I.isalpha())&gt;&gt;&gt; if I.isalpha()&gt;&gt;&gt; \tprint('yes')%输出结果为Trueyes\n\n3、isalnum：判断 str 是否为字母或数字\n1234567&gt;&gt;&gt; I = 'A2c'&gt;&gt;&gt; print(I.isalnum())&gt;&gt;&gt; if I.isalnum()&gt;&gt;&gt; \tprint('yes')%输出结果为Trueyes\n4、islower：判断 str 是否为小写\n1234567&gt;&gt;&gt; I = 'abc'&gt;&gt;&gt; print(I.islower())&gt;&gt;&gt; if I.islower()&gt;&gt;&gt; \tprint('yes')%输出结果为Trueyes\n\n5、isupper：判断 str 是否为大写\n1234567&gt;&gt;&gt; I = 'ABC'&gt;&gt;&gt; print()&gt;&gt;&gt; if I.isupper()&gt;&gt;&gt; \tprint('yes')%输出结果为Trueyes\n\n6、istitle：判断 str 是否仅有首字母大写\n1234567&gt;&gt;&gt; I = 'Abc Def'&gt;&gt;&gt; print()&gt;&gt;&gt; if I.istitle()&gt;&gt;&gt; \tprint('yes')%输出结果为Trueyes\n\n7、isspace：判断 str 是否为空格符\n1234567&gt;&gt;&gt; I = ' '&gt;&gt;&gt; print()&gt;&gt;&gt; if I.isspace()&gt;&gt;&gt; \tprint('yes')%输出结果为Trueyes\n\n\n\n看完梨泰院的第10集，心情复杂…唉\n喝杯咖啡再回来继续更博文\n","dateCreated":"2020-06-17T17:59:35+08:00","dateModified":"2020-07-08T10:54:42+08:00","datePublished":"2020-06-17T17:59:35+08:00","description":"相信大家都喜欢表情包吧\n话说学习Python一定要坚持，持之以恒，万事开头难嘛\n\n哈哈，稍微皮一下","headline":"Python学习笔记_2：判断str类型的函数","image":[],"mainEntityOfPage":{"@type":"WebPage","@id":"https://squansh.top/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_2%EF%BC%9A%E5%88%A4%E6%96%ADstr%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%87%BD%E6%95%B0.html"},"publisher":{"@type":"Organization","name":"squansh","sameAs":["https://github.com/","http://stackoverflow.com/users","https://twitter.com/","https://facebook.com/","https://plus.google.com/","https://www.linkedin.com/profile/","mailto"]},"url":"https://squansh.top/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_2%EF%BC%9A%E5%88%A4%E6%96%ADstr%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%87%BD%E6%95%B0.html","keywords":"python, 语法笔记"}</script>
+    <meta name="description" content="相信大家都喜欢表情包吧 话说学习Python一定要坚持，持之以恒，万事开头难嘛  哈哈，稍微皮一下">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="Python学习笔记_2：判断str类型的函数">
+<meta property="og:url" content="https://squansh.top/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_2%EF%BC%9A%E5%88%A4%E6%96%ADstr%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%87%BD%E6%95%B0.html">
+<meta property="og:site_name" content="孙全胜의Space">
+<meta property="og:description" content="相信大家都喜欢表情包吧 话说学习Python一定要坚持，持之以恒，万事开头难嘛  哈哈，稍微皮一下">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/2020030218253379.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200302221055518.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200302220305485.png">
+<meta property="article:published_time" content="2020-06-17T09:59:35.000Z">
+<meta property="article:modified_time" content="2020-07-08T02:54:42.506Z">
+<meta property="article:author" content="squansh">
+<meta property="article:tag" content="python">
+<meta property="article:tag" content="语法笔记">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/2020030218253379.png">
+    
+    
+        
+    
+    
+    
+    
+    
+    <!--STYLES-->
+    
+<link rel="stylesheet" href="/assets/css/all.css">
+
+    
+<link rel="stylesheet" href="/assets/css/jquery.fancybox.css">
+
+    
+<link rel="stylesheet" href="/assets/css/thumbs.css">
+
+    
+<link rel="stylesheet" href="/assets/css/tranquilpeak.css">
+
+    <!--STYLES END-->
+    
+
+    
+
+    
+        
+    
+</head>
+
+    <body>
+        <div id="blog">
+            <!-- Define author's picture -->
+
+
+    
+
+<header id="header" data-behavior="4">
+    <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+    <div class="header-title">
+        <a
+            class="header-title-link"
+            href="/%20"
+            aria-label=""
+        >
+            孙全胜의Space
+        </a>
+    </div>
+    
+        
+            <a
+                class="header-right-picture "
+                href="#about"
+                aria-label="Öffne den Link: /#about"
+            >
+        
+        
+        </a>
+    
+</header>
+
+            <!-- Define author's picture -->
+
+
+<nav id="sidebar" data-behavior="4">
+    <div class="sidebar-container">
+        
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/"
+                            
+                            rel="noopener"
+                            title="Home"
+                        >
+                        <i class="sidebar-button-icon fa fa-home" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Home</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/all-categories"
+                            
+                            rel="noopener"
+                            title="Kategorien"
+                        >
+                        <i class="sidebar-button-icon fa fa-bookmark" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Kategorien</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/all-tags"
+                            
+                            rel="noopener"
+                            title="Tags"
+                        >
+                        <i class="sidebar-button-icon fa fa-tags" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Tags</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/all-archives"
+                            
+                            rel="noopener"
+                            title="Archiv"
+                        >
+                        <i class="sidebar-button-icon fa fa-archive" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Archiv</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link open-algolia-search"
+                            href="#search"
+                            
+                            rel="noopener"
+                            title="Suche"
+                        >
+                        <i class="sidebar-button-icon fa fa-search" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Suche</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="#about"
+                            
+                            rel="noopener"
+                            title="Über"
+                        >
+                        <i class="sidebar-button-icon fa fa-question" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Über</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="https://github.com/"
+                            
+                                target="_blank"
+                            
+                            rel="noopener"
+                            title="GitHub"
+                        >
+                        <i class="sidebar-button-icon fab fa-github" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">GitHub</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="http://stackoverflow.com/users"
+                            
+                                target="_blank"
+                            
+                            rel="noopener"
+                            title="Stack Overflow"
+                        >
+                        <i class="sidebar-button-icon fab fa-stack-overflow" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Stack Overflow</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="https://twitter.com/"
+                            
+                                target="_blank"
+                            
+                            rel="noopener"
+                            title="Twitter"
+                        >
+                        <i class="sidebar-button-icon fab fa-twitter" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Twitter</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="https://facebook.com/"
+                            
+                                target="_blank"
+                            
+                            rel="noopener"
+                            title="Facebook"
+                        >
+                        <i class="sidebar-button-icon fab fa-facebook" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Facebook</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="https://plus.google.com/"
+                            
+                                target="_blank"
+                            
+                            rel="noopener"
+                            title="Google Plus"
+                        >
+                        <i class="sidebar-button-icon fab fa-google-plus" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Google Plus</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="https://www.linkedin.com/profile/"
+                            
+                                target="_blank"
+                            
+                            rel="noopener"
+                            title="LinkedIn"
+                        >
+                        <i class="sidebar-button-icon fab fa-linkedin" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">LinkedIn</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/mailto"
+                            
+                            rel="noopener"
+                            title="E-Mail"
+                        >
+                        <i class="sidebar-button-icon fa fa-envelope" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">E-Mail</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/atom.xml"
+                            
+                            rel="noopener"
+                            title="RSS"
+                        >
+                        <i class="sidebar-button-icon fa fa-rss" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">RSS</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+    </div>
+</nav>
+
+            
+            <div id="main" data-behavior="4"
+                 class="
+                        hasCoverMetaIn
+                        ">
+                
+<article class="post">
+    
+    
+        <div class="post-header main-content-wrap text-left">
+    
+        <h1 class="post-title">
+            Python学习笔记_2：判断str类型的函数
+        </h1>
+    
+    
+        <div class="post-meta">
+    <time datetime="2020-06-17T17:59:35+08:00">
+	
+		    17 6月 2020
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/python/">python</a>, <a class="category-link" href="/categories/python/%E8%AF%AD%E6%B3%95%E7%AC%94%E8%AE%B0/">语法笔记</a>
+
+
+    
+</div>
+
+    
+</div>
+
+    
+    <div class="post-content markdown">
+        <div class="main-content-wrap">
+            <p>相信大家都喜欢表情包吧</p>
+<p>话说学习Python一定要坚持，持之以恒，万事开头难嘛</p>
+<p><img src="https://img-blog.csdnimg.cn/2020030218253379.png" alt="在这里插入图片描述"></p>
+<p>哈哈，稍微皮一下</p>
+<a id="more"></a>
+<p>经过整理</p>
+<p>今天给大家介绍一下 python 中可以判断 str 类型的函数：</p>
+<p>1、isdigit： 判断 str 是否为数字 </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>I = <span class="string">'123'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(I.isdigit())</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">if</span> I.isdigit():</span><br><span class="line">&gt;&gt;&gt;		print(<span class="string">'yes'</span>)</span><br><span class="line">%输出结果为</span><br><span class="line"><span class="literal">True</span></span><br><span class="line">yes</span><br></pre></td></tr></table></figure>
+
+<p>2、isalpha：判断 str 是否为字母</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>I = <span class="string">'Abc'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(I.isalpha())</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">if</span> I.isalpha()</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>	print(<span class="string">'yes'</span>)</span><br><span class="line">%输出结果为</span><br><span class="line"><span class="literal">True</span></span><br><span class="line">yes</span><br></pre></td></tr></table></figure>
+
+<p>3、isalnum：判断 str 是否为字母或数字</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>I = <span class="string">'A2c'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(I.isalnum())</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">if</span> I.isalnum()</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>	print(<span class="string">'yes'</span>)</span><br><span class="line">%输出结果为</span><br><span class="line"><span class="literal">True</span></span><br><span class="line">yes</span><br></pre></td></tr></table></figure>
+<p>4、islower：判断 str 是否为小写</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>I = <span class="string">'abc'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(I.islower())</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">if</span> I.islower()</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>	print(<span class="string">'yes'</span>)</span><br><span class="line">%输出结果为</span><br><span class="line"><span class="literal">True</span></span><br><span class="line">yes</span><br></pre></td></tr></table></figure>
+
+<p>5、isupper：判断 str 是否为大写</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>I = <span class="string">'ABC'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print()</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">if</span> I.isupper()</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>	print(<span class="string">'yes'</span>)</span><br><span class="line">%输出结果为</span><br><span class="line"><span class="literal">True</span></span><br><span class="line">yes</span><br></pre></td></tr></table></figure>
+
+<p>6、istitle：判断 str 是否仅有首字母大写</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>I = <span class="string">'Abc Def'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print()</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">if</span> I.istitle()</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>	print(<span class="string">'yes'</span>)</span><br><span class="line">%输出结果为</span><br><span class="line"><span class="literal">True</span></span><br><span class="line">yes</span><br></pre></td></tr></table></figure>
+
+<p>7、isspace：判断 str 是否为空格符</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>I = <span class="string">' '</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print()</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">if</span> I.isspace()</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>	print(<span class="string">'yes'</span>)</span><br><span class="line">%输出结果为</span><br><span class="line"><span class="literal">True</span></span><br><span class="line">yes</span><br></pre></td></tr></table></figure>
+<hr>
+<hr>
+<hr>
+<p>看完梨泰院的第10集，心情复杂…唉<br><img src="https://img-blog.csdnimg.cn/20200302221055518.png" alt="在这里插入图片描述"></p>
+<p>喝杯咖啡再回来继续更博文<br><img src="https://img-blog.csdnimg.cn/20200302220305485.png" alt="在这里插入图片描述"></p>
+
+            
+
+
+        </div>
+    </div>
+    <div id="post-footer" class="post-footer main-content-wrap">
+        
+            <div class="post-footer-tags">
+                <span class="text-color-light text-small">GETAGGT IN</span><br/>
+                
+    <a class="tag tag--primary tag--small t-link" href="/tags/python/" rel="tag">python</a> <a class="tag tag--primary tag--small t-link" href="/tags/%E8%AF%AD%E6%B3%95%E7%AC%94%E8%AE%B0/" rel="tag">语法笔记</a>
+
+            </div>
+        
+        
+            <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    
+                <a
+                    class="post-action-btn btn btn--default tooltip--top"
+                    href="/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_3%EF%BC%9Apython%20%E5%88%97%E8%A1%A8%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%E2%80%94%E8%AF%A6%E7%BB%86.html"
+                    data-tooltip="Python学习笔记_3：python 列表的使用方法—详细"
+                    aria-label="FRÜHER: Python学习笔记_3：python 列表的使用方法—详细"
+                >
+                    
+                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                        <span class="hide-xs hide-sm text-small icon-ml">FRÜHER</span>
+                    </a>
+            </li>
+            <li class="post-action">
+                
+                    
+                <a
+                    class="post-action-btn btn btn--default tooltip--top"
+                    href="/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_1%EF%BC%9Aprint%E4%B8%ADend%E7%9A%84%E7%94%A8%E6%B3%95%20print%EF%BC%88%E2%80%98%E2%80%99%EF%BC%8Cend=''%EF%BC%89.html"
+                    data-tooltip="Python学习笔记_1：print中end的用法 print（‘’，end=&#39;&#39;）"
+                    aria-label="NÄCHSTER: Python学习笔记_1：print中end的用法 print（‘’，end=&#39;&#39;）"
+                >
+                    
+                        <span class="hide-xs hide-sm text-small icon-mr">NÄCHSTER</span>
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a
+                class="post-action-btn btn btn--default btn-open-shareoptions"
+                href="#btn-open-shareoptions"
+                aria-label="Diesen Beitrag teilen"
+            >
+                <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </a>
+        </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://squansh.top/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_2%EF%BC%9A%E5%88%A4%E6%96%ADstr%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%87%BD%E6%95%B0.html"
+                    title="Teilen auf Facebook"
+                    aria-label="Teilen auf Facebook"
+                >
+                    <i class="fab fa-facebook" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://twitter.com/intent/tweet?text=https://squansh.top/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_2%EF%BC%9A%E5%88%A4%E6%96%ADstr%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%87%BD%E6%95%B0.html"
+                    title="Teilen auf Twitter"
+                    aria-label="Teilen auf Twitter"
+                >
+                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://plus.google.com/share?url=https://squansh.top/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_2%EF%BC%9A%E5%88%A4%E6%96%ADstr%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%87%BD%E6%95%B0.html"
+                    title="Teilen auf Google Plus"
+                    aria-label="Teilen auf Google Plus"
+                >
+                    <i class="fab fa-google-plus" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+        
+            
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#" aria-label="Nach oben">
+            
+                <i class="fa fa-list" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+        
+        
+            
+        
+    </div>
+</article>
+
+
+
+                <footer id="footer" class="main-content-wrap">
+    <span class="copyrights">
+        Copyrights &copy; 2020 squansh. All Rights Reserved.
+    </span>
+</footer>
+
+            </div>
+            
+                <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+                    <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    
+                <a
+                    class="post-action-btn btn btn--default tooltip--top"
+                    href="/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_3%EF%BC%9Apython%20%E5%88%97%E8%A1%A8%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%E2%80%94%E8%AF%A6%E7%BB%86.html"
+                    data-tooltip="Python学习笔记_3：python 列表的使用方法—详细"
+                    aria-label="FRÜHER: Python学习笔记_3：python 列表的使用方法—详细"
+                >
+                    
+                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                        <span class="hide-xs hide-sm text-small icon-ml">FRÜHER</span>
+                    </a>
+            </li>
+            <li class="post-action">
+                
+                    
+                <a
+                    class="post-action-btn btn btn--default tooltip--top"
+                    href="/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_1%EF%BC%9Aprint%E4%B8%ADend%E7%9A%84%E7%94%A8%E6%B3%95%20print%EF%BC%88%E2%80%98%E2%80%99%EF%BC%8Cend=''%EF%BC%89.html"
+                    data-tooltip="Python学习笔记_1：print中end的用法 print（‘’，end=&#39;&#39;）"
+                    aria-label="NÄCHSTER: Python学习笔记_1：print中end的用法 print（‘’，end=&#39;&#39;）"
+                >
+                    
+                        <span class="hide-xs hide-sm text-small icon-mr">NÄCHSTER</span>
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a
+                class="post-action-btn btn btn--default btn-open-shareoptions"
+                href="#btn-open-shareoptions"
+                aria-label="Diesen Beitrag teilen"
+            >
+                <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </a>
+        </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://squansh.top/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_2%EF%BC%9A%E5%88%A4%E6%96%ADstr%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%87%BD%E6%95%B0.html"
+                    title="Teilen auf Facebook"
+                    aria-label="Teilen auf Facebook"
+                >
+                    <i class="fab fa-facebook" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://twitter.com/intent/tweet?text=https://squansh.top/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_2%EF%BC%9A%E5%88%A4%E6%96%ADstr%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%87%BD%E6%95%B0.html"
+                    title="Teilen auf Twitter"
+                    aria-label="Teilen auf Twitter"
+                >
+                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://plus.google.com/share?url=https://squansh.top/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_2%EF%BC%9A%E5%88%A4%E6%96%ADstr%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%87%BD%E6%95%B0.html"
+                    title="Teilen auf Google Plus"
+                    aria-label="Teilen auf Google Plus"
+                >
+                    <i class="fab fa-google-plus" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+        
+            
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#" aria-label="Nach oben">
+            
+                <i class="fa fa-list" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+                </div>
+                
+    <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+        <i id="btn-close-shareoptions" class="fa fa-times"></i>
+        <ul class="share-options">
+            
+                
+                
+                <li class="share-option">
+                    <a
+                        class="share-option-btn"
+                        target="new"
+                        href="https://www.facebook.com/sharer/sharer.php?u=https://squansh.top/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_2%EF%BC%9A%E5%88%A4%E6%96%ADstr%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%87%BD%E6%95%B0.html"
+                        aria-label="Teilen auf Facebook"
+                    >
+                        <i class="fab fa-facebook" aria-hidden="true"></i><span>Teilen auf Facebook</span>
+                    </a>
+                </li>
+            
+                
+                
+                <li class="share-option">
+                    <a
+                        class="share-option-btn"
+                        target="new"
+                        href="https://twitter.com/intent/tweet?text=https://squansh.top/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_2%EF%BC%9A%E5%88%A4%E6%96%ADstr%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%87%BD%E6%95%B0.html"
+                        aria-label="Teilen auf Twitter"
+                    >
+                        <i class="fab fa-twitter" aria-hidden="true"></i><span>Teilen auf Twitter</span>
+                    </a>
+                </li>
+            
+                
+                
+                <li class="share-option">
+                    <a
+                        class="share-option-btn"
+                        target="new"
+                        href="https://plus.google.com/share?url=https://squansh.top/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_2%EF%BC%9A%E5%88%A4%E6%96%ADstr%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%87%BD%E6%95%B0.html"
+                        aria-label="Teilen auf Google Plus"
+                    >
+                        <i class="fab fa-google-plus" aria-hidden="true"></i><span>Teilen auf Google Plus</span>
+                    </a>
+                </li>
+            
+        </ul>
+    </div>
+
+
+            
+        </div>
+        
+
+
+<div id="about">
+    <div id="about-card">
+        <div id="about-btn-close">
+            <i class="fa fa-times"></i>
+        </div>
+        
+            <h4 id="about-card-name">squansh</h4>
+        
+            <div id="about-card-bio"><p>author.bio</p>
+</div>
+        
+        
+            <div id="about-card-job">
+                <i class="fa fa-briefcase"></i>
+                <br/>
+                <p>author.job</p>
+
+            </div>
+        
+        
+    </div>
+</div>
+
+        
+        
+<div id="cover" style="background-image:url('/assets/images/cover.jpg');"></div>
+        <!--SCRIPTS-->
+
+<script src="/assets/js/jquery.js"></script>
+
+
+<script src="/assets/js/jquery.fancybox.js"></script>
+
+
+<script src="/assets/js/thumbs.js"></script>
+
+
+<script src="/assets/js/tranquilpeak.js"></script>
+
+<!--SCRIPTS END-->
+
+
+    
+
+
+
+
+    <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/haruto.model.json"},"display":{"position":"right","width":260,"height":520},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>

@@ -1,0 +1,971 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="孙全胜의Space">
+    <title>Archiv: 2020/6 - 孙全胜의Space</title>
+    <meta name="author" content="squansh">
+    
+        <meta name="keywords" content="python,matlab,yolo,yolov3,java,go,c++,c#,">
+    
+    
+    
+        
+            <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
+        
+    
+    <script type="application/ld+json">{}</script>
+    <meta property="og:type" content="blog">
+<meta property="og:title" content="孙全胜의Space">
+<meta property="og:url" content="https://squansh.top/archives/2020/06/page/2/index.html">
+<meta property="og:site_name" content="孙全胜의Space">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="squansh">
+<meta property="article:tag" content="python">
+<meta property="article:tag" content="matlab">
+<meta property="article:tag" content="yolo">
+<meta property="article:tag" content="yolov3">
+<meta property="article:tag" content="java">
+<meta property="article:tag" content="go">
+<meta property="article:tag" content="c++">
+<meta property="article:tag" content="c#">
+<meta name="twitter:card" content="summary">
+    
+    
+        
+    
+    
+    
+    
+    
+    <!--STYLES-->
+    
+<link rel="stylesheet" href="/assets/css/all.css">
+
+    
+<link rel="stylesheet" href="/assets/css/jquery.fancybox.css">
+
+    
+<link rel="stylesheet" href="/assets/css/thumbs.css">
+
+    
+<link rel="stylesheet" href="/assets/css/tranquilpeak.css">
+
+    <!--STYLES END-->
+    
+
+    
+
+    
+</head>
+
+    <body>
+        <div id="blog">
+            <!-- Define author's picture -->
+
+
+    
+
+<header id="header" data-behavior="1">
+    <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+    <div class="header-title">
+        <a
+            class="header-title-link"
+            href="/%20"
+            aria-label=""
+        >
+            孙全胜의Space
+        </a>
+    </div>
+    
+        
+            <a
+                class="header-right-picture "
+                href="#about"
+                aria-label="Öffne den Link: /#about"
+            >
+        
+        
+        </a>
+    
+</header>
+
+            <!-- Define author's picture -->
+
+
+<nav id="sidebar" data-behavior="1">
+    <div class="sidebar-container">
+        
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/"
+                            
+                            rel="noopener"
+                            title="Home"
+                        >
+                        <i class="sidebar-button-icon fa fa-home" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Home</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/all-categories"
+                            
+                            rel="noopener"
+                            title="Kategorien"
+                        >
+                        <i class="sidebar-button-icon fa fa-bookmark" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Kategorien</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/all-tags"
+                            
+                            rel="noopener"
+                            title="Tags"
+                        >
+                        <i class="sidebar-button-icon fa fa-tags" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Tags</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/all-archives"
+                            
+                            rel="noopener"
+                            title="Archiv"
+                        >
+                        <i class="sidebar-button-icon fa fa-archive" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Archiv</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link open-algolia-search"
+                            href="#search"
+                            
+                            rel="noopener"
+                            title="Suche"
+                        >
+                        <i class="sidebar-button-icon fa fa-search" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Suche</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="#about"
+                            
+                            rel="noopener"
+                            title="Über"
+                        >
+                        <i class="sidebar-button-icon fa fa-question" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Über</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="https://github.com/"
+                            
+                                target="_blank"
+                            
+                            rel="noopener"
+                            title="GitHub"
+                        >
+                        <i class="sidebar-button-icon fab fa-github" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">GitHub</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="http://stackoverflow.com/users"
+                            
+                                target="_blank"
+                            
+                            rel="noopener"
+                            title="Stack Overflow"
+                        >
+                        <i class="sidebar-button-icon fab fa-stack-overflow" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Stack Overflow</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="https://twitter.com/"
+                            
+                                target="_blank"
+                            
+                            rel="noopener"
+                            title="Twitter"
+                        >
+                        <i class="sidebar-button-icon fab fa-twitter" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Twitter</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="https://facebook.com/"
+                            
+                                target="_blank"
+                            
+                            rel="noopener"
+                            title="Facebook"
+                        >
+                        <i class="sidebar-button-icon fab fa-facebook" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Facebook</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="https://plus.google.com/"
+                            
+                                target="_blank"
+                            
+                            rel="noopener"
+                            title="Google Plus"
+                        >
+                        <i class="sidebar-button-icon fab fa-google-plus" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Google Plus</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="https://www.linkedin.com/profile/"
+                            
+                                target="_blank"
+                            
+                            rel="noopener"
+                            title="LinkedIn"
+                        >
+                        <i class="sidebar-button-icon fab fa-linkedin" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">LinkedIn</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/mailto"
+                            
+                            rel="noopener"
+                            title="E-Mail"
+                        >
+                        <i class="sidebar-button-icon fa fa-envelope" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">E-Mail</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/atom.xml"
+                            
+                            rel="noopener"
+                            title="RSS"
+                        >
+                        <i class="sidebar-button-icon fa fa-rss" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">RSS</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+    </div>
+</nav>
+
+            
+            <div id="main" data-behavior="1"
+                 class="
+                        hasCoverMetaIn
+                        ">
+                
+    <section class="postShorten-group main-content-wrap">
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-right">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title">
+                    
+                        <a
+                            class="link-unstyled"
+                            href="/pytorch%20%E5%AE%89%E8%A3%85%E8%BF%87%E7%A8%8B%E5%87%BA%E7%8E%B0%EF%BC%9A%20No%20module%20named%20'tools.nnwrap'%E2%80%94%E2%80%94%E5%B7%B2%E8%A7%A3%E5%86%B3.html"
+                            aria-label=": pytorch 安装过程出现： No module named &#39;tools.nnwrap&#39;——已解决"
+                        >
+                            pytorch 安装过程出现： No module named &#39;tools.nnwrap&#39;——已解决
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time datetime="2020-06-17T19:30:56+08:00">
+	
+		    17 6月 2020
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/python/">python</a>, <a class="category-link" href="/categories/python/error-%E5%BA%93/">error&库</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-excerpt">
+                    <blockquote>
+<p>环境：win10、py3.6</p>
+</blockquote>
+<p>可以先参考下面这个博文：<br><a href="https://blog.csdn.net/qq_45504119/article/details/104905471" target="_blank" rel="noopener">安装 torch 详细解决方法</a></p>
+<p>这篇文章是我之前写的，后来重装系统，忘了没安装 torch，所以报错，里面文件下载和安装说的很详细。</p>
+                    
+                        <a
+                            href="/pytorch%20%E5%AE%89%E8%A3%85%E8%BF%87%E7%A8%8B%E5%87%BA%E7%8E%B0%EF%BC%9A%20No%20module%20named%20'tools.nnwrap'%E2%80%94%E2%80%94%E5%B7%B2%E8%A7%A3%E5%86%B3.html"
+                            class="postShorten-excerpt_link link"
+                            aria-label=": pytorch 安装过程出现： No module named &#39;tools.nnwrap&#39;——已解决"
+                        >
+                            Weiterlesen
+                        </a>
+                        
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-right">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title">
+                    
+                        <a
+                            class="link-unstyled"
+                            href="/cpu%E8%BF%90%E8%A1%8Cgpu%E4%B8%8A%E7%9A%84pytorch%20%E6%8A%A5%E9%94%99%EF%BC%9AAssertionErrortorch%20not%20compiled%20with%20cuda%20enabled%E2%80%94%E2%80%94%E5%B7%B2%E8%A7%A3%E5%86%B3.html"
+                            aria-label=": cpu运行gpu上的pytorch 报错AssertionErrortorch not compiled with cuda enabled——已解决"
+                        >
+                            cpu运行gpu上的pytorch 报错AssertionErrortorch not compiled with cuda enabled——已解决
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time datetime="2020-06-17T19:29:35+08:00">
+	
+		    17 6月 2020
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/python/">python</a>, <a class="category-link" href="/categories/python/error-%E5%BA%93/">error&库</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-excerpt">
+                    <p>感觉今天介绍的这种方法可以解决所有这种报错出现的问题</p>
+<h2 id="事件发生："><a href="#事件发生：" class="headerlink" title="事件发生："></a>事件发生：</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">报错：AssertionError:torch <span class="keyword">not</span> compiled <span class="keyword">with</span> cuda enabled</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdnimg.cn/20200409104210488.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+                    
+                        <a
+                            href="/cpu%E8%BF%90%E8%A1%8Cgpu%E4%B8%8A%E7%9A%84pytorch%20%E6%8A%A5%E9%94%99%EF%BC%9AAssertionErrortorch%20not%20compiled%20with%20cuda%20enabled%E2%80%94%E2%80%94%E5%B7%B2%E8%A7%A3%E5%86%B3.html"
+                            class="postShorten-excerpt_link link"
+                            aria-label=": cpu运行gpu上的pytorch 报错AssertionErrortorch not compiled with cuda enabled——已解决"
+                        >
+                            Weiterlesen
+                        </a>
+                        
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-right">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title">
+                    
+                        <a
+                            class="link-unstyled"
+                            href="/matlab%E5%88%9B%E5%BB%BA%E4%B8%8B%E8%BD%BD%E8%BF%9B%E5%BA%A6%E6%9D%A1.html"
+                            aria-label=": matlab创建下载进度条"
+                        >
+                            matlab创建下载进度条
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time datetime="2020-06-17T19:28:28+08:00">
+	
+		    17 6月 2020
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/MATLAB/">MATLAB</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-excerpt">
+                    <blockquote>
+<p>最近玩GUI玩的比较多，想分享一些好玩的东西，就从最简单的开始吧</p>
+</blockquote>
+<p>大家都知道matlab的进度条吧，这里实现了创建进度条，并且当进度条达到100%时就关闭进度条界面</p>
+                    
+                        <a
+                            href="/matlab%E5%88%9B%E5%BB%BA%E4%B8%8B%E8%BD%BD%E8%BF%9B%E5%BA%A6%E6%9D%A1.html"
+                            class="postShorten-excerpt_link link"
+                            aria-label=": matlab创建下载进度条"
+                        >
+                            Weiterlesen
+                        </a>
+                        
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-right">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title">
+                    
+                        <a
+                            class="link-unstyled"
+                            href="/%E5%AE%89%E8%A3%85Mathtype%E5%90%8E%E6%97%A0%E6%B3%95%E4%BD%BF%E7%94%A8%E2%80%94%E2%80%94%E5%B7%B2%E8%A7%A3%E5%86%B3.html"
+                            aria-label=": 安装Mathtype后无法使用——已解决"
+                        >
+                            安装Mathtype后无法使用——已解决
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time datetime="2020-06-17T19:26:04+08:00">
+	
+		    17 6月 2020
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/win10/">win10</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-excerpt">
+                    <h2 id="事件背景："><a href="#事件背景：" class="headerlink" title="事件背景："></a>事件背景：</h2><blockquote>
+<p>word 中安装 mathtype 后无法正常使用，总是提示文件未找到等报错？？？</p>
+</blockquote>
+<p>比如我遇到的一下情况：</p>
+<p><img src="https://img-blog.csdnimg.cn/20200406194329852.png" alt="在这里插入图片描述"></p>
+                    
+                        <a
+                            href="/%E5%AE%89%E8%A3%85Mathtype%E5%90%8E%E6%97%A0%E6%B3%95%E4%BD%BF%E7%94%A8%E2%80%94%E2%80%94%E5%B7%B2%E8%A7%A3%E5%86%B3.html"
+                            class="postShorten-excerpt_link link"
+                            aria-label=": 安装Mathtype后无法使用——已解决"
+                        >
+                            Weiterlesen
+                        </a>
+                        
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-right">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title">
+                    
+                        <a
+                            class="link-unstyled"
+                            href="/Office2016%E4%B8%8EVisio2016%E4%B8%8D%E5%85%BC%E5%AE%B9%E2%80%94%E2%80%94%E5%B7%B2%E8%A7%A3%E5%86%B3.html"
+                            aria-label=": Office2016与Visio2016不兼容——已解决"
+                        >
+                            Office2016与Visio2016不兼容——已解决
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time datetime="2020-06-17T19:23:20+08:00">
+	
+		    17 6月 2020
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/win10/">win10</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-excerpt">
+                    <p>很久之前为了写专利下载的Visio2016，平时也只用wps，没用过office。</p>
+<p>最近安装 office 时提示：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">很抱歉，无法安装office，因为您的计算机上已经安装了office程序：</span><br><span class="line"></span><br><span class="line">Microsoft Office <span class="number">32</span>-bit Components <span class="number">2016</span></span><br><span class="line">Microsoft Visio Professional <span class="number">2016</span></span><br><span class="line"></span><br><span class="line"><span class="number">32</span>位和<span class="number">64</span>位版本的Office程序不兼容，因此您一次只能安装一种类型。</span><br><span class="line">请尝试安装<span class="number">64</span>位版本的Office，或卸载其他<span class="number">64</span>位Office程序，然后再尝试此安装。</span><br></pre></td></tr></table></figure>
+                    
+                        <a
+                            href="/Office2016%E4%B8%8EVisio2016%E4%B8%8D%E5%85%BC%E5%AE%B9%E2%80%94%E2%80%94%E5%B7%B2%E8%A7%A3%E5%86%B3.html"
+                            class="postShorten-excerpt_link link"
+                            aria-label=": Office2016与Visio2016不兼容——已解决"
+                        >
+                            Weiterlesen
+                        </a>
+                        
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-right">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title">
+                    
+                        <a
+                            class="link-unstyled"
+                            href="/python%E7%BB%9D%E5%AF%B9%E5%85%BC%E5%AE%B9%E7%9A%84%E5%BA%93%E9%85%8D%E7%BD%AE%E2%80%94%E2%80%94%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0&%E7%88%AC%E8%99%AB.html"
+                            aria-label=": python绝对兼容的库配置——机器学习&amp;爬虫"
+                        >
+                            python绝对兼容的库配置——机器学习&amp;爬虫
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time datetime="2020-06-17T19:22:13+08:00">
+	
+		    17 6月 2020
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/python/">python</a>, <a class="category-link" href="/categories/python/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89/">机器视觉</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-excerpt">
+                    <blockquote>
+<p> <strong>Time: 2020/4/1   15:01</strong></p>
+</blockquote>
+<p>更新一下我的 python 库的版本，以免以后我自己搞错了…</p>
+<p>相比上次机器学习的库，这次多了部分爬虫的库</p>
+                    
+                        <a
+                            href="/python%E7%BB%9D%E5%AF%B9%E5%85%BC%E5%AE%B9%E7%9A%84%E5%BA%93%E9%85%8D%E7%BD%AE%E2%80%94%E2%80%94%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0&%E7%88%AC%E8%99%AB.html"
+                            class="postShorten-excerpt_link link"
+                            aria-label=": python绝对兼容的库配置——机器学习&amp;爬虫"
+                        >
+                            Weiterlesen
+                        </a>
+                        
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-right">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title">
+                    
+                        <a
+                            class="link-unstyled"
+                            href="/%E6%95%99%E5%A5%B3%E6%9C%8B%E5%8F%8B%E5%AD%A6%E4%BC%9A%E7%94%A8win10+yolov3+python%E8%AE%AD%E7%BB%83%E8%87%AA%E5%B7%B1%E7%9A%84%E6%A8%A1%E5%9E%8B.html"
+                            aria-label=": 教女朋友学会用win10+yolov3+python训练自己的模型"
+                        >
+                            教女朋友学会用win10+yolov3+python训练自己的模型
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time datetime="2020-06-17T19:18:54+08:00">
+	
+		    17 6月 2020
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/python/">python</a>, <a class="category-link" href="/categories/python/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89/">机器视觉</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-excerpt">
+                    <blockquote>
+<p>times：2020/3/23<br>操作系统：win10<br>环境：python 3.6<br>因为我之前把所有内容写在一篇文章里非常的乱，所以本文主线是训练自己的 yolo.h5 去识别图像中的人，所有小细节的操作，我都在文中添加了链接，新手的话需要注意看一下。<br>// 有任何的问题都可以直接评论，还有资料的话直接留言邮箱，说明问题//<br>//也可以评论下加下微信询问//<br>大家一起加油学习yolo，之后我会再出一篇详细介绍yolo代码的文章<br>新创建的小小交流群：977947271 想要资料的也可以在群里要哦<br>2020/5/30：</p>
+</blockquote>
+<p>如果你是 yolo 小白，或者环境配置等一直报错，请先参阅上一篇博文：<a href="https://blog.csdn.net/qq_45504119/article/details/105033492" target="_blank" rel="noopener">keras-yolov3目标检测详解——适合新手</a> (环境配置、用官方权重识别自己的图片)</p>
+                    
+                        <a
+                            href="/%E6%95%99%E5%A5%B3%E6%9C%8B%E5%8F%8B%E5%AD%A6%E4%BC%9A%E7%94%A8win10+yolov3+python%E8%AE%AD%E7%BB%83%E8%87%AA%E5%B7%B1%E7%9A%84%E6%A8%A1%E5%9E%8B.html"
+                            class="postShorten-excerpt_link link"
+                            aria-label=": 教女朋友学会用win10+yolov3+python训练自己的模型"
+                        >
+                            Weiterlesen
+                        </a>
+                        
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-right">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title">
+                    
+                        <a
+                            class="link-unstyled"
+                            href="/python%E7%BB%9D%E5%AF%B9%E5%85%BC%E5%AE%B9%E7%9A%84%E5%BA%93%E9%85%8D%E7%BD%AE%E2%80%94%E2%80%94%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0.html"
+                            aria-label=": python绝对兼容的库配置——机器学习"
+                        >
+                            python绝对兼容的库配置——机器学习
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time datetime="2020-06-17T19:16:52+08:00">
+	
+		    17 6月 2020
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/python/">python</a>, <a class="category-link" href="/categories/python/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89/">机器视觉</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-excerpt">
+                    <p>先给大家推荐一个：<a href="https://docs.floydhub.com/guides/environments/" target="_blank" rel="noopener">深度学习环境兼容性配置</a></p>
+<p>接下来记录一下我的 python 库的版本，以免以后我自己搞错了…</p>
+                    
+                        <a
+                            href="/python%E7%BB%9D%E5%AF%B9%E5%85%BC%E5%AE%B9%E7%9A%84%E5%BA%93%E9%85%8D%E7%BD%AE%E2%80%94%E2%80%94%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0.html"
+                            class="postShorten-excerpt_link link"
+                            aria-label=": python绝对兼容的库配置——机器学习"
+                        >
+                            Weiterlesen
+                        </a>
+                        
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-right">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title">
+                    
+                        <a
+                            class="link-unstyled"
+                            href="/labelimg%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%EF%BC%9A%E5%A6%82%E4%BD%95%E6%A0%87%E6%B3%A8%E5%9B%BE%E7%89%87.html"
+                            aria-label=": labelimg使用方法：如何标注图片"
+                        >
+                            labelimg使用方法：如何标注图片
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time datetime="2020-06-17T19:11:38+08:00">
+	
+		    17 6月 2020
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/python/">python</a>, <a class="category-link" href="/categories/python/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89/">机器视觉</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-excerpt">
+                    <p>labelimg 是一款专门用于贴标签的软件</p>
+<h2 id="如何下载-labelimg："><a href="#如何下载-labelimg：" class="headerlink" title="如何下载 labelimg："></a>如何下载 labelimg：</h2><p><strong>1、anaconda 中下载：</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install -i https://pypi.tuna.tsinghua.edu.cn/simple labelimg</span><br></pre></td></tr></table></figure>
+<p>因为我下载过了，所以显示：<code>Requirement already satisfied</code><br><img src="https://img-blog.csdnimg.cn/20200322230932469.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+                    
+                        <a
+                            href="/labelimg%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%EF%BC%9A%E5%A6%82%E4%BD%95%E6%A0%87%E6%B3%A8%E5%9B%BE%E7%89%87.html"
+                            class="postShorten-excerpt_link link"
+                            aria-label=": labelimg使用方法：如何标注图片"
+                        >
+                            Weiterlesen
+                        </a>
+                        
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-right">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title">
+                    
+                        <a
+                            class="link-unstyled"
+                            href="/%E6%95%99%E5%A5%B3%E5%8F%8B%E5%AD%A6%E4%BC%9Akeras-yolov3%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B%E8%AF%A6%E8%A7%A3%E2%80%94%E2%80%94%E9%80%82%E5%90%88%E6%96%B0%E6%89%8B.html"
+                            aria-label=": 教女友学会keras-yolov3目标检测详解——适合新手"
+                        >
+                            教女友学会keras-yolov3目标检测详解——适合新手
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time datetime="2020-06-17T19:09:25+08:00">
+	
+		    17 6月 2020
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/python/">python</a>, <a class="category-link" href="/categories/python/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89/">机器视觉</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-excerpt">
+                    <blockquote>
+<p>现在网上能找到的博客我现在看起来很明白，虽然讲的很详细，但是对于几天前的我真的看不明白，因为新手会遇到各种各样毫无征兆的问题，所以我决定写一篇面向新手的如何去使用 yolo 和如何去做自己的数据集来训练属于自己的模型。因为我也是新手，所以不说原理，只谈操作方法。</p>
+</blockquote>
+<blockquote>
+<p>2020/5/30：<br>近日每天都有十几个很明显的小号加群，而且有的大号进群竟然打广告和卖不良物品，经我和群友讨论后，加群需要1元钱，但是进群后我会将钱退还给大家，只是为了过滤一些不好的人。</p>
+</blockquote>
+<blockquote>
+<p>因为东西很杂，我会把小东西分出去写，并且在本文中附上链接。</p>
+</blockquote>
+                    
+                        <a
+                            href="/%E6%95%99%E5%A5%B3%E5%8F%8B%E5%AD%A6%E4%BC%9Akeras-yolov3%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B%E8%AF%A6%E8%A7%A3%E2%80%94%E2%80%94%E9%80%82%E5%90%88%E6%96%B0%E6%89%8B.html"
+                            class="postShorten-excerpt_link link"
+                            aria-label=": 教女友学会keras-yolov3目标检测详解——适合新手"
+                        >
+                            Weiterlesen
+                        </a>
+                        
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    <div class="pagination-bar">
+    <ul class="pagination">
+        
+          <li class="pagination-prev">
+            <a
+                class="btn btn--default btn--small"
+                href="/archives/2020/06/"
+                aria-label="NEUERE BEITRÄGE"
+            >
+              <i class="fa fa-angle-left text-base icon-mr"></i>
+              <span>NEUERE BEITRÄGE</span>
+            </a>
+          </li>
+        
+        
+          <li class="pagination-next">
+            <a
+                class="btn btn--default btn--small"
+                href="/archives/2020/06/page/3/"
+                aria-label="ÄLTERE BEITRÄGE"
+            >
+              <span>ÄLTERE BEITRÄGE</span>
+              <i class="fa fa-angle-right text-base icon-ml"></i>
+            </a>
+          </li>
+        
+        <li class="pagination-number">Seite 2 von 6</li>
+    </ul>
+</div>
+
+</section>
+
+
+
+                <footer id="footer" class="main-content-wrap">
+    <span class="copyrights">
+        Copyrights &copy; 2020 squansh. All Rights Reserved.
+    </span>
+</footer>
+
+            </div>
+            
+        </div>
+        
+
+
+<div id="about">
+    <div id="about-card">
+        <div id="about-btn-close">
+            <i class="fa fa-times"></i>
+        </div>
+        
+            <h4 id="about-card-name">squansh</h4>
+        
+            <div id="about-card-bio"><p>author.bio</p>
+</div>
+        
+        
+            <div id="about-card-job">
+                <i class="fa fa-briefcase"></i>
+                <br/>
+                <p>author.job</p>
+
+            </div>
+        
+        
+    </div>
+</div>
+
+        
+        
+<div id="cover" style="background-image:url('/assets/images/cover.jpg');"></div>
+        <!--SCRIPTS-->
+
+<script src="/assets/js/jquery.js"></script>
+
+
+<script src="/assets/js/jquery.fancybox.js"></script>
+
+
+<script src="/assets/js/thumbs.js"></script>
+
+
+<script src="/assets/js/tranquilpeak.js"></script>
+
+<!--SCRIPTS END-->
+
+
+
+
+
+    <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/haruto.model.json"},"display":{"position":"right","width":260,"height":520},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>

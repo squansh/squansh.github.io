@@ -1,0 +1,719 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="孙全胜의Space">
+    <title>使用MATLAB调用摄像头并拍照—详细代码 - 孙全胜의Space</title>
+    <meta name="author" content="squansh">
+    
+        <meta name="keywords" content="python,matlab,yolo,yolov3,java,go,c++,c#,">
+    
+    
+    
+        
+            <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
+        
+    
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"squansh","sameAs":["https://github.com/","http://stackoverflow.com/users","https://twitter.com/","https://facebook.com/","https://plus.google.com/","https://www.linkedin.com/profile/","mailto"]},"articleBody":"\n大家也可以加我的交流群，所有资料我会在群里分享出来哦：9779472712020/5/30：\n\n今天给大家介绍一下我第一次使用matlab进行摄像头拍照并进行图像处理的过程\n下面是个简单的GUI：\n\n\n虽然不使用GUI也可以实现这种功能，不过我建议初学者最好使用GUI来控制程序，之后有时间我会发布不使用GUI来实现这种功能的博文。\nGUI界面的建立这里就不多说了。\n这个GUI是由一个坐标轴和四个按钮组成，按钮分别是“打开摄像头”，“拍照并保存”，“关闭摄像头”，“图像处理”，对应代码中的pushbutton1/2/3/4。\n目的是先打开摄像头，再拍摄照片到电脑中，最后调用图片去进行处理。\n下面介绍代码：这里是 pushbutton1 的callback\n12345678910111213141516171819varargout&#123;1&#125; = handles.output;global vid%定义一个全局变量，global的用法可以参照我的另一篇博文vid = videoinput('winvideo',1,'YUY2_640x480');%winvideo函数可参照另一篇文章中imaqhwinfo的用法set(vid,'FramesPerTrigger',1);%用特定的帧数去显示视频set(vid,'TriggerRepeat',Inf);vidRes = get(vid,'VideoResolution');%二维数组，获取视频长宽nBands = get(ojb,'NumberOfBands');%获得图像的颜色层数axes(handles.axes1);%让视频显示在指定的axes1坐标中global hImage%定义全局变量hImagehImage = image(zeros(vidRes(2),vidRes(1),nBands));%获得图像的句柄preview（vid,hImage）;\n点开“打开摄像头后”在 axes1 中就可看到拍摄的画面\n接下来介绍图片的保存：\n1234567891011121314global vid;frame = getsnapshot(vid);%摄像头每一帧的画面frame = ycbcr2rgb(frame);%将捕获的图像转化为RGB格式的图像[filename,pathname] = uiputfile(&#123;'*.bmp','BMP files':'*.jpg','JPG files'&#125;'格式');%照片名称与储存路径if isequal(filename,0) || isequal(pathname,0)%文件名与路径是否被占用\treturn;else \tfpath = fullfile(pathname,filename);endimwrite(frame,fpath);\n其实这种操作的逻辑对于matlab 的GUI来说，都可以比较简便的解决\n关闭摄像头：\n1234%很简单，在callback中写入一个函数即可close（findobj('gca','figure_csdn')）;%findobj('PropertyName','PropertyValue',...)返回figure的句柄\n对于想要对图像进行处理的话：\n1234%就需要在callback中写入读取上图保存的图片的代码x = imread('name.jpg');imshow(x);%在进行相应的处理程序\n因为 gui 的代码冗长且很多地方无用，就无法将代码全部贴出来，但是对于有些基础的是可以看懂的，所有代码都放在相应的cb中进行。\n之后会发出更复杂的定时拍照的程序 gui，希望有技术大佬可以帮助指点错误与不足。\n如果有需要这篇文章中源码和 gui 的可以私信我。\n欢迎大家指正不足。\n","dateCreated":"2020-06-17T17:36:45+08:00","dateModified":"2020-07-08T10:54:42+08:00","datePublished":"2020-06-17T17:36:45+08:00","description":"\n大家也可以加我的交流群，所有资料我会在群里分享出来哦：9779472712020/5/30：\n\n今天给大家介绍一下我第一次使用matlab进行摄像头拍照并进行图像处理的过程\n下面是个简单的GUI：\n","headline":"使用MATLAB调用摄像头并拍照—详细代码","image":[],"mainEntityOfPage":{"@type":"WebPage","@id":"https://squansh.top/%E4%BD%BF%E7%94%A8MATLAB%E8%B0%83%E7%94%A8%E6%91%84%E5%83%8F%E5%A4%B4%E5%B9%B6%E6%8B%8D%E7%85%A7%E2%80%94%E8%AF%A6%E7%BB%86%E4%BB%A3%E7%A0%81.html"},"publisher":{"@type":"Organization","name":"squansh","sameAs":["https://github.com/","http://stackoverflow.com/users","https://twitter.com/","https://facebook.com/","https://plus.google.com/","https://www.linkedin.com/profile/","mailto"]},"url":"https://squansh.top/%E4%BD%BF%E7%94%A8MATLAB%E8%B0%83%E7%94%A8%E6%91%84%E5%83%8F%E5%A4%B4%E5%B9%B6%E6%8B%8D%E7%85%A7%E2%80%94%E8%AF%A6%E7%BB%86%E4%BB%A3%E7%A0%81.html","keywords":"MATLAB"}</script>
+    <meta name="description" content="大家也可以加我的交流群，所有资料我会在群里分享出来哦：9779472712020&#x2F;5&#x2F;30：  今天给大家介绍一下我第一次使用matlab进行摄像头拍照并进行图像处理的过程 下面是个简单的GUI：">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="使用MATLAB调用摄像头并拍照—详细代码">
+<meta property="og:url" content="https://squansh.top/%E4%BD%BF%E7%94%A8MATLAB%E8%B0%83%E7%94%A8%E6%91%84%E5%83%8F%E5%A4%B4%E5%B9%B6%E6%8B%8D%E7%85%A7%E2%80%94%E8%AF%A6%E7%BB%86%E4%BB%A3%E7%A0%81.html">
+<meta property="og:site_name" content="孙全胜의Space">
+<meta property="og:description" content="大家也可以加我的交流群，所有资料我会在群里分享出来哦：9779472712020&#x2F;5&#x2F;30：  今天给大家介绍一下我第一次使用matlab进行摄像头拍照并进行图像处理的过程 下面是个简单的GUI：">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200219115644543.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70">
+<meta property="article:published_time" content="2020-06-17T09:36:45.000Z">
+<meta property="article:modified_time" content="2020-07-08T02:54:42.576Z">
+<meta property="article:author" content="squansh">
+<meta property="article:tag" content="MATLAB">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20200219115644543.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70">
+    
+    
+        
+    
+    
+    
+    
+    
+    <!--STYLES-->
+    
+<link rel="stylesheet" href="/assets/css/all.css">
+
+    
+<link rel="stylesheet" href="/assets/css/jquery.fancybox.css">
+
+    
+<link rel="stylesheet" href="/assets/css/thumbs.css">
+
+    
+<link rel="stylesheet" href="/assets/css/tranquilpeak.css">
+
+    <!--STYLES END-->
+    
+
+    
+
+    
+        
+    
+</head>
+
+    <body>
+        <div id="blog">
+            <!-- Define author's picture -->
+
+
+    
+
+<header id="header" data-behavior="4">
+    <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+    <div class="header-title">
+        <a
+            class="header-title-link"
+            href="/%20"
+            aria-label=""
+        >
+            孙全胜의Space
+        </a>
+    </div>
+    
+        
+            <a
+                class="header-right-picture "
+                href="#about"
+                aria-label="Öffne den Link: /#about"
+            >
+        
+        
+        </a>
+    
+</header>
+
+            <!-- Define author's picture -->
+
+
+<nav id="sidebar" data-behavior="4">
+    <div class="sidebar-container">
+        
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/"
+                            
+                            rel="noopener"
+                            title="Home"
+                        >
+                        <i class="sidebar-button-icon fa fa-home" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Home</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/all-categories"
+                            
+                            rel="noopener"
+                            title="Kategorien"
+                        >
+                        <i class="sidebar-button-icon fa fa-bookmark" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Kategorien</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/all-tags"
+                            
+                            rel="noopener"
+                            title="Tags"
+                        >
+                        <i class="sidebar-button-icon fa fa-tags" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Tags</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/all-archives"
+                            
+                            rel="noopener"
+                            title="Archiv"
+                        >
+                        <i class="sidebar-button-icon fa fa-archive" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Archiv</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link open-algolia-search"
+                            href="#search"
+                            
+                            rel="noopener"
+                            title="Suche"
+                        >
+                        <i class="sidebar-button-icon fa fa-search" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Suche</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="#about"
+                            
+                            rel="noopener"
+                            title="Über"
+                        >
+                        <i class="sidebar-button-icon fa fa-question" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Über</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="https://github.com/"
+                            
+                                target="_blank"
+                            
+                            rel="noopener"
+                            title="GitHub"
+                        >
+                        <i class="sidebar-button-icon fab fa-github" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">GitHub</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="http://stackoverflow.com/users"
+                            
+                                target="_blank"
+                            
+                            rel="noopener"
+                            title="Stack Overflow"
+                        >
+                        <i class="sidebar-button-icon fab fa-stack-overflow" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Stack Overflow</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="https://twitter.com/"
+                            
+                                target="_blank"
+                            
+                            rel="noopener"
+                            title="Twitter"
+                        >
+                        <i class="sidebar-button-icon fab fa-twitter" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Twitter</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="https://facebook.com/"
+                            
+                                target="_blank"
+                            
+                            rel="noopener"
+                            title="Facebook"
+                        >
+                        <i class="sidebar-button-icon fab fa-facebook" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Facebook</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="https://plus.google.com/"
+                            
+                                target="_blank"
+                            
+                            rel="noopener"
+                            title="Google Plus"
+                        >
+                        <i class="sidebar-button-icon fab fa-google-plus" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Google Plus</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="https://www.linkedin.com/profile/"
+                            
+                                target="_blank"
+                            
+                            rel="noopener"
+                            title="LinkedIn"
+                        >
+                        <i class="sidebar-button-icon fab fa-linkedin" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">LinkedIn</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/mailto"
+                            
+                            rel="noopener"
+                            title="E-Mail"
+                        >
+                        <i class="sidebar-button-icon fa fa-envelope" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">E-Mail</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/atom.xml"
+                            
+                            rel="noopener"
+                            title="RSS"
+                        >
+                        <i class="sidebar-button-icon fa fa-rss" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">RSS</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+    </div>
+</nav>
+
+            
+            <div id="main" data-behavior="4"
+                 class="
+                        hasCoverMetaIn
+                        ">
+                
+<article class="post">
+    
+    
+        <div class="post-header main-content-wrap text-left">
+    
+        <h1 class="post-title">
+            使用MATLAB调用摄像头并拍照—详细代码
+        </h1>
+    
+    
+        <div class="post-meta">
+    <time datetime="2020-06-17T17:36:45+08:00">
+	
+		    17 6月 2020
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/MATLAB/">MATLAB</a>
+
+
+    
+</div>
+
+    
+</div>
+
+    
+    <div class="post-content markdown">
+        <div class="main-content-wrap">
+            <blockquote>
+<p>大家也可以加我的交流群，所有资料我会在群里分享出来哦：977947271<br>2020/5/30：</p>
+</blockquote>
+<p>今天给大家介绍一下我第一次使用matlab进行摄像头拍照并进行图像处理的过程</p>
+<p>下面是个简单的GUI：</p>
+<p><img src="https://img-blog.csdnimg.cn/20200219115644543.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<a id="more"></a>
+<p>虽然不使用GUI也可以实现这种功能，不过我建议初学者最好使用GUI来控制程序，之后有时间我会发布不使用GUI来实现这种功能的博文。</p>
+<p>GUI界面的建立这里就不多说了。</p>
+<p>这个GUI是由一个坐标轴和四个按钮组成，按钮分别是“打开摄像头”，“拍照并保存”，“关闭摄像头”，“图像处理”，对应代码中的pushbutton1/2/3/4。</p>
+<p>目的是先打开摄像头，再拍摄照片到电脑中，最后调用图片去进行处理。</p>
+<p>下面介绍代码：<br>这里是 pushbutton1 的callback</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">varargout&#123;<span class="number">1</span>&#125; = handles.output;</span><br><span class="line"><span class="keyword">global</span> vid</span><br><span class="line">%定义一个全局变量，<span class="keyword">global</span>的用法可以参照我的另一篇博文</span><br><span class="line">vid = videoinput(<span class="string">'winvideo'</span>,<span class="number">1</span>,<span class="string">'YUY2_640x480'</span>);</span><br><span class="line">%winvideo函数可参照另一篇文章中imaqhwinfo的用法</span><br><span class="line">set(vid,<span class="string">'FramesPerTrigger'</span>,<span class="number">1</span>);</span><br><span class="line">%用特定的帧数去显示视频</span><br><span class="line">set(vid,<span class="string">'TriggerRepeat'</span>,Inf);</span><br><span class="line">vidRes = get(vid,<span class="string">'VideoResolution'</span>);</span><br><span class="line">%二维数组，获取视频长宽</span><br><span class="line">nBands = get(ojb,<span class="string">'NumberOfBands'</span>);</span><br><span class="line">%获得图像的颜色层数</span><br><span class="line">axes(handles.axes1);</span><br><span class="line">%让视频显示在指定的axes1坐标中</span><br><span class="line"><span class="keyword">global</span> hImage</span><br><span class="line">%定义全局变量hImage</span><br><span class="line">hImage = image(zeros(vidRes(<span class="number">2</span>),vidRes(<span class="number">1</span>),nBands));</span><br><span class="line">%获得图像的句柄</span><br><span class="line">preview（vid,hImage）;</span><br></pre></td></tr></table></figure>
+<p>点开“打开摄像头后”在 axes1 中就可看到拍摄的画面</p>
+<p>接下来介绍图片的保存：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">global</span> vid;</span><br><span class="line">frame = getsnapshot(vid);</span><br><span class="line">%摄像头每一帧的画面</span><br><span class="line">frame = ycbcr2rgb(frame);</span><br><span class="line">%将捕获的图像转化为RGB格式的图像</span><br><span class="line">[filename,pathname] = uiputfile(&#123;<span class="string">'*.bmp'</span>,<span class="string">'BMP files'</span>:<span class="string">'*.jpg'</span>,<span class="string">'JPG files'</span>&#125;<span class="string">'格式'</span>);</span><br><span class="line">%照片名称与储存路径</span><br><span class="line"><span class="keyword">if</span> isequal(filename,<span class="number">0</span>) || isequal(pathname,<span class="number">0</span>)</span><br><span class="line">%文件名与路径是否被占用</span><br><span class="line">	<span class="keyword">return</span>;</span><br><span class="line"><span class="keyword">else</span> </span><br><span class="line">	fpath = fullfile(pathname,filename);</span><br><span class="line">end</span><br><span class="line">imwrite(frame,fpath);</span><br></pre></td></tr></table></figure>
+<p>其实这种操作的逻辑对于matlab 的GUI来说，都可以比较简便的解决</p>
+<p>关闭摄像头：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">%很简单，在callback中写入一个函数即可</span><br><span class="line">close（findobj(<span class="string">'gca'</span>,<span class="string">'figure_csdn'</span>)）;</span><br><span class="line">%findobj(<span class="string">'PropertyName'</span>,<span class="string">'PropertyValue'</span>,...)</span><br><span class="line">返回figure的句柄</span><br></pre></td></tr></table></figure>
+<p>对于想要对图像进行处理的话：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">%就需要在callback中写入读取上图保存的图片的代码</span><br><span class="line">x = imread(<span class="string">'name.jpg'</span>);</span><br><span class="line">imshow(x);</span><br><span class="line">%在进行相应的处理程序</span><br></pre></td></tr></table></figure>
+<p>因为 gui 的代码冗长且很多地方无用，就无法将代码全部贴出来，但是对于有些基础的是可以看懂的，所有代码都放在相应的cb中进行。</p>
+<p>之后会发出更复杂的定时拍照的程序 gui，希望有技术大佬可以帮助指点错误与不足。</p>
+<p>如果有需要这篇文章中源码和 gui 的可以私信我。</p>
+<p>欢迎大家指正不足。</p>
+
+            
+
+
+        </div>
+    </div>
+    <div id="post-footer" class="post-footer main-content-wrap">
+        
+            <div class="post-footer-tags">
+                <span class="text-color-light text-small">GETAGGT IN</span><br/>
+                
+    <a class="tag tag--primary tag--small t-link" href="/tags/MATLAB/" rel="tag">MATLAB</a>
+
+            </div>
+        
+        
+            <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    
+                <a
+                    class="post-action-btn btn btn--default tooltip--top"
+                    href="/MATLAB%20%E7%9A%84global%E5%87%BD%E6%95%B0%EF%BC%88%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F%EF%BC%89%E2%80%94%E4%BB%8Epython%E5%92%8CMAT%E5%AE%9E%E4%BE%8B%E4%B8%AD%E8%AF%A6%E7%BB%86%E8%A7%A3%E9%87%8A.html"
+                    data-tooltip="MATLAB 的global函数（全局变量）—从python和MAT实例中详细解释"
+                    aria-label="FRÜHER: MATLAB 的global函数（全局变量）—从python和MAT实例中详细解释"
+                >
+                    
+                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                        <span class="hide-xs hide-sm text-small icon-ml">FRÜHER</span>
+                    </a>
+            </li>
+            <li class="post-action">
+                
+                    
+                <a
+                    class="post-action-btn btn btn--default tooltip--top"
+                    href="/%E6%96%B0%E6%89%8B%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8anaconda%EF%BC%88python%EF%BC%89%E2%80%94%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D.html"
+                    data-tooltip="新手如何使用anaconda（python）—简单介绍"
+                    aria-label="NÄCHSTER: 新手如何使用anaconda（python）—简单介绍"
+                >
+                    
+                        <span class="hide-xs hide-sm text-small icon-mr">NÄCHSTER</span>
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a
+                class="post-action-btn btn btn--default btn-open-shareoptions"
+                href="#btn-open-shareoptions"
+                aria-label="Diesen Beitrag teilen"
+            >
+                <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </a>
+        </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://squansh.top/%E4%BD%BF%E7%94%A8MATLAB%E8%B0%83%E7%94%A8%E6%91%84%E5%83%8F%E5%A4%B4%E5%B9%B6%E6%8B%8D%E7%85%A7%E2%80%94%E8%AF%A6%E7%BB%86%E4%BB%A3%E7%A0%81.html"
+                    title="Teilen auf Facebook"
+                    aria-label="Teilen auf Facebook"
+                >
+                    <i class="fab fa-facebook" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://twitter.com/intent/tweet?text=https://squansh.top/%E4%BD%BF%E7%94%A8MATLAB%E8%B0%83%E7%94%A8%E6%91%84%E5%83%8F%E5%A4%B4%E5%B9%B6%E6%8B%8D%E7%85%A7%E2%80%94%E8%AF%A6%E7%BB%86%E4%BB%A3%E7%A0%81.html"
+                    title="Teilen auf Twitter"
+                    aria-label="Teilen auf Twitter"
+                >
+                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://plus.google.com/share?url=https://squansh.top/%E4%BD%BF%E7%94%A8MATLAB%E8%B0%83%E7%94%A8%E6%91%84%E5%83%8F%E5%A4%B4%E5%B9%B6%E6%8B%8D%E7%85%A7%E2%80%94%E8%AF%A6%E7%BB%86%E4%BB%A3%E7%A0%81.html"
+                    title="Teilen auf Google Plus"
+                    aria-label="Teilen auf Google Plus"
+                >
+                    <i class="fab fa-google-plus" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+        
+            
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#" aria-label="Nach oben">
+            
+                <i class="fa fa-list" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+        
+        
+            
+        
+    </div>
+</article>
+
+
+
+                <footer id="footer" class="main-content-wrap">
+    <span class="copyrights">
+        Copyrights &copy; 2020 squansh. All Rights Reserved.
+    </span>
+</footer>
+
+            </div>
+            
+                <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+                    <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    
+                <a
+                    class="post-action-btn btn btn--default tooltip--top"
+                    href="/MATLAB%20%E7%9A%84global%E5%87%BD%E6%95%B0%EF%BC%88%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F%EF%BC%89%E2%80%94%E4%BB%8Epython%E5%92%8CMAT%E5%AE%9E%E4%BE%8B%E4%B8%AD%E8%AF%A6%E7%BB%86%E8%A7%A3%E9%87%8A.html"
+                    data-tooltip="MATLAB 的global函数（全局变量）—从python和MAT实例中详细解释"
+                    aria-label="FRÜHER: MATLAB 的global函数（全局变量）—从python和MAT实例中详细解释"
+                >
+                    
+                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                        <span class="hide-xs hide-sm text-small icon-ml">FRÜHER</span>
+                    </a>
+            </li>
+            <li class="post-action">
+                
+                    
+                <a
+                    class="post-action-btn btn btn--default tooltip--top"
+                    href="/%E6%96%B0%E6%89%8B%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8anaconda%EF%BC%88python%EF%BC%89%E2%80%94%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D.html"
+                    data-tooltip="新手如何使用anaconda（python）—简单介绍"
+                    aria-label="NÄCHSTER: 新手如何使用anaconda（python）—简单介绍"
+                >
+                    
+                        <span class="hide-xs hide-sm text-small icon-mr">NÄCHSTER</span>
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a
+                class="post-action-btn btn btn--default btn-open-shareoptions"
+                href="#btn-open-shareoptions"
+                aria-label="Diesen Beitrag teilen"
+            >
+                <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </a>
+        </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://squansh.top/%E4%BD%BF%E7%94%A8MATLAB%E8%B0%83%E7%94%A8%E6%91%84%E5%83%8F%E5%A4%B4%E5%B9%B6%E6%8B%8D%E7%85%A7%E2%80%94%E8%AF%A6%E7%BB%86%E4%BB%A3%E7%A0%81.html"
+                    title="Teilen auf Facebook"
+                    aria-label="Teilen auf Facebook"
+                >
+                    <i class="fab fa-facebook" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://twitter.com/intent/tweet?text=https://squansh.top/%E4%BD%BF%E7%94%A8MATLAB%E8%B0%83%E7%94%A8%E6%91%84%E5%83%8F%E5%A4%B4%E5%B9%B6%E6%8B%8D%E7%85%A7%E2%80%94%E8%AF%A6%E7%BB%86%E4%BB%A3%E7%A0%81.html"
+                    title="Teilen auf Twitter"
+                    aria-label="Teilen auf Twitter"
+                >
+                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://plus.google.com/share?url=https://squansh.top/%E4%BD%BF%E7%94%A8MATLAB%E8%B0%83%E7%94%A8%E6%91%84%E5%83%8F%E5%A4%B4%E5%B9%B6%E6%8B%8D%E7%85%A7%E2%80%94%E8%AF%A6%E7%BB%86%E4%BB%A3%E7%A0%81.html"
+                    title="Teilen auf Google Plus"
+                    aria-label="Teilen auf Google Plus"
+                >
+                    <i class="fab fa-google-plus" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+        
+            
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#" aria-label="Nach oben">
+            
+                <i class="fa fa-list" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+                </div>
+                
+    <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+        <i id="btn-close-shareoptions" class="fa fa-times"></i>
+        <ul class="share-options">
+            
+                
+                
+                <li class="share-option">
+                    <a
+                        class="share-option-btn"
+                        target="new"
+                        href="https://www.facebook.com/sharer/sharer.php?u=https://squansh.top/%E4%BD%BF%E7%94%A8MATLAB%E8%B0%83%E7%94%A8%E6%91%84%E5%83%8F%E5%A4%B4%E5%B9%B6%E6%8B%8D%E7%85%A7%E2%80%94%E8%AF%A6%E7%BB%86%E4%BB%A3%E7%A0%81.html"
+                        aria-label="Teilen auf Facebook"
+                    >
+                        <i class="fab fa-facebook" aria-hidden="true"></i><span>Teilen auf Facebook</span>
+                    </a>
+                </li>
+            
+                
+                
+                <li class="share-option">
+                    <a
+                        class="share-option-btn"
+                        target="new"
+                        href="https://twitter.com/intent/tweet?text=https://squansh.top/%E4%BD%BF%E7%94%A8MATLAB%E8%B0%83%E7%94%A8%E6%91%84%E5%83%8F%E5%A4%B4%E5%B9%B6%E6%8B%8D%E7%85%A7%E2%80%94%E8%AF%A6%E7%BB%86%E4%BB%A3%E7%A0%81.html"
+                        aria-label="Teilen auf Twitter"
+                    >
+                        <i class="fab fa-twitter" aria-hidden="true"></i><span>Teilen auf Twitter</span>
+                    </a>
+                </li>
+            
+                
+                
+                <li class="share-option">
+                    <a
+                        class="share-option-btn"
+                        target="new"
+                        href="https://plus.google.com/share?url=https://squansh.top/%E4%BD%BF%E7%94%A8MATLAB%E8%B0%83%E7%94%A8%E6%91%84%E5%83%8F%E5%A4%B4%E5%B9%B6%E6%8B%8D%E7%85%A7%E2%80%94%E8%AF%A6%E7%BB%86%E4%BB%A3%E7%A0%81.html"
+                        aria-label="Teilen auf Google Plus"
+                    >
+                        <i class="fab fa-google-plus" aria-hidden="true"></i><span>Teilen auf Google Plus</span>
+                    </a>
+                </li>
+            
+        </ul>
+    </div>
+
+
+            
+        </div>
+        
+
+
+<div id="about">
+    <div id="about-card">
+        <div id="about-btn-close">
+            <i class="fa fa-times"></i>
+        </div>
+        
+            <h4 id="about-card-name">squansh</h4>
+        
+            <div id="about-card-bio"><p>author.bio</p>
+</div>
+        
+        
+            <div id="about-card-job">
+                <i class="fa fa-briefcase"></i>
+                <br/>
+                <p>author.job</p>
+
+            </div>
+        
+        
+    </div>
+</div>
+
+        
+        
+<div id="cover" style="background-image:url('/assets/images/cover.jpg');"></div>
+        <!--SCRIPTS-->
+
+<script src="/assets/js/jquery.js"></script>
+
+
+<script src="/assets/js/jquery.fancybox.js"></script>
+
+
+<script src="/assets/js/thumbs.js"></script>
+
+
+<script src="/assets/js/tranquilpeak.js"></script>
+
+<!--SCRIPTS END-->
+
+
+    
+
+
+
+
+    <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/haruto.model.json"},"display":{"position":"right","width":260,"height":520},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>

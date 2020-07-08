@@ -1,0 +1,717 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="孙全胜의Space">
+    <title>人头录音原理及解释 - 孙全胜의Space</title>
+    <meta name="author" content="squansh">
+    
+        <meta name="keywords" content="python,matlab,yolo,yolov3,java,go,c++,c#,">
+    
+    
+    
+        
+            <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
+        
+    
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"squansh","sameAs":["https://github.com/","http://stackoverflow.com/users","https://twitter.com/","https://facebook.com/","https://plus.google.com/","https://www.linkedin.com/profile/","mailto"]},"articleBody":"简介：\n本文简单介绍了环绕声基础知识，还介绍了各种双声道虚拟环绕声（多声道）的技术。最近突然对虚拟环绕声感兴趣，整理了一下相关知识。\n\n何为环绕声普通的立体声只能分清左右两个方向的声音，而环绕声还能让人声音的前后左右各个方位，更有空间感仿佛置身于现场。常见的环绕声主要有 5.1 声道与 7.1 声道两种，要重现环绕声也相应的需要 6 个或者 8 个音箱。\n电影中最常见的环绕声格式是杜比数字和 DTS，两者是竞争对手关系，电影 DVD 中一般包含有其中一种或者两种音轨都有。此外，这两种格式也有多个不同的版本，这里就不作详细介绍。\n\n除了这两种格式之外，部分蓝光光盘也提供 LPCM 格式的音轨，这是一种未经压缩的音频格式，体积最大。压缩后的音频解码成 PCM 格式才能播放，所以这种格式无需解码。理论上 LPCM 格式无压缩音质好，无需解码，是最理想的格式，但由于光盘容量是有限的，音频体积大会挤占视频的空间。可以计算 96kHz 采样率，24 位采样精度，7.1 声道的 LPCM 音轨每秒数据量是\n\n96k * (24 / 8) * 8 = 2.3MB\n\n那么一部 90 分钟的电影仅音频就占用了约 12.4 GB 空间，而单面蓝光光盘才 25GB。折中办法是无损压缩，类似于 zip 文件解压后可以 100% 还原成压缩前的文件，杜比和 DTS 都推出了相应的音频格式，分别叫杜比 TrueHD 和 DTS-HD Master Audio。这两种格式除了需要解码之外，和 LPCM 音质没有区别。\n说到无损压缩我们常见的音乐中还有 APE 和 FLAC。APE 不支持多声道，FLAC 可以支持，理论上也可以用于电影光盘，但是没有商业化产品支持，所以没有得到应用。FLAC 是免费、开源的音频格式，但目前还没有电影公司采用，没有播放器、解码器以及音响设备支持。网上已有字幕组使用 FLAC 制作多声道的电影文件，目前只能在电脑上软件解码。\n回放环绕声的方法：\n多声道音箱。需要多个音箱，而且摆位要正确，但效果最好。多单元耳机。多个扬声器单元放在一个耳机上，产品很少。虚拟环绕声。经过算法处理成立体声，用普通耳机回放，下面将详细介绍。2. 虚拟环绕声这里只讨论把多声道音频经过算法处理变成立体声的虚拟环绕声，还有一类是把立体声音频经过算法处理使其具有空间感（很多音效宣传具有此功能）的技术，个人觉得后者无意义只能算是一种音效。\n\n虚拟环绕声都是基于 HRTF（Head Related Transfer Functions）头部相关传输函数来实现的，只是各家的算法以及测量数据有差异，效果也就各不相同。关于 HRTF 引用数码多上的简单介绍：人耳在接收到音源发出的声音时，人的耳廓、耳道、头盖骨、肩部等对声波的折射、绕射和衍射以及鼓膜接收到的信息会被大脑所接受，大脑通过经验来对声音的方位进行判断。根据这一原理，通过信号处理的数学方法，我们构建了 HRTF（Head Related Transfer Functions）头部相关传输函数，根据多组的滤波器来虚拟实现人耳接收到的“位置信息”。关于 HRTF 的详细原理，数码多上同样有一篇文章 HRTF音频3D定位技术综述。有了这个基础知识，我们就可以分析各种各样的虚拟环绕声相关技术。\n2.1 人头录音（Dummy head recording）一般录制环绕声音频需要使用多个麦克风，例如 5.1 声道至少需要 5 个麦克风，而一般音乐是双声道两个麦克风。人头录音也是使用两个麦克风录音，但是模拟了人头听音的效果，相当于把两个麦克风放在人的耳朵里面。因为就算是多声道的音箱，人最终都是靠两个耳朵来听，所以在最理想的情况下人头录音是可以达到真实环绕声效果的。但是现实都是不完美的，首先人头录音要求回放时必须使用耳机（录音时麦克风也是放在耳朵里），保证声音没有串扰；其次每个人身体有差异，大脑对声音的判断也不同，录音不可能按照每个人去完美适配。这就造成了人头录音，包括下面提到的虚拟环绕声技术，效果都不如多声道音箱理想。\n2.2 游戏 3D 音效很多游戏也有 3D 音效，计算游戏场景中多个音源（脚步声、远处动物等等）与环境相互作用的效果（反射、阻碍等等）得出游戏中玩家所在位置的全方位声音，这个声音可以认为是环绕声的，然后这个声音经过 HRTF 处理得到立体声输出，当然也可以直接编码成杜比或 DTS 输出到外部多声道音箱。创新的 EAX 以及以前的 Aureal 3D 音效就是属于这一类。\n2.3 虚拟环绕声回放很多厂家有类似的技术，例如 Dolby Headphone、DTS Surround Sensation、索尼 Virtualphones Technology 等等，都是把多声道的各种格式音频（杜比/DTS/LPCM等）解码并经过自家的基于 HRTF 的处理技术转换成立体声，然后用户可以使用耳机回放。下面简单介绍一下两种常见场景：\n视频播放器集成 HRTF 插件。就是视频播放器解码完多声道音频后，再经过 HRTF 处理成立体声输出。例如 PotPlayer 里面有一个音频输出选项叫“虚拟环绕（HRTF）”，PowerDVD 也带有 Dolby Headphone 插件。外部解码器。杜比/DTS/LPCM 等多声道音轨通过光纤或 HDMI 输出到带有虚拟环绕声处理功能的解码器播放，然后输出到耳机。例如搭载有 Dolby Headphone 的游戏耳机，索尼的 MDR-DS 系列搭载有 Virtualphones Technology 技术的耳机。3. 总结总的来说，靠谱的虚拟环绕声技术都是通过把原始多声道音频经过 HRTF 处理得到的，比直接 downmix 到双声道空间感要强，但感觉还是不太自然，效果最好的还是多声道音箱。如果想体验 Dolby Headphone 的效果，这篇文章里面提供有在线试听 5.1 channel audio through ordinary headphones using MPC-HC。\n转载请注明出处：http://www.cnblogs.com/imouto/archive/2013/03/13/virtual-surround-sound-explained.html\n本文外部镜像：http://oteku.blogspot.com/2013/03/virtual-surround-sound-explained.html\n文章出处：https://www.cnblogs.com/imouto/archive/2013/03/13/virtual-surround-sound-explained.html\n","dateCreated":"2020-06-17T19:45:22+08:00","dateModified":"2020-07-08T10:54:42+08:00","datePublished":"2020-06-17T19:45:22+08:00","description":"简介：\n本文简单介绍了环绕声基础知识，还介绍了各种双声道虚拟环绕声（多声道）的技术。最近突然对虚拟环绕声感兴趣，整理了一下相关知识。\n\n何为环绕声普通的立体声只能分清左右两个方向的声音，而环绕声还能让人声音的前后左右各个方位，更有空间感仿佛置身于现场。常见的环绕声主要有 5.1 声道与 7.1 声道两种，要重现环绕声也相应的需要 6 个或者 8 个音箱。","headline":"人头录音原理及解释","image":[],"mainEntityOfPage":{"@type":"WebPage","@id":"https://squansh.top/%E4%BA%BA%E5%A4%B4%E5%BD%95%E9%9F%B3%E5%8E%9F%E7%90%86%E5%8F%8A%E8%A7%A3%E9%87%8A.html"},"publisher":{"@type":"Organization","name":"squansh","sameAs":["https://github.com/","http://stackoverflow.com/users","https://twitter.com/","https://facebook.com/","https://plus.google.com/","https://www.linkedin.com/profile/","mailto"]},"url":"https://squansh.top/%E4%BA%BA%E5%A4%B4%E5%BD%95%E9%9F%B3%E5%8E%9F%E7%90%86%E5%8F%8A%E8%A7%A3%E9%87%8A.html","keywords":"硬件"}</script>
+    <meta name="description" content="简介： 本文简单介绍了环绕声基础知识，还介绍了各种双声道虚拟环绕声（多声道）的技术。最近突然对虚拟环绕声感兴趣，整理了一下相关知识。  何为环绕声普通的立体声只能分清左右两个方向的声音，而环绕声还能让人声音的前后左右各个方位，更有空间感仿佛置身于现场。常见的环绕声主要有 5.1 声道与 7.1 声道两种，要重现环绕声也相应的需要 6 个或者 8 个音箱。">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="人头录音原理及解释">
+<meta property="og:url" content="https://squansh.top/%E4%BA%BA%E5%A4%B4%E5%BD%95%E9%9F%B3%E5%8E%9F%E7%90%86%E5%8F%8A%E8%A7%A3%E9%87%8A.html">
+<meta property="og:site_name" content="孙全胜의Space">
+<meta property="og:description" content="简介： 本文简单介绍了环绕声基础知识，还介绍了各种双声道虚拟环绕声（多声道）的技术。最近突然对虚拟环绕声感兴趣，整理了一下相关知识。  何为环绕声普通的立体声只能分清左右两个方向的声音，而环绕声还能让人声音的前后左右各个方位，更有空间感仿佛置身于现场。常见的环绕声主要有 5.1 声道与 7.1 声道两种，要重现环绕声也相应的需要 6 个或者 8 个音箱。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/2020051421502336.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70">
+<meta property="article:published_time" content="2020-06-17T11:45:22.000Z">
+<meta property="article:modified_time" content="2020-07-08T02:54:42.566Z">
+<meta property="article:author" content="squansh">
+<meta property="article:tag" content="硬件">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/2020051421502336.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70">
+    
+    
+        
+    
+    
+    
+    
+    
+    <!--STYLES-->
+    
+<link rel="stylesheet" href="/assets/css/all.css">
+
+    
+<link rel="stylesheet" href="/assets/css/jquery.fancybox.css">
+
+    
+<link rel="stylesheet" href="/assets/css/thumbs.css">
+
+    
+<link rel="stylesheet" href="/assets/css/tranquilpeak.css">
+
+    <!--STYLES END-->
+    
+
+    
+
+    
+        
+    
+</head>
+
+    <body>
+        <div id="blog">
+            <!-- Define author's picture -->
+
+
+    
+
+<header id="header" data-behavior="4">
+    <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+    <div class="header-title">
+        <a
+            class="header-title-link"
+            href="/%20"
+            aria-label=""
+        >
+            孙全胜의Space
+        </a>
+    </div>
+    
+        
+            <a
+                class="header-right-picture "
+                href="#about"
+                aria-label="Öffne den Link: /#about"
+            >
+        
+        
+        </a>
+    
+</header>
+
+            <!-- Define author's picture -->
+
+
+<nav id="sidebar" data-behavior="4">
+    <div class="sidebar-container">
+        
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/"
+                            
+                            rel="noopener"
+                            title="Home"
+                        >
+                        <i class="sidebar-button-icon fa fa-home" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Home</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/all-categories"
+                            
+                            rel="noopener"
+                            title="Kategorien"
+                        >
+                        <i class="sidebar-button-icon fa fa-bookmark" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Kategorien</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/all-tags"
+                            
+                            rel="noopener"
+                            title="Tags"
+                        >
+                        <i class="sidebar-button-icon fa fa-tags" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Tags</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/all-archives"
+                            
+                            rel="noopener"
+                            title="Archiv"
+                        >
+                        <i class="sidebar-button-icon fa fa-archive" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Archiv</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link open-algolia-search"
+                            href="#search"
+                            
+                            rel="noopener"
+                            title="Suche"
+                        >
+                        <i class="sidebar-button-icon fa fa-search" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Suche</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="#about"
+                            
+                            rel="noopener"
+                            title="Über"
+                        >
+                        <i class="sidebar-button-icon fa fa-question" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Über</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="https://github.com/"
+                            
+                                target="_blank"
+                            
+                            rel="noopener"
+                            title="GitHub"
+                        >
+                        <i class="sidebar-button-icon fab fa-github" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">GitHub</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="http://stackoverflow.com/users"
+                            
+                                target="_blank"
+                            
+                            rel="noopener"
+                            title="Stack Overflow"
+                        >
+                        <i class="sidebar-button-icon fab fa-stack-overflow" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Stack Overflow</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="https://twitter.com/"
+                            
+                                target="_blank"
+                            
+                            rel="noopener"
+                            title="Twitter"
+                        >
+                        <i class="sidebar-button-icon fab fa-twitter" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Twitter</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="https://facebook.com/"
+                            
+                                target="_blank"
+                            
+                            rel="noopener"
+                            title="Facebook"
+                        >
+                        <i class="sidebar-button-icon fab fa-facebook" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Facebook</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="https://plus.google.com/"
+                            
+                                target="_blank"
+                            
+                            rel="noopener"
+                            title="Google Plus"
+                        >
+                        <i class="sidebar-button-icon fab fa-google-plus" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Google Plus</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="https://www.linkedin.com/profile/"
+                            
+                                target="_blank"
+                            
+                            rel="noopener"
+                            title="LinkedIn"
+                        >
+                        <i class="sidebar-button-icon fab fa-linkedin" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">LinkedIn</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/mailto"
+                            
+                            rel="noopener"
+                            title="E-Mail"
+                        >
+                        <i class="sidebar-button-icon fa fa-envelope" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">E-Mail</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/atom.xml"
+                            
+                            rel="noopener"
+                            title="RSS"
+                        >
+                        <i class="sidebar-button-icon fa fa-rss" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">RSS</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+    </div>
+</nav>
+
+            
+            <div id="main" data-behavior="4"
+                 class="
+                        hasCoverMetaIn
+                        ">
+                
+<article class="post">
+    
+    
+        <div class="post-header main-content-wrap text-left">
+    
+        <h1 class="post-title">
+            人头录音原理及解释
+        </h1>
+    
+    
+        <div class="post-meta">
+    <time datetime="2020-06-17T19:45:22+08:00">
+	
+		    17 6月 2020
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/%E7%A1%AC%E4%BB%B6/">硬件</a>
+
+
+    
+</div>
+
+    
+</div>
+
+    
+    <div class="post-content markdown">
+        <div class="main-content-wrap">
+            <p>简介：</p>
+<p>本文简单介绍了环绕声基础知识，还介绍了各种双声道虚拟环绕声（多声道）的技术。最近突然对虚拟环绕声感兴趣，整理了一下相关知识。</p>
+<ol>
+<li>何为环绕声<br>普通的立体声只能分清左右两个方向的声音，而环绕声还能让人声音的前后左右各个方位，更有空间感仿佛置身于现场。常见的环绕声主要有 5.1 声道与 7.1 声道两种，要重现环绕声也相应的需要 6 个或者 8 个音箱。<a id="more"></a>
+电影中最常见的环绕声格式是杜比数字和 DTS，两者是竞争对手关系，电影 DVD 中一般包含有其中一种或者两种音轨都有。此外，这两种格式也有多个不同的版本，这里就不作详细介绍。</li>
+</ol>
+<p>除了这两种格式之外，部分蓝光光盘也提供 LPCM 格式的音轨，这是一种未经压缩的音频格式，体积最大。压缩后的音频解码成 PCM 格式才能播放，所以这种格式无需解码。理论上 LPCM 格式无压缩音质好，无需解码，是最理想的格式，但由于光盘容量是有限的，音频体积大会挤占视频的空间。可以计算 96kHz 采样率，24 位采样精度，7.1 声道的 LPCM 音轨每秒数据量是</p>
+<blockquote>
+<p>96k * (24 / 8) * 8 = 2.3MB</p>
+</blockquote>
+<p>那么一部 90 分钟的电影仅音频就占用了约 12.4 GB 空间，而单面蓝光光盘才 25GB。折中办法是无损压缩，类似于 zip 文件解压后可以 100% 还原成压缩前的文件，杜比和 DTS 都推出了相应的音频格式，分别叫杜比 TrueHD 和 DTS-HD Master Audio。这两种格式除了需要解码之外，和 LPCM 音质没有区别。</p>
+<p>说到无损压缩我们常见的音乐中还有 APE 和 FLAC。APE 不支持多声道，FLAC 可以支持，理论上也可以用于电影光盘，但是没有商业化产品支持，所以没有得到应用。FLAC 是免费、开源的音频格式，但目前还没有电影公司采用，没有播放器、解码器以及音响设备支持。网上已有字幕组使用 FLAC 制作多声道的电影文件，目前只能在电脑上软件解码。</p>
+<p>回放环绕声的方法：</p>
+<p>多声道音箱。需要多个音箱，而且摆位要正确，但效果最好。<br>多单元耳机。多个扬声器单元放在一个耳机上，产品很少。<br>虚拟环绕声。经过算法处理成立体声，用普通耳机回放，下面将详细介绍。<br>2. 虚拟环绕声<br>这里只讨论把多声道音频经过算法处理变成立体声的虚拟环绕声，还有一类是把立体声音频经过算法处理使其具有空间感（很多音效宣传具有此功能）的技术，个人觉得后者无意义只能算是一种音效。</p>
+<p><img src="https://img-blog.csdnimg.cn/2020051421502336.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="HRTF 示意图，来源于维基百科"></p>
+<p>虚拟环绕声都是基于 HRTF（Head Related Transfer Functions）头部相关传输函数来实现的，只是各家的算法以及测量数据有差异，效果也就各不相同。关于 HRTF 引用数码多上的简单介绍：人耳在接收到音源发出的声音时，人的耳廓、耳道、头盖骨、肩部等对声波的折射、绕射和衍射以及鼓膜接收到的信息会被大脑所接受，大脑通过经验来对声音的方位进行判断。根据这一原理，通过信号处理的数学方法，我们构建了 HRTF（Head Related Transfer Functions）头部相关传输函数，根据多组的滤波器来虚拟实现人耳接收到的“位置信息”。关于 HRTF 的详细原理，数码多上同样有一篇文章 HRTF音频3D定位技术综述。有了这个基础知识，我们就可以分析各种各样的虚拟环绕声相关技术。</p>
+<p>2.1 人头录音（Dummy head recording）<br>一般录制环绕声音频需要使用多个麦克风，例如 5.1 声道至少需要 5 个麦克风，而一般音乐是双声道两个麦克风。人头录音也是使用两个麦克风录音，但是模拟了人头听音的效果，相当于把两个麦克风放在人的耳朵里面。因为就算是多声道的音箱，人最终都是靠两个耳朵来听，所以在最理想的情况下人头录音是可以达到真实环绕声效果的。但是现实都是不完美的，首先人头录音要求回放时必须使用耳机（录音时麦克风也是放在耳朵里），保证声音没有串扰；其次每个人身体有差异，大脑对声音的判断也不同，录音不可能按照每个人去完美适配。这就造成了人头录音，包括下面提到的虚拟环绕声技术，效果都不如多声道音箱理想。</p>
+<p>2.2 游戏 3D 音效<br>很多游戏也有 3D 音效，计算游戏场景中多个音源（脚步声、远处动物等等）与环境相互作用的效果（反射、阻碍等等）得出游戏中玩家所在位置的全方位声音，这个声音可以认为是环绕声的，然后这个声音经过 HRTF 处理得到立体声输出，当然也可以直接编码成杜比或 DTS 输出到外部多声道音箱。创新的 EAX 以及以前的 Aureal 3D 音效就是属于这一类。</p>
+<p>2.3 虚拟环绕声回放<br>很多厂家有类似的技术，例如 Dolby Headphone、DTS Surround Sensation、索尼 Virtualphones Technology 等等，都是把多声道的各种格式音频（杜比/DTS/LPCM等）解码并经过自家的基于 HRTF 的处理技术转换成立体声，然后用户可以使用耳机回放。下面简单介绍一下两种常见场景：</p>
+<p>视频播放器集成 HRTF 插件。就是视频播放器解码完多声道音频后，再经过 HRTF 处理成立体声输出。例如 PotPlayer 里面有一个音频输出选项叫“虚拟环绕（HRTF）”，PowerDVD 也带有 Dolby Headphone 插件。<br>外部解码器。杜比/DTS/LPCM 等多声道音轨通过光纤或 HDMI 输出到带有虚拟环绕声处理功能的解码器播放，然后输出到耳机。例如搭载有 Dolby Headphone 的游戏耳机，索尼的 MDR-DS 系列搭载有 Virtualphones Technology 技术的耳机。<br>3. 总结<br>总的来说，靠谱的虚拟环绕声技术都是通过把原始多声道音频经过 HRTF 处理得到的，比直接 downmix 到双声道空间感要强，但感觉还是不太自然，效果最好的还是多声道音箱。如果想体验 Dolby Headphone 的效果，这篇文章里面提供有在线试听 5.1 channel audio through ordinary headphones using MPC-HC。</p>
+<p>转载请注明出处：<a href="http://www.cnblogs.com/imouto/archive/2013/03/13/virtual-surround-sound-explained.html" target="_blank" rel="noopener">http://www.cnblogs.com/imouto/archive/2013/03/13/virtual-surround-sound-explained.html</a></p>
+<p>本文外部镜像：<a href="http://oteku.blogspot.com/2013/03/virtual-surround-sound-explained.html" target="_blank" rel="noopener">http://oteku.blogspot.com/2013/03/virtual-surround-sound-explained.html</a></p>
+<p>文章出处：<a href="https://www.cnblogs.com/imouto/archive/2013/03/13/virtual-surround-sound-explained.html" target="_blank" rel="noopener">https://www.cnblogs.com/imouto/archive/2013/03/13/virtual-surround-sound-explained.html</a></p>
+
+            
+
+
+        </div>
+    </div>
+    <div id="post-footer" class="post-footer main-content-wrap">
+        
+            <div class="post-footer-tags">
+                <span class="text-color-light text-small">GETAGGT IN</span><br/>
+                
+    <a class="tag tag--primary tag--small t-link" href="/tags/%E7%A1%AC%E4%BB%B6/" rel="tag">硬件</a>
+
+            </div>
+        
+        
+            <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    
+                <a
+                    class="post-action-btn btn btn--default tooltip--top"
+                    href="/Command%20%E2%80%9Cpython%20setup.py%20egg_info%E2%80%9D%20failed%E2%80%94%E2%80%94%E5%AE%8C%E7%BE%8E%E8%A7%A3%E5%86%B3.html"
+                    data-tooltip="Command “python setup.py egg_info” failed——完美解决"
+                    aria-label="FRÜHER: Command “python setup.py egg_info” failed——完美解决"
+                >
+                    
+                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                        <span class="hide-xs hide-sm text-small icon-ml">FRÜHER</span>
+                    </a>
+            </li>
+            <li class="post-action">
+                
+                    
+                <a
+                    class="post-action-btn btn btn--default tooltip--top"
+                    href="/%E6%95%99%E5%A5%B3%E6%9C%8B%E5%8F%8B%E5%AD%A6%E4%BC%9A%E7%94%A8ESP8266%E5%AE%9E%E7%8E%B0wifi%E6%9D%80%E6%89%8B%E2%80%94%E2%80%94%E6%9C%89%E5%9B%BA%E4%BB%B6.html"
+                    data-tooltip="教女朋友学会用ESP8266实现wifi杀手——有固件"
+                    aria-label="NÄCHSTER: 教女朋友学会用ESP8266实现wifi杀手——有固件"
+                >
+                    
+                        <span class="hide-xs hide-sm text-small icon-mr">NÄCHSTER</span>
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a
+                class="post-action-btn btn btn--default btn-open-shareoptions"
+                href="#btn-open-shareoptions"
+                aria-label="Diesen Beitrag teilen"
+            >
+                <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </a>
+        </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://squansh.top/%E4%BA%BA%E5%A4%B4%E5%BD%95%E9%9F%B3%E5%8E%9F%E7%90%86%E5%8F%8A%E8%A7%A3%E9%87%8A.html"
+                    title="Teilen auf Facebook"
+                    aria-label="Teilen auf Facebook"
+                >
+                    <i class="fab fa-facebook" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://twitter.com/intent/tweet?text=https://squansh.top/%E4%BA%BA%E5%A4%B4%E5%BD%95%E9%9F%B3%E5%8E%9F%E7%90%86%E5%8F%8A%E8%A7%A3%E9%87%8A.html"
+                    title="Teilen auf Twitter"
+                    aria-label="Teilen auf Twitter"
+                >
+                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://plus.google.com/share?url=https://squansh.top/%E4%BA%BA%E5%A4%B4%E5%BD%95%E9%9F%B3%E5%8E%9F%E7%90%86%E5%8F%8A%E8%A7%A3%E9%87%8A.html"
+                    title="Teilen auf Google Plus"
+                    aria-label="Teilen auf Google Plus"
+                >
+                    <i class="fab fa-google-plus" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+        
+            
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#" aria-label="Nach oben">
+            
+                <i class="fa fa-list" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+        
+        
+            
+        
+    </div>
+</article>
+
+
+
+                <footer id="footer" class="main-content-wrap">
+    <span class="copyrights">
+        Copyrights &copy; 2020 squansh. All Rights Reserved.
+    </span>
+</footer>
+
+            </div>
+            
+                <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+                    <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    
+                <a
+                    class="post-action-btn btn btn--default tooltip--top"
+                    href="/Command%20%E2%80%9Cpython%20setup.py%20egg_info%E2%80%9D%20failed%E2%80%94%E2%80%94%E5%AE%8C%E7%BE%8E%E8%A7%A3%E5%86%B3.html"
+                    data-tooltip="Command “python setup.py egg_info” failed——完美解决"
+                    aria-label="FRÜHER: Command “python setup.py egg_info” failed——完美解决"
+                >
+                    
+                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                        <span class="hide-xs hide-sm text-small icon-ml">FRÜHER</span>
+                    </a>
+            </li>
+            <li class="post-action">
+                
+                    
+                <a
+                    class="post-action-btn btn btn--default tooltip--top"
+                    href="/%E6%95%99%E5%A5%B3%E6%9C%8B%E5%8F%8B%E5%AD%A6%E4%BC%9A%E7%94%A8ESP8266%E5%AE%9E%E7%8E%B0wifi%E6%9D%80%E6%89%8B%E2%80%94%E2%80%94%E6%9C%89%E5%9B%BA%E4%BB%B6.html"
+                    data-tooltip="教女朋友学会用ESP8266实现wifi杀手——有固件"
+                    aria-label="NÄCHSTER: 教女朋友学会用ESP8266实现wifi杀手——有固件"
+                >
+                    
+                        <span class="hide-xs hide-sm text-small icon-mr">NÄCHSTER</span>
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a
+                class="post-action-btn btn btn--default btn-open-shareoptions"
+                href="#btn-open-shareoptions"
+                aria-label="Diesen Beitrag teilen"
+            >
+                <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </a>
+        </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://squansh.top/%E4%BA%BA%E5%A4%B4%E5%BD%95%E9%9F%B3%E5%8E%9F%E7%90%86%E5%8F%8A%E8%A7%A3%E9%87%8A.html"
+                    title="Teilen auf Facebook"
+                    aria-label="Teilen auf Facebook"
+                >
+                    <i class="fab fa-facebook" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://twitter.com/intent/tweet?text=https://squansh.top/%E4%BA%BA%E5%A4%B4%E5%BD%95%E9%9F%B3%E5%8E%9F%E7%90%86%E5%8F%8A%E8%A7%A3%E9%87%8A.html"
+                    title="Teilen auf Twitter"
+                    aria-label="Teilen auf Twitter"
+                >
+                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://plus.google.com/share?url=https://squansh.top/%E4%BA%BA%E5%A4%B4%E5%BD%95%E9%9F%B3%E5%8E%9F%E7%90%86%E5%8F%8A%E8%A7%A3%E9%87%8A.html"
+                    title="Teilen auf Google Plus"
+                    aria-label="Teilen auf Google Plus"
+                >
+                    <i class="fab fa-google-plus" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+        
+            
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#" aria-label="Nach oben">
+            
+                <i class="fa fa-list" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+                </div>
+                
+    <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+        <i id="btn-close-shareoptions" class="fa fa-times"></i>
+        <ul class="share-options">
+            
+                
+                
+                <li class="share-option">
+                    <a
+                        class="share-option-btn"
+                        target="new"
+                        href="https://www.facebook.com/sharer/sharer.php?u=https://squansh.top/%E4%BA%BA%E5%A4%B4%E5%BD%95%E9%9F%B3%E5%8E%9F%E7%90%86%E5%8F%8A%E8%A7%A3%E9%87%8A.html"
+                        aria-label="Teilen auf Facebook"
+                    >
+                        <i class="fab fa-facebook" aria-hidden="true"></i><span>Teilen auf Facebook</span>
+                    </a>
+                </li>
+            
+                
+                
+                <li class="share-option">
+                    <a
+                        class="share-option-btn"
+                        target="new"
+                        href="https://twitter.com/intent/tweet?text=https://squansh.top/%E4%BA%BA%E5%A4%B4%E5%BD%95%E9%9F%B3%E5%8E%9F%E7%90%86%E5%8F%8A%E8%A7%A3%E9%87%8A.html"
+                        aria-label="Teilen auf Twitter"
+                    >
+                        <i class="fab fa-twitter" aria-hidden="true"></i><span>Teilen auf Twitter</span>
+                    </a>
+                </li>
+            
+                
+                
+                <li class="share-option">
+                    <a
+                        class="share-option-btn"
+                        target="new"
+                        href="https://plus.google.com/share?url=https://squansh.top/%E4%BA%BA%E5%A4%B4%E5%BD%95%E9%9F%B3%E5%8E%9F%E7%90%86%E5%8F%8A%E8%A7%A3%E9%87%8A.html"
+                        aria-label="Teilen auf Google Plus"
+                    >
+                        <i class="fab fa-google-plus" aria-hidden="true"></i><span>Teilen auf Google Plus</span>
+                    </a>
+                </li>
+            
+        </ul>
+    </div>
+
+
+            
+        </div>
+        
+
+
+<div id="about">
+    <div id="about-card">
+        <div id="about-btn-close">
+            <i class="fa fa-times"></i>
+        </div>
+        
+            <h4 id="about-card-name">squansh</h4>
+        
+            <div id="about-card-bio"><p>author.bio</p>
+</div>
+        
+        
+            <div id="about-card-job">
+                <i class="fa fa-briefcase"></i>
+                <br/>
+                <p>author.job</p>
+
+            </div>
+        
+        
+    </div>
+</div>
+
+        
+        
+<div id="cover" style="background-image:url('/assets/images/cover.jpg');"></div>
+        <!--SCRIPTS-->
+
+<script src="/assets/js/jquery.js"></script>
+
+
+<script src="/assets/js/jquery.fancybox.js"></script>
+
+
+<script src="/assets/js/thumbs.js"></script>
+
+
+<script src="/assets/js/tranquilpeak.js"></script>
+
+<!--SCRIPTS END-->
+
+
+    
+
+
+
+
+    <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/haruto.model.json"},"display":{"position":"right","width":260,"height":520},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>

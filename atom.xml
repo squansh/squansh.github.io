@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://squansh.top/"/>
-  <updated>2020-06-17T11:52:23.593Z</updated>
+  <updated>2020-07-08T02:54:42.536Z</updated>
   <id>https://squansh.top/</id>
   
   <author>
@@ -18,18 +18,18 @@
   
   <entry>
     <title>ValueError Dimension 0 in both shapes must be equal</title>
-    <link href="https://squansh.top/posts/50048/"/>
-    <id>https://squansh.top/posts/50048/</id>
+    <link href="https://squansh.top/ValueError%EF%BC%9ADimension%200%20in%20both%20shapes%20must%20be%20equal.html"/>
+    <id>https://squansh.top/ValueError%EF%BC%9ADimension%200%20in%20both%20shapes%20must%20be%20equal.html</id>
     <published>2020-06-17T11:51:09.000Z</published>
-    <updated>2020-06-17T11:52:23.593Z</updated>
+    <updated>2020-07-08T02:54:42.536Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt; 今天重新训练 yolo 的时候出现了这个报错 &lt;/p&gt;
+      &lt;p&gt;今天重新训练yolo的时候出现了这个报错&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;ValueError: Dimension 0 in both shapes must be equal, but are 1 and 21. Shapes are [1,1,1024,24] and [21,1024,1,1]. for ‘Assign_360’ (op: ‘Assign’) with input shapes: [1,1,1024,24], [21,1024,1,1].&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt; 一般情况就是 class 中的数量对不上 &lt;/p&gt;
+&lt;p&gt;一般情况就是class中的数量对不上&lt;/p&gt;
     
     </summary>
     
@@ -47,10 +47,10 @@
   
   <entry>
     <title>ModuleNotFoundError：No module named “ckeditor”</title>
-    <link href="https://squansh.top/posts/29537/"/>
-    <id>https://squansh.top/posts/29537/</id>
+    <link href="https://squansh.top/ModuleNotFoundError%EF%BC%9ANo%20module%20named%20%E2%80%9Cckeditor%E2%80%9D.html"/>
+    <id>https://squansh.top/ModuleNotFoundError%EF%BC%9ANo%20module%20named%20%E2%80%9Cckeditor%E2%80%9D.html</id>
     <published>2020-06-17T11:49:51.000Z</published>
-    <updated>2020-06-17T11:50:58.145Z</updated>
+    <updated>2020-07-08T02:54:42.496Z</updated>
     
     <summary type="html">
     
@@ -72,10 +72,10 @@
   
   <entry>
     <title>Command “python setup.py egg_info” failed——完美解决</title>
-    <link href="https://squansh.top/posts/2659/"/>
-    <id>https://squansh.top/posts/2659/</id>
+    <link href="https://squansh.top/Command%20%E2%80%9Cpython%20setup.py%20egg_info%E2%80%9D%20failed%E2%80%94%E2%80%94%E5%AE%8C%E7%BE%8E%E8%A7%A3%E5%86%B3.html"/>
+    <id>https://squansh.top/Command%20%E2%80%9Cpython%20setup.py%20egg_info%E2%80%9D%20failed%E2%80%94%E2%80%94%E5%AE%8C%E7%BE%8E%E8%A7%A3%E5%86%B3.html</id>
     <published>2020-06-17T11:46:34.000Z</published>
-    <updated>2020-06-17T11:49:38.505Z</updated>
+    <updated>2020-07-08T02:54:42.486Z</updated>
     
     <summary type="html">
     
@@ -83,7 +83,7 @@
 &lt;blockquote&gt;
 &lt;p&gt;Command “python setup.py egg_info” failed with error code 1 in /tmp/pip-build-2XpM94/django-mdeditor/&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;有人说是 &lt;code&gt;setuptools&lt;/code&gt; 的版本太低，于是我镜像源下更新了一下： &lt;code&gt;pip install -i https://pypi.tuna.tsinghua.edu.cn/simple --upgrade setuptools&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;有人说是&lt;code&gt;setuptools&lt;/code&gt;的版本太低，于是我镜像源下更新了一下： &lt;code&gt;pip install -i https://pypi.tuna.tsinghua.edu.cn/simple --upgrade setuptools&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://img-blog.csdnimg.cn/20200518185849980.png&quot; alt=&quot;在这里插入图片描述&quot;&gt;&lt;/p&gt;
     
     </summary>
@@ -104,17 +104,17 @@
   
   <entry>
     <title>人头录音原理及解释</title>
-    <link href="https://squansh.top/posts/51563/"/>
-    <id>https://squansh.top/posts/51563/</id>
+    <link href="https://squansh.top/%E4%BA%BA%E5%A4%B4%E5%BD%95%E9%9F%B3%E5%8E%9F%E7%90%86%E5%8F%8A%E8%A7%A3%E9%87%8A.html"/>
+    <id>https://squansh.top/%E4%BA%BA%E5%A4%B4%E5%BD%95%E9%9F%B3%E5%8E%9F%E7%90%86%E5%8F%8A%E8%A7%A3%E9%87%8A.html</id>
     <published>2020-06-17T11:45:22.000Z</published>
-    <updated>2020-06-17T11:49:40.857Z</updated>
+    <updated>2020-07-08T02:54:42.566Z</updated>
     
     <summary type="html">
     
       &lt;p&gt;简介：&lt;/p&gt;
 &lt;p&gt;本文简单介绍了环绕声基础知识，还介绍了各种双声道虚拟环绕声（多声道）的技术。最近突然对虚拟环绕声感兴趣，整理了一下相关知识。&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;何为环绕声 &lt;br&gt; 普通的立体声只能分清左右两个方向的声音，而环绕声还能让人声音的前后左右各个方位，更有空间感仿佛置身于现场。常见的环绕声主要有 5.1 声道与 7.1 声道两种，要重现环绕声也相应的需要 6 个或者 8 个音箱。
+&lt;li&gt;何为环绕声&lt;br&gt;普通的立体声只能分清左右两个方向的声音，而环绕声还能让人声音的前后左右各个方位，更有空间感仿佛置身于现场。常见的环绕声主要有 5.1 声道与 7.1 声道两种，要重现环绕声也相应的需要 6 个或者 8 个音箱。
     
     </summary>
     
@@ -127,16 +127,16 @@
   </entry>
   
   <entry>
-    <title>教女朋友学会用 ESP8266 实现 wifi 杀手——有固件</title>
-    <link href="https://squansh.top/posts/37492/"/>
-    <id>https://squansh.top/posts/37492/</id>
+    <title>教女朋友学会用ESP8266实现wifi杀手——有固件</title>
+    <link href="https://squansh.top/%E6%95%99%E5%A5%B3%E6%9C%8B%E5%8F%8B%E5%AD%A6%E4%BC%9A%E7%94%A8ESP8266%E5%AE%9E%E7%8E%B0wifi%E6%9D%80%E6%89%8B%E2%80%94%E2%80%94%E6%9C%89%E5%9B%BA%E4%BB%B6.html"/>
+    <id>https://squansh.top/%E6%95%99%E5%A5%B3%E6%9C%8B%E5%8F%8B%E5%AD%A6%E4%BC%9A%E7%94%A8ESP8266%E5%AE%9E%E7%8E%B0wifi%E6%9D%80%E6%89%8B%E2%80%94%E2%80%94%E6%9C%89%E5%9B%BA%E4%BB%B6.html</id>
     <published>2020-06-17T11:42:16.000Z</published>
-    <updated>2020-06-17T11:45:02.553Z</updated>
+    <updated>2020-07-08T02:54:42.586Z</updated>
     
     <summary type="html">
     
       &lt;blockquote&gt;
-&lt;p&gt; 固件来自大神：FengMo&lt;br&gt; 固件下载地址：&lt;a href=&quot;https://download.csdn.net/download/qq_45504119/12407789&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://download.csdn.net/download/qq_45504119/12407789&lt;/a&gt;&lt;br&gt; 也可以加我的交流群，我会在群里分享出来哦：977947271&lt;br&gt;2020/5/30：&lt;br&gt; 近日每天都有十几个很明显的小号加群，而且有的大号进群竟然打广告和卖不良物品，经我和群友讨论后，加群需要正确填写我的 CSDN 账号昵称，只是为了过滤一些不好的人。&lt;/p&gt;
+&lt;p&gt;固件来自大神：FengMo&lt;br&gt;固件下载地址：&lt;a href=&quot;https://download.csdn.net/download/qq_45504119/12407789&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://download.csdn.net/download/qq_45504119/12407789&lt;/a&gt;&lt;br&gt;也可以加我的交流群，我会在群里分享出来哦：977947271&lt;br&gt;2020/5/30：&lt;br&gt;近日每天都有十几个很明显的小号加群，而且有的大号进群竟然打广告和卖不良物品，经我和群友讨论后，加群需要正确填写我的CSDN账号昵称，只是为了过滤一些不好的人。&lt;/p&gt;
 &lt;/blockquote&gt;
     
     </summary>
@@ -152,17 +152,17 @@
   </entry>
   
   <entry>
-    <title>运行 SSD-TensorFlow 报错：tensorflow.python.framework.errors_impl.NotFoundError：</title>
-    <link href="https://squansh.top/posts/15660/"/>
-    <id>https://squansh.top/posts/15660/</id>
+    <title>运行SSD-TensorFlow报错：tensorflow.python.framework.errors_impl.NotFoundError：</title>
+    <link href="https://squansh.top/%E8%BF%90%E8%A1%8CSSD-TensorFlow%E6%8A%A5%E9%94%99%EF%BC%9Atensorflow.python.framework.errors_impl.NotFoundError%EF%BC%9A.html"/>
+    <id>https://squansh.top/%E8%BF%90%E8%A1%8CSSD-TensorFlow%E6%8A%A5%E9%94%99%EF%BC%9Atensorflow.python.framework.errors_impl.NotFoundError%EF%BC%9A.html</id>
     <published>2020-06-17T11:39:23.000Z</published>
-    <updated>2020-06-17T11:41:49.952Z</updated>
+    <updated>2020-07-08T02:54:42.596Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt; 玩了很久的 yolo，今天下载了 SSD-TensorFlow 的代码，不过在运行的时候出现了一点问题 &lt;/p&gt;
-&lt;p&gt; 官方的介绍是运行：&lt;code&gt;jupyter notebook notebooks/ssd_notebook.ipynb&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt; 但是在 &lt;code&gt;jupyter notebook&lt;/code&gt; 中运行多有不便，我就将代码复制在了下面文件夹里，与 &lt;code&gt;ssd_notebook.ipynb&lt;/code&gt; 放在了一块，可是出现报错：&lt;/p&gt;
+      &lt;p&gt;玩了很久的 yolo，今天下载了 SSD-TensorFlow 的代码，不过在运行的时候出现了一点问题&lt;/p&gt;
+&lt;p&gt;官方的介绍是运行：&lt;code&gt;jupyter notebook notebooks/ssd_notebook.ipynb&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;但是在 &lt;code&gt;jupyter notebook&lt;/code&gt; 中运行多有不便，我就将代码复制在了下面文件夹里，与 &lt;code&gt;ssd_notebook.ipynb&lt;/code&gt; 放在了一块，可是出现报错：&lt;/p&gt;
 &lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;tensorflow.python.framework.errors_impl.NotFoundError: FindFirstFile failed &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;…/checkpoints:ϵͳ\udcd5Ҳ\udcbb\udcb5\udcbdָ\udcb6\udca8\udcb5\udcc4·\udcbe\udcb6\udca1\udca3 &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;; No such process&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
@@ -180,16 +180,16 @@
   </entry>
   
   <entry>
-    <title>教女友学会 python+yolov3 调用笔记本摄像头——实时进行识别</title>
-    <link href="https://squansh.top/posts/60092/"/>
-    <id>https://squansh.top/posts/60092/</id>
+    <title>教女友学会python+yolov3调用笔记本摄像头——实时进行识别</title>
+    <link href="https://squansh.top/%E6%95%99%E5%A5%B3%E5%8F%8B%E5%AD%A6%E4%BC%9Apython+yolov3%E8%B0%83%E7%94%A8%E7%AC%94%E8%AE%B0%E6%9C%AC%E6%91%84%E5%83%8F%E5%A4%B4%E2%80%94%E2%80%94%E5%AE%9E%E6%97%B6%E8%BF%9B%E8%A1%8C%E8%AF%86%E5%88%AB.html"/>
+    <id>https://squansh.top/%E6%95%99%E5%A5%B3%E5%8F%8B%E5%AD%A6%E4%BC%9Apython+yolov3%E8%B0%83%E7%94%A8%E7%AC%94%E8%AE%B0%E6%9C%AC%E6%91%84%E5%83%8F%E5%A4%B4%E2%80%94%E2%80%94%E5%AE%9E%E6%97%B6%E8%BF%9B%E8%A1%8C%E8%AF%86%E5%88%AB.html</id>
     <published>2020-06-17T11:37:19.000Z</published>
-    <updated>2020-06-17T11:39:10.312Z</updated>
+    <updated>2020-07-08T02:54:42.576Z</updated>
     
     <summary type="html">
     
       &lt;blockquote&gt;
-&lt;p&gt;我终于回来啦，快一个月没有正式写博客了 &lt;br&gt; 最近忙着把老师交给我的项目完成，又从老师经费里白嫖了好多好玩的硬件，网课都没咋听，今天介绍完这个小点，马上就要准备看模电了 &lt;br&gt; 其实我做项目时完全从 0 开始，所接触的东西也是零零散散的，我想表达的东西用面向新手的方式写出来，之后开始介绍软硬件结合的东西。&lt;br&gt;也可以加我的交流群，所有资料我会在群里分享出来哦：977947271&lt;br&gt;2020/5/30：&lt;br&gt;近日每天都有十几个很明显的小号加群，而且有的大号进群竟然打广告和卖不良物品，经我和群友讨论后，加群需要 1 元钱，但是进群后我会将钱退还给大家，只是为了过滤一些不好的人。&lt;/p&gt;
+&lt;p&gt;我终于回来啦，快一个月没有正式写博客了&lt;br&gt;最近忙着把老师交给我的项目完成，又从老师经费里白嫖了好多好玩的硬件，网课都没咋听，今天介绍完这个小点，马上就要准备看模电了&lt;br&gt;其实我做项目时完全从0开始，所接触的东西也是零零散散的，我想表达的东西用面向新手的方式写出来，之后开始介绍软硬件结合的东西。&lt;br&gt;也可以加我的交流群，所有资料我会在群里分享出来哦：977947271&lt;br&gt;2020/5/30：&lt;br&gt;近日每天都有十几个很明显的小号加群，而且有的大号进群竟然打广告和卖不良物品，经我和群友讨论后，加群需要1元钱，但是进群后我会将钱退还给大家，只是为了过滤一些不好的人。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;blockquote&gt;
 &lt;p&gt;环境：win10、py3.6、yolov3&lt;/p&gt;
@@ -210,16 +210,16 @@
   </entry>
   
   <entry>
-    <title>关于 yolo 配合硬件的小结——个人笔记</title>
-    <link href="https://squansh.top/posts/56562/"/>
-    <id>https://squansh.top/posts/56562/</id>
+    <title>关于yolo配合硬件的小结——个人笔记</title>
+    <link href="https://squansh.top/%E5%85%B3%E4%BA%8Eyolo%E9%85%8D%E5%90%88%E7%A1%AC%E4%BB%B6%E7%9A%84%E5%B0%8F%E7%BB%93%E2%80%94%E2%80%94%E4%B8%AA%E4%BA%BA%E7%AC%94%E8%AE%B0.html"/>
+    <id>https://squansh.top/%E5%85%B3%E4%BA%8Eyolo%E9%85%8D%E5%90%88%E7%A1%AC%E4%BB%B6%E7%9A%84%E5%B0%8F%E7%BB%93%E2%80%94%E2%80%94%E4%B8%AA%E4%BA%BA%E7%AC%94%E8%AE%B0.html</id>
     <published>2020-06-17T11:35:27.000Z</published>
-    <updated>2020-06-17T11:37:05.257Z</updated>
+    <updated>2020-07-08T02:54:42.566Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;这个纯属个人笔记了——完全是怕忘 &lt;br&gt; 很久没有写博客，也不太知道想写什么，最近玩的东西比较多：esp8266 做 wifi 杀手、配合 esp32 搭建了个简易的网络摄像头，改 yolo 玩的一阵子，入手几个红外模块，现在正在玩 USART HMI。&lt;/p&gt;
-&lt;p&gt;今天用 yolo 和红外编码打开空调的时候，因为 yolo 是不停的循环调用摄像头识别人数的&lt;/p&gt;
+      &lt;p&gt;这个纯属个人笔记了——完全是怕忘&lt;br&gt;很久没有写博客，也不太知道想写什么，最近玩的东西比较多：esp8266做wifi杀手、配合esp32搭建了个简易的网络摄像头，改yolo玩的一阵子，入手几个红外模块，现在正在玩 USART HMI。&lt;/p&gt;
+&lt;p&gt;今天用yolo和红外编码打开空调的时候，因为yolo是不停的循环调用摄像头识别人数的&lt;/p&gt;
     
     </summary>
     
@@ -236,11 +236,11 @@
   </entry>
   
   <entry>
-    <title>python 实现人数识别目标识别</title>
-    <link href="https://squansh.top/posts/54324/"/>
-    <id>https://squansh.top/posts/54324/</id>
+    <title>python实现人数识别目标识别</title>
+    <link href="https://squansh.top/python%E5%AE%9E%E7%8E%B0%E4%BA%BA%E6%95%B0%E8%AF%86%E5%88%AB%E7%9B%AE%E6%A0%87%E8%AF%86%E5%88%AB.html"/>
+    <id>https://squansh.top/python%E5%AE%9E%E7%8E%B0%E4%BA%BA%E6%95%B0%E8%AF%86%E5%88%AB%E7%9B%AE%E6%A0%87%E8%AF%86%E5%88%AB.html</id>
     <published>2020-06-17T11:34:30.000Z</published>
-    <updated>2020-06-17T11:36:21.295Z</updated>
+    <updated>2020-07-08T02:54:42.546Z</updated>
     
     <summary type="html">
     
@@ -268,15 +268,15 @@
   
   <entry>
     <title>ERROR Cannot uninstall &#39;xxx&#39;. It is a distutils installed project and thus we cannot accurately</title>
-    <link href="https://squansh.top/posts/14185/"/>
-    <id>https://squansh.top/posts/14185/</id>
+    <link href="https://squansh.top/ERROR%EF%BC%9ACannot%20uninstall%20&#39;xxx&#39;.%20It%20is%20a%20distutils%20installed%20project%20and%20thus%20we%20cannot%20accurately.html"/>
+    <id>https://squansh.top/ERROR%EF%BC%9ACannot%20uninstall%20&#39;xxx&#39;.%20It%20is%20a%20distutils%20installed%20project%20and%20thus%20we%20cannot%20accurately.html</id>
     <published>2020-06-17T11:31:58.000Z</published>
-    <updated>2020-06-17T11:34:21.207Z</updated>
+    <updated>2020-07-08T02:54:42.486Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt; 今天安装 &lt;code&gt;serial&lt;/code&gt; 时报错：&lt;/p&gt;
-&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;ERROR: Cannot uninstall &lt;span class=&quot;string&quot;&gt;&#39;PyYAML&#39;&lt;/span&gt;. It &lt;span class=&quot;keyword&quot;&gt;is&lt;/span&gt; a distutils installed project &lt;span class=&quot;keyword&quot;&gt;and&lt;/span&gt; thus we&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;       cannot accurately determine which files belong to it which would lead to &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;       only a partial uninstall .&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; 错误：无法卸载“ PyYAML”。 这是一个 distutils 安装的项目，因此我们 &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        无法准确确定哪些文件属于该文件，这将导致 &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        仅部分卸载 &lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+      &lt;p&gt;今天安装 &lt;code&gt;serial&lt;/code&gt; 时报错：&lt;/p&gt;
+&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;ERROR: Cannot uninstall &lt;span class=&quot;string&quot;&gt;&#39;PyYAML&#39;&lt;/span&gt;. It &lt;span class=&quot;keyword&quot;&gt;is&lt;/span&gt; a distutils installed project &lt;span class=&quot;keyword&quot;&gt;and&lt;/span&gt; thus we&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;       cannot accurately determine which files belong to it which would lead to &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;       only a partial uninstall .&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;错误：无法卸载“ PyYAML”。 这是一个distutils安装的项目，因此我们&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        无法准确确定哪些文件属于该文件，这将导致&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        仅部分卸载&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
@@ -294,18 +294,18 @@
   
   <entry>
     <title>pytorch 安装过程出现： No module named &#39;tools.nnwrap&#39;——已解决</title>
-    <link href="https://squansh.top/posts/19425/"/>
-    <id>https://squansh.top/posts/19425/</id>
+    <link href="https://squansh.top/pytorch%20%E5%AE%89%E8%A3%85%E8%BF%87%E7%A8%8B%E5%87%BA%E7%8E%B0%EF%BC%9A%20No%20module%20named%20&#39;tools.nnwrap&#39;%E2%80%94%E2%80%94%E5%B7%B2%E8%A7%A3%E5%86%B3.html"/>
+    <id>https://squansh.top/pytorch%20%E5%AE%89%E8%A3%85%E8%BF%87%E7%A8%8B%E5%87%BA%E7%8E%B0%EF%BC%9A%20No%20module%20named%20&#39;tools.nnwrap&#39;%E2%80%94%E2%80%94%E5%B7%B2%E8%A7%A3%E5%86%B3.html</id>
     <published>2020-06-17T11:30:56.000Z</published>
-    <updated>2020-06-17T11:31:46.351Z</updated>
+    <updated>2020-07-08T02:54:42.566Z</updated>
     
     <summary type="html">
     
       &lt;blockquote&gt;
-&lt;p&gt; 环境：win10、py3.6&lt;/p&gt;
+&lt;p&gt;环境：win10、py3.6&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt; 可以先参考下面这个博文：&lt;br&gt;&lt;a href=&quot;https://blog.csdn.net/qq_45504119/article/details/104905471&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt; 安装 torch 详细解决方法 &lt;/a&gt;&lt;/p&gt;
-&lt;p&gt; 这篇文章是我之前写的，后来重装系统，忘了没安装 torch，所以报错，里面文件下载和安装说的很详细。&lt;/p&gt;
+&lt;p&gt;可以先参考下面这个博文：&lt;br&gt;&lt;a href=&quot;https://blog.csdn.net/qq_45504119/article/details/104905471&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;安装 torch 详细解决方法&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;这篇文章是我之前写的，后来重装系统，忘了没安装 torch，所以报错，里面文件下载和安装说的很详细。&lt;/p&gt;
     
     </summary>
     
@@ -322,16 +322,16 @@
   </entry>
   
   <entry>
-    <title>cpu 运行 gpu 上的 pytorch 报错 AssertionErrortorch not compiled with cuda enabled——已解决</title>
-    <link href="https://squansh.top/posts/54195/"/>
-    <id>https://squansh.top/posts/54195/</id>
+    <title>cpu运行gpu上的pytorch 报错AssertionErrortorch not compiled with cuda enabled——已解决</title>
+    <link href="https://squansh.top/cpu%E8%BF%90%E8%A1%8Cgpu%E4%B8%8A%E7%9A%84pytorch%20%E6%8A%A5%E9%94%99%EF%BC%9AAssertionErrortorch%20not%20compiled%20with%20cuda%20enabled%E2%80%94%E2%80%94%E5%B7%B2%E8%A7%A3%E5%86%B3.html"/>
+    <id>https://squansh.top/cpu%E8%BF%90%E8%A1%8Cgpu%E4%B8%8A%E7%9A%84pytorch%20%E6%8A%A5%E9%94%99%EF%BC%9AAssertionErrortorch%20not%20compiled%20with%20cuda%20enabled%E2%80%94%E2%80%94%E5%B7%B2%E8%A7%A3%E5%86%B3.html</id>
     <published>2020-06-17T11:29:35.000Z</published>
-    <updated>2020-06-17T11:30:47.680Z</updated>
+    <updated>2020-07-08T02:54:42.546Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt; 感觉今天介绍的这种方法可以解决所有这种报错出现的问题 &lt;/p&gt;
-&lt;h2 id=&quot;事件发生：&quot;&gt;&lt;a href=&quot;# 事件发生：&quot; class=&quot;headerlink&quot; title=&quot;事件发生：&quot;&gt;&lt;/a&gt; 事件发生：&lt;/h2&gt;&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt; 报错：AssertionError:torch &lt;span class=&quot;keyword&quot;&gt;not&lt;/span&gt; compiled &lt;span class=&quot;keyword&quot;&gt;with&lt;/span&gt; cuda enabled&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+      &lt;p&gt;感觉今天介绍的这种方法可以解决所有这种报错出现的问题&lt;/p&gt;
+&lt;h2 id=&quot;事件发生：&quot;&gt;&lt;a href=&quot;#事件发生：&quot; class=&quot;headerlink&quot; title=&quot;事件发生：&quot;&gt;&lt;/a&gt;事件发生：&lt;/h2&gt;&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;报错：AssertionError:torch &lt;span class=&quot;keyword&quot;&gt;not&lt;/span&gt; compiled &lt;span class=&quot;keyword&quot;&gt;with&lt;/span&gt; cuda enabled&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://img-blog.csdnimg.cn/20200409104210488.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70&quot; alt=&quot;在这里插入图片描述&quot;&gt;&lt;/p&gt;
     
@@ -350,18 +350,18 @@
   </entry>
   
   <entry>
-    <title>matlab 创建下载进度条</title>
-    <link href="https://squansh.top/posts/65431/"/>
-    <id>https://squansh.top/posts/65431/</id>
+    <title>matlab创建下载进度条</title>
+    <link href="https://squansh.top/matlab%E5%88%9B%E5%BB%BA%E4%B8%8B%E8%BD%BD%E8%BF%9B%E5%BA%A6%E6%9D%A1.html"/>
+    <id>https://squansh.top/matlab%E5%88%9B%E5%BB%BA%E4%B8%8B%E8%BD%BD%E8%BF%9B%E5%BA%A6%E6%9D%A1.html</id>
     <published>2020-06-17T11:28:28.000Z</published>
-    <updated>2020-06-18T01:44:16.085Z</updated>
+    <updated>2020-07-08T02:54:42.556Z</updated>
     
     <summary type="html">
     
       &lt;blockquote&gt;
-&lt;p&gt; 最近玩 GUI 玩的比较多，想分享一些好玩的东西，就从最简单的开始吧 &lt;/p&gt;
+&lt;p&gt;最近玩GUI玩的比较多，想分享一些好玩的东西，就从最简单的开始吧&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt; 大家都知道 matlab 的进度条吧，这里实现了创建进度条，并且当进度条达到 100% 时就关闭进度条界面 &lt;/p&gt;
+&lt;p&gt;大家都知道matlab的进度条吧，这里实现了创建进度条，并且当进度条达到100%时就关闭进度条界面&lt;/p&gt;
     
     </summary>
     
@@ -374,18 +374,18 @@
   </entry>
   
   <entry>
-    <title>安装 Mathtype 后无法使用——已解决</title>
-    <link href="https://squansh.top/posts/30328/"/>
-    <id>https://squansh.top/posts/30328/</id>
+    <title>安装Mathtype后无法使用——已解决</title>
+    <link href="https://squansh.top/%E5%AE%89%E8%A3%85Mathtype%E5%90%8E%E6%97%A0%E6%B3%95%E4%BD%BF%E7%94%A8%E2%80%94%E2%80%94%E5%B7%B2%E8%A7%A3%E5%86%B3.html"/>
+    <id>https://squansh.top/%E5%AE%89%E8%A3%85Mathtype%E5%90%8E%E6%97%A0%E6%B3%95%E4%BD%BF%E7%94%A8%E2%80%94%E2%80%94%E5%B7%B2%E8%A7%A3%E5%86%B3.html</id>
     <published>2020-06-17T11:26:04.000Z</published>
-    <updated>2020-06-17T11:28:15.559Z</updated>
+    <updated>2020-07-08T02:54:42.576Z</updated>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;事件背景：&quot;&gt;&lt;a href=&quot;# 事件背景：&quot; class=&quot;headerlink&quot; title=&quot;事件背景：&quot;&gt;&lt;/a&gt; 事件背景：&lt;/h2&gt;&lt;blockquote&gt;
+      &lt;h2 id=&quot;事件背景：&quot;&gt;&lt;a href=&quot;#事件背景：&quot; class=&quot;headerlink&quot; title=&quot;事件背景：&quot;&gt;&lt;/a&gt;事件背景：&lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;word 中安装 mathtype 后无法正常使用，总是提示文件未找到等报错？？？&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt; 比如我遇到的一下情况：&lt;/p&gt;
+&lt;p&gt;比如我遇到的一下情况：&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://img-blog.csdnimg.cn/20200406194329852.png&quot; alt=&quot;在这里插入图片描述&quot;&gt;&lt;/p&gt;
     
     </summary>
@@ -399,17 +399,17 @@
   </entry>
   
   <entry>
-    <title>Office2016 与 Visio2016 不兼容——已解决</title>
-    <link href="https://squansh.top/posts/1019/"/>
-    <id>https://squansh.top/posts/1019/</id>
+    <title>Office2016与Visio2016不兼容——已解决</title>
+    <link href="https://squansh.top/Office2016%E4%B8%8EVisio2016%E4%B8%8D%E5%85%BC%E5%AE%B9%E2%80%94%E2%80%94%E5%B7%B2%E8%A7%A3%E5%86%B3.html"/>
+    <id>https://squansh.top/Office2016%E4%B8%8EVisio2016%E4%B8%8D%E5%85%BC%E5%AE%B9%E2%80%94%E2%80%94%E5%B7%B2%E8%A7%A3%E5%86%B3.html</id>
     <published>2020-06-17T11:23:20.000Z</published>
-    <updated>2020-06-17T11:25:42.535Z</updated>
+    <updated>2020-07-08T02:54:42.506Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;很久之前为了写专利下载的 Visio2016，平时也只用 wps，没用过 office。&lt;/p&gt;
+      &lt;p&gt;很久之前为了写专利下载的Visio2016，平时也只用wps，没用过office。&lt;/p&gt;
 &lt;p&gt;最近安装 office 时提示：&lt;/p&gt;
-&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;很抱歉，无法安装 office，因为您的计算机上已经安装了 office 程序：&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Microsoft Office &lt;span class=&quot;number&quot;&gt;32&lt;/span&gt;-bit Components &lt;span class=&quot;number&quot;&gt;2016&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Microsoft Visio Professional &lt;span class=&quot;number&quot;&gt;2016&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;32&lt;/span&gt;位和 &lt;span class=&quot;number&quot;&gt;64&lt;/span&gt; 位版本的 Office 程序不兼容，因此您一次只能安装一种类型。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;请尝试安装 &lt;span class=&quot;number&quot;&gt;64&lt;/span&gt; 位版本的 Office，或卸载其他 &lt;span class=&quot;number&quot;&gt;64&lt;/span&gt; 位 Office 程序，然后再尝试此安装。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;很抱歉，无法安装office，因为您的计算机上已经安装了office程序：&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Microsoft Office &lt;span class=&quot;number&quot;&gt;32&lt;/span&gt;-bit Components &lt;span class=&quot;number&quot;&gt;2016&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Microsoft Visio Professional &lt;span class=&quot;number&quot;&gt;2016&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;32&lt;/span&gt;位和&lt;span class=&quot;number&quot;&gt;64&lt;/span&gt;位版本的Office程序不兼容，因此您一次只能安装一种类型。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;请尝试安装&lt;span class=&quot;number&quot;&gt;64&lt;/span&gt;位版本的Office，或卸载其他&lt;span class=&quot;number&quot;&gt;64&lt;/span&gt;位Office程序，然后再尝试此安装。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
@@ -422,19 +422,19 @@
   </entry>
   
   <entry>
-    <title>python 绝对兼容的库配置——机器学习 &amp; 爬虫</title>
-    <link href="https://squansh.top/posts/3611/"/>
-    <id>https://squansh.top/posts/3611/</id>
+    <title>python绝对兼容的库配置——机器学习&amp;爬虫</title>
+    <link href="https://squansh.top/python%E7%BB%9D%E5%AF%B9%E5%85%BC%E5%AE%B9%E7%9A%84%E5%BA%93%E9%85%8D%E7%BD%AE%E2%80%94%E2%80%94%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0&amp;%E7%88%AC%E8%99%AB.html"/>
+    <id>https://squansh.top/python%E7%BB%9D%E5%AF%B9%E5%85%BC%E5%AE%B9%E7%9A%84%E5%BA%93%E9%85%8D%E7%BD%AE%E2%80%94%E2%80%94%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0&amp;%E7%88%AC%E8%99%AB.html</id>
     <published>2020-06-17T11:22:13.000Z</published>
-    <updated>2020-06-17T11:23:10.399Z</updated>
+    <updated>2020-07-08T02:54:42.566Z</updated>
     
     <summary type="html">
     
       &lt;blockquote&gt;
 &lt;p&gt; &lt;strong&gt;Time: 2020/4/1   15:01&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt; 更新一下我的 python 库的版本，以免以后我自己搞错了…&lt;/p&gt;
-&lt;p&gt; 相比上次机器学习的库，这次多了部分爬虫的库 &lt;/p&gt;
+&lt;p&gt;更新一下我的 python 库的版本，以免以后我自己搞错了…&lt;/p&gt;
+&lt;p&gt;相比上次机器学习的库，这次多了部分爬虫的库&lt;/p&gt;
     
     </summary>
     
@@ -451,18 +451,18 @@
   </entry>
   
   <entry>
-    <title>教女朋友学会用 win10+yolov3+python 训练自己的模型</title>
-    <link href="https://squansh.top/posts/63366/"/>
-    <id>https://squansh.top/posts/63366/</id>
+    <title>教女朋友学会用win10+yolov3+python训练自己的模型</title>
+    <link href="https://squansh.top/%E6%95%99%E5%A5%B3%E6%9C%8B%E5%8F%8B%E5%AD%A6%E4%BC%9A%E7%94%A8win10+yolov3+python%E8%AE%AD%E7%BB%83%E8%87%AA%E5%B7%B1%E7%9A%84%E6%A8%A1%E5%9E%8B.html"/>
+    <id>https://squansh.top/%E6%95%99%E5%A5%B3%E6%9C%8B%E5%8F%8B%E5%AD%A6%E4%BC%9A%E7%94%A8win10+yolov3+python%E8%AE%AD%E7%BB%83%E8%87%AA%E5%B7%B1%E7%9A%84%E6%A8%A1%E5%9E%8B.html</id>
     <published>2020-06-17T11:18:54.000Z</published>
-    <updated>2020-06-17T11:21:59.047Z</updated>
+    <updated>2020-07-08T02:54:42.586Z</updated>
     
     <summary type="html">
     
       &lt;blockquote&gt;
-&lt;p&gt;times：2020/3/23&lt;br&gt;操作系统：win10&lt;br&gt;环境：python 3.6&lt;br&gt;因为我之前把所有内容写在一篇文章里非常的乱，所以本文主线是训练自己的 yolo.h5 去识别图像中的人，所有小细节的操作，我都在文中添加了链接，新手的话需要注意看一下。&lt;br&gt;// 有任何的问题都可以直接评论，还有资料的话直接留言邮箱，说明问题 //&lt;br&gt;// 也可以评论下加下微信询问 //&lt;br&gt;大家一起加油学习 yolo，之后我会再出一篇详细介绍 yolo 代码的文章 &lt;br&gt; 新创建的小小交流群：977947271 想要资料的也可以在群里要哦&lt;br&gt;2020/5/30：&lt;/p&gt;
+&lt;p&gt;times：2020/3/23&lt;br&gt;操作系统：win10&lt;br&gt;环境：python 3.6&lt;br&gt;因为我之前把所有内容写在一篇文章里非常的乱，所以本文主线是训练自己的 yolo.h5 去识别图像中的人，所有小细节的操作，我都在文中添加了链接，新手的话需要注意看一下。&lt;br&gt;// 有任何的问题都可以直接评论，还有资料的话直接留言邮箱，说明问题//&lt;br&gt;//也可以评论下加下微信询问//&lt;br&gt;大家一起加油学习yolo，之后我会再出一篇详细介绍yolo代码的文章&lt;br&gt;新创建的小小交流群：977947271 想要资料的也可以在群里要哦&lt;br&gt;2020/5/30：&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;如果你是 yolo 小白，或者环境配置等一直报错，请先参阅上一篇博文：&lt;a href=&quot;https://blog.csdn.net/qq_45504119/article/details/105033492&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;keras-yolov3 目标检测详解——适合新手&lt;/a&gt; (环境配置、用官方权重识别自己的图片)&lt;/p&gt;
+&lt;p&gt;如果你是 yolo 小白，或者环境配置等一直报错，请先参阅上一篇博文：&lt;a href=&quot;https://blog.csdn.net/qq_45504119/article/details/105033492&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;keras-yolov3目标检测详解——适合新手&lt;/a&gt; (环境配置、用官方权重识别自己的图片)&lt;/p&gt;
     
     </summary>
     
@@ -479,16 +479,16 @@
   </entry>
   
   <entry>
-    <title>python 绝对兼容的库配置——机器学习</title>
-    <link href="https://squansh.top/posts/37357/"/>
-    <id>https://squansh.top/posts/37357/</id>
+    <title>python绝对兼容的库配置——机器学习</title>
+    <link href="https://squansh.top/python%E7%BB%9D%E5%AF%B9%E5%85%BC%E5%AE%B9%E7%9A%84%E5%BA%93%E9%85%8D%E7%BD%AE%E2%80%94%E2%80%94%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0.html"/>
+    <id>https://squansh.top/python%E7%BB%9D%E5%AF%B9%E5%85%BC%E5%AE%B9%E7%9A%84%E5%BA%93%E9%85%8D%E7%BD%AE%E2%80%94%E2%80%94%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0.html</id>
     <published>2020-06-17T11:16:52.000Z</published>
-    <updated>2020-06-17T11:19:41.014Z</updated>
+    <updated>2020-07-08T02:54:42.556Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt; 先给大家推荐一个：&lt;a href=&quot;https://docs.floydhub.com/guides/environments/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt; 深度学习环境兼容性配置 &lt;/a&gt;&lt;/p&gt;
-&lt;p&gt; 接下来记录一下我的 python 库的版本，以免以后我自己搞错了…&lt;/p&gt;
+      &lt;p&gt;先给大家推荐一个：&lt;a href=&quot;https://docs.floydhub.com/guides/environments/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;深度学习环境兼容性配置&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;接下来记录一下我的 python 库的版本，以免以后我自己搞错了…&lt;/p&gt;
     
     </summary>
     
@@ -505,18 +505,18 @@
   </entry>
   
   <entry>
-    <title>labelimg 使用方法：如何标注图片</title>
-    <link href="https://squansh.top/posts/50785/"/>
-    <id>https://squansh.top/posts/50785/</id>
+    <title>labelimg使用方法：如何标注图片</title>
+    <link href="https://squansh.top/labelimg%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%EF%BC%9A%E5%A6%82%E4%BD%95%E6%A0%87%E6%B3%A8%E5%9B%BE%E7%89%87.html"/>
+    <id>https://squansh.top/labelimg%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%EF%BC%9A%E5%A6%82%E4%BD%95%E6%A0%87%E6%B3%A8%E5%9B%BE%E7%89%87.html</id>
     <published>2020-06-17T11:11:38.000Z</published>
-    <updated>2020-06-17T11:14:10.214Z</updated>
+    <updated>2020-07-08T02:54:42.556Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;labelimg 是一款专门用于贴标签的软件 &lt;/p&gt;
-&lt;h2 id=&quot;如何下载 -labelimg：&quot;&gt;&lt;a href=&quot;# 如何下载 -labelimg：&quot; class=&quot;headerlink&quot; title=&quot;如何下载 labelimg：&quot;&gt;&lt;/a&gt; 如何下载 labelimg：&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;1、anaconda 中下载：&lt;/strong&gt;&lt;/p&gt;
+      &lt;p&gt;labelimg 是一款专门用于贴标签的软件&lt;/p&gt;
+&lt;h2 id=&quot;如何下载-labelimg：&quot;&gt;&lt;a href=&quot;#如何下载-labelimg：&quot; class=&quot;headerlink&quot; title=&quot;如何下载 labelimg：&quot;&gt;&lt;/a&gt;如何下载 labelimg：&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;1、anaconda 中下载：&lt;/strong&gt;&lt;/p&gt;
 &lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;pip install -i https://pypi.tuna.tsinghua.edu.cn/simple labelimg&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt; 因为我下载过了，所以显示：&lt;code&gt;Requirement already satisfied&lt;/code&gt;&lt;br&gt;&lt;img src=&quot;https://img-blog.csdnimg.cn/20200322230932469.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70&quot; alt=&quot;在这里插入图片描述&quot;&gt;&lt;/p&gt;
+&lt;p&gt;因为我下载过了，所以显示：&lt;code&gt;Requirement already satisfied&lt;/code&gt;&lt;br&gt;&lt;img src=&quot;https://img-blog.csdnimg.cn/20200322230932469.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70&quot; alt=&quot;在这里插入图片描述&quot;&gt;&lt;/p&gt;
     
     </summary>
     
@@ -533,22 +533,22 @@
   </entry>
   
   <entry>
-    <title>教女友学会 keras-yolov3 目标检测详解——适合新手</title>
-    <link href="https://squansh.top/posts/12478/"/>
-    <id>https://squansh.top/posts/12478/</id>
+    <title>教女友学会keras-yolov3目标检测详解——适合新手</title>
+    <link href="https://squansh.top/%E6%95%99%E5%A5%B3%E5%8F%8B%E5%AD%A6%E4%BC%9Akeras-yolov3%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B%E8%AF%A6%E8%A7%A3%E2%80%94%E2%80%94%E9%80%82%E5%90%88%E6%96%B0%E6%89%8B.html"/>
+    <id>https://squansh.top/%E6%95%99%E5%A5%B3%E5%8F%8B%E5%AD%A6%E4%BC%9Akeras-yolov3%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B%E8%AF%A6%E8%A7%A3%E2%80%94%E2%80%94%E9%80%82%E5%90%88%E6%96%B0%E6%89%8B.html</id>
     <published>2020-06-17T11:09:25.000Z</published>
-    <updated>2020-06-17T11:15:17.022Z</updated>
+    <updated>2020-07-08T02:54:42.586Z</updated>
     
     <summary type="html">
     
       &lt;blockquote&gt;
-&lt;p&gt; 现在网上能找到的博客我现在看起来很明白，虽然讲的很详细，但是对于几天前的我真的看不明白，因为新手会遇到各种各样毫无征兆的问题，所以我决定写一篇面向新手的如何去使用 yolo 和如何去做自己的数据集来训练属于自己的模型。因为我也是新手，所以不说原理，只谈操作方法。&lt;/p&gt;
+&lt;p&gt;现在网上能找到的博客我现在看起来很明白，虽然讲的很详细，但是对于几天前的我真的看不明白，因为新手会遇到各种各样毫无征兆的问题，所以我决定写一篇面向新手的如何去使用 yolo 和如何去做自己的数据集来训练属于自己的模型。因为我也是新手，所以不说原理，只谈操作方法。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;blockquote&gt;
-&lt;p&gt;2020/5/30：&lt;br&gt; 近日每天都有十几个很明显的小号加群，而且有的大号进群竟然打广告和卖不良物品，经我和群友讨论后，加群需要 1 元钱，但是进群后我会将钱退还给大家，只是为了过滤一些不好的人。&lt;/p&gt;
+&lt;p&gt;2020/5/30：&lt;br&gt;近日每天都有十几个很明显的小号加群，而且有的大号进群竟然打广告和卖不良物品，经我和群友讨论后，加群需要1元钱，但是进群后我会将钱退还给大家，只是为了过滤一些不好的人。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;blockquote&gt;
-&lt;p&gt; 因为东西很杂，我会把小东西分出去写，并且在本文中附上链接。&lt;/p&gt;
+&lt;p&gt;因为东西很杂，我会把小东西分出去写，并且在本文中附上链接。&lt;/p&gt;
 &lt;/blockquote&gt;
     
     </summary>
