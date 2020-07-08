@@ -1,0 +1,45 @@
+body {
+  background: url("/images/donghua2.jpeg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 50% 50%;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+/*这是设置底部文字, 看个人需要修改*/
+}
+body #footer > div > div {
+  color: #eee;
+}
+.sidebar {
+  left: -15rem;
+  width: 15rem;
+}
+.sidebar.on {
+  left: 0;
+}
+.content.on {
+  margin-left: 0 !important;
+}
+.navbar-toggle {
+  left: 16.5rem;
+}
+.search-form-wrap {
+  right: 15rem;
+}
+@media (min-width: 768px) {
+  .outer,
+  .wrap {
+    width: 99rem !important;
+  }
+}
+@media (max-width: 768px) {
+  .tocbot {
+    display: none !important;
+  }
+  .content.on {
+    transform: translateX(15rem);
+  }
+}
