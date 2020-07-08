@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Anaconda镜像下载地址</title>
+    <url>/Anaconda%E9%95%9C%E5%83%8F%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80.html</url>
+    <content><![CDATA[<p>清华大学镜像：<a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/" target="_blank" rel="noopener">https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/</a><br><img src="https://img-blog.csdnimg.cn/20200217154416803.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<a id="more"></a>
+<p>这里建议大家下载这里画圈的版本，是python3.6的Windows版本。</p>
+<p>我试了anaconda官网的下载，基本速度在10k左右；用清华镜像下载的话速度在6M上下，速度很快。</p>
+<p>安装的话就是正常安装，安装过程中全部选择默认就可以了，我也试过不用默认的安装方式，并未发现什么不同。所以不用担心。</p>
+<p>下次会发一篇关于新手如何了解anaconda的文章。</p>
+]]></content>
+      <categories>
+        <category>python</category>
+        <category>入门</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>anaconda</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Command “python setup.py egg_info” failed——完美解决</title>
     <url>/Command%20%E2%80%9Cpython%20setup.py%20egg_info%E2%80%9D%20failed%E2%80%94%E2%80%94%E5%AE%8C%E7%BE%8E%E8%A7%A3%E5%86%B3.html</url>
     <content><![CDATA[<p>用 ubuntu 安装 <code>django-mdeditor==0.1.13</code> 时报错：</p>
@@ -47,25 +66,6 @@
       <tags>
         <tag>python</tag>
         <tag>error&amp;库</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Anaconda镜像下载地址</title>
-    <url>/Anaconda%E9%95%9C%E5%83%8F%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80.html</url>
-    <content><![CDATA[<p>清华大学镜像：<a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/" target="_blank" rel="noopener">https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/</a><br><img src="https://img-blog.csdnimg.cn/20200217154416803.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<a id="more"></a>
-<p>这里建议大家下载这里画圈的版本，是python3.6的Windows版本。</p>
-<p>我试了anaconda官网的下载，基本速度在10k左右；用清华镜像下载的话速度在6M上下，速度很快。</p>
-<p>安装的话就是正常安装，安装过程中全部选择默认就可以了，我也试过不用默认的安装方式，并未发现什么不同。所以不用担心。</p>
-<p>下次会发一篇关于新手如何了解anaconda的文章。</p>
-]]></content>
-      <categories>
-        <category>python</category>
-        <category>入门</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>anaconda</tag>
       </tags>
   </entry>
   <entry>
@@ -822,6 +822,32 @@ Did you mean &#39;conda create&#39;?</code></p>
       </tags>
   </entry>
   <entry>
+    <title>Win10自带的虚拟机如何打开—Hyper-v</title>
+    <url>/Win10%E8%87%AA%E5%B8%A6%E7%9A%84%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%A6%82%E4%BD%95%E6%89%93%E5%BC%80%E2%80%94Hyper-v.html</url>
+    <content><![CDATA[<p>作为一个程序员电脑里面怎么能没有安装虚拟机呢…</p>
+<p>我之前装的虚拟机是VMware，配置的环境是openSUSE（大多数程序员好像用Ubuntu）</p>
+<p>作为电气工程的学生，我也不了解程序员界的行情…..这些事情也无从考究</p>
+<p>不过最近开始使用win10自带的虚拟机Hyper-v了，不过会和VM有兼容性问题。</p>
+<a id="more"></a>
+<p>直接上操作：<br>    打开 “控制面板”—&gt;“程序”<br><img src="https://img-blog.csdnimg.cn/20200222215045728.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>选择“启用或关闭windows功能”<br><img src="https://img-blog.csdnimg.cn/20200222215429330.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>选中Hyper-v的所有工具—就可以点击“确定”等待了<br><img src="https://img-blog.csdnimg.cn/20200222215807339.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200222215905888.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>这里让电脑立即重启<br><img src="https://img-blog.csdnimg.cn/20200222215954888.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>一般来说重启后就能找到hyper-v</p>
+<p>可是我的电脑重启时竟然显示无法正常安装</p>
+<p>我一开始觉得是VM的兼容性问题，我还傻乎乎的把VM卸载了（我之前用VM是为了运行R语言代码，后来就没怎么用过）</p>
+<p>结果还是不行</p>
+<p>后来在windows论坛上找到了解决方法</p>
+<p>“win+X”进入管理员PowerShell运行模式——&gt;</p>
+<p>输入</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">.\bcdedit /<span class="built_in">set</span> hypervisorlaunchtype <span class="keyword">auto</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/20200222223623274.png" alt="在这里插入图片描述"><br>显示操作成功完成即可</p>
+<p>最后结果：<br><img src="https://img-blog.csdnimg.cn/2020022222372689.png" alt="在这里插入图片描述"><br>有需要 openSUSE 资源的朋友可以找我，压缩资源我电脑里还是有的。</p>
+]]></content>
+      <categories>
+        <category>win10</category>
+      </categories>
+      <tags>
+        <tag>win10</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>anaconda 配置 yolov3 环境</title>
     <url>/anaconda%20%E9%85%8D%E7%BD%AE%20yolov3%20%E7%8E%AF%E5%A2%83.html</url>
     <content><![CDATA[<h2 id="1、-使用清华镜像创建环境"><a href="#1、-使用清华镜像创建环境" class="headerlink" title="1、 使用清华镜像创建环境"></a>1、 使用清华镜像创建环境</h2><p>输入：</p>
@@ -858,32 +884,6 @@ Did you mean &#39;conda create&#39;?</code></p>
       <tags>
         <tag>python</tag>
         <tag>机器视觉</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Win10自带的虚拟机如何打开—Hyper-v</title>
-    <url>/Win10%E8%87%AA%E5%B8%A6%E7%9A%84%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%A6%82%E4%BD%95%E6%89%93%E5%BC%80%E2%80%94Hyper-v.html</url>
-    <content><![CDATA[<p>作为一个程序员电脑里面怎么能没有安装虚拟机呢…</p>
-<p>我之前装的虚拟机是VMware，配置的环境是openSUSE（大多数程序员好像用Ubuntu）</p>
-<p>作为电气工程的学生，我也不了解程序员界的行情…..这些事情也无从考究</p>
-<p>不过最近开始使用win10自带的虚拟机Hyper-v了，不过会和VM有兼容性问题。</p>
-<a id="more"></a>
-<p>直接上操作：<br>    打开 “控制面板”—&gt;“程序”<br><img src="https://img-blog.csdnimg.cn/20200222215045728.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>选择“启用或关闭windows功能”<br><img src="https://img-blog.csdnimg.cn/20200222215429330.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>选中Hyper-v的所有工具—就可以点击“确定”等待了<br><img src="https://img-blog.csdnimg.cn/20200222215807339.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200222215905888.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>这里让电脑立即重启<br><img src="https://img-blog.csdnimg.cn/20200222215954888.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>一般来说重启后就能找到hyper-v</p>
-<p>可是我的电脑重启时竟然显示无法正常安装</p>
-<p>我一开始觉得是VM的兼容性问题，我还傻乎乎的把VM卸载了（我之前用VM是为了运行R语言代码，后来就没怎么用过）</p>
-<p>结果还是不行</p>
-<p>后来在windows论坛上找到了解决方法</p>
-<p>“win+X”进入管理员PowerShell运行模式——&gt;</p>
-<p>输入</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">.\bcdedit /<span class="built_in">set</span> hypervisorlaunchtype <span class="keyword">auto</span></span><br></pre></td></tr></table></figure>
-<p><img src="https://img-blog.csdnimg.cn/20200222223623274.png" alt="在这里插入图片描述"><br>显示操作成功完成即可</p>
-<p>最后结果：<br><img src="https://img-blog.csdnimg.cn/2020022222372689.png" alt="在这里插入图片描述"><br>有需要 openSUSE 资源的朋友可以找我，压缩资源我电脑里还是有的。</p>
-]]></content>
-      <categories>
-        <category>win10</category>
-      </categories>
-      <tags>
-        <tag>win10</tag>
       </tags>
   </entry>
   <entry>
@@ -1057,6 +1057,20 @@ Did you mean &#39;conda create&#39;?</code></p>
       </tags>
   </entry>
   <entry>
+    <title>python实现人数识别目标识别</title>
+    <url>/python%E5%AE%9E%E7%8E%B0%E4%BA%BA%E6%95%B0%E8%AF%86%E5%88%AB%E7%9B%AE%E6%A0%87%E8%AF%86%E5%88%AB.html</url>
+    <content><![CDATA[<p>python 实现 yolo 人数识别或目标识别：<a href="https://blog.csdn.net/qq_45504119/article/details/105033492" target="_blank" rel="noopener">https://blog.csdn.net/qq_45504119/article/details/105033492</a></p>
+]]></content>
+      <categories>
+        <category>python</category>
+        <category>机器视觉</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>机器视觉</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>python 使用镜像安装库时提示 Warning——已解决</title>
     <url>/python%20%E4%BD%BF%E7%94%A8%E9%95%9C%E5%83%8F%E5%AE%89%E8%A3%85%E5%BA%93%E6%97%B6%E6%8F%90%E7%A4%BA%20Warning%E2%80%94%E2%80%94%E5%B7%B2%E8%A7%A3%E5%86%B3.html</url>
     <content><![CDATA[<h2 id="事件起因："><a href="#事件起因：" class="headerlink" title="事件起因："></a>事件起因：</h2><p><img src="https://img-blog.csdnimg.cn/20200318014810411.png" alt="在这里插入图片描述"></p>
@@ -1080,20 +1094,6 @@ Did you mean &#39;conda create&#39;?</code></p>
       <tags>
         <tag>python</tag>
         <tag>error&amp;库</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>python实现人数识别目标识别</title>
-    <url>/python%E5%AE%9E%E7%8E%B0%E4%BA%BA%E6%95%B0%E8%AF%86%E5%88%AB%E7%9B%AE%E6%A0%87%E8%AF%86%E5%88%AB.html</url>
-    <content><![CDATA[<p>python 实现 yolo 人数识别或目标识别：<a href="https://blog.csdn.net/qq_45504119/article/details/105033492" target="_blank" rel="noopener">https://blog.csdn.net/qq_45504119/article/details/105033492</a></p>
-]]></content>
-      <categories>
-        <category>python</category>
-        <category>机器视觉</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>机器视觉</tag>
       </tags>
   </entry>
   <entry>
