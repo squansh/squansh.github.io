@@ -1,51 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Command “python setup.py egg_info” failed——完美解决</title>
-    <url>/Command%20%E2%80%9Cpython%20setup.py%20egg_info%E2%80%9D%20failed%E2%80%94%E2%80%94%E5%AE%8C%E7%BE%8E%E8%A7%A3%E5%86%B3.html</url>
-    <content><![CDATA[<p>用 ubuntu 安装 <code>django-mdeditor==0.1.13</code> 时报错：</p>
-<blockquote>
-<p>Command “python setup.py egg_info” failed with error code 1 in /tmp/pip-build-2XpM94/django-mdeditor/</p>
-</blockquote>
-<p>有人说是<code>setuptools</code>的版本太低，于是我镜像源下更新了一下： <code>pip install -i https://pypi.tuna.tsinghua.edu.cn/simple --upgrade setuptools</code></p>
-<p><img src="https://img-blog.csdnimg.cn/20200518185849980.png" alt="在这里插入图片描述"></p>
-<a id="more"></a>
-<p>完全没用</p>
-<p><img src="https://img-blog.csdnimg.cn/20200518185647662.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p><strong>解决方法：</strong><code>pip3 install django-mdeditor==0.1.13</code></p>
-<p><img src="https://img-blog.csdnimg.cn/20200518185754776.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>问题解决，之前安装 Django 也是这种报错，<code>pip</code> 换成 <code>pip3</code> 就完全解决了</p>
-]]></content>
-      <categories>
-        <category>python</category>
-        <category>error&amp;库</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>error&amp;库</tag>
-        <tag>ubuntu</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Anaconda镜像下载地址</title>
-    <url>/Anaconda%E9%95%9C%E5%83%8F%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80.html</url>
-    <content><![CDATA[<p>清华大学镜像：<a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/" target="_blank" rel="noopener">https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/</a><br><img src="https://img-blog.csdnimg.cn/20200217154416803.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<a id="more"></a>
-<p>这里建议大家下载这里画圈的版本，是python3.6的Windows版本。</p>
-<p>我试了anaconda官网的下载，基本速度在10k左右；用清华镜像下载的话速度在6M上下，速度很快。</p>
-<p>安装的话就是正常安装，安装过程中全部选择默认就可以了，我也试过不用默认的安装方式，并未发现什么不同。所以不用担心。</p>
-<p>下次会发一篇关于新手如何了解anaconda的文章。</p>
-]]></content>
-      <categories>
-        <category>python</category>
-        <category>入门</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>anaconda</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>ERROR Cannot uninstall &#39;xxx&#39;. It is a distutils installed project and thus we cannot accurately</title>
     <url>/ERROR%EF%BC%9ACannot%20uninstall%20&#39;xxx&#39;.%20It%20is%20a%20distutils%20installed%20project%20and%20thus%20we%20cannot%20accurately.html</url>
     <content><![CDATA[<p>今天安装 <code>serial</code> 时报错：</p>
@@ -69,43 +24,48 @@
       </tags>
   </entry>
   <entry>
-    <title>MATLAB安装USB Webcams工具箱出现‘error’</title>
-    <url>/MATLAB%E5%AE%89%E8%A3%85USB%20Webcams%E5%B7%A5%E5%85%B7%E7%AE%B1%E5%87%BA%E7%8E%B0%E2%80%98error%E2%80%99.html</url>
-    <content><![CDATA[<p>下载matlab的Support Package for USB Webcams</p>
-<p><img src="https://img-blog.csdnimg.cn/20200208215954945.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+    <title>Anaconda镜像下载地址</title>
+    <url>/Anaconda%E9%95%9C%E5%83%8F%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80.html</url>
+    <content><![CDATA[<p>清华大学镜像：<a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/" target="_blank" rel="noopener">https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/</a><br><img src="https://img-blog.csdnimg.cn/20200217154416803.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 <a id="more"></a>
-<p>点击安装后出现错误，无法安装<br> receive the error “There was a problem downloading the Support Package”<br> 出现这种情况一般是因为电脑和工具箱的服务器连接错误，可能是防火墙阻止连接，可以暂时禁止防护软件再重新安装。<br> 在这里说一下：有些情况重新试几次就行，但是如果一直不行就可能是proxy、firewall的原因。<br>我经过一番折腾已经下载完成了：<br><img src="https://img-blog.csdnimg.cn/20200208224301292.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>对于proxy问题，大家可以找下相关文章。<br>对于firewall<br>如果正在运行firewall，需要绕过阻碍连接mathworks服务器。<br>mathworks安装程序需要联系以下端口和地址上的mathworks服务器：<br>登录：mathworks.com<br>服务.mathworks.com<br>TCP端口80和443<br>Firewall需要绕过两个端口上两个地址的阻碍连接，<br>这些服务器不使用静态IP地址，为动态IP地址。所以需要使用域名搜索。   </p>
-<p>如果有问题可以再联系我，也可以找相关文章，此篇文章会在以后遇到具体问题时再做详细更改。           </p>
+<p>这里建议大家下载这里画圈的版本，是python3.6的Windows版本。</p>
+<p>我试了anaconda官网的下载，基本速度在10k左右；用清华镜像下载的话速度在6M上下，速度很快。</p>
+<p>安装的话就是正常安装，安装过程中全部选择默认就可以了，我也试过不用默认的安装方式，并未发现什么不同。所以不用担心。</p>
+<p>下次会发一篇关于新手如何了解anaconda的文章。</p>
 ]]></content>
       <categories>
-        <category>MATLAB</category>
+        <category>python</category>
+        <category>入门</category>
       </categories>
       <tags>
-        <tag>MATLAB</tag>
+        <tag>python</tag>
+        <tag>anaconda</tag>
       </tags>
   </entry>
   <entry>
-    <title>Matlab如何打开c++文件</title>
-    <url>/Matlab%E5%A6%82%E4%BD%95%E6%89%93%E5%BC%80c++%E6%96%87%E4%BB%B6.html</url>
-    <content><![CDATA[<p>最近在尝试视觉分析的项目</p>
-<p>总是会遇到一些cpp文件需要在matlab中运行，在这里记录一下操作</p>
-<p><strong>1、命令行输入</strong> ：<code>mex -setup</code></p>
-<p><img src="https://img-blog.csdnimg.cn/20200314231840100.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+    <title>Command “python setup.py egg_info” failed——完美解决</title>
+    <url>/Command%20%E2%80%9Cpython%20setup.py%20egg_info%E2%80%9D%20failed%E2%80%94%E2%80%94%E5%AE%8C%E7%BE%8E%E8%A7%A3%E5%86%B3.html</url>
+    <content><![CDATA[<p>用 ubuntu 安装 <code>django-mdeditor==0.1.13</code> 时报错：</p>
+<blockquote>
+<p>Command “python setup.py egg_info” failed with error code 1 in /tmp/pip-build-2XpM94/django-mdeditor/</p>
+</blockquote>
+<p>有人说是<code>setuptools</code>的版本太低，于是我镜像源下更新了一下： <code>pip install -i https://pypi.tuna.tsinghua.edu.cn/simple --upgrade setuptools</code></p>
+<p><img src="https://img-blog.csdnimg.cn/20200518185849980.png" alt="在这里插入图片描述"></p>
 <a id="more"></a>
-<p><strong>2、我这里需要再选择语言的种类</strong></p>
-<p>点击 <code>mex -setup C++</code></p>
-<p><img src="https://img-blog.csdnimg.cn/20200314232025601.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p><strong>3、运行 C 文件</strong></p>
-<p>输入 mex +文件名和后缀</p>
-<p>比如我这里需要运行名为 maxsubarray2D.cpp 的文件，</p>
-<p>所以我输入：<code>mex maxsubarray2D.cpp</code><br><img src="https://img-blog.csdnimg.cn/20200314232301967.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200314232508289.png" alt="在这里插入图片描述"><br>显示编译完成后就可以进行接下来的操作了。</p>
+<p>完全没用</p>
+<p><img src="https://img-blog.csdnimg.cn/20200518185647662.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><strong>解决方法：</strong><code>pip3 install django-mdeditor==0.1.13</code></p>
+<p><img src="https://img-blog.csdnimg.cn/20200518185754776.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>问题解决，之前安装 Django 也是这种报错，<code>pip</code> 换成 <code>pip3</code> 就完全解决了</p>
 ]]></content>
       <categories>
-        <category>MATLAB</category>
+        <category>python</category>
+        <category>error&amp;库</category>
       </categories>
       <tags>
-        <tag>MATLAB</tag>
+        <tag>python</tag>
+        <tag>error&amp;库</tag>
+        <tag>ubuntu</tag>
       </tags>
   </entry>
   <entry>
@@ -161,6 +121,55 @@
       </tags>
   </entry>
   <entry>
+    <title>MATLAB安装USB Webcams工具箱出现‘error’</title>
+    <url>/MATLAB%E5%AE%89%E8%A3%85USB%20Webcams%E5%B7%A5%E5%85%B7%E7%AE%B1%E5%87%BA%E7%8E%B0%E2%80%98error%E2%80%99.html</url>
+    <content><![CDATA[<p>下载matlab的Support Package for USB Webcams</p>
+<p><img src="https://img-blog.csdnimg.cn/20200208215954945.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<a id="more"></a>
+<p>点击安装后出现错误，无法安装<br> receive the error “There was a problem downloading the Support Package”<br> 出现这种情况一般是因为电脑和工具箱的服务器连接错误，可能是防火墙阻止连接，可以暂时禁止防护软件再重新安装。<br> 在这里说一下：有些情况重新试几次就行，但是如果一直不行就可能是proxy、firewall的原因。<br>我经过一番折腾已经下载完成了：<br><img src="https://img-blog.csdnimg.cn/20200208224301292.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>对于proxy问题，大家可以找下相关文章。<br>对于firewall<br>如果正在运行firewall，需要绕过阻碍连接mathworks服务器。<br>mathworks安装程序需要联系以下端口和地址上的mathworks服务器：<br>登录：mathworks.com<br>服务.mathworks.com<br>TCP端口80和443<br>Firewall需要绕过两个端口上两个地址的阻碍连接，<br>这些服务器不使用静态IP地址，为动态IP地址。所以需要使用域名搜索。   </p>
+<p>如果有问题可以再联系我，也可以找相关文章，此篇文章会在以后遇到具体问题时再做详细更改。           </p>
+]]></content>
+      <categories>
+        <category>MATLAB</category>
+      </categories>
+      <tags>
+        <tag>MATLAB</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>MATLAB自适应直方图均衡—adapthisteq</title>
+    <url>/MATLAB%E8%87%AA%E9%80%82%E5%BA%94%E7%9B%B4%E6%96%B9%E5%9B%BE%E5%9D%87%E8%A1%A1%E2%80%94adapthisteq.html</url>
+    <content><![CDATA[<p>今天写调用摄像头处理图像函数，用到了adapthisteq函数，顺便对adapthisteq函数做了一些总结。</p>
+<p>adapthisteq：适应直方图均衡化对比度限制器。通过转换强度图像中的值来改变图像的对比度。</p>
+<p>histeq：自适应直方图均衡。</p>
+<a id="more"></a>
+<p>与histeq函数不同的是，adapthisteq处理的是图片的小块区域的数据，而不是整个图像对比度增强，使输出区域的直方图大约匹配指定的直方图。相邻的小块用双线性插值把它们混合在一起，以消除人工诱导的边界。对比，尤其是在同质区域，可以限制，以避免放大图像中可能存在的噪声。</p>
+<p>G = adapthisteq(I, param1, val1, param2, val2, …)</p>
+<p><strong>‘NumTiles’</strong>：由正整数组成的二元向量[ m, n ]。[ m, n ]为指定小块区域的行列数，M 和 n 都必须至少为2。图像块的总数等于 m * n。 默认值为 [ 8,  8 ]。 </p>
+<p><strong>‘ClipLimit’</strong>  ：是从0到1的实数标量，用于限制对比度增强。数值越大，对比度越高。默认值为: 0.01。</p>
+<p><strong>‘NBins’</strong>：正整数标量。为构建直方图时使用的直方图设置容器数增强对比度的转换。更高的值结果导致有在更大的动态范围，代价是较慢的处理速度。 默认值: 256。</p>
+<p> <strong>‘Range’</strong>：’original’ 或 ‘full’. 控制输出图像数据的范围。 如果‘ Range’设置为‘ original’ ，则范围限制为[ min (i (：))  max (i (：))]。 否则，默认情况下，或者当‘ Range’设置为‘ full’时，将使用输出图像类的全部范围(e.g.    uint8  是 [0 255])。默认值：full。</p>
+<p><strong>‘Distribution’</strong>：’uniform’, ‘rayleigh’, ‘exponential’。通过指定分布类型，为图像块设置所需的直方图形状。 默认值：uniform。</p>
+<p><strong>‘Alpha’</strong>：是一个分布参数，当“ Dist”为“ rayleigh”或“ exponential”时可以使用这个参数。 默认值：0.4。</p>
+<p>下面是随手写的一份代码，可以直观的看到adapthisteq的使用方法和使用效果。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">I &#x3D; rgb2gray(imread(&#39;tupian.png&#39;));</span><br><span class="line">figure;</span><br><span class="line">imshow(I);</span><br><span class="line"></span><br><span class="line">I1 &#x3D; adapthisteq(I);</span><br><span class="line">figure;</span><br><span class="line">imshow(I1);</span><br><span class="line"></span><br><span class="line">I2 &#x3D; adapthisteq(I,&#39;NumTiles&#39;,[50 50]);</span><br><span class="line">figure;</span><br><span class="line">imshow(I2);</span><br><span class="line"></span><br><span class="line">I3 &#x3D; adapthisteq(I,&#39;NumTiles&#39;,[50 50],&#39;ClipLimit&#39;,0.5);</span><br><span class="line">figure;</span><br><span class="line">imshow(I3);</span><br><span class="line"></span><br><span class="line">I4 &#x3D; adapthisteq(I,&#39;NumTiles&#39;,[50 50],&#39;ClipLimit&#39;,...</span><br><span class="line">0.5,&#39;NBins&#39;,400);</span><br><span class="line">figure;</span><br><span class="line">imshow(I4);</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/2020020917231924.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><img src="https://img-blog.csdnimg.cn/20200209172340536.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200209172424575.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/2020020917250378.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200209172520303.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>这里注意第一行代码，</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">I &#x3D; rgb2gray(imread(&#39;tupian.png&#39;));</span><br><span class="line">I &#x3D; imread(&#39;tupian.png&#39;);</span><br></pre></td></tr></table></figure>
+
+<p>很多人会忘记做灰度处理导致adapthisteq使用错误。</p>
+<p>写文章时间较紧，如有错误，还请指正。</p>
+]]></content>
+      <categories>
+        <category>MATLAB</category>
+      </categories>
+      <tags>
+        <tag>MATLAB</tag>
+        <tag>语法笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>MATLAB账户未关联到许可证—无法打开help文档—解决方法</title>
     <url>/MATLAB%E8%B4%A6%E6%88%B7%E6%9C%AA%E5%85%B3%E8%81%94%E5%88%B0%E8%AE%B8%E5%8F%AF%E8%AF%81%E2%80%94%E6%97%A0%E6%B3%95%E6%89%93%E5%BC%80help%E6%96%87%E6%A1%A3%E2%80%94%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95.html</url>
     <content><![CDATA[<p>今天在使用help命令时，需要参阅一些函数的help文档，却发现我的matlab无法关联到许可证<br><img src="https://img-blog.csdnimg.cn/20200211154400903.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
@@ -177,22 +186,26 @@
       </tags>
   </entry>
   <entry>
-    <title>ModuleNotFoundError：No module named “ckeditor”</title>
-    <url>/ModuleNotFoundError%EF%BC%9ANo%20module%20named%20%E2%80%9Cckeditor%E2%80%9D.html</url>
-    <content><![CDATA[<p><img src="https://img-blog.csdnimg.cn/20200518195810898.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+    <title>Matlab如何打开c++文件</title>
+    <url>/Matlab%E5%A6%82%E4%BD%95%E6%89%93%E5%BC%80c++%E6%96%87%E4%BB%B6.html</url>
+    <content><![CDATA[<p>最近在尝试视觉分析的项目</p>
+<p>总是会遇到一些cpp文件需要在matlab中运行，在这里记录一下操作</p>
+<p><strong>1、命令行输入</strong> ：<code>mex -setup</code></p>
+<p><img src="https://img-blog.csdnimg.cn/20200314231840100.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 <a id="more"></a>
-<p>我使用 <code>pip3 install ckeditor Collecting ckeditor</code> 安装也报错</p>
-<p>解决方法：<code>pip3 install django-ckeditor
-Collecting django-ckeditor</code></p>
-<p><img src="https://img-blog.csdnimg.cn/20200518195956173.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><strong>2、我这里需要再选择语言的种类</strong></p>
+<p>点击 <code>mex -setup C++</code></p>
+<p><img src="https://img-blog.csdnimg.cn/20200314232025601.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><strong>3、运行 C 文件</strong></p>
+<p>输入 mex +文件名和后缀</p>
+<p>比如我这里需要运行名为 maxsubarray2D.cpp 的文件，</p>
+<p>所以我输入：<code>mex maxsubarray2D.cpp</code><br><img src="https://img-blog.csdnimg.cn/20200314232301967.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200314232508289.png" alt="在这里插入图片描述"><br>显示编译完成后就可以进行接下来的操作了。</p>
 ]]></content>
       <categories>
-        <category>python</category>
-        <category>error&amp;库</category>
+        <category>MATLAB</category>
       </categories>
       <tags>
-        <tag>python</tag>
-        <tag>error&amp;库</tag>
+        <tag>MATLAB</tag>
       </tags>
   </entry>
   <entry>
@@ -218,6 +231,25 @@ Did you mean &#39;conda create&#39;?</code></p>
 <p><img src="https://img-blog.csdnimg.cn/20200315230444682.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 <p><strong>等待直到下载成功</strong></p>
 <p><img src="https://img-blog.csdnimg.cn/20200315230542856.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+]]></content>
+      <categories>
+        <category>python</category>
+        <category>error&amp;库</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>error&amp;库</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>ModuleNotFoundError：No module named “ckeditor”</title>
+    <url>/ModuleNotFoundError%EF%BC%9ANo%20module%20named%20%E2%80%9Cckeditor%E2%80%9D.html</url>
+    <content><![CDATA[<p><img src="https://img-blog.csdnimg.cn/20200518195810898.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<a id="more"></a>
+<p>我使用 <code>pip3 install ckeditor Collecting ckeditor</code> 安装也报错</p>
+<p>解决方法：<code>pip3 install django-ckeditor
+Collecting django-ckeditor</code></p>
+<p><img src="https://img-blog.csdnimg.cn/20200518195956173.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 ]]></content>
       <categories>
         <category>python</category>
@@ -280,52 +312,6 @@ Did you mean &#39;conda create&#39;?</code></p>
       </tags>
   </entry>
   <entry>
-    <title>Python99道经典练习题答案</title>
-    <url>/Python99%E9%81%93%E7%BB%8F%E5%85%B8%E7%BB%83%E4%B9%A0%E9%A2%98%E7%AD%94%E6%A1%88.html</url>
-    <content><![CDATA[<p>转载与百度文库：<br><a href="https://wenku.baidu.com/view/bc745bdaf6ec4afe04a1b0717fd5360cbb1a8d16.html" target="_blank" rel="noopener">https://wenku.baidu.com/view/bc745bdaf6ec4afe04a1b0717fd5360cbb1a8d16.html</a></p>
-]]></content>
-      <categories>
-        <category>python</category>
-        <category>入门</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>入门练习题</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>MATLAB自适应直方图均衡—adapthisteq</title>
-    <url>/MATLAB%E8%87%AA%E9%80%82%E5%BA%94%E7%9B%B4%E6%96%B9%E5%9B%BE%E5%9D%87%E8%A1%A1%E2%80%94adapthisteq.html</url>
-    <content><![CDATA[<p>今天写调用摄像头处理图像函数，用到了adapthisteq函数，顺便对adapthisteq函数做了一些总结。</p>
-<p>adapthisteq：适应直方图均衡化对比度限制器。通过转换强度图像中的值来改变图像的对比度。</p>
-<p>histeq：自适应直方图均衡。</p>
-<a id="more"></a>
-<p>与histeq函数不同的是，adapthisteq处理的是图片的小块区域的数据，而不是整个图像对比度增强，使输出区域的直方图大约匹配指定的直方图。相邻的小块用双线性插值把它们混合在一起，以消除人工诱导的边界。对比，尤其是在同质区域，可以限制，以避免放大图像中可能存在的噪声。</p>
-<p>G = adapthisteq(I, param1, val1, param2, val2, …)</p>
-<p><strong>‘NumTiles’</strong>：由正整数组成的二元向量[ m, n ]。[ m, n ]为指定小块区域的行列数，M 和 n 都必须至少为2。图像块的总数等于 m * n。 默认值为 [ 8,  8 ]。 </p>
-<p><strong>‘ClipLimit’</strong>  ：是从0到1的实数标量，用于限制对比度增强。数值越大，对比度越高。默认值为: 0.01。</p>
-<p><strong>‘NBins’</strong>：正整数标量。为构建直方图时使用的直方图设置容器数增强对比度的转换。更高的值结果导致有在更大的动态范围，代价是较慢的处理速度。 默认值: 256。</p>
-<p> <strong>‘Range’</strong>：’original’ 或 ‘full’. 控制输出图像数据的范围。 如果‘ Range’设置为‘ original’ ，则范围限制为[ min (i (：))  max (i (：))]。 否则，默认情况下，或者当‘ Range’设置为‘ full’时，将使用输出图像类的全部范围(e.g.    uint8  是 [0 255])。默认值：full。</p>
-<p><strong>‘Distribution’</strong>：’uniform’, ‘rayleigh’, ‘exponential’。通过指定分布类型，为图像块设置所需的直方图形状。 默认值：uniform。</p>
-<p><strong>‘Alpha’</strong>：是一个分布参数，当“ Dist”为“ rayleigh”或“ exponential”时可以使用这个参数。 默认值：0.4。</p>
-<p>下面是随手写的一份代码，可以直观的看到adapthisteq的使用方法和使用效果。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">I &#x3D; rgb2gray(imread(&#39;tupian.png&#39;));</span><br><span class="line">figure;</span><br><span class="line">imshow(I);</span><br><span class="line"></span><br><span class="line">I1 &#x3D; adapthisteq(I);</span><br><span class="line">figure;</span><br><span class="line">imshow(I1);</span><br><span class="line"></span><br><span class="line">I2 &#x3D; adapthisteq(I,&#39;NumTiles&#39;,[50 50]);</span><br><span class="line">figure;</span><br><span class="line">imshow(I2);</span><br><span class="line"></span><br><span class="line">I3 &#x3D; adapthisteq(I,&#39;NumTiles&#39;,[50 50],&#39;ClipLimit&#39;,0.5);</span><br><span class="line">figure;</span><br><span class="line">imshow(I3);</span><br><span class="line"></span><br><span class="line">I4 &#x3D; adapthisteq(I,&#39;NumTiles&#39;,[50 50],&#39;ClipLimit&#39;,...</span><br><span class="line">0.5,&#39;NBins&#39;,400);</span><br><span class="line">figure;</span><br><span class="line">imshow(I4);</span><br></pre></td></tr></table></figure>
-<p><img src="https://img-blog.csdnimg.cn/2020020917231924.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p><img src="https://img-blog.csdnimg.cn/20200209172340536.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200209172424575.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/2020020917250378.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200209172520303.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>这里注意第一行代码，</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">I &#x3D; rgb2gray(imread(&#39;tupian.png&#39;));</span><br><span class="line">I &#x3D; imread(&#39;tupian.png&#39;);</span><br></pre></td></tr></table></figure>
-
-<p>很多人会忘记做灰度处理导致adapthisteq使用错误。</p>
-<p>写文章时间较紧，如有错误，还请指正。</p>
-]]></content>
-      <categories>
-        <category>MATLAB</category>
-      </categories>
-      <tags>
-        <tag>MATLAB</tag>
-        <tag>语法笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Python 官方的中文文档</title>
     <url>/Python%20%E5%AE%98%E6%96%B9%E7%9A%84%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3.html</url>
     <content><![CDATA[<p>今天打开Python documentation 查阅函数使用方法，像往常一样，我打开了百度翻译</p>
@@ -350,6 +336,32 @@ Did you mean &#39;conda create&#39;?</code></p>
       </categories>
       <tags>
         <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python学习笔记_1：print中end的用法 print（‘’，end=&#39;&#39;）</title>
+    <url>/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_1%EF%BC%9Aprint%E4%B8%ADend%E7%9A%84%E7%94%A8%E6%B3%95%20print%EF%BC%88%E2%80%98%E2%80%99%EF%BC%8Cend=&#39;&#39;%EF%BC%89.html</url>
+    <content><![CDATA[<p>学了那么久的python，都没有过系统的总结一下知识点，所以我决定在这里出一次python知识点集合——Python学习笔记。<br><img src="https://img-blog.csdnimg.cn/20200302170928468.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<a id="more"></a>
+<p>哈哈哈哈，就当是自己随时可以查阅的笔记本了</p>
+<p>下面开始介绍第一知识点：</p>
+<p>print 中 end 的用法：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">%先让输出两个 str</span><br><span class="line">%则两个 str 一定经过一次 <span class="keyword">print</span> 的换行操作</span><br><span class="line">&gt;&gt;&gt;print(<span class="string">'ABC'</span>)</span><br><span class="line">&gt;&gt;&gt;print(<span class="string">'DEF'</span>)</span><br><span class="line">ABC</span><br><span class="line">DEF</span><br></pre></td></tr></table></figure>
+<p>如果我加上 “end”</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">&gt;&gt;&gt;print(<span class="string">'ABC'</span>,end =<span class="string">''</span>) %这里的end中没有东西</span><br><span class="line">&gt;&gt;&gt;print(<span class="string">'DEF'</span>)</span><br><span class="line">%则结果为</span><br><span class="line">ABCDEF</span><br><span class="line">%因为end的作用就是告诉<span class="keyword">print</span>，将<span class="keyword">print</span>自带</span><br><span class="line">的换行用end中指定的str代替</span><br></pre></td></tr></table></figure>
+<p>如果我将end中填入‘ ’空格</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">&gt;&gt;&gt;print(<span class="string">'ABC'</span>,end =<span class="string">' '</span>)</span><br><span class="line">&gt;&gt;&gt;print(<span class="string">'DEF'</span>)</span><br><span class="line">ABC DEF</span><br></pre></td></tr></table></figure>
+<p>如果我指定end中为其他数</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">&gt;&gt;&gt;print(<span class="string">'ABC'</span>,end =<span class="string">'123'</span>)</span><br><span class="line">&gt;&gt;&gt;print(<span class="string">'DEF'</span>)</span><br><span class="line">ABC123DEF</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>python</category>
+        <category>语法笔记</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>语法笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -412,6 +424,54 @@ Did you mean &#39;conda create&#39;?</code></p>
       </tags>
   </entry>
   <entry>
+    <title>Python99道经典练习题答案</title>
+    <url>/Python99%E9%81%93%E7%BB%8F%E5%85%B8%E7%BB%83%E4%B9%A0%E9%A2%98%E7%AD%94%E6%A1%88.html</url>
+    <content><![CDATA[<p>转载与百度文库：<br><a href="https://wenku.baidu.com/view/bc745bdaf6ec4afe04a1b0717fd5360cbb1a8d16.html" target="_blank" rel="noopener">https://wenku.baidu.com/view/bc745bdaf6ec4afe04a1b0717fd5360cbb1a8d16.html</a></p>
+]]></content>
+      <categories>
+        <category>python</category>
+        <category>入门</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>入门练习题</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python学习笔记_4列表和元组的区别</title>
+    <url>/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_4%EF%BC%9A%E5%88%97%E8%A1%A8%E5%92%8C%E5%85%83%E7%BB%84%E7%9A%84%E5%8C%BA%E5%88%AB.html</url>
+    <content><![CDATA[<p>上节我主要详细的介绍了一下列表的用法</p>
+<p>突然想起来需要说一下列表和元组的区别,所以这篇文章就简洁点,以文字为主</p>
+<p><strong>列表:存放的是暂时的元素,可以更改,增添</strong></p>
+<p><strong>元组:存放的是不可更改的元素,不可删除,不可添加,不可修改</strong></p>
+<a id="more"></a>
+<p>list ( [ string ] )：将 str 转化为列表</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>exmp = <span class="string">'abcd efgh'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>list(exmp)</span><br><span class="line">输出为</span><br><span class="line">[<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>, <span class="string">'d'</span>, <span class="string">' '</span>, <span class="string">'e'</span>, <span class="string">'f'</span>, <span class="string">'g'</span>, <span class="string">'h'</span>]</span><br></pre></td></tr></table></figure>
+
+<p>tuple ( [ string ] )：将 str 转化为元组</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>exmp = <span class="string">'abcd efgh'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>tuple(exmp)</span><br><span class="line">输出为</span><br><span class="line">(<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>, <span class="string">'d'</span>, <span class="string">' '</span>, <span class="string">'e'</span>, <span class="string">'f'</span>, <span class="string">'g'</span>, <span class="string">'h'</span>)</span><br></pre></td></tr></table></figure>
+
+<p>当我们的项目中需要一些永远不用更改的数据,那就用元组</p>
+<p>如果我们需要后期维护并修改时就用列表</p>
+<p>但是在一定条件下我们需要改变元组中的数据或者增添一些新元素难道就没办法了嘛?<br><img src="https://img-blog.csdnimg.cn/20200304212858622.png" alt="在这里插入图片描述"></p>
+<p>当然不是,我们可以新建一个元组来代替原来的元组啊….是不是方法很沙雕</p>
+<p>不过在这里要说一个关于在元组之中添加元素的方法</p>
+<p>比如要在下列元组的’B’’E’中添加’C’’D’</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>I = (<span class="string">'A'</span>,<span class="string">'B'</span>,<span class="string">'E'</span>,<span class="string">'F'</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>I = I[<span class="number">0</span>:<span class="number">2</span>]+(<span class="string">'C'</span>,<span class="string">'D'</span>)+I[<span class="number">2</span>:]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(I)</span><br><span class="line">输出为</span><br><span class="line">(<span class="string">'A'</span>, <span class="string">'B'</span>, <span class="string">'C'</span>, <span class="string">'D'</span>, <span class="string">'E'</span>, <span class="string">'F'</span>)</span><br></pre></td></tr></table></figure>
+<p>这样如果在遇到紧急需要处理的问题时能省事的解决</p>
+<p>但如果真的要对元组改动太大</p>
+<p>那只能新建一个元组了,所以我们一般不太会使用元组。</p>
+]]></content>
+      <categories>
+        <category>python</category>
+        <category>语法笔记</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>语法笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Python学习笔记_2：判断str类型的函数</title>
     <url>/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_2%EF%BC%9A%E5%88%A4%E6%96%ADstr%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%87%BD%E6%95%B0.html</url>
     <content><![CDATA[<p>相信大家都喜欢表情包吧</p>
@@ -445,66 +505,6 @@ Did you mean &#39;conda create&#39;?</code></p>
 <hr>
 <p>看完梨泰院的第10集，心情复杂…唉<br><img src="https://img-blog.csdnimg.cn/20200302221055518.png" alt="在这里插入图片描述"></p>
 <p>喝杯咖啡再回来继续更博文<br><img src="https://img-blog.csdnimg.cn/20200302220305485.png" alt="在这里插入图片描述"></p>
-]]></content>
-      <categories>
-        <category>python</category>
-        <category>语法笔记</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>语法笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python学习笔记_1：print中end的用法 print（‘’，end=&#39;&#39;）</title>
-    <url>/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_1%EF%BC%9Aprint%E4%B8%ADend%E7%9A%84%E7%94%A8%E6%B3%95%20print%EF%BC%88%E2%80%98%E2%80%99%EF%BC%8Cend=&#39;&#39;%EF%BC%89.html</url>
-    <content><![CDATA[<p>学了那么久的python，都没有过系统的总结一下知识点，所以我决定在这里出一次python知识点集合——Python学习笔记。<br><img src="https://img-blog.csdnimg.cn/20200302170928468.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<a id="more"></a>
-<p>哈哈哈哈，就当是自己随时可以查阅的笔记本了</p>
-<p>下面开始介绍第一知识点：</p>
-<p>print 中 end 的用法：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">%先让输出两个 str</span><br><span class="line">%则两个 str 一定经过一次 <span class="keyword">print</span> 的换行操作</span><br><span class="line">&gt;&gt;&gt;print(<span class="string">'ABC'</span>)</span><br><span class="line">&gt;&gt;&gt;print(<span class="string">'DEF'</span>)</span><br><span class="line">ABC</span><br><span class="line">DEF</span><br></pre></td></tr></table></figure>
-<p>如果我加上 “end”</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">&gt;&gt;&gt;print(<span class="string">'ABC'</span>,end =<span class="string">''</span>) %这里的end中没有东西</span><br><span class="line">&gt;&gt;&gt;print(<span class="string">'DEF'</span>)</span><br><span class="line">%则结果为</span><br><span class="line">ABCDEF</span><br><span class="line">%因为end的作用就是告诉<span class="keyword">print</span>，将<span class="keyword">print</span>自带</span><br><span class="line">的换行用end中指定的str代替</span><br></pre></td></tr></table></figure>
-<p>如果我将end中填入‘ ’空格</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">&gt;&gt;&gt;print(<span class="string">'ABC'</span>,end =<span class="string">' '</span>)</span><br><span class="line">&gt;&gt;&gt;print(<span class="string">'DEF'</span>)</span><br><span class="line">ABC DEF</span><br></pre></td></tr></table></figure>
-<p>如果我指定end中为其他数</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">&gt;&gt;&gt;print(<span class="string">'ABC'</span>,end =<span class="string">'123'</span>)</span><br><span class="line">&gt;&gt;&gt;print(<span class="string">'DEF'</span>)</span><br><span class="line">ABC123DEF</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>python</category>
-        <category>语法笔记</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>语法笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python学习笔记_4列表和元组的区别</title>
-    <url>/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_4%EF%BC%9A%E5%88%97%E8%A1%A8%E5%92%8C%E5%85%83%E7%BB%84%E7%9A%84%E5%8C%BA%E5%88%AB.html</url>
-    <content><![CDATA[<p>上节我主要详细的介绍了一下列表的用法</p>
-<p>突然想起来需要说一下列表和元组的区别,所以这篇文章就简洁点,以文字为主</p>
-<p><strong>列表:存放的是暂时的元素,可以更改,增添</strong></p>
-<p><strong>元组:存放的是不可更改的元素,不可删除,不可添加,不可修改</strong></p>
-<a id="more"></a>
-<p>list ( [ string ] )：将 str 转化为列表</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>exmp = <span class="string">'abcd efgh'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>list(exmp)</span><br><span class="line">输出为</span><br><span class="line">[<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>, <span class="string">'d'</span>, <span class="string">' '</span>, <span class="string">'e'</span>, <span class="string">'f'</span>, <span class="string">'g'</span>, <span class="string">'h'</span>]</span><br></pre></td></tr></table></figure>
-
-<p>tuple ( [ string ] )：将 str 转化为元组</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>exmp = <span class="string">'abcd efgh'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>tuple(exmp)</span><br><span class="line">输出为</span><br><span class="line">(<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>, <span class="string">'d'</span>, <span class="string">' '</span>, <span class="string">'e'</span>, <span class="string">'f'</span>, <span class="string">'g'</span>, <span class="string">'h'</span>)</span><br></pre></td></tr></table></figure>
-
-<p>当我们的项目中需要一些永远不用更改的数据,那就用元组</p>
-<p>如果我们需要后期维护并修改时就用列表</p>
-<p>但是在一定条件下我们需要改变元组中的数据或者增添一些新元素难道就没办法了嘛?<br><img src="https://img-blog.csdnimg.cn/20200304212858622.png" alt="在这里插入图片描述"></p>
-<p>当然不是,我们可以新建一个元组来代替原来的元组啊….是不是方法很沙雕</p>
-<p>不过在这里要说一个关于在元组之中添加元素的方法</p>
-<p>比如要在下列元组的’B’’E’中添加’C’’D’</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>I = (<span class="string">'A'</span>,<span class="string">'B'</span>,<span class="string">'E'</span>,<span class="string">'F'</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>I = I[<span class="number">0</span>:<span class="number">2</span>]+(<span class="string">'C'</span>,<span class="string">'D'</span>)+I[<span class="number">2</span>:]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(I)</span><br><span class="line">输出为</span><br><span class="line">(<span class="string">'A'</span>, <span class="string">'B'</span>, <span class="string">'C'</span>, <span class="string">'D'</span>, <span class="string">'E'</span>, <span class="string">'F'</span>)</span><br></pre></td></tr></table></figure>
-<p>这样如果在遇到紧急需要处理的问题时能省事的解决</p>
-<p>但如果真的要对元组改动太大</p>
-<p>那只能新建一个元组了,所以我们一般不太会使用元组。</p>
 ]]></content>
       <categories>
         <category>python</category>
@@ -568,6 +568,28 @@ Did you mean &#39;conda create&#39;?</code></p>
       </tags>
   </entry>
   <entry>
+    <title>Python学习笔记_5：字符串格式化符号及进制转换</title>
+    <url>/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_5%EF%BC%9A%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%A0%BC%E5%BC%8F%E5%8C%96%E7%AC%A6%E5%8F%B7%E5%8F%8A%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2.html</url>
+    <content><![CDATA[<p>介绍下经常用得到的格式化字符</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">%c	：格式化字符及其ASCII码</span><br><span class="line">%s	：格式化字符串</span><br><span class="line">%d	：格式化整数</span><br><span class="line">%f	：可指定小数点精度</span><br><span class="line">%e	：用科学计数法表示小数</span><br><span class="line">%g	：根据值的的具体情况使用%f或%e</span><br><span class="line">%o	：八进制</span><br><span class="line">%x	：十六进制</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<hr>
+<p>简单的进制转换：<br>1、十六进制转换</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>I = input(<span class="string">'请输入一个数'</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>I = int(I)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(<span class="string">'%x'</span> %I)</span><br></pre></td></tr></table></figure>
+<p>2、八进制转换</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">I = input(<span class="string">'请输入一个数'</span>)</span><br><span class="line">I = int(I)</span><br><span class="line">print(<span class="string">'%o'</span> %I)</span><br></pre></td></tr></table></figure>
+<p>3、二进制转换</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">%%% python 中的二进制可以直接用 bin() 函数处理</span><br><span class="line">I = input(<span class="string">'请输入一个数'</span>)</span><br><span class="line">I = int(I)</span><br><span class="line">print(bin(I))</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>python</category>
+        <category>语法笔记</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>语法笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Python学习笔记_6：global 与 nanlacal 的区别</title>
     <url>/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_6%EF%BC%9Aglobal%20%E4%B8%8E%20nanlacal%20%E7%9A%84%E5%8C%BA%E5%88%AB.html</url>
     <content><![CDATA[<p>之前我在 matlab 的笔记里介绍过一次 global 的用法</p>
@@ -595,28 +617,6 @@ Did you mean &#39;conda create&#39;?</code></p>
       </tags>
   </entry>
   <entry>
-    <title>Python学习笔记_5：字符串格式化符号及进制转换</title>
-    <url>/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_5%EF%BC%9A%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%A0%BC%E5%BC%8F%E5%8C%96%E7%AC%A6%E5%8F%B7%E5%8F%8A%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2.html</url>
-    <content><![CDATA[<p>介绍下经常用得到的格式化字符</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">%c	：格式化字符及其ASCII码</span><br><span class="line">%s	：格式化字符串</span><br><span class="line">%d	：格式化整数</span><br><span class="line">%f	：可指定小数点精度</span><br><span class="line">%e	：用科学计数法表示小数</span><br><span class="line">%g	：根据值的的具体情况使用%f或%e</span><br><span class="line">%o	：八进制</span><br><span class="line">%x	：十六进制</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
-<hr>
-<p>简单的进制转换：<br>1、十六进制转换</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>I = input(<span class="string">'请输入一个数'</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>I = int(I)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(<span class="string">'%x'</span> %I)</span><br></pre></td></tr></table></figure>
-<p>2、八进制转换</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">I = input(<span class="string">'请输入一个数'</span>)</span><br><span class="line">I = int(I)</span><br><span class="line">print(<span class="string">'%o'</span> %I)</span><br></pre></td></tr></table></figure>
-<p>3、二进制转换</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">%%% python 中的二进制可以直接用 bin() 函数处理</span><br><span class="line">I = input(<span class="string">'请输入一个数'</span>)</span><br><span class="line">I = int(I)</span><br><span class="line">print(bin(I))</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>python</category>
-        <category>语法笔记</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>语法笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Python学习笔记_7：index() 和 dict() 的用法详解</title>
     <url>/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_7%EF%BC%9Aindex()%20%E5%92%8C%20dict()%20%E7%9A%84%E7%94%A8%E6%B3%95%E8%AF%A6%E8%A7%A3.html</url>
     <content><![CDATA[<p>前面的笔记中我详细介绍了列表和元组</p>
@@ -634,6 +634,38 @@ Did you mean &#39;conda create&#39;?</code></p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>people = [<span class="string">'东北大鹌鹑'</span>,<span class="string">'周淑怡'</span>,<span class="string">'刘某人'</span>,<span class="string">'胡歌'</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>mapping = [<span class="string">'小胖子'</span>,<span class="string">'大美女'</span>,<span class="string">'反向抽烟'</span>,<span class="string">'艺术家'</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(<span class="string">'周淑怡是%s'</span> %(mapping[people.index(<span class="string">'周淑怡'</span>)]))</span><br><span class="line">周淑怡是大美女</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(<span class="string">'胡歌是%s'</span> %(mapping[people.index(<span class="string">'胡歌'</span>)]))</span><br><span class="line">胡歌是艺术家</span><br></pre></td></tr></table></figure>
 
 <p><strong>总结：</strong><br>本来是想把 dict() 函数单独详细的说一下，但是写文章的时候突然想起来 index() 在这种情况下可以代替 dict() 的用法，而且 dict() 也比较简单，就在这里一起介绍了。</p>
+]]></content>
+      <categories>
+        <category>python</category>
+        <category>语法笔记</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>语法笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python学习笔记_9：class 类定义的属性与方法——详解</title>
+    <url>/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_9%EF%BC%9Aclass%20%E7%B1%BB%E5%AE%9A%E4%B9%89%E7%9A%84%E5%B1%9E%E6%80%A7%E4%B8%8E%E6%96%B9%E6%B3%95%E2%80%94%E2%80%94%E8%AF%A6%E8%A7%A3.html</url>
+    <content><![CDATA[<p>对很多没有其他语言基础的初学者来说，可能学到 python 的类定义的时候会苦恼很久</p>
+<p>但，无论我们遇到什么困难，也不要怕，微笑着面对他，消除恐惧的最好办法就是面对恐惧，坚持，才是胜利，加油，奥利给！！！</p>
+<p><img src="https://img-blog.csdnimg.cn/20200308134728646.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<a id="more"></a>
+<p>今天就给大家浅谈一下 class 中遇到的小问题吧</p>
+<p><strong>1、首先类的对象是什么时候产生的？</strong></p>
+<p>当类被定义完成时，类定义就变成了类的对象，可以通过 “类名.属性” 或 “类名.方法名()”  引用或使用相关的属性或方法</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="class"><span class="keyword">class</span> <span class="title">I</span>:</span></span><br><span class="line">    	<span class="function"><span class="keyword">def</span> <span class="title">text</span><span class="params">(self,x)</span>:</span></span><br><span class="line">        	print(<span class="string">'%d'</span>%(x**<span class="number">2</span>))</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>O = I()</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>O.text</span><br><span class="line">&lt;bound method I.text of &lt;__main__.I object at <span class="number">0x0000018820ABCB38</span>&gt;&gt;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>O.text(<span class="number">3</span>)</span><br><span class="line"><span class="number">9</span></span><br></pre></td></tr></table></figure>
+<p><strong>2、类的属性可以将类的方法覆盖</strong><br>当给 O.text 赋值时，O.text(obj) 就会报错，因为 O.text 将 O.text()  覆盖</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="class"><span class="keyword">class</span> <span class="title">I</span>:</span></span><br><span class="line">    	<span class="function"><span class="keyword">def</span> <span class="title">text</span><span class="params">(self,x)</span>:</span></span><br><span class="line">        	print(<span class="string">'%d'</span>%(x**<span class="number">2</span>))</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>O = I()</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>O.text(<span class="number">4</span>)</span><br><span class="line"><span class="number">16</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>O.text = <span class="number">5</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>O.text(<span class="number">4</span>)</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"&lt;pyshell#11&gt;"</span>, line <span class="number">1</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">    O.text(<span class="number">4</span>)</span><br><span class="line">TypeError: <span class="string">'int'</span> object <span class="keyword">is</span> <span class="keyword">not</span> callable</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>O.text</span><br><span class="line"><span class="number">5</span></span><br></pre></td></tr></table></figure>
+<p><strong>3、注意类属性和实例属性的区别</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="class"><span class="keyword">class</span> <span class="title">I</span>:</span></span><br><span class="line">		count = <span class="number">1</span></span><br><span class="line">		<span class="function"><span class="keyword">def</span> <span class="title">text</span><span class="params">(self)</span></span></span><br><span class="line">			self.a = 2</span><br><span class="line">			self.b = <span class="number">3</span></span><br><span class="line">			self.c = <span class="number">4</span></span><br><span class="line">			I.num = <span class="number">5</span></span><br></pre></td></tr></table></figure>
+<p>count 和num 就是类属性（静态变量），a,b,c则是实例属性</p>
+<p>4、Error——传参错误</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="class"><span class="keyword">class</span> <span class="title">I</span>:</span></span><br><span class="line">    	<span class="function"><span class="keyword">def</span> <span class="title">text</span><span class="params">()</span>:</span></span><br><span class="line">        	print(<span class="string">'abc'</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>O = I()   %默认将O的值传给I(),作为I() 的参数</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>O.text()</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"&lt;pyshell#20&gt;"</span>, line <span class="number">1</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">    O.text()</span><br><span class="line">TypeError: text() takes <span class="number">0</span> positional arguments but <span class="number">1</span> was given</span><br></pre></td></tr></table></figure>
+<p>因为python中的 “类.obj（）” 需要实例才可以使用，上述代码中python 就会默认将O的值传给 I() ，所以再调用 O.text() 时就是报错</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">TypeError: text() takes <span class="number">0</span> positional arguments but <span class="number">1</span> was given</span><br><span class="line">%需要<span class="number">0</span>个参数，但是已经传入<span class="number">1</span>个参数</span><br></pre></td></tr></table></figure>
+<p>所以应该在 def text() 加入实例对象</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="class"><span class="keyword">class</span> <span class="title">I</span>:</span></span><br><span class="line">    	<span class="function"><span class="keyword">def</span> <span class="title">text</span><span class="params">(obj)</span>:</span></span><br><span class="line">        	print(<span class="string">'abc'</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>O = I()   </span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>O.text()</span><br><span class="line">abc</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>python</category>
@@ -716,35 +748,27 @@ Did you mean &#39;conda create&#39;?</code></p>
       </tags>
   </entry>
   <entry>
-    <title>Python学习笔记_9：class 类定义的属性与方法——详解</title>
-    <url>/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_9%EF%BC%9Aclass%20%E7%B1%BB%E5%AE%9A%E4%B9%89%E7%9A%84%E5%B1%9E%E6%80%A7%E4%B8%8E%E6%96%B9%E6%B3%95%E2%80%94%E2%80%94%E8%AF%A6%E8%A7%A3.html</url>
-    <content><![CDATA[<p>对很多没有其他语言基础的初学者来说，可能学到 python 的类定义的时候会苦恼很久</p>
-<p>但，无论我们遇到什么困难，也不要怕，微笑着面对他，消除恐惧的最好办法就是面对恐惧，坚持，才是胜利，加油，奥利给！！！</p>
-<p><img src="https://img-blog.csdnimg.cn/20200308134728646.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+    <title>VLFeat工具包下载</title>
+    <url>/VLFeat%E5%B7%A5%E5%85%B7%E5%8C%85%E4%B8%8B%E8%BD%BD.html</url>
+    <content><![CDATA[<p><strong>vlfeat 官方下载链接：</strong><a href="https://www.vlfeat.org/" target="_blank" rel="noopener">https://www.vlfeat.org/</a></p>
+<p>运用于计算机视觉算法专业图像的理解和局部特征提取和匹配。算法包括Fisher向量，VLAD，SIFT，MSER，k均值，分层k均值，聚集信息瓶颈，SLIC超像素，快速移位超像素，大规模SVM训练等。它是用C编写的，以提高效率和兼容性，并带有MATLAB的接口（易于使用）和详细的文档。</p>
+<p>点击直接下载压缩包，不过下载速度可能会有点慢,可以使用迅雷下载</p>
 <a id="more"></a>
-<p>今天就给大家浅谈一下 class 中遇到的小问题吧</p>
-<p><strong>1、首先类的对象是什么时候产生的？</strong></p>
-<p>当类被定义完成时，类定义就变成了类的对象，可以通过 “类名.属性” 或 “类名.方法名()”  引用或使用相关的属性或方法</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="class"><span class="keyword">class</span> <span class="title">I</span>:</span></span><br><span class="line">    	<span class="function"><span class="keyword">def</span> <span class="title">text</span><span class="params">(self,x)</span>:</span></span><br><span class="line">        	print(<span class="string">'%d'</span>%(x**<span class="number">2</span>))</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>O = I()</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>O.text</span><br><span class="line">&lt;bound method I.text of &lt;__main__.I object at <span class="number">0x0000018820ABCB38</span>&gt;&gt;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>O.text(<span class="number">3</span>)</span><br><span class="line"><span class="number">9</span></span><br></pre></td></tr></table></figure>
-<p><strong>2、类的属性可以将类的方法覆盖</strong><br>当给 O.text 赋值时，O.text(obj) 就会报错，因为 O.text 将 O.text()  覆盖</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="class"><span class="keyword">class</span> <span class="title">I</span>:</span></span><br><span class="line">    	<span class="function"><span class="keyword">def</span> <span class="title">text</span><span class="params">(self,x)</span>:</span></span><br><span class="line">        	print(<span class="string">'%d'</span>%(x**<span class="number">2</span>))</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>O = I()</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>O.text(<span class="number">4</span>)</span><br><span class="line"><span class="number">16</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>O.text = <span class="number">5</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>O.text(<span class="number">4</span>)</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"&lt;pyshell#11&gt;"</span>, line <span class="number">1</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">    O.text(<span class="number">4</span>)</span><br><span class="line">TypeError: <span class="string">'int'</span> object <span class="keyword">is</span> <span class="keyword">not</span> callable</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>O.text</span><br><span class="line"><span class="number">5</span></span><br></pre></td></tr></table></figure>
-<p><strong>3、注意类属性和实例属性的区别</strong></p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="class"><span class="keyword">class</span> <span class="title">I</span>:</span></span><br><span class="line">		count = <span class="number">1</span></span><br><span class="line">		<span class="function"><span class="keyword">def</span> <span class="title">text</span><span class="params">(self)</span></span></span><br><span class="line">			self.a = 2</span><br><span class="line">			self.b = <span class="number">3</span></span><br><span class="line">			self.c = <span class="number">4</span></span><br><span class="line">			I.num = <span class="number">5</span></span><br></pre></td></tr></table></figure>
-<p>count 和num 就是类属性（静态变量），a,b,c则是实例属性</p>
-<p>4、Error——传参错误</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="class"><span class="keyword">class</span> <span class="title">I</span>:</span></span><br><span class="line">    	<span class="function"><span class="keyword">def</span> <span class="title">text</span><span class="params">()</span>:</span></span><br><span class="line">        	print(<span class="string">'abc'</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>O = I()   %默认将O的值传给I(),作为I() 的参数</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>O.text()</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"&lt;pyshell#20&gt;"</span>, line <span class="number">1</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">    O.text()</span><br><span class="line">TypeError: text() takes <span class="number">0</span> positional arguments but <span class="number">1</span> was given</span><br></pre></td></tr></table></figure>
-<p>因为python中的 “类.obj（）” 需要实例才可以使用，上述代码中python 就会默认将O的值传给 I() ，所以再调用 O.text() 时就是报错</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">TypeError: text() takes <span class="number">0</span> positional arguments but <span class="number">1</span> was given</span><br><span class="line">%需要<span class="number">0</span>个参数，但是已经传入<span class="number">1</span>个参数</span><br></pre></td></tr></table></figure>
-<p>所以应该在 def text() 加入实例对象</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="class"><span class="keyword">class</span> <span class="title">I</span>:</span></span><br><span class="line">    	<span class="function"><span class="keyword">def</span> <span class="title">text</span><span class="params">(obj)</span>:</span></span><br><span class="line">        	print(<span class="string">'abc'</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>O = I()   </span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>O.text()</span><br><span class="line">abc</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/2020031317311149.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>这里是源代码和安装教程</p>
+<p><img src="https://img-blog.csdnimg.cn/20200313173258764.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><strong>我的 vl_setup.m 文件的位置是：</strong></p>
+<p>D:\MATLAB 2018a anzhuanglujing\toolbox\vlfeat-0.9.21-bin\vlfeat-0.9.21\toolbox</p>
+<p>所以命令行输入：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">run(<span class="string">'D:\MATLAB 2018a anzhuanglujing\toolbox\vlfeat-0.9.21-bin\vlfeat-0.9.21\toolbox\vl_setup.m'</span>)</span><br></pre></td></tr></table></figure>
+<p>即可使用 vlfeat 工具包</p>
+<p><img src="https://img-blog.csdnimg.cn/20200314234457223.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 ]]></content>
       <categories>
-        <category>python</category>
-        <category>语法笔记</category>
+        <category>MATLAB</category>
       </categories>
       <tags>
-        <tag>python</tag>
-        <tag>语法笔记</tag>
+        <tag>MATLAB</tag>
       </tags>
   </entry>
   <entry>
@@ -772,30 +796,6 @@ Did you mean &#39;conda create&#39;?</code></p>
       </tags>
   </entry>
   <entry>
-    <title>VLFeat工具包下载</title>
-    <url>/VLFeat%E5%B7%A5%E5%85%B7%E5%8C%85%E4%B8%8B%E8%BD%BD.html</url>
-    <content><![CDATA[<p><strong>vlfeat 官方下载链接：</strong><a href="https://www.vlfeat.org/" target="_blank" rel="noopener">https://www.vlfeat.org/</a></p>
-<p>运用于计算机视觉算法专业图像的理解和局部特征提取和匹配。算法包括Fisher向量，VLAD，SIFT，MSER，k均值，分层k均值，聚集信息瓶颈，SLIC超像素，快速移位超像素，大规模SVM训练等。它是用C编写的，以提高效率和兼容性，并带有MATLAB的接口（易于使用）和详细的文档。</p>
-<p>点击直接下载压缩包，不过下载速度可能会有点慢,可以使用迅雷下载</p>
-<a id="more"></a>
-<p><img src="https://img-blog.csdnimg.cn/2020031317311149.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>这里是源代码和安装教程</p>
-<p><img src="https://img-blog.csdnimg.cn/20200313173258764.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p><strong>我的 vl_setup.m 文件的位置是：</strong></p>
-<p>D:\MATLAB 2018a anzhuanglujing\toolbox\vlfeat-0.9.21-bin\vlfeat-0.9.21\toolbox</p>
-<p>所以命令行输入：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">run(<span class="string">'D:\MATLAB 2018a anzhuanglujing\toolbox\vlfeat-0.9.21-bin\vlfeat-0.9.21\toolbox\vl_setup.m'</span>)</span><br></pre></td></tr></table></figure>
-<p>即可使用 vlfeat 工具包</p>
-<p><img src="https://img-blog.csdnimg.cn/20200314234457223.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-]]></content>
-      <categories>
-        <category>MATLAB</category>
-      </categories>
-      <tags>
-        <tag>MATLAB</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>WIN10 未安装任何音频驱动 扬声器有个小红叉（已解决）</title>
     <url>/WIN10%20%E6%9C%AA%E5%AE%89%E8%A3%85%E4%BB%BB%E4%BD%95%E9%9F%B3%E9%A2%91%E9%A9%B1%E5%8A%A8%20%E6%89%AC%E5%A3%B0%E5%99%A8%E6%9C%89%E4%B8%AA%E5%B0%8F%E7%BA%A2%E5%8F%89%EF%BC%88%E5%B7%B2%E8%A7%A3%E5%86%B3%EF%BC%89.html</url>
     <content><![CDATA[<p>经历了无数次的下载安装各种驱动，无数次重启，几乎试了全网所有的方法都是不行，最后使用了国外论坛的方法终于成功了</p>
@@ -813,6 +813,32 @@ Did you mean &#39;conda create&#39;?</code></p>
 <p><img src="https://img-blog.csdnimg.cn/20200205211722980.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 <p>我的未安装任何音频输出设备就这样解决了。</p>
 <p>欢迎大家提问，如果能帮到的就会回复大家。</p>
+]]></content>
+      <categories>
+        <category>win10</category>
+      </categories>
+      <tags>
+        <tag>win10</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Win10自带的虚拟机如何打开—Hyper-v</title>
+    <url>/Win10%E8%87%AA%E5%B8%A6%E7%9A%84%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%A6%82%E4%BD%95%E6%89%93%E5%BC%80%E2%80%94Hyper-v.html</url>
+    <content><![CDATA[<p>作为一个程序员电脑里面怎么能没有安装虚拟机呢…</p>
+<p>我之前装的虚拟机是VMware，配置的环境是openSUSE（大多数程序员好像用Ubuntu）</p>
+<p>作为电气工程的学生，我也不了解程序员界的行情…..这些事情也无从考究</p>
+<p>不过最近开始使用win10自带的虚拟机Hyper-v了，不过会和VM有兼容性问题。</p>
+<a id="more"></a>
+<p>直接上操作：<br>    打开 “控制面板”—&gt;“程序”<br><img src="https://img-blog.csdnimg.cn/20200222215045728.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>选择“启用或关闭windows功能”<br><img src="https://img-blog.csdnimg.cn/20200222215429330.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>选中Hyper-v的所有工具—就可以点击“确定”等待了<br><img src="https://img-blog.csdnimg.cn/20200222215807339.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200222215905888.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>这里让电脑立即重启<br><img src="https://img-blog.csdnimg.cn/20200222215954888.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>一般来说重启后就能找到hyper-v</p>
+<p>可是我的电脑重启时竟然显示无法正常安装</p>
+<p>我一开始觉得是VM的兼容性问题，我还傻乎乎的把VM卸载了（我之前用VM是为了运行R语言代码，后来就没怎么用过）</p>
+<p>结果还是不行</p>
+<p>后来在windows论坛上找到了解决方法</p>
+<p>“win+X”进入管理员PowerShell运行模式——&gt;</p>
+<p>输入</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">.\bcdedit /<span class="built_in">set</span> hypervisorlaunchtype <span class="keyword">auto</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/20200222223623274.png" alt="在这里插入图片描述"><br>显示操作成功完成即可</p>
+<p>最后结果：<br><img src="https://img-blog.csdnimg.cn/2020022222372689.png" alt="在这里插入图片描述"><br>有需要 openSUSE 资源的朋友可以找我，压缩资源我电脑里还是有的。</p>
 ]]></content>
       <categories>
         <category>win10</category>
@@ -896,6 +922,34 @@ Did you mean &#39;conda create&#39;?</code></p>
       </tags>
   </entry>
   <entry>
+    <title>cpu运行gpu上的pytorch 报错AssertionErrortorch not compiled with cuda enabled——已解决</title>
+    <url>/cpu%E8%BF%90%E8%A1%8Cgpu%E4%B8%8A%E7%9A%84pytorch%20%E6%8A%A5%E9%94%99%EF%BC%9AAssertionErrortorch%20not%20compiled%20with%20cuda%20enabled%E2%80%94%E2%80%94%E5%B7%B2%E8%A7%A3%E5%86%B3.html</url>
+    <content><![CDATA[<p>感觉今天介绍的这种方法可以解决所有这种报错出现的问题</p>
+<h2 id="事件发生："><a href="#事件发生：" class="headerlink" title="事件发生："></a>事件发生：</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">报错：AssertionError:torch <span class="keyword">not</span> compiled <span class="keyword">with</span> cuda enabled</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdnimg.cn/20200409104210488.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<a id="more"></a>
+<h2 id="解决方法："><a href="#解决方法：" class="headerlink" title="解决方法："></a>解决方法：</h2><p>后来看到这个代码</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">parser.add_argument(<span class="string">'--test_device'</span>, default=<span class="string">"cuda:0"</span>, type=str,</span><br><span class="line">                    help=<span class="string">'cuda:0 or cpu'</span>)</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/20200409104356554.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>把 cuda 换成 cpu</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">parser.add_argument(<span class="string">'--test_device'</span>, default=<span class="string">"cpu:0"</span>, type=str,</span><br><span class="line">                    help=<span class="string">'cuda:0 or cpu'</span>)</span><br><span class="line">                    </span><br><span class="line">%上面的 default=<span class="string">"cuda:0"</span> 改成 default=<span class="string">"cpu:0"</span>，</span><br><span class="line">下面的 help=<span class="string">'cuda:0 or cpu'</span> 因为定义了可以使用 cpu 所以就不用改了</span><br></pre></td></tr></table></figure>
+<p>当然也可以改成：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">parser.add_argument(<span class="string">'--test_device'</span>, default=<span class="string">"cpu:0"</span>, type=str,</span><br><span class="line">                    help=<span class="string">'cpu:0'</span>)</span><br><span class="line">parser.add_argument(<span class="string">'--test_device'</span>, default=<span class="string">"cuda:0 or cpu"</span>, type=str,</span><br><span class="line">                    help=<span class="string">'cuda:0 or cpu'</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h2><p><strong>总结一下就是：出现的 cuda 全部换成 cpu 就可以运行！！！</strong></p>
+<h2 id="这种方法应该适用于这种报错："><a href="#这种方法应该适用于这种报错：" class="headerlink" title="这种方法应该适用于这种报错："></a>这种方法应该适用于这种报错：</h2><p>为了尝试这种方法是不是适用于很多情况，我找了也出现这种报错的一位博主尝试，果然可以解决。</p>
+]]></content>
+      <categories>
+        <category>python</category>
+        <category>error&amp;库</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>error&amp;库</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>labelimg使用方法：如何标注图片</title>
     <url>/labelimg%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%EF%BC%9A%E5%A6%82%E4%BD%95%E6%A0%87%E6%B3%A8%E5%9B%BE%E7%89%87.html</url>
     <content><![CDATA[<p>labelimg 是一款专门用于贴标签的软件</p>
@@ -951,29 +1005,23 @@ Did you mean &#39;conda create&#39;?</code></p>
       </tags>
   </entry>
   <entry>
-    <title>Win10自带的虚拟机如何打开—Hyper-v</title>
-    <url>/Win10%E8%87%AA%E5%B8%A6%E7%9A%84%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%A6%82%E4%BD%95%E6%89%93%E5%BC%80%E2%80%94Hyper-v.html</url>
-    <content><![CDATA[<p>作为一个程序员电脑里面怎么能没有安装虚拟机呢…</p>
-<p>我之前装的虚拟机是VMware，配置的环境是openSUSE（大多数程序员好像用Ubuntu）</p>
-<p>作为电气工程的学生，我也不了解程序员界的行情…..这些事情也无从考究</p>
-<p>不过最近开始使用win10自带的虚拟机Hyper-v了，不过会和VM有兼容性问题。</p>
+    <title>matlab创建下载进度条</title>
+    <url>/matlab%E5%88%9B%E5%BB%BA%E4%B8%8B%E8%BD%BD%E8%BF%9B%E5%BA%A6%E6%9D%A1.html</url>
+    <content><![CDATA[<blockquote>
+<p>最近玩GUI玩的比较多，想分享一些好玩的东西，就从最简单的开始吧</p>
+</blockquote>
+<p>大家都知道matlab的进度条吧，这里实现了创建进度条，并且当进度条达到100%时就关闭进度条界面</p>
 <a id="more"></a>
-<p>直接上操作：<br>    打开 “控制面板”—&gt;“程序”<br><img src="https://img-blog.csdnimg.cn/20200222215045728.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>选择“启用或关闭windows功能”<br><img src="https://img-blog.csdnimg.cn/20200222215429330.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>选中Hyper-v的所有工具—就可以点击“确定”等待了<br><img src="https://img-blog.csdnimg.cn/20200222215807339.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200222215905888.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>这里让电脑立即重启<br><img src="https://img-blog.csdnimg.cn/20200222215954888.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>一般来说重启后就能找到hyper-v</p>
-<p>可是我的电脑重启时竟然显示无法正常安装</p>
-<p>我一开始觉得是VM的兼容性问题，我还傻乎乎的把VM卸载了（我之前用VM是为了运行R语言代码，后来就没怎么用过）</p>
-<p>结果还是不行</p>
-<p>后来在windows论坛上找到了解决方法</p>
-<p>“win+X”进入管理员PowerShell运行模式——&gt;</p>
-<p>输入</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">.\bcdedit /<span class="built_in">set</span> hypervisorlaunchtype <span class="keyword">auto</span></span><br></pre></td></tr></table></figure>
-<p><img src="https://img-blog.csdnimg.cn/20200222223623274.png" alt="在这里插入图片描述"><br>显示操作成功完成即可</p>
-<p>最后结果：<br><img src="https://img-blog.csdnimg.cn/2020022222372689.png" alt="在这里插入图片描述"><br>有需要 openSUSE 资源的朋友可以找我，压缩资源我电脑里还是有的。</p>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">state = <span class="number">0</span>;                                 </span><br><span class="line">h = waitbar(<span class="number">0</span>, <span class="string">'请等待...'</span>, <span class="string">'Name'</span>, <span class="string">'进度条'</span>, <span class="string">'CreateCancelBtn'</span>, ...</span><br><span class="line">    <span class="string">'state = 1; delete(h); clear h'</span>);       </span><br><span class="line">h1 = findall(h, <span class="string">'style'</span>, <span class="string">'pushbutton'</span>);     </span><br><span class="line">set(h1, <span class="string">'string'</span>, <span class="string">'取消'</span>, <span class="string">'fontsize'</span>, <span class="number">10</span>)   </span><br><span class="line"><span class="keyword">for</span> i = <span class="number">1</span> : <span class="number">100</span>                             </span><br><span class="line">    waitbar(i / <span class="number">100</span>, h, [<span class="string">'进度完成'</span> num2str(i) <span class="string">'%'</span>]);</span><br><span class="line">    pause(<span class="number">0.1</span>)</span><br><span class="line">    <span class="keyword">if</span> state                                </span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">    end</span><br><span class="line">end</span><br><span class="line"><span class="keyword">if</span> exist(<span class="string">'h'</span>) == <span class="number">1</span>     </span><br><span class="line">    delete(h); </span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdnimg.cn/2020040909231571.png" alt="在这里插入图片描述"></p>
 ]]></content>
       <categories>
-        <category>win10</category>
+        <category>MATLAB</category>
       </categories>
       <tags>
-        <tag>win10</tag>
+        <tag>MATLAB</tag>
       </tags>
   </entry>
   <entry>
@@ -998,34 +1046,6 @@ Did you mean &#39;conda create&#39;?</code></p>
 <p>这件事也显示了各个版本之间的 兼容 与 矛盾</p>
 <p>版本的选择真的很重要</p>
 <p>————————————————————————————————————<br>如果有使用 yolov3 算法中遇到各种问题的朋友可以评论你的问题，我几乎把所有能遇到的问题都遇到了，应该可以给予帮助</p>
-]]></content>
-      <categories>
-        <category>python</category>
-        <category>error&amp;库</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>error&amp;库</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>cpu运行gpu上的pytorch 报错AssertionErrortorch not compiled with cuda enabled——已解决</title>
-    <url>/cpu%E8%BF%90%E8%A1%8Cgpu%E4%B8%8A%E7%9A%84pytorch%20%E6%8A%A5%E9%94%99%EF%BC%9AAssertionErrortorch%20not%20compiled%20with%20cuda%20enabled%E2%80%94%E2%80%94%E5%B7%B2%E8%A7%A3%E5%86%B3.html</url>
-    <content><![CDATA[<p>感觉今天介绍的这种方法可以解决所有这种报错出现的问题</p>
-<h2 id="事件发生："><a href="#事件发生：" class="headerlink" title="事件发生："></a>事件发生：</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">报错：AssertionError:torch <span class="keyword">not</span> compiled <span class="keyword">with</span> cuda enabled</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://img-blog.csdnimg.cn/20200409104210488.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<a id="more"></a>
-<h2 id="解决方法："><a href="#解决方法：" class="headerlink" title="解决方法："></a>解决方法：</h2><p>后来看到这个代码</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">parser.add_argument(<span class="string">'--test_device'</span>, default=<span class="string">"cuda:0"</span>, type=str,</span><br><span class="line">                    help=<span class="string">'cuda:0 or cpu'</span>)</span><br></pre></td></tr></table></figure>
-<p><img src="https://img-blog.csdnimg.cn/20200409104356554.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>把 cuda 换成 cpu</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">parser.add_argument(<span class="string">'--test_device'</span>, default=<span class="string">"cpu:0"</span>, type=str,</span><br><span class="line">                    help=<span class="string">'cuda:0 or cpu'</span>)</span><br><span class="line">                    </span><br><span class="line">%上面的 default=<span class="string">"cuda:0"</span> 改成 default=<span class="string">"cpu:0"</span>，</span><br><span class="line">下面的 help=<span class="string">'cuda:0 or cpu'</span> 因为定义了可以使用 cpu 所以就不用改了</span><br></pre></td></tr></table></figure>
-<p>当然也可以改成：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">parser.add_argument(<span class="string">'--test_device'</span>, default=<span class="string">"cpu:0"</span>, type=str,</span><br><span class="line">                    help=<span class="string">'cpu:0'</span>)</span><br><span class="line">parser.add_argument(<span class="string">'--test_device'</span>, default=<span class="string">"cuda:0 or cpu"</span>, type=str,</span><br><span class="line">                    help=<span class="string">'cuda:0 or cpu'</span>)</span><br></pre></td></tr></table></figure>
-
-<h2 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h2><p><strong>总结一下就是：出现的 cuda 全部换成 cpu 就可以运行！！！</strong></p>
-<h2 id="这种方法应该适用于这种报错："><a href="#这种方法应该适用于这种报错：" class="headerlink" title="这种方法应该适用于这种报错："></a>这种方法应该适用于这种报错：</h2><p>为了尝试这种方法是不是适用于很多情况，我找了也出现这种报错的一位博主尝试，果然可以解决。</p>
 ]]></content>
       <categories>
         <category>python</category>
@@ -1063,29 +1083,29 @@ Did you mean &#39;conda create&#39;?</code></p>
       </tags>
   </entry>
   <entry>
-    <title>matlab创建下载进度条</title>
-    <url>/matlab%E5%88%9B%E5%BB%BA%E4%B8%8B%E8%BD%BD%E8%BF%9B%E5%BA%A6%E6%9D%A1.html</url>
-    <content><![CDATA[<blockquote>
-<p>最近玩GUI玩的比较多，想分享一些好玩的东西，就从最简单的开始吧</p>
-</blockquote>
-<p>大家都知道matlab的进度条吧，这里实现了创建进度条，并且当进度条达到100%时就关闭进度条界面</p>
-<a id="more"></a>
-
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">state = <span class="number">0</span>;                                 </span><br><span class="line">h = waitbar(<span class="number">0</span>, <span class="string">'请等待...'</span>, <span class="string">'Name'</span>, <span class="string">'进度条'</span>, <span class="string">'CreateCancelBtn'</span>, ...</span><br><span class="line">    <span class="string">'state = 1; delete(h); clear h'</span>);       </span><br><span class="line">h1 = findall(h, <span class="string">'style'</span>, <span class="string">'pushbutton'</span>);     </span><br><span class="line">set(h1, <span class="string">'string'</span>, <span class="string">'取消'</span>, <span class="string">'fontsize'</span>, <span class="number">10</span>)   </span><br><span class="line"><span class="keyword">for</span> i = <span class="number">1</span> : <span class="number">100</span>                             </span><br><span class="line">    waitbar(i / <span class="number">100</span>, h, [<span class="string">'进度完成'</span> num2str(i) <span class="string">'%'</span>]);</span><br><span class="line">    pause(<span class="number">0.1</span>)</span><br><span class="line">    <span class="keyword">if</span> state                                </span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">    end</span><br><span class="line">end</span><br><span class="line"><span class="keyword">if</span> exist(<span class="string">'h'</span>) == <span class="number">1</span>     </span><br><span class="line">    delete(h); </span><br><span class="line">end</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://img-blog.csdnimg.cn/2020040909231571.png" alt="在这里插入图片描述"></p>
-]]></content>
-      <categories>
-        <category>MATLAB</category>
-      </categories>
-      <tags>
-        <tag>MATLAB</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>python实现人数识别目标识别</title>
     <url>/python%E5%AE%9E%E7%8E%B0%E4%BA%BA%E6%95%B0%E8%AF%86%E5%88%AB%E7%9B%AE%E6%A0%87%E8%AF%86%E5%88%AB.html</url>
     <content><![CDATA[<p>python 实现 yolo 人数识别或目标识别：<a href="https://blog.csdn.net/qq_45504119/article/details/105033492" target="_blank" rel="noopener">https://blog.csdn.net/qq_45504119/article/details/105033492</a></p>
+]]></content>
+      <categories>
+        <category>python</category>
+        <category>机器视觉</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>机器视觉</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>python绝对兼容的库配置——机器学习&amp;爬虫</title>
+    <url>/python%E7%BB%9D%E5%AF%B9%E5%85%BC%E5%AE%B9%E7%9A%84%E5%BA%93%E9%85%8D%E7%BD%AE%E2%80%94%E2%80%94%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0&amp;%E7%88%AC%E8%99%AB.html</url>
+    <content><![CDATA[<blockquote>
+<p> <strong>Time: 2020/4/1   15:01</strong></p>
+</blockquote>
+<p>更新一下我的 python 库的版本，以免以后我自己搞错了…</p>
+<p>相比上次机器学习的库，这次多了部分爬虫的库</p>
+<a id="more"></a>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">Package                            Version</span><br><span class="line">---------------------------------- -----------</span><br><span class="line">-eras                              <span class="number">2.2</span><span class="number">.0</span></span><br><span class="line">absl-py                            <span class="number">0.9</span><span class="number">.0</span></span><br><span class="line">aiodns                             <span class="number">2.0</span><span class="number">.0</span></span><br><span class="line">aiohttp                            <span class="number">3.6</span><span class="number">.2</span></span><br><span class="line">alabaster                          <span class="number">0.7</span><span class="number">.10</span></span><br><span class="line">anaconda-client                    <span class="number">1.6</span><span class="number">.14</span></span><br><span class="line">anaconda-navigator                 <span class="number">1.8</span><span class="number">.7</span></span><br><span class="line">anaconda-project                   <span class="number">0.8</span><span class="number">.2</span></span><br><span class="line">asn1crypto                         <span class="number">0.24</span><span class="number">.0</span></span><br><span class="line">astor                              <span class="number">0.8</span><span class="number">.1</span></span><br><span class="line">astroid                            <span class="number">1.6</span><span class="number">.3</span></span><br><span class="line">astropy                            <span class="number">3.0</span><span class="number">.2</span></span><br><span class="line"><span class="keyword">async</span>-timeout                      <span class="number">3.0</span><span class="number">.1</span></span><br><span class="line">attrs                              <span class="number">18.1</span><span class="number">.0</span></span><br><span class="line">Automat                            <span class="number">20.2</span><span class="number">.0</span></span><br><span class="line">Babel                              <span class="number">2.5</span><span class="number">.3</span></span><br><span class="line">backcall                           <span class="number">0.1</span><span class="number">.0</span></span><br><span class="line">backports.shutil-get-terminal-size <span class="number">1.0</span><span class="number">.0</span></span><br><span class="line">backports.weakref                  <span class="number">1.0</span>rc1</span><br><span class="line">beautifulsoup4                     <span class="number">4.6</span><span class="number">.0</span></span><br><span class="line">bitarray                           <span class="number">0.8</span><span class="number">.1</span></span><br><span class="line">bkcharts                           <span class="number">0.2</span></span><br><span class="line">blaze                              <span class="number">0.11</span><span class="number">.3</span></span><br><span class="line">bleach                             <span class="number">1.5</span><span class="number">.0</span></span><br><span class="line">bokeh                              <span class="number">0.12</span><span class="number">.16</span></span><br><span class="line">boto                               <span class="number">2.48</span><span class="number">.0</span></span><br><span class="line">Bottleneck                         <span class="number">1.2</span><span class="number">.1</span></span><br><span class="line">brotlipy                           <span class="number">0.7</span><span class="number">.0</span></span><br><span class="line">cchardet                           <span class="number">2.1</span><span class="number">.6</span></span><br><span class="line">certifi                            <span class="number">2019.11</span><span class="number">.28</span></span><br><span class="line">cffi                               <span class="number">1.11</span><span class="number">.5</span></span><br><span class="line">chardet                            <span class="number">3.0</span><span class="number">.4</span></span><br><span class="line">click                              <span class="number">6.7</span></span><br><span class="line">cloudpickle                        <span class="number">0.5</span><span class="number">.3</span></span><br><span class="line">clyent                             <span class="number">1.2</span><span class="number">.2</span></span><br><span class="line">colorama                           <span class="number">0.3</span><span class="number">.9</span></span><br><span class="line">comtypes                           <span class="number">1.1</span><span class="number">.4</span></span><br><span class="line">conda                              <span class="number">4.8</span><span class="number">.3</span></span><br><span class="line">conda-build                        <span class="number">3.10</span><span class="number">.5</span></span><br><span class="line">conda-package-handling             <span class="number">1.6</span><span class="number">.0</span></span><br><span class="line">conda-verify                       <span class="number">2.0</span><span class="number">.0</span></span><br><span class="line">constantly                         <span class="number">15.1</span><span class="number">.0</span></span><br><span class="line">contextlib2                        <span class="number">0.5</span><span class="number">.5</span></span><br><span class="line">cryptography                       <span class="number">2.8</span></span><br><span class="line">cssselect                          <span class="number">1.1</span><span class="number">.0</span></span><br><span class="line">cycler                             <span class="number">0.10</span><span class="number">.0</span></span><br><span class="line">Cython                             <span class="number">0.28</span><span class="number">.2</span></span><br><span class="line">cytoolz                            <span class="number">0.9</span><span class="number">.0</span><span class="number">.1</span></span><br><span class="line">dask                               <span class="number">0.17</span><span class="number">.5</span></span><br><span class="line">datashape                          <span class="number">0.5</span><span class="number">.4</span></span><br><span class="line">decorator                          <span class="number">4.3</span><span class="number">.0</span></span><br><span class="line">defusedxml                         <span class="number">0.6</span><span class="number">.0</span></span><br><span class="line">distributed                        <span class="number">1.21</span><span class="number">.8</span></span><br><span class="line">docutils                           <span class="number">0.14</span></span><br><span class="line">entrypoints                        <span class="number">0.2</span><span class="number">.3</span></span><br><span class="line">et-xmlfile                         <span class="number">1.0</span><span class="number">.1</span></span><br><span class="line">fastcache                          <span class="number">1.0</span><span class="number">.2</span></span><br><span class="line">ffmpeg                             <span class="number">1.4</span></span><br><span class="line">filelock                           <span class="number">3.0</span><span class="number">.4</span></span><br><span class="line">Flask                              <span class="number">1.0</span><span class="number">.2</span></span><br><span class="line">Flask-Cors                         <span class="number">3.0</span><span class="number">.4</span></span><br><span class="line">Flask-Login                        <span class="number">0.5</span><span class="number">.0</span></span><br><span class="line">gast                               <span class="number">0.2</span><span class="number">.2</span></span><br><span class="line">gevent                             <span class="number">1.3</span><span class="number">.0</span></span><br><span class="line">glob2                              <span class="number">0.6</span></span><br><span class="line">greenlet                           <span class="number">0.4</span><span class="number">.13</span></span><br><span class="line">grpcio                             <span class="number">1.27</span><span class="number">.2</span></span><br><span class="line">h5py                               <span class="number">2.8</span><span class="number">.0</span></span><br><span class="line">heapdict                           <span class="number">1.0</span><span class="number">.0</span></span><br><span class="line">html5lib                           <span class="number">0.9999999</span></span><br><span class="line">hyperlink                          <span class="number">19.0</span><span class="number">.0</span></span><br><span class="line">idna                               <span class="number">2.6</span></span><br><span class="line">idna-ssl                           <span class="number">1.1</span><span class="number">.0</span></span><br><span class="line">imageio                            <span class="number">2.3</span><span class="number">.0</span></span><br><span class="line">imagesize                          <span class="number">1.0</span><span class="number">.0</span></span><br><span class="line">incremental                        <span class="number">17.5</span><span class="number">.0</span></span><br><span class="line">ipykernel                          <span class="number">4.8</span><span class="number">.2</span></span><br><span class="line">ipython                            <span class="number">6.4</span><span class="number">.0</span></span><br><span class="line">ipython-genutils                   <span class="number">0.2</span><span class="number">.0</span></span><br><span class="line">ipywidgets                         <span class="number">7.2</span><span class="number">.1</span></span><br><span class="line">isort                              <span class="number">4.3</span><span class="number">.4</span></span><br><span class="line">itsdangerous                       <span class="number">0.24</span></span><br><span class="line">jdcal                              <span class="number">1.4</span></span><br><span class="line">jedi                               <span class="number">0.12</span><span class="number">.0</span></span><br><span class="line">Jinja2                             <span class="number">2.10</span></span><br><span class="line">json5                              <span class="number">0.9</span><span class="number">.4</span></span><br><span class="line">jsonschema                         <span class="number">2.6</span><span class="number">.0</span></span><br><span class="line">jupyter                            <span class="number">1.0</span><span class="number">.0</span></span><br><span class="line">jupyter-client                     <span class="number">5.2</span><span class="number">.3</span></span><br><span class="line">jupyter-console                    <span class="number">5.2</span><span class="number">.0</span></span><br><span class="line">jupyter-core                       <span class="number">4.4</span><span class="number">.0</span></span><br><span class="line">jupyterlab                         <span class="number">0.32</span><span class="number">.1</span></span><br><span class="line">jupyterlab-launcher                <span class="number">0.10</span><span class="number">.5</span></span><br><span class="line">Keras                              <span class="number">2.2</span><span class="number">.4</span></span><br><span class="line">Keras-Applications                 <span class="number">1.0</span><span class="number">.8</span></span><br><span class="line">Keras-Preprocessing                <span class="number">1.1</span><span class="number">.0</span></span><br><span class="line">kiwisolver                         <span class="number">1.0</span><span class="number">.1</span></span><br><span class="line">labelImg                           <span class="number">1.8</span><span class="number">.3</span></span><br><span class="line">lazy-object-proxy                  <span class="number">1.3</span><span class="number">.1</span></span><br><span class="line">llvmlite                           <span class="number">0.23</span><span class="number">.1</span></span><br><span class="line">locket                             <span class="number">0.2</span><span class="number">.0</span></span><br><span class="line">lxml                               <span class="number">4.2</span><span class="number">.1</span></span><br><span class="line">Markdown                           <span class="number">3.1</span><span class="number">.1</span></span><br><span class="line">MarkupSafe                         <span class="number">1.0</span></span><br><span class="line">matplotlib                         <span class="number">2.2</span><span class="number">.2</span></span><br><span class="line">mccabe                             <span class="number">0.6</span><span class="number">.1</span></span><br><span class="line">menuinst                           <span class="number">1.4</span><span class="number">.14</span></span><br><span class="line">mistune                            <span class="number">0.8</span><span class="number">.3</span></span><br><span class="line">mkl-fft                            <span class="number">1.0</span><span class="number">.0</span></span><br><span class="line">mkl-random                         <span class="number">1.0</span><span class="number">.1</span></span><br><span class="line">more-itertools                     <span class="number">4.1</span><span class="number">.0</span></span><br><span class="line">mpmath                             <span class="number">1.0</span><span class="number">.0</span></span><br><span class="line">msgpack-python                     <span class="number">0.5</span><span class="number">.6</span></span><br><span class="line">multidict                          <span class="number">4.7</span><span class="number">.5</span></span><br><span class="line">multipledispatch                   <span class="number">0.5</span><span class="number">.0</span></span><br><span class="line">mysql                              <span class="number">0.0</span><span class="number">.2</span></span><br><span class="line">mysqlclient                        <span class="number">1.4</span><span class="number">.6</span></span><br><span class="line">navigator-updater                  <span class="number">0.2</span><span class="number">.1</span></span><br><span class="line">nbconvert                          <span class="number">5.3</span><span class="number">.1</span></span><br><span class="line">nbformat                           <span class="number">4.4</span><span class="number">.0</span></span><br><span class="line">networkx                           <span class="number">2.1</span></span><br><span class="line">nltk                               <span class="number">3.3</span></span><br><span class="line">nose                               <span class="number">1.3</span><span class="number">.7</span></span><br><span class="line">notebook                           <span class="number">5.5</span><span class="number">.0</span></span><br><span class="line">numba                              <span class="number">0.38</span><span class="number">.0</span></span><br><span class="line">numexpr                            <span class="number">2.6</span><span class="number">.5</span></span><br><span class="line">numpy                              <span class="number">1.18</span><span class="number">.2</span></span><br><span class="line">numpydoc                           <span class="number">0.8</span><span class="number">.0</span></span><br><span class="line">odo                                <span class="number">0.5</span><span class="number">.1</span></span><br><span class="line">olefile                            <span class="number">0.45</span><span class="number">.1</span></span><br><span class="line">opencv-contrib-python              <span class="number">4.2</span><span class="number">.0</span><span class="number">.32</span></span><br><span class="line">openpyxl                           <span class="number">2.5</span><span class="number">.3</span></span><br><span class="line">packaging                          <span class="number">17.1</span></span><br><span class="line">pandas                             <span class="number">0.23</span><span class="number">.0</span></span><br><span class="line">pandocfilters                      <span class="number">1.4</span><span class="number">.2</span></span><br><span class="line">parsel                             <span class="number">1.5</span><span class="number">.2</span></span><br><span class="line">parso                              <span class="number">0.2</span><span class="number">.0</span></span><br><span class="line">partd                              <span class="number">0.3</span><span class="number">.8</span></span><br><span class="line">path.py                            <span class="number">11.0</span><span class="number">.1</span></span><br><span class="line">pathlib2                           <span class="number">2.3</span><span class="number">.2</span></span><br><span class="line">patsy                              <span class="number">0.5</span><span class="number">.0</span></span><br><span class="line">pep8                               <span class="number">1.7</span><span class="number">.1</span></span><br><span class="line">phantomjs                          <span class="number">1.1</span><span class="number">.4</span></span><br><span class="line">pickleshare                        <span class="number">0.7</span><span class="number">.4</span></span><br><span class="line">Pillow                             <span class="number">5.1</span><span class="number">.0</span></span><br><span class="line">pip                                <span class="number">20.0</span><span class="number">.2</span></span><br><span class="line">pkginfo                            <span class="number">1.4</span><span class="number">.2</span></span><br><span class="line">pluggy                             <span class="number">0.6</span><span class="number">.0</span></span><br><span class="line">ply                                <span class="number">3.11</span></span><br><span class="line">prompt-toolkit                     <span class="number">1.0</span><span class="number">.15</span></span><br><span class="line">Protego                            <span class="number">0.1</span><span class="number">.16</span></span><br><span class="line">protobuf                           <span class="number">3.11</span><span class="number">.4</span></span><br><span class="line">psutil                             <span class="number">5.4</span><span class="number">.5</span></span><br><span class="line">py                                 <span class="number">1.5</span><span class="number">.3</span></span><br><span class="line">pyasn1                             <span class="number">0.4</span><span class="number">.8</span></span><br><span class="line">pyasn1-modules                     <span class="number">0.2</span><span class="number">.8</span></span><br><span class="line">pycares                            <span class="number">3.1</span><span class="number">.1</span></span><br><span class="line">pycodestyle                        <span class="number">2.4</span><span class="number">.0</span></span><br><span class="line">pycosat                            <span class="number">0.6</span><span class="number">.3</span></span><br><span class="line">pycparser                          <span class="number">2.18</span></span><br><span class="line">pycrypto                           <span class="number">2.6</span><span class="number">.1</span></span><br><span class="line">pycurl                             <span class="number">7.43</span><span class="number">.0</span><span class="number">.5</span></span><br><span class="line">PyDispatcher                       <span class="number">2.0</span><span class="number">.5</span></span><br><span class="line">pyflakes                           <span class="number">1.6</span><span class="number">.0</span></span><br><span class="line">Pygments                           <span class="number">2.2</span><span class="number">.0</span></span><br><span class="line">PyHamcrest                         <span class="number">2.0</span><span class="number">.2</span></span><br><span class="line">pylint                             <span class="number">1.8</span><span class="number">.4</span></span><br><span class="line">PyMySQL                            <span class="number">0.9</span><span class="number">.3</span></span><br><span class="line">pyodbc                             <span class="number">4.0</span><span class="number">.23</span></span><br><span class="line">pyOpenSSL                          <span class="number">18.0</span><span class="number">.0</span></span><br><span class="line">pyparsing                          <span class="number">2.2</span><span class="number">.0</span></span><br><span class="line">PyQt5                              <span class="number">5.14</span><span class="number">.1</span></span><br><span class="line">PyQt5-sip                          <span class="number">12.7</span><span class="number">.1</span></span><br><span class="line">pyquery                            <span class="number">1.4</span><span class="number">.1</span></span><br><span class="line">PySocks                            <span class="number">1.6</span><span class="number">.8</span></span><br><span class="line">pyspider                           <span class="number">0.3</span><span class="number">.10</span></span><br><span class="line">pytest                             <span class="number">3.5</span><span class="number">.1</span></span><br><span class="line">pytest-arraydiff                   <span class="number">0.2</span></span><br><span class="line">pytest-astropy                     <span class="number">0.3</span><span class="number">.0</span></span><br><span class="line">pytest-doctestplus                 <span class="number">0.1</span><span class="number">.3</span></span><br><span class="line">pytest-openfiles                   <span class="number">0.3</span><span class="number">.0</span></span><br><span class="line">pytest-remotedata                  <span class="number">0.2</span><span class="number">.1</span></span><br><span class="line">python-dateutil                    <span class="number">2.7</span><span class="number">.3</span></span><br><span class="line">pytz                               <span class="number">2018.4</span></span><br><span class="line">PyWavelets                         <span class="number">0.5</span><span class="number">.2</span></span><br><span class="line">pywin32                            <span class="number">223</span></span><br><span class="line">pywinpty                           <span class="number">0.5</span><span class="number">.1</span></span><br><span class="line">PyYAML                             <span class="number">3.12</span></span><br><span class="line">pyzmq                              <span class="number">17.0</span><span class="number">.0</span></span><br><span class="line">QtAwesome                          <span class="number">0.4</span><span class="number">.4</span></span><br><span class="line">qtconsole                          <span class="number">4.3</span><span class="number">.1</span></span><br><span class="line">QtPy                               <span class="number">1.4</span><span class="number">.1</span></span><br><span class="line">queuelib                           <span class="number">1.5</span><span class="number">.0</span></span><br><span class="line">redis                              <span class="number">3.4</span><span class="number">.1</span></span><br><span class="line">requests                           <span class="number">2.18</span><span class="number">.4</span></span><br><span class="line">rope                               <span class="number">0.10</span><span class="number">.7</span></span><br><span class="line">ruamel-yaml                        <span class="number">0.15</span><span class="number">.35</span></span><br><span class="line">scikit-image                       <span class="number">0.13</span><span class="number">.1</span></span><br><span class="line">scikit-learn                       <span class="number">0.19</span><span class="number">.1</span></span><br><span class="line">scipy                              <span class="number">1.4</span><span class="number">.1</span></span><br><span class="line">Scrapy                             <span class="number">2.0</span><span class="number">.1</span></span><br><span class="line">seaborn                            <span class="number">0.8</span><span class="number">.1</span></span><br><span class="line">selenium                           <span class="number">3.141</span><span class="number">.0</span></span><br><span class="line">Send2Trash                         <span class="number">1.5</span><span class="number">.0</span></span><br><span class="line">service-identity                   <span class="number">18.1</span><span class="number">.0</span></span><br><span class="line">setuptools                         <span class="number">39.1</span><span class="number">.0</span></span><br><span class="line">simplegeneric                      <span class="number">0.8</span><span class="number">.1</span></span><br><span class="line">singledispatch                     <span class="number">3.4</span><span class="number">.0</span><span class="number">.3</span></span><br><span class="line">six                                <span class="number">1.11</span><span class="number">.0</span></span><br><span class="line">snowballstemmer                    <span class="number">1.2</span><span class="number">.1</span></span><br><span class="line">sortedcollections                  <span class="number">0.6</span><span class="number">.1</span></span><br><span class="line">sortedcontainers                   <span class="number">1.5</span><span class="number">.10</span></span><br><span class="line">Sphinx                             <span class="number">1.7</span><span class="number">.4</span></span><br><span class="line">sphinxcontrib-websupport           <span class="number">1.0</span><span class="number">.1</span></span><br><span class="line">spyder                             <span class="number">3.2</span><span class="number">.8</span></span><br><span class="line">SQLAlchemy                         <span class="number">1.2</span><span class="number">.7</span></span><br><span class="line">statsmodels                        <span class="number">0.9</span><span class="number">.0</span></span><br><span class="line">sympy                              <span class="number">1.1</span><span class="number">.1</span></span><br><span class="line">tables                             <span class="number">3.4</span><span class="number">.3</span></span><br><span class="line">TBB                                <span class="number">0.1</span></span><br><span class="line">tblib                              <span class="number">1.3</span><span class="number">.2</span></span><br><span class="line">tensorboard                        <span class="number">1.12</span><span class="number">.2</span></span><br><span class="line">tensorflow                         <span class="number">1.12</span><span class="number">.0</span></span><br><span class="line">tensorflow-base                    <span class="number">0.0</span><span class="number">.0</span>.post2</span><br><span class="line">termcolor                          <span class="number">1.1</span><span class="number">.0</span></span><br><span class="line">terminado                          <span class="number">0.8</span><span class="number">.1</span></span><br><span class="line">testpath                           <span class="number">0.3</span><span class="number">.1</span></span><br><span class="line">toolz                              <span class="number">0.9</span><span class="number">.0</span></span><br><span class="line">tornado                            <span class="number">4.5</span><span class="number">.3</span></span><br><span class="line">tqdm                               <span class="number">4.43</span><span class="number">.0</span></span><br><span class="line">traitlets                          <span class="number">4.3</span><span class="number">.2</span></span><br><span class="line">Twisted                            <span class="number">20.3</span><span class="number">.0</span></span><br><span class="line">typing                             <span class="number">3.6</span><span class="number">.4</span></span><br><span class="line">typing-extensions                  <span class="number">3.7</span><span class="number">.4</span><span class="number">.1</span></span><br><span class="line">u-msgpack-python                   <span class="number">2.5</span><span class="number">.2</span></span><br><span class="line">unicodecsv                         <span class="number">0.14</span><span class="number">.1</span></span><br><span class="line">urllib3                            <span class="number">1.22</span></span><br><span class="line">w3lib                              <span class="number">1.21</span><span class="number">.0</span></span><br><span class="line">wcwidth                            <span class="number">0.1</span><span class="number">.7</span></span><br><span class="line">webencodings                       <span class="number">0.5</span><span class="number">.1</span></span><br><span class="line">Werkzeug                           <span class="number">0.14</span><span class="number">.1</span></span><br><span class="line">wheel                              <span class="number">0.31</span><span class="number">.1</span></span><br><span class="line">widgetsnbextension                 <span class="number">3.2</span><span class="number">.1</span></span><br><span class="line">win-inet-pton                      <span class="number">1.0</span><span class="number">.1</span></span><br><span class="line">win-unicode-console                <span class="number">0.5</span></span><br><span class="line">wincertstore                       <span class="number">0.2</span></span><br><span class="line">wrapt                              <span class="number">1.10</span><span class="number">.11</span></span><br><span class="line">WsgiDAV                            <span class="number">3.0</span><span class="number">.2</span></span><br><span class="line">xlrd                               <span class="number">1.1</span><span class="number">.0</span></span><br><span class="line">XlsxWriter                         <span class="number">1.0</span><span class="number">.4</span></span><br><span class="line">xlwings                            <span class="number">0.11</span><span class="number">.8</span></span><br><span class="line">xlwt                               <span class="number">1.3</span><span class="number">.0</span></span><br><span class="line">yarl                               <span class="number">1.4</span><span class="number">.2</span></span><br><span class="line">zict                               <span class="number">0.1</span><span class="number">.3</span></span><br><span class="line">zope.interface                     <span class="number">5.0</span><span class="number">.2</span></span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>python</category>
@@ -1172,6 +1192,42 @@ Did you mean &#39;conda create&#39;?</code></p>
       </categories>
       <tags>
         <tag>硬件</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>使用MATLAB调用摄像头并拍照—详细代码</title>
+    <url>/%E4%BD%BF%E7%94%A8MATLAB%E8%B0%83%E7%94%A8%E6%91%84%E5%83%8F%E5%A4%B4%E5%B9%B6%E6%8B%8D%E7%85%A7%E2%80%94%E8%AF%A6%E7%BB%86%E4%BB%A3%E7%A0%81.html</url>
+    <content><![CDATA[<blockquote>
+<p>大家也可以加我的交流群，所有资料我会在群里分享出来哦：977947271<br>2020/5/30：</p>
+</blockquote>
+<p>今天给大家介绍一下我第一次使用matlab进行摄像头拍照并进行图像处理的过程</p>
+<p>下面是个简单的GUI：</p>
+<p><img src="https://img-blog.csdnimg.cn/20200219115644543.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<a id="more"></a>
+<p>虽然不使用GUI也可以实现这种功能，不过我建议初学者最好使用GUI来控制程序，之后有时间我会发布不使用GUI来实现这种功能的博文。</p>
+<p>GUI界面的建立这里就不多说了。</p>
+<p>这个GUI是由一个坐标轴和四个按钮组成，按钮分别是“打开摄像头”，“拍照并保存”，“关闭摄像头”，“图像处理”，对应代码中的pushbutton1/2/3/4。</p>
+<p>目的是先打开摄像头，再拍摄照片到电脑中，最后调用图片去进行处理。</p>
+<p>下面介绍代码：<br>这里是 pushbutton1 的callback</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">varargout&#123;<span class="number">1</span>&#125; = handles.output;</span><br><span class="line"><span class="keyword">global</span> vid</span><br><span class="line">%定义一个全局变量，<span class="keyword">global</span>的用法可以参照我的另一篇博文</span><br><span class="line">vid = videoinput(<span class="string">'winvideo'</span>,<span class="number">1</span>,<span class="string">'YUY2_640x480'</span>);</span><br><span class="line">%winvideo函数可参照另一篇文章中imaqhwinfo的用法</span><br><span class="line">set(vid,<span class="string">'FramesPerTrigger'</span>,<span class="number">1</span>);</span><br><span class="line">%用特定的帧数去显示视频</span><br><span class="line">set(vid,<span class="string">'TriggerRepeat'</span>,Inf);</span><br><span class="line">vidRes = get(vid,<span class="string">'VideoResolution'</span>);</span><br><span class="line">%二维数组，获取视频长宽</span><br><span class="line">nBands = get(ojb,<span class="string">'NumberOfBands'</span>);</span><br><span class="line">%获得图像的颜色层数</span><br><span class="line">axes(handles.axes1);</span><br><span class="line">%让视频显示在指定的axes1坐标中</span><br><span class="line"><span class="keyword">global</span> hImage</span><br><span class="line">%定义全局变量hImage</span><br><span class="line">hImage = image(zeros(vidRes(<span class="number">2</span>),vidRes(<span class="number">1</span>),nBands));</span><br><span class="line">%获得图像的句柄</span><br><span class="line">preview（vid,hImage）;</span><br></pre></td></tr></table></figure>
+<p>点开“打开摄像头后”在 axes1 中就可看到拍摄的画面</p>
+<p>接下来介绍图片的保存：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">global</span> vid;</span><br><span class="line">frame = getsnapshot(vid);</span><br><span class="line">%摄像头每一帧的画面</span><br><span class="line">frame = ycbcr2rgb(frame);</span><br><span class="line">%将捕获的图像转化为RGB格式的图像</span><br><span class="line">[filename,pathname] = uiputfile(&#123;<span class="string">'*.bmp'</span>,<span class="string">'BMP files'</span>:<span class="string">'*.jpg'</span>,<span class="string">'JPG files'</span>&#125;<span class="string">'格式'</span>);</span><br><span class="line">%照片名称与储存路径</span><br><span class="line"><span class="keyword">if</span> isequal(filename,<span class="number">0</span>) || isequal(pathname,<span class="number">0</span>)</span><br><span class="line">%文件名与路径是否被占用</span><br><span class="line">	<span class="keyword">return</span>;</span><br><span class="line"><span class="keyword">else</span> </span><br><span class="line">	fpath = fullfile(pathname,filename);</span><br><span class="line">end</span><br><span class="line">imwrite(frame,fpath);</span><br></pre></td></tr></table></figure>
+<p>其实这种操作的逻辑对于matlab 的GUI来说，都可以比较简便的解决</p>
+<p>关闭摄像头：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">%很简单，在callback中写入一个函数即可</span><br><span class="line">close（findobj(<span class="string">'gca'</span>,<span class="string">'figure_csdn'</span>)）;</span><br><span class="line">%findobj(<span class="string">'PropertyName'</span>,<span class="string">'PropertyValue'</span>,...)</span><br><span class="line">返回figure的句柄</span><br></pre></td></tr></table></figure>
+<p>对于想要对图像进行处理的话：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">%就需要在callback中写入读取上图保存的图片的代码</span><br><span class="line">x = imread(<span class="string">'name.jpg'</span>);</span><br><span class="line">imshow(x);</span><br><span class="line">%在进行相应的处理程序</span><br></pre></td></tr></table></figure>
+<p>因为 gui 的代码冗长且很多地方无用，就无法将代码全部贴出来，但是对于有些基础的是可以看懂的，所有代码都放在相应的cb中进行。</p>
+<p>之后会发出更复杂的定时拍照的程序 gui，希望有技术大佬可以帮助指点错误与不足。</p>
+<p>如果有需要这篇文章中源码和 gui 的可以私信我。</p>
+<p>欢迎大家指正不足。</p>
+]]></content>
+      <categories>
+        <category>MATLAB</category>
+      </categories>
+      <tags>
+        <tag>MATLAB</tag>
       </tags>
   </entry>
   <entry>
@@ -1307,23 +1363,40 @@ Did you mean &#39;conda create&#39;?</code></p>
       </tags>
   </entry>
   <entry>
-    <title>python绝对兼容的库配置——机器学习&amp;爬虫</title>
-    <url>/python%E7%BB%9D%E5%AF%B9%E5%85%BC%E5%AE%B9%E7%9A%84%E5%BA%93%E9%85%8D%E7%BD%AE%E2%80%94%E2%80%94%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0&amp;%E7%88%AC%E8%99%AB.html</url>
-    <content><![CDATA[<blockquote>
-<p> <strong>Time: 2020/4/1   15:01</strong></p>
-</blockquote>
-<p>更新一下我的 python 库的版本，以免以后我自己搞错了…</p>
-<p>相比上次机器学习的库，这次多了部分爬虫的库</p>
-<a id="more"></a>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">Package                            Version</span><br><span class="line">---------------------------------- -----------</span><br><span class="line">-eras                              <span class="number">2.2</span><span class="number">.0</span></span><br><span class="line">absl-py                            <span class="number">0.9</span><span class="number">.0</span></span><br><span class="line">aiodns                             <span class="number">2.0</span><span class="number">.0</span></span><br><span class="line">aiohttp                            <span class="number">3.6</span><span class="number">.2</span></span><br><span class="line">alabaster                          <span class="number">0.7</span><span class="number">.10</span></span><br><span class="line">anaconda-client                    <span class="number">1.6</span><span class="number">.14</span></span><br><span class="line">anaconda-navigator                 <span class="number">1.8</span><span class="number">.7</span></span><br><span class="line">anaconda-project                   <span class="number">0.8</span><span class="number">.2</span></span><br><span class="line">asn1crypto                         <span class="number">0.24</span><span class="number">.0</span></span><br><span class="line">astor                              <span class="number">0.8</span><span class="number">.1</span></span><br><span class="line">astroid                            <span class="number">1.6</span><span class="number">.3</span></span><br><span class="line">astropy                            <span class="number">3.0</span><span class="number">.2</span></span><br><span class="line"><span class="keyword">async</span>-timeout                      <span class="number">3.0</span><span class="number">.1</span></span><br><span class="line">attrs                              <span class="number">18.1</span><span class="number">.0</span></span><br><span class="line">Automat                            <span class="number">20.2</span><span class="number">.0</span></span><br><span class="line">Babel                              <span class="number">2.5</span><span class="number">.3</span></span><br><span class="line">backcall                           <span class="number">0.1</span><span class="number">.0</span></span><br><span class="line">backports.shutil-get-terminal-size <span class="number">1.0</span><span class="number">.0</span></span><br><span class="line">backports.weakref                  <span class="number">1.0</span>rc1</span><br><span class="line">beautifulsoup4                     <span class="number">4.6</span><span class="number">.0</span></span><br><span class="line">bitarray                           <span class="number">0.8</span><span class="number">.1</span></span><br><span class="line">bkcharts                           <span class="number">0.2</span></span><br><span class="line">blaze                              <span class="number">0.11</span><span class="number">.3</span></span><br><span class="line">bleach                             <span class="number">1.5</span><span class="number">.0</span></span><br><span class="line">bokeh                              <span class="number">0.12</span><span class="number">.16</span></span><br><span class="line">boto                               <span class="number">2.48</span><span class="number">.0</span></span><br><span class="line">Bottleneck                         <span class="number">1.2</span><span class="number">.1</span></span><br><span class="line">brotlipy                           <span class="number">0.7</span><span class="number">.0</span></span><br><span class="line">cchardet                           <span class="number">2.1</span><span class="number">.6</span></span><br><span class="line">certifi                            <span class="number">2019.11</span><span class="number">.28</span></span><br><span class="line">cffi                               <span class="number">1.11</span><span class="number">.5</span></span><br><span class="line">chardet                            <span class="number">3.0</span><span class="number">.4</span></span><br><span class="line">click                              <span class="number">6.7</span></span><br><span class="line">cloudpickle                        <span class="number">0.5</span><span class="number">.3</span></span><br><span class="line">clyent                             <span class="number">1.2</span><span class="number">.2</span></span><br><span class="line">colorama                           <span class="number">0.3</span><span class="number">.9</span></span><br><span class="line">comtypes                           <span class="number">1.1</span><span class="number">.4</span></span><br><span class="line">conda                              <span class="number">4.8</span><span class="number">.3</span></span><br><span class="line">conda-build                        <span class="number">3.10</span><span class="number">.5</span></span><br><span class="line">conda-package-handling             <span class="number">1.6</span><span class="number">.0</span></span><br><span class="line">conda-verify                       <span class="number">2.0</span><span class="number">.0</span></span><br><span class="line">constantly                         <span class="number">15.1</span><span class="number">.0</span></span><br><span class="line">contextlib2                        <span class="number">0.5</span><span class="number">.5</span></span><br><span class="line">cryptography                       <span class="number">2.8</span></span><br><span class="line">cssselect                          <span class="number">1.1</span><span class="number">.0</span></span><br><span class="line">cycler                             <span class="number">0.10</span><span class="number">.0</span></span><br><span class="line">Cython                             <span class="number">0.28</span><span class="number">.2</span></span><br><span class="line">cytoolz                            <span class="number">0.9</span><span class="number">.0</span><span class="number">.1</span></span><br><span class="line">dask                               <span class="number">0.17</span><span class="number">.5</span></span><br><span class="line">datashape                          <span class="number">0.5</span><span class="number">.4</span></span><br><span class="line">decorator                          <span class="number">4.3</span><span class="number">.0</span></span><br><span class="line">defusedxml                         <span class="number">0.6</span><span class="number">.0</span></span><br><span class="line">distributed                        <span class="number">1.21</span><span class="number">.8</span></span><br><span class="line">docutils                           <span class="number">0.14</span></span><br><span class="line">entrypoints                        <span class="number">0.2</span><span class="number">.3</span></span><br><span class="line">et-xmlfile                         <span class="number">1.0</span><span class="number">.1</span></span><br><span class="line">fastcache                          <span class="number">1.0</span><span class="number">.2</span></span><br><span class="line">ffmpeg                             <span class="number">1.4</span></span><br><span class="line">filelock                           <span class="number">3.0</span><span class="number">.4</span></span><br><span class="line">Flask                              <span class="number">1.0</span><span class="number">.2</span></span><br><span class="line">Flask-Cors                         <span class="number">3.0</span><span class="number">.4</span></span><br><span class="line">Flask-Login                        <span class="number">0.5</span><span class="number">.0</span></span><br><span class="line">gast                               <span class="number">0.2</span><span class="number">.2</span></span><br><span class="line">gevent                             <span class="number">1.3</span><span class="number">.0</span></span><br><span class="line">glob2                              <span class="number">0.6</span></span><br><span class="line">greenlet                           <span class="number">0.4</span><span class="number">.13</span></span><br><span class="line">grpcio                             <span class="number">1.27</span><span class="number">.2</span></span><br><span class="line">h5py                               <span class="number">2.8</span><span class="number">.0</span></span><br><span class="line">heapdict                           <span class="number">1.0</span><span class="number">.0</span></span><br><span class="line">html5lib                           <span class="number">0.9999999</span></span><br><span class="line">hyperlink                          <span class="number">19.0</span><span class="number">.0</span></span><br><span class="line">idna                               <span class="number">2.6</span></span><br><span class="line">idna-ssl                           <span class="number">1.1</span><span class="number">.0</span></span><br><span class="line">imageio                            <span class="number">2.3</span><span class="number">.0</span></span><br><span class="line">imagesize                          <span class="number">1.0</span><span class="number">.0</span></span><br><span class="line">incremental                        <span class="number">17.5</span><span class="number">.0</span></span><br><span class="line">ipykernel                          <span class="number">4.8</span><span class="number">.2</span></span><br><span class="line">ipython                            <span class="number">6.4</span><span class="number">.0</span></span><br><span class="line">ipython-genutils                   <span class="number">0.2</span><span class="number">.0</span></span><br><span class="line">ipywidgets                         <span class="number">7.2</span><span class="number">.1</span></span><br><span class="line">isort                              <span class="number">4.3</span><span class="number">.4</span></span><br><span class="line">itsdangerous                       <span class="number">0.24</span></span><br><span class="line">jdcal                              <span class="number">1.4</span></span><br><span class="line">jedi                               <span class="number">0.12</span><span class="number">.0</span></span><br><span class="line">Jinja2                             <span class="number">2.10</span></span><br><span class="line">json5                              <span class="number">0.9</span><span class="number">.4</span></span><br><span class="line">jsonschema                         <span class="number">2.6</span><span class="number">.0</span></span><br><span class="line">jupyter                            <span class="number">1.0</span><span class="number">.0</span></span><br><span class="line">jupyter-client                     <span class="number">5.2</span><span class="number">.3</span></span><br><span class="line">jupyter-console                    <span class="number">5.2</span><span class="number">.0</span></span><br><span class="line">jupyter-core                       <span class="number">4.4</span><span class="number">.0</span></span><br><span class="line">jupyterlab                         <span class="number">0.32</span><span class="number">.1</span></span><br><span class="line">jupyterlab-launcher                <span class="number">0.10</span><span class="number">.5</span></span><br><span class="line">Keras                              <span class="number">2.2</span><span class="number">.4</span></span><br><span class="line">Keras-Applications                 <span class="number">1.0</span><span class="number">.8</span></span><br><span class="line">Keras-Preprocessing                <span class="number">1.1</span><span class="number">.0</span></span><br><span class="line">kiwisolver                         <span class="number">1.0</span><span class="number">.1</span></span><br><span class="line">labelImg                           <span class="number">1.8</span><span class="number">.3</span></span><br><span class="line">lazy-object-proxy                  <span class="number">1.3</span><span class="number">.1</span></span><br><span class="line">llvmlite                           <span class="number">0.23</span><span class="number">.1</span></span><br><span class="line">locket                             <span class="number">0.2</span><span class="number">.0</span></span><br><span class="line">lxml                               <span class="number">4.2</span><span class="number">.1</span></span><br><span class="line">Markdown                           <span class="number">3.1</span><span class="number">.1</span></span><br><span class="line">MarkupSafe                         <span class="number">1.0</span></span><br><span class="line">matplotlib                         <span class="number">2.2</span><span class="number">.2</span></span><br><span class="line">mccabe                             <span class="number">0.6</span><span class="number">.1</span></span><br><span class="line">menuinst                           <span class="number">1.4</span><span class="number">.14</span></span><br><span class="line">mistune                            <span class="number">0.8</span><span class="number">.3</span></span><br><span class="line">mkl-fft                            <span class="number">1.0</span><span class="number">.0</span></span><br><span class="line">mkl-random                         <span class="number">1.0</span><span class="number">.1</span></span><br><span class="line">more-itertools                     <span class="number">4.1</span><span class="number">.0</span></span><br><span class="line">mpmath                             <span class="number">1.0</span><span class="number">.0</span></span><br><span class="line">msgpack-python                     <span class="number">0.5</span><span class="number">.6</span></span><br><span class="line">multidict                          <span class="number">4.7</span><span class="number">.5</span></span><br><span class="line">multipledispatch                   <span class="number">0.5</span><span class="number">.0</span></span><br><span class="line">mysql                              <span class="number">0.0</span><span class="number">.2</span></span><br><span class="line">mysqlclient                        <span class="number">1.4</span><span class="number">.6</span></span><br><span class="line">navigator-updater                  <span class="number">0.2</span><span class="number">.1</span></span><br><span class="line">nbconvert                          <span class="number">5.3</span><span class="number">.1</span></span><br><span class="line">nbformat                           <span class="number">4.4</span><span class="number">.0</span></span><br><span class="line">networkx                           <span class="number">2.1</span></span><br><span class="line">nltk                               <span class="number">3.3</span></span><br><span class="line">nose                               <span class="number">1.3</span><span class="number">.7</span></span><br><span class="line">notebook                           <span class="number">5.5</span><span class="number">.0</span></span><br><span class="line">numba                              <span class="number">0.38</span><span class="number">.0</span></span><br><span class="line">numexpr                            <span class="number">2.6</span><span class="number">.5</span></span><br><span class="line">numpy                              <span class="number">1.18</span><span class="number">.2</span></span><br><span class="line">numpydoc                           <span class="number">0.8</span><span class="number">.0</span></span><br><span class="line">odo                                <span class="number">0.5</span><span class="number">.1</span></span><br><span class="line">olefile                            <span class="number">0.45</span><span class="number">.1</span></span><br><span class="line">opencv-contrib-python              <span class="number">4.2</span><span class="number">.0</span><span class="number">.32</span></span><br><span class="line">openpyxl                           <span class="number">2.5</span><span class="number">.3</span></span><br><span class="line">packaging                          <span class="number">17.1</span></span><br><span class="line">pandas                             <span class="number">0.23</span><span class="number">.0</span></span><br><span class="line">pandocfilters                      <span class="number">1.4</span><span class="number">.2</span></span><br><span class="line">parsel                             <span class="number">1.5</span><span class="number">.2</span></span><br><span class="line">parso                              <span class="number">0.2</span><span class="number">.0</span></span><br><span class="line">partd                              <span class="number">0.3</span><span class="number">.8</span></span><br><span class="line">path.py                            <span class="number">11.0</span><span class="number">.1</span></span><br><span class="line">pathlib2                           <span class="number">2.3</span><span class="number">.2</span></span><br><span class="line">patsy                              <span class="number">0.5</span><span class="number">.0</span></span><br><span class="line">pep8                               <span class="number">1.7</span><span class="number">.1</span></span><br><span class="line">phantomjs                          <span class="number">1.1</span><span class="number">.4</span></span><br><span class="line">pickleshare                        <span class="number">0.7</span><span class="number">.4</span></span><br><span class="line">Pillow                             <span class="number">5.1</span><span class="number">.0</span></span><br><span class="line">pip                                <span class="number">20.0</span><span class="number">.2</span></span><br><span class="line">pkginfo                            <span class="number">1.4</span><span class="number">.2</span></span><br><span class="line">pluggy                             <span class="number">0.6</span><span class="number">.0</span></span><br><span class="line">ply                                <span class="number">3.11</span></span><br><span class="line">prompt-toolkit                     <span class="number">1.0</span><span class="number">.15</span></span><br><span class="line">Protego                            <span class="number">0.1</span><span class="number">.16</span></span><br><span class="line">protobuf                           <span class="number">3.11</span><span class="number">.4</span></span><br><span class="line">psutil                             <span class="number">5.4</span><span class="number">.5</span></span><br><span class="line">py                                 <span class="number">1.5</span><span class="number">.3</span></span><br><span class="line">pyasn1                             <span class="number">0.4</span><span class="number">.8</span></span><br><span class="line">pyasn1-modules                     <span class="number">0.2</span><span class="number">.8</span></span><br><span class="line">pycares                            <span class="number">3.1</span><span class="number">.1</span></span><br><span class="line">pycodestyle                        <span class="number">2.4</span><span class="number">.0</span></span><br><span class="line">pycosat                            <span class="number">0.6</span><span class="number">.3</span></span><br><span class="line">pycparser                          <span class="number">2.18</span></span><br><span class="line">pycrypto                           <span class="number">2.6</span><span class="number">.1</span></span><br><span class="line">pycurl                             <span class="number">7.43</span><span class="number">.0</span><span class="number">.5</span></span><br><span class="line">PyDispatcher                       <span class="number">2.0</span><span class="number">.5</span></span><br><span class="line">pyflakes                           <span class="number">1.6</span><span class="number">.0</span></span><br><span class="line">Pygments                           <span class="number">2.2</span><span class="number">.0</span></span><br><span class="line">PyHamcrest                         <span class="number">2.0</span><span class="number">.2</span></span><br><span class="line">pylint                             <span class="number">1.8</span><span class="number">.4</span></span><br><span class="line">PyMySQL                            <span class="number">0.9</span><span class="number">.3</span></span><br><span class="line">pyodbc                             <span class="number">4.0</span><span class="number">.23</span></span><br><span class="line">pyOpenSSL                          <span class="number">18.0</span><span class="number">.0</span></span><br><span class="line">pyparsing                          <span class="number">2.2</span><span class="number">.0</span></span><br><span class="line">PyQt5                              <span class="number">5.14</span><span class="number">.1</span></span><br><span class="line">PyQt5-sip                          <span class="number">12.7</span><span class="number">.1</span></span><br><span class="line">pyquery                            <span class="number">1.4</span><span class="number">.1</span></span><br><span class="line">PySocks                            <span class="number">1.6</span><span class="number">.8</span></span><br><span class="line">pyspider                           <span class="number">0.3</span><span class="number">.10</span></span><br><span class="line">pytest                             <span class="number">3.5</span><span class="number">.1</span></span><br><span class="line">pytest-arraydiff                   <span class="number">0.2</span></span><br><span class="line">pytest-astropy                     <span class="number">0.3</span><span class="number">.0</span></span><br><span class="line">pytest-doctestplus                 <span class="number">0.1</span><span class="number">.3</span></span><br><span class="line">pytest-openfiles                   <span class="number">0.3</span><span class="number">.0</span></span><br><span class="line">pytest-remotedata                  <span class="number">0.2</span><span class="number">.1</span></span><br><span class="line">python-dateutil                    <span class="number">2.7</span><span class="number">.3</span></span><br><span class="line">pytz                               <span class="number">2018.4</span></span><br><span class="line">PyWavelets                         <span class="number">0.5</span><span class="number">.2</span></span><br><span class="line">pywin32                            <span class="number">223</span></span><br><span class="line">pywinpty                           <span class="number">0.5</span><span class="number">.1</span></span><br><span class="line">PyYAML                             <span class="number">3.12</span></span><br><span class="line">pyzmq                              <span class="number">17.0</span><span class="number">.0</span></span><br><span class="line">QtAwesome                          <span class="number">0.4</span><span class="number">.4</span></span><br><span class="line">qtconsole                          <span class="number">4.3</span><span class="number">.1</span></span><br><span class="line">QtPy                               <span class="number">1.4</span><span class="number">.1</span></span><br><span class="line">queuelib                           <span class="number">1.5</span><span class="number">.0</span></span><br><span class="line">redis                              <span class="number">3.4</span><span class="number">.1</span></span><br><span class="line">requests                           <span class="number">2.18</span><span class="number">.4</span></span><br><span class="line">rope                               <span class="number">0.10</span><span class="number">.7</span></span><br><span class="line">ruamel-yaml                        <span class="number">0.15</span><span class="number">.35</span></span><br><span class="line">scikit-image                       <span class="number">0.13</span><span class="number">.1</span></span><br><span class="line">scikit-learn                       <span class="number">0.19</span><span class="number">.1</span></span><br><span class="line">scipy                              <span class="number">1.4</span><span class="number">.1</span></span><br><span class="line">Scrapy                             <span class="number">2.0</span><span class="number">.1</span></span><br><span class="line">seaborn                            <span class="number">0.8</span><span class="number">.1</span></span><br><span class="line">selenium                           <span class="number">3.141</span><span class="number">.0</span></span><br><span class="line">Send2Trash                         <span class="number">1.5</span><span class="number">.0</span></span><br><span class="line">service-identity                   <span class="number">18.1</span><span class="number">.0</span></span><br><span class="line">setuptools                         <span class="number">39.1</span><span class="number">.0</span></span><br><span class="line">simplegeneric                      <span class="number">0.8</span><span class="number">.1</span></span><br><span class="line">singledispatch                     <span class="number">3.4</span><span class="number">.0</span><span class="number">.3</span></span><br><span class="line">six                                <span class="number">1.11</span><span class="number">.0</span></span><br><span class="line">snowballstemmer                    <span class="number">1.2</span><span class="number">.1</span></span><br><span class="line">sortedcollections                  <span class="number">0.6</span><span class="number">.1</span></span><br><span class="line">sortedcontainers                   <span class="number">1.5</span><span class="number">.10</span></span><br><span class="line">Sphinx                             <span class="number">1.7</span><span class="number">.4</span></span><br><span class="line">sphinxcontrib-websupport           <span class="number">1.0</span><span class="number">.1</span></span><br><span class="line">spyder                             <span class="number">3.2</span><span class="number">.8</span></span><br><span class="line">SQLAlchemy                         <span class="number">1.2</span><span class="number">.7</span></span><br><span class="line">statsmodels                        <span class="number">0.9</span><span class="number">.0</span></span><br><span class="line">sympy                              <span class="number">1.1</span><span class="number">.1</span></span><br><span class="line">tables                             <span class="number">3.4</span><span class="number">.3</span></span><br><span class="line">TBB                                <span class="number">0.1</span></span><br><span class="line">tblib                              <span class="number">1.3</span><span class="number">.2</span></span><br><span class="line">tensorboard                        <span class="number">1.12</span><span class="number">.2</span></span><br><span class="line">tensorflow                         <span class="number">1.12</span><span class="number">.0</span></span><br><span class="line">tensorflow-base                    <span class="number">0.0</span><span class="number">.0</span>.post2</span><br><span class="line">termcolor                          <span class="number">1.1</span><span class="number">.0</span></span><br><span class="line">terminado                          <span class="number">0.8</span><span class="number">.1</span></span><br><span class="line">testpath                           <span class="number">0.3</span><span class="number">.1</span></span><br><span class="line">toolz                              <span class="number">0.9</span><span class="number">.0</span></span><br><span class="line">tornado                            <span class="number">4.5</span><span class="number">.3</span></span><br><span class="line">tqdm                               <span class="number">4.43</span><span class="number">.0</span></span><br><span class="line">traitlets                          <span class="number">4.3</span><span class="number">.2</span></span><br><span class="line">Twisted                            <span class="number">20.3</span><span class="number">.0</span></span><br><span class="line">typing                             <span class="number">3.6</span><span class="number">.4</span></span><br><span class="line">typing-extensions                  <span class="number">3.7</span><span class="number">.4</span><span class="number">.1</span></span><br><span class="line">u-msgpack-python                   <span class="number">2.5</span><span class="number">.2</span></span><br><span class="line">unicodecsv                         <span class="number">0.14</span><span class="number">.1</span></span><br><span class="line">urllib3                            <span class="number">1.22</span></span><br><span class="line">w3lib                              <span class="number">1.21</span><span class="number">.0</span></span><br><span class="line">wcwidth                            <span class="number">0.1</span><span class="number">.7</span></span><br><span class="line">webencodings                       <span class="number">0.5</span><span class="number">.1</span></span><br><span class="line">Werkzeug                           <span class="number">0.14</span><span class="number">.1</span></span><br><span class="line">wheel                              <span class="number">0.31</span><span class="number">.1</span></span><br><span class="line">widgetsnbextension                 <span class="number">3.2</span><span class="number">.1</span></span><br><span class="line">win-inet-pton                      <span class="number">1.0</span><span class="number">.1</span></span><br><span class="line">win-unicode-console                <span class="number">0.5</span></span><br><span class="line">wincertstore                       <span class="number">0.2</span></span><br><span class="line">wrapt                              <span class="number">1.10</span><span class="number">.11</span></span><br><span class="line">WsgiDAV                            <span class="number">3.0</span><span class="number">.2</span></span><br><span class="line">xlrd                               <span class="number">1.1</span><span class="number">.0</span></span><br><span class="line">XlsxWriter                         <span class="number">1.0</span><span class="number">.4</span></span><br><span class="line">xlwings                            <span class="number">0.11</span><span class="number">.8</span></span><br><span class="line">xlwt                               <span class="number">1.3</span><span class="number">.0</span></span><br><span class="line">yarl                               <span class="number">1.4</span><span class="number">.2</span></span><br><span class="line">zict                               <span class="number">0.1</span><span class="number">.3</span></span><br><span class="line">zope.interface                     <span class="number">5.0</span><span class="number">.2</span></span><br></pre></td></tr></table></figure>
+    <title>怎么下载网页在线视频</title>
+    <url>/%E6%80%8E%E4%B9%88%E4%B8%8B%E8%BD%BD%E7%BD%91%E9%A1%B5%E5%9C%A8%E7%BA%BF%E8%A7%86%E9%A2%91.html</url>
+    <content><![CDATA[<p>在线看视频多少会有些卡顿，所以就可以将视频先下载下来之后看</p>
+<p>但对我而言，大部分视频都是在线甚至很小众的</p>
+<p>单独拿B站等大型网站来说，我们可以使用“硕鼠”等</p>
+<p>复制需要下载的视频的链接，复制在这里就可以准备下载<br><img src="https://img-blog.csdnimg.cn/20200223233143492.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>但今天说的没有那么简单</p>
+<p>硕鼠这种软件毕竟可下载的网站数量有限</p>
+<p>像我今天遇到了无法用硕鼠直接下载的情况</p>
+<p>下面给大家详细介绍三种方法：</p>
+<p><strong>1、**</strong>拿谷歌浏览器来说，如果想下载视频，先要打开视频，打开开发者工具**<br><img src="https://img-blog.csdnimg.cn/20200223233748416.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>选择”Network“—&gt;”all“<br><img src="https://img-blog.csdnimg.cn/20200223233938512.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">最好按F5刷新一下界面，不然可以会导致加载的视频不完整：</p>
+<p>在界面中找到 Time 框中的时间随着真实秒数在变化的文件，一般为所有现实的文件中时间最长，size 最大的文件，则这个文件就是我们想要的文件<br><img src="https://img-blog.csdnimg.cn/20200223234755761.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>右键该文件——选择”Open in new tab“,再右键另存为就可以了<br><img src="https://img-blog.csdnimg.cn/20200224100123975.jpeg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>这是第一种比较简单的方法。</p>
+<p><strong>2、**</strong>打开视频，右键点击画面空白处 选择”查看网页源代码“，再Ctrl+F 打开查找窗口。**</p>
+<p>因为我一直在学习韩语，所以这里以某韩语教学视频为例<br><img src="https://img-blog.csdnimg.cn/20200223235957978.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>输入”url”,复制这些url后面的连接去迅雷直接搜索网站下载就ok了。<br><img src="https://img-blog.csdnimg.cn/20200224000136299.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong>3、**</strong>这个方法就比较小众了，因为很多视频不会出现这种情况**</p>
+<p>有的视频的开发者工具打开后发现全部都是ts后缀的文件</p>
+<p>列表显示的都是分割过的文件，保存下来也只是1段1段的<br><img src="https://img-blog.csdnimg.cn/20200224000803175.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>所以这时候就需要找到这些 ts 后缀的文件的缓存地址了</p>
+<p>打开新的标签页输入“chrome://version/”</p>
+<p>就可以知道这些 mp2t 文件被保存的位置<br><img src="https://img-blog.csdnimg.cn/20200224001554297.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>现在我为了接下来述说简单点，我把刚刚</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">C:\Users\<span class="number">27511</span>\AppData\Local\Google\Chrome\Application\chrome.exe</span><br></pre></td></tr></table></figure>
+<p>这个路径下的 mp2t 文件全部移到新的文件夹，名字就叫 CSDN<br>我再建立一个新的文件夹，名字叫 CSDN2，两个文件夹都放在名为1的文件夹下面</p>
+<p>那么现在按win+R 输入 cmd 打开窗口输入：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">copy /b  D:\<span class="number">1</span>\CSDN D:\<span class="number">1</span>\CSDN2\<span class="keyword">new</span>.mp4</span><br><span class="line">%copy /b  C:\f\  D:\f\<span class="keyword">new</span>.ts</span><br><span class="line">%copy /b不能动</span><br><span class="line">%C：\f\ 是缓存的mp2y文件的位置</span><br><span class="line">%D：\f\是将mp2y合并后储存的位置</span><br><span class="line">%<span class="keyword">new</span>是文件名，ts是文件后缀</span><br></pre></td></tr></table></figure>
+<p>给大家看一下CSDN文件夹<br><img src="https://img-blog.csdnimg.cn/20200224004637895.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>现在在cmd中输入：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">copy /b  D:\<span class="number">1</span>\CSDN D:\<span class="number">1</span>\CSDN2\<span class="keyword">new</span>.mp4</span><br><span class="line">%我这里保存为MP4格式，可以根据需要随意更改后缀</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/202002240048274.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200224004856636.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>而我的CSDN2文件夹中就有了MP4格式的视频文件了</p>
+<p><img src="https://img-blog.csdnimg.cn/20200224005006426.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>这样就可以正常观看了。</p>
+<p>这几种方法均是我最近下载视频文件的终于到的可以解决问题的方法，基本所有的视频均可以解决。</p>
+<p>如有其他问题，可以联系我</p>
 ]]></content>
       <categories>
-        <category>python</category>
-        <category>机器视觉</category>
+        <category>win10</category>
       </categories>
       <tags>
-        <tag>python</tag>
-        <tag>机器视觉</tag>
+        <tag>win10</tag>
       </tags>
   </entry>
   <entry>
@@ -1409,95 +1482,6 @@ Did you mean &#39;conda create&#39;?</code></p>
       </tags>
   </entry>
   <entry>
-    <title>教女朋友一周学会 python 爬虫_1</title>
-    <url>/%E6%95%99%E5%A5%B3%E6%9C%8B%E5%8F%8B%E4%B8%80%E5%91%A8%E5%AD%A6%E4%BC%9A%20python%20%E7%88%AC%E8%99%AB_1.html</url>
-    <content><![CDATA[<p>今天开始我将简单介绍一下网络爬虫，并开始带大家学习如何写爬虫</p>
-<p><strong>一、爬虫介绍</strong></p>
-<p> <strong>1、什么是爬虫？</strong></p>
-<p>你可以把互联网想想成一个巨大的蜘蛛网，而爬虫就是一个小蜘蛛在网的各个节点中穿梭。   就像探测机器一样，基本操作就是模拟人去浏览各个网站，浏览数据，查看信息。</p>
-<a id="more"></a>
-<p> <strong>2、爬虫可以做什么？</strong></p>
-<p><strong>（1）抢火车票：</strong></p>
-<p>这应该是爬虫行业中使用量最大，很多抢票软件每秒对12306扫数千数万次。</p>
-<p><strong>（2）刷浏览量：</strong></p>
-<p>爬虫重灾区应该是微博无疑了，爬虫代码指向微博的某一个接口，可以获取用户的微博列表，微博动态，等等信息。</p>
-<p>有的人用爬虫指挥机器人，来打开某人的微博进行点赞、评论或留言。也就是微博上所谓的僵尸粉（去年某坤微博转发过亿次还记得吗）。</p>
-<p>还有很多更“好玩”的用处，这里就不废话了</p>
-<p><strong>二、正式开始学习</strong></p>
-<p>想写爬虫，首先要了解 URL：</p>
-<p>统一资源定位符（Universal Resource Locator），简单说就是表示资源的地址（我们说某个网站的网址就是 URL）。</p>
-<p><strong>1、urllib.request.urlopen（）函数</strong></p>
-<blockquote>
-<p><strong>urllib 是一个软件包，收集了几个用于处理URL的模块 ：</strong><br>.<br><strong>urllib.request ： 用于打开和阅读URL</strong><br>.<br><strong>urllib.error ： 包含由引发的异常 urllib.request</strong><br>.<br><strong>urllib.parse ： 用于解析URL</strong><br>.<br><strong>urllib.robotparser ： 用于解析robots.txt文件</strong></p>
-</blockquote>
-<p><strong>urllib.request—用于打开URL的可扩展库</strong></p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">urllib.request.urlopen（url，data = <span class="literal">None</span>，[ timeout，] *，cafile = <span class="literal">None</span>，capath = <span class="literal">None</span>，cadefault = <span class="literal">False</span>，context = <span class="literal">None</span> ）</span><br><span class="line"><span class="comment">##打开url，字符串或 Request 对象</span></span><br></pre></td></tr></table></figure>
-<p>data：访问URL时传输的数据</p>
-<p>timeout：参数以秒为单位，检测是否超时</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Time：2020/03/11 1:07</span></span><br><span class="line"><span class="comment"># environment:IDLE</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> urllib.request</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>response=urllib.request.urlopen(<span class="string">"http://www.baidu.com"</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>type(response)</span><br><span class="line">&lt;<span class="class"><span class="keyword">class</span> '<span class="title">http</span>.<span class="title">client</span>.<span class="title">HTTPResponse</span>'&gt;</span></span><br><span class="line"><span class="class"># 返回 <span class="title">HTTPResponse</span> 类型数据</span></span><br></pre></td></tr></table></figure>
-<hr>
-<p><strong>2、实例检测某网站的编码</strong></p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> chardet</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> urllib.request</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>url = input(<span class="string">'input address：'</span>)</span><br><span class="line"><span class="comment"># 输入网址</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>response = urllib.request.urlopen(url)</span><br><span class="line"><span class="comment"># urllib.request.urlopen信息传给response</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>infor = response.read()</span><br><span class="line"><span class="comment"># 返回获取到的页面内容</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>encode = chardet.detect(infor)[<span class="string">'encoding'</span>]</span><br><span class="line">&gt;&gt;&gt;print(encode)</span><br><span class="line">input address：http://www.baidu.com</span><br><span class="line">utf<span class="number">-8</span></span><br></pre></td></tr></table></figure>
-<hr>
-<p><strong>3、检测网站状态</strong></p>
-<p>“200”则说明网站正常</p>
-<p>“404”就说明不正常</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> urllib.request</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>response=urllib.request.urlopen(<span class="string">"http://www.baidu.com"</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>code=response.getcode()</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(code)</span><br><span class="line"><span class="number">200</span></span><br></pre></td></tr></table></figure>
-
-<hr>
-<hr>
-<hr>
-<p>今天晚上一直看 LOL 直播，现在有点撑不住了，都凌晨一点半了</p>
-<p>早起还要上网课</p>
-<p>上完网课再更</p>
-]]></content>
-      <categories>
-        <category>python</category>
-        <category>爬虫</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>爬虫</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>怎么下载网页在线视频</title>
-    <url>/%E6%80%8E%E4%B9%88%E4%B8%8B%E8%BD%BD%E7%BD%91%E9%A1%B5%E5%9C%A8%E7%BA%BF%E8%A7%86%E9%A2%91.html</url>
-    <content><![CDATA[<p>在线看视频多少会有些卡顿，所以就可以将视频先下载下来之后看</p>
-<p>但对我而言，大部分视频都是在线甚至很小众的</p>
-<p>单独拿B站等大型网站来说，我们可以使用“硕鼠”等</p>
-<p>复制需要下载的视频的链接，复制在这里就可以准备下载<br><img src="https://img-blog.csdnimg.cn/20200223233143492.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>但今天说的没有那么简单</p>
-<p>硕鼠这种软件毕竟可下载的网站数量有限</p>
-<p>像我今天遇到了无法用硕鼠直接下载的情况</p>
-<p>下面给大家详细介绍三种方法：</p>
-<p><strong>1、**</strong>拿谷歌浏览器来说，如果想下载视频，先要打开视频，打开开发者工具**<br><img src="https://img-blog.csdnimg.cn/20200223233748416.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>选择”Network“—&gt;”all“<br><img src="https://img-blog.csdnimg.cn/20200223233938512.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">最好按F5刷新一下界面，不然可以会导致加载的视频不完整：</p>
-<p>在界面中找到 Time 框中的时间随着真实秒数在变化的文件，一般为所有现实的文件中时间最长，size 最大的文件，则这个文件就是我们想要的文件<br><img src="https://img-blog.csdnimg.cn/20200223234755761.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>右键该文件——选择”Open in new tab“,再右键另存为就可以了<br><img src="https://img-blog.csdnimg.cn/20200224100123975.jpeg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>这是第一种比较简单的方法。</p>
-<p><strong>2、**</strong>打开视频，右键点击画面空白处 选择”查看网页源代码“，再Ctrl+F 打开查找窗口。**</p>
-<p>因为我一直在学习韩语，所以这里以某韩语教学视频为例<br><img src="https://img-blog.csdnimg.cn/20200223235957978.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>输入”url”,复制这些url后面的连接去迅雷直接搜索网站下载就ok了。<br><img src="https://img-blog.csdnimg.cn/20200224000136299.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong>3、**</strong>这个方法就比较小众了，因为很多视频不会出现这种情况**</p>
-<p>有的视频的开发者工具打开后发现全部都是ts后缀的文件</p>
-<p>列表显示的都是分割过的文件，保存下来也只是1段1段的<br><img src="https://img-blog.csdnimg.cn/20200224000803175.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>所以这时候就需要找到这些 ts 后缀的文件的缓存地址了</p>
-<p>打开新的标签页输入“chrome://version/”</p>
-<p>就可以知道这些 mp2t 文件被保存的位置<br><img src="https://img-blog.csdnimg.cn/20200224001554297.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>现在我为了接下来述说简单点，我把刚刚</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">C:\Users\<span class="number">27511</span>\AppData\Local\Google\Chrome\Application\chrome.exe</span><br></pre></td></tr></table></figure>
-<p>这个路径下的 mp2t 文件全部移到新的文件夹，名字就叫 CSDN<br>我再建立一个新的文件夹，名字叫 CSDN2，两个文件夹都放在名为1的文件夹下面</p>
-<p>那么现在按win+R 输入 cmd 打开窗口输入：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">copy /b  D:\<span class="number">1</span>\CSDN D:\<span class="number">1</span>\CSDN2\<span class="keyword">new</span>.mp4</span><br><span class="line">%copy /b  C:\f\  D:\f\<span class="keyword">new</span>.ts</span><br><span class="line">%copy /b不能动</span><br><span class="line">%C：\f\ 是缓存的mp2y文件的位置</span><br><span class="line">%D：\f\是将mp2y合并后储存的位置</span><br><span class="line">%<span class="keyword">new</span>是文件名，ts是文件后缀</span><br></pre></td></tr></table></figure>
-<p>给大家看一下CSDN文件夹<br><img src="https://img-blog.csdnimg.cn/20200224004637895.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>现在在cmd中输入：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">copy /b  D:\<span class="number">1</span>\CSDN D:\<span class="number">1</span>\CSDN2\<span class="keyword">new</span>.mp4</span><br><span class="line">%我这里保存为MP4格式，可以根据需要随意更改后缀</span><br></pre></td></tr></table></figure>
-<p><img src="https://img-blog.csdnimg.cn/202002240048274.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200224004856636.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>而我的CSDN2文件夹中就有了MP4格式的视频文件了</p>
-<p><img src="https://img-blog.csdnimg.cn/20200224005006426.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>这样就可以正常观看了。</p>
-<p>这几种方法均是我最近下载视频文件的终于到的可以解决问题的方法，基本所有的视频均可以解决。</p>
-<p>如有其他问题，可以联系我</p>
-]]></content>
-      <categories>
-        <category>win10</category>
-      </categories>
-      <tags>
-        <tag>win10</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>教女友学会python+yolov3调用笔记本摄像头——实时进行识别</title>
     <url>/%E6%95%99%E5%A5%B3%E5%8F%8B%E5%AD%A6%E4%BC%9Apython+yolov3%E8%B0%83%E7%94%A8%E7%AC%94%E8%AE%B0%E6%9C%AC%E6%91%84%E5%83%8F%E5%A4%B4%E2%80%94%E2%80%94%E5%AE%9E%E6%97%B6%E8%BF%9B%E8%A1%8C%E8%AF%86%E5%88%AB.html</url>
     <content><![CDATA[<blockquote>
@@ -1552,43 +1536,55 @@ Did you mean &#39;conda create&#39;?</code></p>
       </tags>
   </entry>
   <entry>
-    <title>新手如何使用anaconda（python）—简单介绍</title>
-    <url>/%E6%96%B0%E6%89%8B%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8anaconda%EF%BC%88python%EF%BC%89%E2%80%94%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D.html</url>
-    <content><![CDATA[<p>我之前用 python 的 IDLE 去写代码，但是在深度学习的部分，代码频频报错，因为 python 的很多库都没有，而自己去下载的话速度极其的慢。</p>
-<p>所以下载 anaconda 了， anaconda 里已经下载了很多库（虽然依然没有我想要的库），但相比单单一个 python 软件便好用许多。</p>
-<p>这里介绍一下新手如何快速使用 anaconda（我也是刚接触 python，好在比C简单多了，和 matlab 又很像）：</p>
+    <title>教女朋友一周学会 python 爬虫_1</title>
+    <url>/%E6%95%99%E5%A5%B3%E6%9C%8B%E5%8F%8B%E4%B8%80%E5%91%A8%E5%AD%A6%E4%BC%9A%20python%20%E7%88%AC%E8%99%AB_1.html</url>
+    <content><![CDATA[<p>今天开始我将简单介绍一下网络爬虫，并开始带大家学习如何写爬虫</p>
+<p><strong>一、爬虫介绍</strong></p>
+<p> <strong>1、什么是爬虫？</strong></p>
+<p>你可以把互联网想想成一个巨大的蜘蛛网，而爬虫就是一个小蜘蛛在网的各个节点中穿梭。   就像探测机器一样，基本操作就是模拟人去浏览各个网站，浏览数据，查看信息。</p>
 <a id="more"></a>
-<p>我们在：</p>
-<p>清华镜像下载   anaconda（下载过程看我另一篇博文）：<br><a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/" target="_blank" rel="noopener">https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/</a></p>
-<p>安装好了之后</p>
-<p><img src="https://img-blog.csdnimg.cn/20200217161343829.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>开始界面应该有这些东西，不过我们需要的一般只有 Jupyter Notebook 和  Anaconda Prompt。</p>
-<p>Jupyter Notebook 可以当作 python 来用，只是界面不同。 Anaconda Prompt 就是和windows 的 cmd 差不多。</p>
-<p><img src="https://img-blog.csdnimg.cn/20200217162002355.png" alt="在这里插入图片描述"></p>
-<p>在prompt里输入python，则就会显示python的版本，我这里是3.6.5。</p>
-<p>并进入python的编程环境：</p>
-<p><img src="https://img-blog.csdnimg.cn/20200217163039966.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>不过最好不要在这里写代码吧，因为…上图就是教训呀！（新手不懂。。。）</p>
-<p>回归正题：<br>代码一般都在Jupyter Notebook里写<br>这里打开Jupyter Notebook</p>
-<p><img src="https://img-blog.csdnimg.cn/2020021716330039.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200217163404727.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>电脑会自动打开网页 jupyter , anaconda中的python就是个web程序。在这里就可以开始python之旅了。上图现实的打开文件路径，可以打开里面储存的文件。</p>
-<p><img src="https://img-blog.csdnimg.cn/20200217164043772.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>点击new按钮就可以创建新的text file 和folder.</p>
-<p>打开text:</p>
-<p><img src="https://img-blog.csdnimg.cn/2020021716452081.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">就可以编辑文字和代码。</p>
-<p>点击 python 3 就可以正常的进行代码的编写了，下面随手写了个新手代码，按住shift+Enter就可以运行代码了。</p>
-<p><img src="https://img-blog.csdnimg.cn/20200217165201133.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>我也是个新手，因为 MATLAB 项目的需要所以转战 python。</p>
-<p>接下来我会继续更新 MATLAB 项目的部分，也会开始python爬虫的编写。</p>
-<p>欢迎各位指正错误。</p>
+<p> <strong>2、爬虫可以做什么？</strong></p>
+<p><strong>（1）抢火车票：</strong></p>
+<p>这应该是爬虫行业中使用量最大，很多抢票软件每秒对12306扫数千数万次。</p>
+<p><strong>（2）刷浏览量：</strong></p>
+<p>爬虫重灾区应该是微博无疑了，爬虫代码指向微博的某一个接口，可以获取用户的微博列表，微博动态，等等信息。</p>
+<p>有的人用爬虫指挥机器人，来打开某人的微博进行点赞、评论或留言。也就是微博上所谓的僵尸粉（去年某坤微博转发过亿次还记得吗）。</p>
+<p>还有很多更“好玩”的用处，这里就不废话了</p>
+<p><strong>二、正式开始学习</strong></p>
+<p>想写爬虫，首先要了解 URL：</p>
+<p>统一资源定位符（Universal Resource Locator），简单说就是表示资源的地址（我们说某个网站的网址就是 URL）。</p>
+<p><strong>1、urllib.request.urlopen（）函数</strong></p>
+<blockquote>
+<p><strong>urllib 是一个软件包，收集了几个用于处理URL的模块 ：</strong><br>.<br><strong>urllib.request ： 用于打开和阅读URL</strong><br>.<br><strong>urllib.error ： 包含由引发的异常 urllib.request</strong><br>.<br><strong>urllib.parse ： 用于解析URL</strong><br>.<br><strong>urllib.robotparser ： 用于解析robots.txt文件</strong></p>
+</blockquote>
+<p><strong>urllib.request—用于打开URL的可扩展库</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">urllib.request.urlopen（url，data = <span class="literal">None</span>，[ timeout，] *，cafile = <span class="literal">None</span>，capath = <span class="literal">None</span>，cadefault = <span class="literal">False</span>，context = <span class="literal">None</span> ）</span><br><span class="line"><span class="comment">##打开url，字符串或 Request 对象</span></span><br></pre></td></tr></table></figure>
+<p>data：访问URL时传输的数据</p>
+<p>timeout：参数以秒为单位，检测是否超时</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Time：2020/03/11 1:07</span></span><br><span class="line"><span class="comment"># environment:IDLE</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> urllib.request</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>response=urllib.request.urlopen(<span class="string">"http://www.baidu.com"</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>type(response)</span><br><span class="line">&lt;<span class="class"><span class="keyword">class</span> '<span class="title">http</span>.<span class="title">client</span>.<span class="title">HTTPResponse</span>'&gt;</span></span><br><span class="line"><span class="class"># 返回 <span class="title">HTTPResponse</span> 类型数据</span></span><br></pre></td></tr></table></figure>
+<hr>
+<p><strong>2、实例检测某网站的编码</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> chardet</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> urllib.request</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>url = input(<span class="string">'input address：'</span>)</span><br><span class="line"><span class="comment"># 输入网址</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>response = urllib.request.urlopen(url)</span><br><span class="line"><span class="comment"># urllib.request.urlopen信息传给response</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>infor = response.read()</span><br><span class="line"><span class="comment"># 返回获取到的页面内容</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>encode = chardet.detect(infor)[<span class="string">'encoding'</span>]</span><br><span class="line">&gt;&gt;&gt;print(encode)</span><br><span class="line">input address：http://www.baidu.com</span><br><span class="line">utf<span class="number">-8</span></span><br></pre></td></tr></table></figure>
+<hr>
+<p><strong>3、检测网站状态</strong></p>
+<p>“200”则说明网站正常</p>
+<p>“404”就说明不正常</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> urllib.request</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>response=urllib.request.urlopen(<span class="string">"http://www.baidu.com"</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>code=response.getcode()</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(code)</span><br><span class="line"><span class="number">200</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<hr>
+<hr>
+<p>今天晚上一直看 LOL 直播，现在有点撑不住了，都凌晨一点半了</p>
+<p>早起还要上网课</p>
+<p>上完网课再更</p>
 ]]></content>
       <categories>
         <category>python</category>
-        <category>入门</category>
+        <category>爬虫</category>
       </categories>
       <tags>
         <tag>python</tag>
-        <tag>anaconda</tag>
+        <tag>爬虫</tag>
       </tags>
   </entry>
   <entry>
@@ -1620,40 +1616,6 @@ Did you mean &#39;conda create&#39;?</code></p>
       <tags>
         <tag>硬件</tag>
         <tag>ESP8266</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>运行SSD-TensorFlow报错：tensorflow.python.framework.errors_impl.NotFoundError：</title>
-    <url>/%E8%BF%90%E8%A1%8CSSD-TensorFlow%E6%8A%A5%E9%94%99%EF%BC%9Atensorflow.python.framework.errors_impl.NotFoundError%EF%BC%9A.html</url>
-    <content><![CDATA[<p>玩了很久的 yolo，今天下载了 SSD-TensorFlow 的代码，不过在运行的时候出现了一点问题</p>
-<p>官方的介绍是运行：<code>jupyter notebook notebooks/ssd_notebook.ipynb</code></p>
-<p>但是在 <code>jupyter notebook</code> 中运行多有不便，我就将代码复制在了下面文件夹里，与 <code>ssd_notebook.ipynb</code> 放在了一块，可是出现报错：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">tensorflow.python.framework.errors_impl.NotFoundError: FindFirstFile failed <span class="keyword">for</span></span><br><span class="line">…/checkpoints:ϵͳ\udcd5Ҳ\udcbb\udcb5\udcbdָ\udcb6\udca8\udcb5\udcc4·\udcbe\udcb6\udca1\udca3 </span><br><span class="line">; No such process</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
-<p><img src="https://img-blog.csdnimg.cn/20200506152235306.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>可以看到：在 <code>demo_test.py</code> 的大概15、42、73行的位置，路径全都写错了</p>
-<p><img src="https://img-blog.csdnimg.cn/20200506153032938.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p><img src="https://img-blog.csdnimg.cn/20200506153046666.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p><img src="https://img-blog.csdnimg.cn/20200506153053557.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>以43行为例将：<code>ckpt_filename = &#39;.../checkpoints/ssd_300_vgg.ckpt&#39;</code> 改为：<code>ckpt_filename = &#39;./checkpoints/ssd_300_vgg.ckpt&#39;</code></p>
-<p><img src="https://img-blog.csdnimg.cn/20200506153309230.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>而且有一点要注意，我这里路径写的是相对路径，也就是从我 <code>demo_test.py</code> 所在的位置到 <code>checkpoints</code> 文件所在的相对位置，所以很明显路径需要添加东西，或者我直接将  <code>demo_test.py</code> 文件放在主文件夹下面即可：</p>
-<p><img src="https://img-blog.csdnimg.cn/20200506153618543.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<h2 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h2><p><strong>1、将路径前面的点删除至只留下一个</strong></p>
-<p><strong>2、注意相对路径，否则会报同样的错误</strong></p>
-<hr>
-<blockquote>
-<p>题外话：<br>我也只是个学生，做项目的时候刚好看到 yolo 了，就玩了一阵子，现在准备玩 ssd ，这些只是很简单的东西，之后我会慢慢的把我做的比较深入的东西写出来(说实话…一般没人看)，我准备创建一个开源项目的交流群。<br>我本身很菜，但是玩过一些开源的项目，本身电气专业，也喜欢自己用单片机做东西，现在自己发过论文、国际发明专利、国内发明专利。马上准备考研了，也希望能遇到一些大佬，给些指点，也可以大家一起讨论问题，解决问题。<br>群号：977947271</p>
-</blockquote>
-<p><img src="https://img-blog.csdnimg.cn/20200506154001109.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-]]></content>
-      <categories>
-        <category>python</category>
-        <category>机器视觉</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>机器视觉</tag>
       </tags>
   </entry>
   <entry>
@@ -1768,16 +1730,35 @@ Did you mean &#39;conda create&#39;?</code></p>
       </tags>
   </entry>
   <entry>
-    <title>鱼C论坛小甲鱼Python课后题</title>
-    <url>/%E9%B1%BCC%E8%AE%BA%E5%9D%9B%E5%B0%8F%E7%94%B2%E9%B1%BCPython%E8%AF%BE%E5%90%8E%E9%A2%98.html</url>
-    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">本人是从小甲鱼的python视频一步步过来的</span><br><span class="line">所以刚看到小甲鱼的课后题库就转载过来和大家分享</span><br><span class="line">如有侵权，请联系删除</span><br></pre></td></tr></table></figure>
-
-
-<p>之前python时就是学习的小甲鱼的课程</p>
-<p>现在看了那么多的教学视频，感觉还是小甲鱼的视频有点意思</p>
-<p>正定不失风趣，正经不失一丝**（看过小甲鱼视频的应该都懂，哈哈哈哈）</p>
-<p>刚刚在百度文库中看了小甲鱼的Python课后题总结，毕竟小甲鱼专门搞得课后题，正确率就比其他的整合的题目要准确很多：</p>
-<p>小甲鱼Python课后题百度文库：<br><a href="https://wenku.baidu.com/view/84d437faf021dd36a32d7375a417866fb94ac067.html" target="_blank" rel="noopener">https://wenku.baidu.com/view/84d437faf021dd36a32d7375a417866fb94ac067.html</a></p>
+    <title>新手如何使用anaconda（python）—简单介绍</title>
+    <url>/%E6%96%B0%E6%89%8B%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8anaconda%EF%BC%88python%EF%BC%89%E2%80%94%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D.html</url>
+    <content><![CDATA[<p>我之前用 python 的 IDLE 去写代码，但是在深度学习的部分，代码频频报错，因为 python 的很多库都没有，而自己去下载的话速度极其的慢。</p>
+<p>所以下载 anaconda 了， anaconda 里已经下载了很多库（虽然依然没有我想要的库），但相比单单一个 python 软件便好用许多。</p>
+<p>这里介绍一下新手如何快速使用 anaconda（我也是刚接触 python，好在比C简单多了，和 matlab 又很像）：</p>
+<a id="more"></a>
+<p>我们在：</p>
+<p>清华镜像下载   anaconda（下载过程看我另一篇博文）：<br><a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/" target="_blank" rel="noopener">https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/</a></p>
+<p>安装好了之后</p>
+<p><img src="https://img-blog.csdnimg.cn/20200217161343829.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>开始界面应该有这些东西，不过我们需要的一般只有 Jupyter Notebook 和  Anaconda Prompt。</p>
+<p>Jupyter Notebook 可以当作 python 来用，只是界面不同。 Anaconda Prompt 就是和windows 的 cmd 差不多。</p>
+<p><img src="https://img-blog.csdnimg.cn/20200217162002355.png" alt="在这里插入图片描述"></p>
+<p>在prompt里输入python，则就会显示python的版本，我这里是3.6.5。</p>
+<p>并进入python的编程环境：</p>
+<p><img src="https://img-blog.csdnimg.cn/20200217163039966.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>不过最好不要在这里写代码吧，因为…上图就是教训呀！（新手不懂。。。）</p>
+<p>回归正题：<br>代码一般都在Jupyter Notebook里写<br>这里打开Jupyter Notebook</p>
+<p><img src="https://img-blog.csdnimg.cn/2020021716330039.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200217163404727.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>电脑会自动打开网页 jupyter , anaconda中的python就是个web程序。在这里就可以开始python之旅了。上图现实的打开文件路径，可以打开里面储存的文件。</p>
+<p><img src="https://img-blog.csdnimg.cn/20200217164043772.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>点击new按钮就可以创建新的text file 和folder.</p>
+<p>打开text:</p>
+<p><img src="https://img-blog.csdnimg.cn/2020021716452081.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">就可以编辑文字和代码。</p>
+<p>点击 python 3 就可以正常的进行代码的编写了，下面随手写了个新手代码，按住shift+Enter就可以运行代码了。</p>
+<p><img src="https://img-blog.csdnimg.cn/20200217165201133.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>我也是个新手，因为 MATLAB 项目的需要所以转战 python。</p>
+<p>接下来我会继续更新 MATLAB 项目的部分，也会开始python爬虫的编写。</p>
+<p>欢迎各位指正错误。</p>
 ]]></content>
       <categories>
         <category>python</category>
@@ -1785,6 +1766,41 @@ Did you mean &#39;conda create&#39;?</code></p>
       </categories>
       <tags>
         <tag>python</tag>
+        <tag>anaconda</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>运行SSD-TensorFlow报错：tensorflow.python.framework.errors_impl.NotFoundError：</title>
+    <url>/%E8%BF%90%E8%A1%8CSSD-TensorFlow%E6%8A%A5%E9%94%99%EF%BC%9Atensorflow.python.framework.errors_impl.NotFoundError%EF%BC%9A.html</url>
+    <content><![CDATA[<p>玩了很久的 yolo，今天下载了 SSD-TensorFlow 的代码，不过在运行的时候出现了一点问题</p>
+<p>官方的介绍是运行：<code>jupyter notebook notebooks/ssd_notebook.ipynb</code></p>
+<p>但是在 <code>jupyter notebook</code> 中运行多有不便，我就将代码复制在了下面文件夹里，与 <code>ssd_notebook.ipynb</code> 放在了一块，可是出现报错：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">tensorflow.python.framework.errors_impl.NotFoundError: FindFirstFile failed <span class="keyword">for</span></span><br><span class="line">…/checkpoints:ϵͳ\udcd5Ҳ\udcbb\udcb5\udcbdָ\udcb6\udca8\udcb5\udcc4·\udcbe\udcb6\udca1\udca3 </span><br><span class="line">; No such process</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<p><img src="https://img-blog.csdnimg.cn/20200506152235306.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>可以看到：在 <code>demo_test.py</code> 的大概15、42、73行的位置，路径全都写错了</p>
+<p><img src="https://img-blog.csdnimg.cn/20200506153032938.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><img src="https://img-blog.csdnimg.cn/20200506153046666.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><img src="https://img-blog.csdnimg.cn/20200506153053557.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>以43行为例将：<code>ckpt_filename = &#39;.../checkpoints/ssd_300_vgg.ckpt&#39;</code> 改为：<code>ckpt_filename = &#39;./checkpoints/ssd_300_vgg.ckpt&#39;</code></p>
+<p><img src="https://img-blog.csdnimg.cn/20200506153309230.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>而且有一点要注意，我这里路径写的是相对路径，也就是从我 <code>demo_test.py</code> 所在的位置到 <code>checkpoints</code> 文件所在的相对位置，所以很明显路径需要添加东西，或者我直接将  <code>demo_test.py</code> 文件放在主文件夹下面即可：</p>
+<p><img src="https://img-blog.csdnimg.cn/20200506153618543.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h2><p><strong>1、将路径前面的点删除至只留下一个</strong></p>
+<p><strong>2、注意相对路径，否则会报同样的错误</strong></p>
+<hr>
+<blockquote>
+<p>题外话：<br>我也只是个学生，做项目的时候刚好看到 yolo 了，就玩了一阵子，现在准备玩 ssd ，这些只是很简单的东西，之后我会慢慢的把我做的比较深入的东西写出来(说实话…一般没人看)，我准备创建一个开源项目的交流群。<br>我本身很菜，但是玩过一些开源的项目，本身电气专业，也喜欢自己用单片机做东西，现在自己发过论文、国际发明专利、国内发明专利。马上准备考研了，也希望能遇到一些大佬，给些指点，也可以大家一起讨论问题，解决问题。<br>群号：977947271</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/20200506154001109.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+]]></content>
+      <categories>
+        <category>python</category>
+        <category>机器视觉</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>机器视觉</tag>
       </tags>
   </entry>
   <entry>
@@ -1812,39 +1828,23 @@ Did you mean &#39;conda create&#39;?</code></p>
       </tags>
   </entry>
   <entry>
-    <title>使用MATLAB调用摄像头并拍照—详细代码</title>
-    <url>/%E4%BD%BF%E7%94%A8MATLAB%E8%B0%83%E7%94%A8%E6%91%84%E5%83%8F%E5%A4%B4%E5%B9%B6%E6%8B%8D%E7%85%A7%E2%80%94%E8%AF%A6%E7%BB%86%E4%BB%A3%E7%A0%81.html</url>
-    <content><![CDATA[<blockquote>
-<p>大家也可以加我的交流群，所有资料我会在群里分享出来哦：977947271<br>2020/5/30：</p>
-</blockquote>
-<p>今天给大家介绍一下我第一次使用matlab进行摄像头拍照并进行图像处理的过程</p>
-<p>下面是个简单的GUI：</p>
-<p><img src="https://img-blog.csdnimg.cn/20200219115644543.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<a id="more"></a>
-<p>虽然不使用GUI也可以实现这种功能，不过我建议初学者最好使用GUI来控制程序，之后有时间我会发布不使用GUI来实现这种功能的博文。</p>
-<p>GUI界面的建立这里就不多说了。</p>
-<p>这个GUI是由一个坐标轴和四个按钮组成，按钮分别是“打开摄像头”，“拍照并保存”，“关闭摄像头”，“图像处理”，对应代码中的pushbutton1/2/3/4。</p>
-<p>目的是先打开摄像头，再拍摄照片到电脑中，最后调用图片去进行处理。</p>
-<p>下面介绍代码：<br>这里是 pushbutton1 的callback</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">varargout&#123;<span class="number">1</span>&#125; = handles.output;</span><br><span class="line"><span class="keyword">global</span> vid</span><br><span class="line">%定义一个全局变量，<span class="keyword">global</span>的用法可以参照我的另一篇博文</span><br><span class="line">vid = videoinput(<span class="string">'winvideo'</span>,<span class="number">1</span>,<span class="string">'YUY2_640x480'</span>);</span><br><span class="line">%winvideo函数可参照另一篇文章中imaqhwinfo的用法</span><br><span class="line">set(vid,<span class="string">'FramesPerTrigger'</span>,<span class="number">1</span>);</span><br><span class="line">%用特定的帧数去显示视频</span><br><span class="line">set(vid,<span class="string">'TriggerRepeat'</span>,Inf);</span><br><span class="line">vidRes = get(vid,<span class="string">'VideoResolution'</span>);</span><br><span class="line">%二维数组，获取视频长宽</span><br><span class="line">nBands = get(ojb,<span class="string">'NumberOfBands'</span>);</span><br><span class="line">%获得图像的颜色层数</span><br><span class="line">axes(handles.axes1);</span><br><span class="line">%让视频显示在指定的axes1坐标中</span><br><span class="line"><span class="keyword">global</span> hImage</span><br><span class="line">%定义全局变量hImage</span><br><span class="line">hImage = image(zeros(vidRes(<span class="number">2</span>),vidRes(<span class="number">1</span>),nBands));</span><br><span class="line">%获得图像的句柄</span><br><span class="line">preview（vid,hImage）;</span><br></pre></td></tr></table></figure>
-<p>点开“打开摄像头后”在 axes1 中就可看到拍摄的画面</p>
-<p>接下来介绍图片的保存：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">global</span> vid;</span><br><span class="line">frame = getsnapshot(vid);</span><br><span class="line">%摄像头每一帧的画面</span><br><span class="line">frame = ycbcr2rgb(frame);</span><br><span class="line">%将捕获的图像转化为RGB格式的图像</span><br><span class="line">[filename,pathname] = uiputfile(&#123;<span class="string">'*.bmp'</span>,<span class="string">'BMP files'</span>:<span class="string">'*.jpg'</span>,<span class="string">'JPG files'</span>&#125;<span class="string">'格式'</span>);</span><br><span class="line">%照片名称与储存路径</span><br><span class="line"><span class="keyword">if</span> isequal(filename,<span class="number">0</span>) || isequal(pathname,<span class="number">0</span>)</span><br><span class="line">%文件名与路径是否被占用</span><br><span class="line">	<span class="keyword">return</span>;</span><br><span class="line"><span class="keyword">else</span> </span><br><span class="line">	fpath = fullfile(pathname,filename);</span><br><span class="line">end</span><br><span class="line">imwrite(frame,fpath);</span><br></pre></td></tr></table></figure>
-<p>其实这种操作的逻辑对于matlab 的GUI来说，都可以比较简便的解决</p>
-<p>关闭摄像头：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">%很简单，在callback中写入一个函数即可</span><br><span class="line">close（findobj(<span class="string">'gca'</span>,<span class="string">'figure_csdn'</span>)）;</span><br><span class="line">%findobj(<span class="string">'PropertyName'</span>,<span class="string">'PropertyValue'</span>,...)</span><br><span class="line">返回figure的句柄</span><br></pre></td></tr></table></figure>
-<p>对于想要对图像进行处理的话：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">%就需要在callback中写入读取上图保存的图片的代码</span><br><span class="line">x = imread(<span class="string">'name.jpg'</span>);</span><br><span class="line">imshow(x);</span><br><span class="line">%在进行相应的处理程序</span><br></pre></td></tr></table></figure>
-<p>因为 gui 的代码冗长且很多地方无用，就无法将代码全部贴出来，但是对于有些基础的是可以看懂的，所有代码都放在相应的cb中进行。</p>
-<p>之后会发出更复杂的定时拍照的程序 gui，希望有技术大佬可以帮助指点错误与不足。</p>
-<p>如果有需要这篇文章中源码和 gui 的可以私信我。</p>
-<p>欢迎大家指正不足。</p>
+    <title>鱼C论坛小甲鱼Python课后题</title>
+    <url>/%E9%B1%BCC%E8%AE%BA%E5%9D%9B%E5%B0%8F%E7%94%B2%E9%B1%BCPython%E8%AF%BE%E5%90%8E%E9%A2%98.html</url>
+    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">本人是从小甲鱼的python视频一步步过来的</span><br><span class="line">所以刚看到小甲鱼的课后题库就转载过来和大家分享</span><br><span class="line">如有侵权，请联系删除</span><br></pre></td></tr></table></figure>
+
+
+<p>之前python时就是学习的小甲鱼的课程</p>
+<p>现在看了那么多的教学视频，感觉还是小甲鱼的视频有点意思</p>
+<p>正定不失风趣，正经不失一丝**（看过小甲鱼视频的应该都懂，哈哈哈哈）</p>
+<p>刚刚在百度文库中看了小甲鱼的Python课后题总结，毕竟小甲鱼专门搞得课后题，正确率就比其他的整合的题目要准确很多：</p>
+<p>小甲鱼Python课后题百度文库：<br><a href="https://wenku.baidu.com/view/84d437faf021dd36a32d7375a417866fb94ac067.html" target="_blank" rel="noopener">https://wenku.baidu.com/view/84d437faf021dd36a32d7375a417866fb94ac067.html</a></p>
 ]]></content>
       <categories>
-        <category>MATLAB</category>
+        <category>python</category>
+        <category>入门</category>
       </categories>
       <tags>
-        <tag>MATLAB</tag>
+        <tag>python</tag>
       </tags>
   </entry>
 </search>
