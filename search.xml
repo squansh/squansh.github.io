@@ -170,22 +170,6 @@
       </tags>
   </entry>
   <entry>
-    <title>MATLAB账户未关联到许可证—无法打开help文档—解决方法</title>
-    <url>/MATLAB%E8%B4%A6%E6%88%B7%E6%9C%AA%E5%85%B3%E8%81%94%E5%88%B0%E8%AE%B8%E5%8F%AF%E8%AF%81%E2%80%94%E6%97%A0%E6%B3%95%E6%89%93%E5%BC%80help%E6%96%87%E6%A1%A3%E2%80%94%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95.html</url>
-    <content><![CDATA[<p>今天在使用help命令时，需要参阅一些函数的help文档，却发现我的matlab无法关联到许可证<br><img src="https://img-blog.csdnimg.cn/20200211154400903.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<a id="more"></a>
-<p>对于一些朋友，只需要在命令行输入‘license’便可得到许可证编号。但我的matlab是破解版的，所以没有许可证。</p>
-<p>再参阅的国外论坛后，找到了解决方法。<br>下面就教大家如何解决：<br><img src="https://img-blog.csdnimg.cn/20200211154735579.png" alt="在这里插入图片描述"><br>点击‘预设项’—‘帮助’<br><img src="https://img-blog.csdnimg.cn/20200211155006810.png" alt="在这里插入图片描述"></p>
-<p>选择‘安装在本地’—‘在小窗口中’<br><img src="https://img-blog.csdnimg.cn/20200211155132806.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>即可解决问题，方法简单，只供破解版用户参阅。<br>有问题可联系我。</p>
-]]></content>
-      <categories>
-        <category>MATLAB</category>
-      </categories>
-      <tags>
-        <tag>MATLAB</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Matlab如何打开c++文件</title>
     <url>/Matlab%E5%A6%82%E4%BD%95%E6%89%93%E5%BC%80c++%E6%96%87%E4%BB%B6.html</url>
     <content><![CDATA[<p>最近在尝试视觉分析的项目</p>
@@ -209,6 +193,22 @@
       </tags>
   </entry>
   <entry>
+    <title>MATLAB账户未关联到许可证—无法打开help文档—解决方法</title>
+    <url>/MATLAB%E8%B4%A6%E6%88%B7%E6%9C%AA%E5%85%B3%E8%81%94%E5%88%B0%E8%AE%B8%E5%8F%AF%E8%AF%81%E2%80%94%E6%97%A0%E6%B3%95%E6%89%93%E5%BC%80help%E6%96%87%E6%A1%A3%E2%80%94%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95.html</url>
+    <content><![CDATA[<p>今天在使用help命令时，需要参阅一些函数的help文档，却发现我的matlab无法关联到许可证<br><img src="https://img-blog.csdnimg.cn/20200211154400903.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<a id="more"></a>
+<p>对于一些朋友，只需要在命令行输入‘license’便可得到许可证编号。但我的matlab是破解版的，所以没有许可证。</p>
+<p>再参阅的国外论坛后，找到了解决方法。<br>下面就教大家如何解决：<br><img src="https://img-blog.csdnimg.cn/20200211154735579.png" alt="在这里插入图片描述"><br>点击‘预设项’—‘帮助’<br><img src="https://img-blog.csdnimg.cn/20200211155006810.png" alt="在这里插入图片描述"></p>
+<p>选择‘安装在本地’—‘在小窗口中’<br><img src="https://img-blog.csdnimg.cn/20200211155132806.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>即可解决问题，方法简单，只供破解版用户参阅。<br>有问题可联系我。</p>
+]]></content>
+      <categories>
+        <category>MATLAB</category>
+      </categories>
+      <tags>
+        <tag>MATLAB</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>ModuleNotFoundError：No module named “ckeditor”</title>
     <url>/ModuleNotFoundError%EF%BC%9ANo%20module%20named%20%E2%80%9Cckeditor%E2%80%9D.html</url>
     <content><![CDATA[<p><img src="https://img-blog.csdnimg.cn/20200518195810898.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
@@ -217,26 +217,6 @@
 <p>解决方法：<code>pip3 install django-ckeditor
 Collecting django-ckeditor</code></p>
 <p><img src="https://img-blog.csdnimg.cn/20200518195956173.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-]]></content>
-      <categories>
-        <category>python</category>
-        <category>error&amp;库</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>error&amp;库</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>No module named &#39;pkg_resources&#39;解决方法</title>
-    <url>/No%20module%20named%20&#39;pkg_resources&#39;%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95.html</url>
-    <content><![CDATA[<blockquote>
-<p>No module named ‘pkg_resources’</p>
-</blockquote>
-<p>我在安装 pip 时出现这种问题</p>
-<p><strong>解决方法:</strong></p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">curl https://bootstrap.pypa.io/ez_setup.py | python</span><br></pre></td></tr></table></figure>
-<p><img src="https://img-blog.csdnimg.cn/20200311193145656.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>等待 Downloading setuptools 完成后即可.</p>
 ]]></content>
       <categories>
         <category>python</category>
@@ -309,6 +289,26 @@ Did you mean &#39;conda create&#39;?</code></p>
       </categories>
       <tags>
         <tag>win10</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>No module named &#39;pkg_resources&#39;解决方法</title>
+    <url>/No%20module%20named%20&#39;pkg_resources&#39;%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95.html</url>
+    <content><![CDATA[<blockquote>
+<p>No module named ‘pkg_resources’</p>
+</blockquote>
+<p>我在安装 pip 时出现这种问题</p>
+<p><strong>解决方法:</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">curl https://bootstrap.pypa.io/ez_setup.py | python</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/20200311193145656.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>等待 Downloading setuptools 完成后即可.</p>
+]]></content>
+      <categories>
+        <category>python</category>
+        <category>error&amp;库</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>error&amp;库</tag>
       </tags>
   </entry>
   <entry>
@@ -670,6 +670,31 @@ Did you mean &#39;conda create&#39;?</code></p>
       </tags>
   </entry>
   <entry>
+    <title>Python安装 chardet</title>
+    <url>/Python%E5%AE%89%E8%A3%85%20chardet.html</url>
+    <content><![CDATA[<p>Chardet：通用字符编码检测器</p>
+<p>chardet 3.0.4官网链接<a href="https://pypi.org/project/chardet/#files" target="_blank" rel="noopener">https://pypi.org/project/chardet/#files</a></p>
+<p><img src="https://img-blog.csdnimg.cn/20200309201404769.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<a id="more"></a>
+<p>下载—&gt;解压文件后，找到chardet文件夹</p>
+<p><img src="https://img-blog.csdnimg.cn/20200309203606459.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>复制在python的安装路径下的 Lib 文件夹内即可</p>
+<p>部分同学的 Lib 文件夹下有 site-packages 文件夹，则最好将 chardet 复制在 site-packages 文件夹内</p>
+<p>pycharm 和 anaconda 都可以这样安装（不会使用 pip 的同学）</p>
+<p><img src="https://img-blog.csdnimg.cn/20200309204210131.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>然后 chardet 就可以正常使了</p>
+<p><img src="https://img-blog.csdnimg.cn/2020030921003628.png" alt="在这里插入图片描述"></p>
+]]></content>
+      <categories>
+        <category>python</category>
+        <category>error&amp;库</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>error&amp;库</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Python学习笔记_9：class 类定义的属性与方法——详解</title>
     <url>/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_9%EF%BC%9Aclass%20%E7%B1%BB%E5%AE%9A%E4%B9%89%E7%9A%84%E5%B1%9E%E6%80%A7%E4%B8%8E%E6%96%B9%E6%B3%95%E2%80%94%E2%80%94%E8%AF%A6%E8%A7%A3.html</url>
     <content><![CDATA[<p>对很多没有其他语言基础的初学者来说，可能学到 python 的类定义的时候会苦恼很久</p>
@@ -699,31 +724,6 @@ Did you mean &#39;conda create&#39;?</code></p>
       <tags>
         <tag>python</tag>
         <tag>语法笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python安装 chardet</title>
-    <url>/Python%E5%AE%89%E8%A3%85%20chardet.html</url>
-    <content><![CDATA[<p>Chardet：通用字符编码检测器</p>
-<p>chardet 3.0.4官网链接<a href="https://pypi.org/project/chardet/#files" target="_blank" rel="noopener">https://pypi.org/project/chardet/#files</a></p>
-<p><img src="https://img-blog.csdnimg.cn/20200309201404769.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<a id="more"></a>
-<p>下载—&gt;解压文件后，找到chardet文件夹</p>
-<p><img src="https://img-blog.csdnimg.cn/20200309203606459.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>复制在python的安装路径下的 Lib 文件夹内即可</p>
-<p>部分同学的 Lib 文件夹下有 site-packages 文件夹，则最好将 chardet 复制在 site-packages 文件夹内</p>
-<p>pycharm 和 anaconda 都可以这样安装（不会使用 pip 的同学）</p>
-<p><img src="https://img-blog.csdnimg.cn/20200309204210131.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>然后 chardet 就可以正常使了</p>
-<p><img src="https://img-blog.csdnimg.cn/2020030921003628.png" alt="在这里插入图片描述"></p>
-]]></content>
-      <categories>
-        <category>python</category>
-        <category>error&amp;库</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>error&amp;库</tag>
       </tags>
   </entry>
   <entry>
@@ -1025,6 +1025,32 @@ Did you mean &#39;conda create&#39;?</code></p>
       </tags>
   </entry>
   <entry>
+    <title>python 使用镜像安装库时提示 Warning——已解决</title>
+    <url>/python%20%E4%BD%BF%E7%94%A8%E9%95%9C%E5%83%8F%E5%AE%89%E8%A3%85%E5%BA%93%E6%97%B6%E6%8F%90%E7%A4%BA%20Warning%E2%80%94%E2%80%94%E5%B7%B2%E8%A7%A3%E5%86%B3.html</url>
+    <content><![CDATA[<h2 id="事件起因："><a href="#事件起因：" class="headerlink" title="事件起因："></a>事件起因：</h2><p><img src="https://img-blog.csdnimg.cn/20200318014810411.png" alt="在这里插入图片描述"></p>
+<p>看这张图，使用清华镜像时提示 warning：<br><code>Warning: &#39;https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/&#39; already in &#39;channels&#39; list, moving to the top</code></p>
+<a id="more"></a>
+<h2 id="解决方法："><a href="#解决方法：" class="headerlink" title="解决方法："></a>解决方法：</h2><p>在 C 盘的用户目录下找到 <code>.condarc</code> 文件<br><img src="https://img-blog.csdnimg.cn/20200318015055134.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>双击用记事本打开</p>
+<p>可以看到文件里有清华源的链接<br><img src="https://img-blog.csdnimg.cn/20200318015226395.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>直接删除链接：</p>
+<p><img src="https://img-blog.csdnimg.cn/20200318015324793.png" alt="在这里插入图片描述"></p>
+<blockquote>
+<p><strong>记得把文件保存再关闭</strong></p>
+<p><strong>即可正常使用</strong></p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/2020031801543635.png" alt="在这里插入图片描述"></p>
+]]></content>
+      <categories>
+        <category>python</category>
+        <category>error&amp;库</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>error&amp;库</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>module &#39;tensorflow&#39; has no attribute &#39;get_default_graph&#39;</title>
     <url>/module%20&#39;tensorflow&#39;%20has%20no%20attribute%20&#39;get_default_graph&#39;.html</url>
     <content><![CDATA[<p>参考：<a href="https://blog.csdn.net/u014466109/article/details/88877321?depth_1-utm_source=distribute.pc_relevant.none-task&amp;utm_source=distribute.pc_relevant.none-task" target="_blank" rel="noopener">https://blog.csdn.net/u014466109/article/details/88877321?depth_1-utm_source=distribute.pc_relevant.none-task&amp;utm_source=distribute.pc_relevant.none-task</a></p>
@@ -1046,32 +1072,6 @@ Did you mean &#39;conda create&#39;?</code></p>
 <p>这件事也显示了各个版本之间的 兼容 与 矛盾</p>
 <p>版本的选择真的很重要</p>
 <p>————————————————————————————————————<br>如果有使用 yolov3 算法中遇到各种问题的朋友可以评论你的问题，我几乎把所有能遇到的问题都遇到了，应该可以给予帮助</p>
-]]></content>
-      <categories>
-        <category>python</category>
-        <category>error&amp;库</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>error&amp;库</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>python 使用镜像安装库时提示 Warning——已解决</title>
-    <url>/python%20%E4%BD%BF%E7%94%A8%E9%95%9C%E5%83%8F%E5%AE%89%E8%A3%85%E5%BA%93%E6%97%B6%E6%8F%90%E7%A4%BA%20Warning%E2%80%94%E2%80%94%E5%B7%B2%E8%A7%A3%E5%86%B3.html</url>
-    <content><![CDATA[<h2 id="事件起因："><a href="#事件起因：" class="headerlink" title="事件起因："></a>事件起因：</h2><p><img src="https://img-blog.csdnimg.cn/20200318014810411.png" alt="在这里插入图片描述"></p>
-<p>看这张图，使用清华镜像时提示 warning：<br><code>Warning: &#39;https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/&#39; already in &#39;channels&#39; list, moving to the top</code></p>
-<a id="more"></a>
-<h2 id="解决方法："><a href="#解决方法：" class="headerlink" title="解决方法："></a>解决方法：</h2><p>在 C 盘的用户目录下找到 <code>.condarc</code> 文件<br><img src="https://img-blog.csdnimg.cn/20200318015055134.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>双击用记事本打开</p>
-<p>可以看到文件里有清华源的链接<br><img src="https://img-blog.csdnimg.cn/20200318015226395.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>直接删除链接：</p>
-<p><img src="https://img-blog.csdnimg.cn/20200318015324793.png" alt="在这里插入图片描述"></p>
-<blockquote>
-<p><strong>记得把文件保存再关闭</strong></p>
-<p><strong>即可正常使用</strong></p>
-</blockquote>
-<p><img src="https://img-blog.csdnimg.cn/2020031801543635.png" alt="在这里插入图片描述"></p>
 ]]></content>
       <categories>
         <category>python</category>
