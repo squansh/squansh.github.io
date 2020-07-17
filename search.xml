@@ -20,6 +20,29 @@
       </tags>
   </entry>
   <entry>
+    <title>ERROR Cannot uninstall &#39;xxx&#39;. It is a distutils installed project and thus we cannot accurately</title>
+    <url>/ERROR%EF%BC%9ACannot%20uninstall%20&#39;xxx&#39;.%20It%20is%20a%20distutils%20installed%20project%20and%20thus%20we%20cannot%20accurately.html</url>
+    <content><![CDATA[<p>今天安装 <code>serial</code> 时报错：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">ERROR: Cannot uninstall <span class="string">'PyYAML'</span>. It <span class="keyword">is</span> a distutils installed project <span class="keyword">and</span> thus we</span><br><span class="line">       cannot accurately determine which files belong to it which would lead to </span><br><span class="line">       only a partial uninstall .</span><br><span class="line">错误：无法卸载“ PyYAML”。 这是一个distutils安装的项目，因此我们</span><br><span class="line">        无法准确确定哪些文件属于该文件，这将导致</span><br><span class="line">        仅部分卸载</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<p>我的环境：win10、py3.6</p>
+<p>解决办法：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">报错 Cannot uninstall <span class="string">'abcd'</span>，那就 pip install --ignore-installed abcd</span><br></pre></td></tr></table></figure>
+
+<p>因为我报错 <code>Cannot uninstall &#39;PyYAML&#39;</code>，所以</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">pip install --ignore-installed pyyaml</span><br><span class="line"><span class="comment">#Successfully installed pyyaml-5.3.1</span></span><br><span class="line"><span class="string">'安装完成后,再下载自己想要下载的包'</span></span><br><span class="line">pip install serial</span><br><span class="line"><span class="comment">#Successfully installed iso8601-0.1.12 serial-0.0.97</span></span><br></pre></td></tr></table></figure>
+<p>就成功解决了。</p>
+]]></content>
+      <categories>
+        <category>python</category>
+        <category>error&amp;库</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>error&amp;库</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Command “python setup.py egg_info” failed——完美解决</title>
     <url>/Command%20%E2%80%9Cpython%20setup.py%20egg_info%E2%80%9D%20failed%E2%80%94%E2%80%94%E5%AE%8C%E7%BE%8E%E8%A7%A3%E5%86%B3.html</url>
     <content><![CDATA[<p>用 ubuntu 安装 <code>django-mdeditor==0.1.13</code> 时报错：</p>
@@ -43,29 +66,6 @@
         <tag>python</tag>
         <tag>error&amp;库</tag>
         <tag>ubuntu</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>ERROR Cannot uninstall &#39;xxx&#39;. It is a distutils installed project and thus we cannot accurately</title>
-    <url>/ERROR%EF%BC%9ACannot%20uninstall%20&#39;xxx&#39;.%20It%20is%20a%20distutils%20installed%20project%20and%20thus%20we%20cannot%20accurately.html</url>
-    <content><![CDATA[<p>今天安装 <code>serial</code> 时报错：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">ERROR: Cannot uninstall <span class="string">'PyYAML'</span>. It <span class="keyword">is</span> a distutils installed project <span class="keyword">and</span> thus we</span><br><span class="line">       cannot accurately determine which files belong to it which would lead to </span><br><span class="line">       only a partial uninstall .</span><br><span class="line">错误：无法卸载“ PyYAML”。 这是一个distutils安装的项目，因此我们</span><br><span class="line">        无法准确确定哪些文件属于该文件，这将导致</span><br><span class="line">        仅部分卸载</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
-<p>我的环境：win10、py3.6</p>
-<p>解决办法：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">报错 Cannot uninstall <span class="string">'abcd'</span>，那就 pip install --ignore-installed abcd</span><br></pre></td></tr></table></figure>
-
-<p>因为我报错 <code>Cannot uninstall &#39;PyYAML&#39;</code>，所以</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">pip install --ignore-installed pyyaml</span><br><span class="line"><span class="comment">#Successfully installed pyyaml-5.3.1</span></span><br><span class="line"><span class="string">'安装完成后,再下载自己想要下载的包'</span></span><br><span class="line">pip install serial</span><br><span class="line"><span class="comment">#Successfully installed iso8601-0.1.12 serial-0.0.97</span></span><br></pre></td></tr></table></figure>
-<p>就成功解决了。</p>
-]]></content>
-      <categories>
-        <category>python</category>
-        <category>error&amp;库</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>error&amp;库</tag>
       </tags>
   </entry>
   <entry>
@@ -727,6 +727,27 @@ Did you mean &#39;conda create&#39;?</code></p>
       </tags>
   </entry>
   <entry>
+    <title>Python的Scripts文件夹为空——已解决</title>
+    <url>/Python%E7%9A%84Scripts%E6%96%87%E4%BB%B6%E5%A4%B9%E4%B8%BA%E7%A9%BA%E2%80%94%E2%80%94%E5%B7%B2%E8%A7%A3%E5%86%B3.html</url>
+    <content><![CDATA[<p>如果有 windows 环境的 python 的话，很可能会出现 Scripts 文件夹为空，这样就无法正常在 cmd 正常使用 pip 命令。</p>
+<p><strong>解决方法：</strong></p>
+<p> cmd 中输入： <code>python -m ensurepip</code></p>
+<p><img src="https://img-blog.csdnimg.cn/20200313174634904.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<a id="more"></a>
+<p>文件夹下就出现 exe 文件</p>
+<p><img src="https://img-blog.csdnimg.cn/20200313174720149.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>问题解决。</p>
+]]></content>
+      <categories>
+        <category>python</category>
+        <category>error&amp;库</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>error&amp;库</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>VLFeat工具包下载</title>
     <url>/VLFeat%E5%B7%A5%E5%85%B7%E5%8C%85%E4%B8%8B%E8%BD%BD.html</url>
     <content><![CDATA[<p><strong>vlfeat 官方下载链接：</strong><a href="https://www.vlfeat.org/" target="_blank" rel="noopener">https://www.vlfeat.org/</a></p>
@@ -748,27 +769,6 @@ Did you mean &#39;conda create&#39;?</code></p>
       </categories>
       <tags>
         <tag>MATLAB</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python的Scripts文件夹为空——已解决</title>
-    <url>/Python%E7%9A%84Scripts%E6%96%87%E4%BB%B6%E5%A4%B9%E4%B8%BA%E7%A9%BA%E2%80%94%E2%80%94%E5%B7%B2%E8%A7%A3%E5%86%B3.html</url>
-    <content><![CDATA[<p>如果有 windows 环境的 python 的话，很可能会出现 Scripts 文件夹为空，这样就无法正常在 cmd 正常使用 pip 命令。</p>
-<p><strong>解决方法：</strong></p>
-<p> cmd 中输入： <code>python -m ensurepip</code></p>
-<p><img src="https://img-blog.csdnimg.cn/20200313174634904.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<a id="more"></a>
-<p>文件夹下就出现 exe 文件</p>
-<p><img src="https://img-blog.csdnimg.cn/20200313174720149.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>问题解决。</p>
-]]></content>
-      <categories>
-        <category>python</category>
-        <category>error&amp;库</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>error&amp;库</tag>
       </tags>
   </entry>
   <entry>
@@ -1315,6 +1315,43 @@ Did you mean &#39;conda create&#39;?</code></p>
       </tags>
   </entry>
   <entry>
+    <title>怎么下载网页在线视频</title>
+    <url>/%E6%80%8E%E4%B9%88%E4%B8%8B%E8%BD%BD%E7%BD%91%E9%A1%B5%E5%9C%A8%E7%BA%BF%E8%A7%86%E9%A2%91.html</url>
+    <content><![CDATA[<p>在线看视频多少会有些卡顿，所以就可以将视频先下载下来之后看</p>
+<p>但对我而言，大部分视频都是在线甚至很小众的</p>
+<p>单独拿B站等大型网站来说，我们可以使用“硕鼠”等</p>
+<p>复制需要下载的视频的链接，复制在这里就可以准备下载<br><img src="https://img-blog.csdnimg.cn/20200223233143492.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>但今天说的没有那么简单</p>
+<p>硕鼠这种软件毕竟可下载的网站数量有限</p>
+<p>像我今天遇到了无法用硕鼠直接下载的情况</p>
+<p>下面给大家详细介绍三种方法：</p>
+<p><strong>1、**</strong>拿谷歌浏览器来说，如果想下载视频，先要打开视频，打开开发者工具**<br><img src="https://img-blog.csdnimg.cn/20200223233748416.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>选择”Network“—&gt;”all“<br><img src="https://img-blog.csdnimg.cn/20200223233938512.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">最好按F5刷新一下界面，不然可以会导致加载的视频不完整：</p>
+<p>在界面中找到 Time 框中的时间随着真实秒数在变化的文件，一般为所有现实的文件中时间最长，size 最大的文件，则这个文件就是我们想要的文件<br><img src="https://img-blog.csdnimg.cn/20200223234755761.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>右键该文件——选择”Open in new tab“,再右键另存为就可以了<br><img src="https://img-blog.csdnimg.cn/20200224100123975.jpeg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>这是第一种比较简单的方法。</p>
+<p><strong>2、**</strong>打开视频，右键点击画面空白处 选择”查看网页源代码“，再Ctrl+F 打开查找窗口。**</p>
+<p>因为我一直在学习韩语，所以这里以某韩语教学视频为例<br><img src="https://img-blog.csdnimg.cn/20200223235957978.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>输入”url”,复制这些url后面的连接去迅雷直接搜索网站下载就ok了。<br><img src="https://img-blog.csdnimg.cn/20200224000136299.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong>3、**</strong>这个方法就比较小众了，因为很多视频不会出现这种情况**</p>
+<p>有的视频的开发者工具打开后发现全部都是ts后缀的文件</p>
+<p>列表显示的都是分割过的文件，保存下来也只是1段1段的<br><img src="https://img-blog.csdnimg.cn/20200224000803175.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>所以这时候就需要找到这些 ts 后缀的文件的缓存地址了</p>
+<p>打开新的标签页输入“chrome://version/”</p>
+<p>就可以知道这些 mp2t 文件被保存的位置<br><img src="https://img-blog.csdnimg.cn/20200224001554297.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>现在我为了接下来述说简单点，我把刚刚</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">C:\Users\<span class="number">27511</span>\AppData\Local\Google\Chrome\Application\chrome.exe</span><br></pre></td></tr></table></figure>
+<p>这个路径下的 mp2t 文件全部移到新的文件夹，名字就叫 CSDN<br>我再建立一个新的文件夹，名字叫 CSDN2，两个文件夹都放在名为1的文件夹下面</p>
+<p>那么现在按win+R 输入 cmd 打开窗口输入：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">copy /b  D:\<span class="number">1</span>\CSDN D:\<span class="number">1</span>\CSDN2\<span class="keyword">new</span>.mp4</span><br><span class="line">%copy /b  C:\f\  D:\f\<span class="keyword">new</span>.ts</span><br><span class="line">%copy /b不能动</span><br><span class="line">%C：\f\ 是缓存的mp2y文件的位置</span><br><span class="line">%D：\f\是将mp2y合并后储存的位置</span><br><span class="line">%<span class="keyword">new</span>是文件名，ts是文件后缀</span><br></pre></td></tr></table></figure>
+<p>给大家看一下CSDN文件夹<br><img src="https://img-blog.csdnimg.cn/20200224004637895.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>现在在cmd中输入：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">copy /b  D:\<span class="number">1</span>\CSDN D:\<span class="number">1</span>\CSDN2\<span class="keyword">new</span>.mp4</span><br><span class="line">%我这里保存为MP4格式，可以根据需要随意更改后缀</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/202002240048274.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200224004856636.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>而我的CSDN2文件夹中就有了MP4格式的视频文件了</p>
+<p><img src="https://img-blog.csdnimg.cn/20200224005006426.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>这样就可以正常观看了。</p>
+<p>这几种方法均是我最近下载视频文件的终于到的可以解决问题的方法，基本所有的视频均可以解决。</p>
+<p>如有其他问题，可以联系我</p>
+]]></content>
+      <categories>
+        <category>win10</category>
+      </categories>
+      <tags>
+        <tag>win10</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>安装Mathtype后无法使用——已解决</title>
     <url>/%E5%AE%89%E8%A3%85Mathtype%E5%90%8E%E6%97%A0%E6%B3%95%E4%BD%BF%E7%94%A8%E2%80%94%E2%80%94%E5%B7%B2%E8%A7%A3%E5%86%B3.html</url>
     <content><![CDATA[<h2 id="事件背景："><a href="#事件背景：" class="headerlink" title="事件背景："></a>事件背景：</h2><blockquote>
@@ -1354,43 +1391,6 @@ Did you mean &#39;conda create&#39;?</code></p>
 <p>然后重启 word</p>
 <p>MathType 就可以正常使用了</p>
 <p><img src="https://img-blog.csdnimg.cn/20200406203406349.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-]]></content>
-      <categories>
-        <category>win10</category>
-      </categories>
-      <tags>
-        <tag>win10</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>怎么下载网页在线视频</title>
-    <url>/%E6%80%8E%E4%B9%88%E4%B8%8B%E8%BD%BD%E7%BD%91%E9%A1%B5%E5%9C%A8%E7%BA%BF%E8%A7%86%E9%A2%91.html</url>
-    <content><![CDATA[<p>在线看视频多少会有些卡顿，所以就可以将视频先下载下来之后看</p>
-<p>但对我而言，大部分视频都是在线甚至很小众的</p>
-<p>单独拿B站等大型网站来说，我们可以使用“硕鼠”等</p>
-<p>复制需要下载的视频的链接，复制在这里就可以准备下载<br><img src="https://img-blog.csdnimg.cn/20200223233143492.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>但今天说的没有那么简单</p>
-<p>硕鼠这种软件毕竟可下载的网站数量有限</p>
-<p>像我今天遇到了无法用硕鼠直接下载的情况</p>
-<p>下面给大家详细介绍三种方法：</p>
-<p><strong>1、**</strong>拿谷歌浏览器来说，如果想下载视频，先要打开视频，打开开发者工具**<br><img src="https://img-blog.csdnimg.cn/20200223233748416.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>选择”Network“—&gt;”all“<br><img src="https://img-blog.csdnimg.cn/20200223233938512.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">最好按F5刷新一下界面，不然可以会导致加载的视频不完整：</p>
-<p>在界面中找到 Time 框中的时间随着真实秒数在变化的文件，一般为所有现实的文件中时间最长，size 最大的文件，则这个文件就是我们想要的文件<br><img src="https://img-blog.csdnimg.cn/20200223234755761.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>右键该文件——选择”Open in new tab“,再右键另存为就可以了<br><img src="https://img-blog.csdnimg.cn/20200224100123975.jpeg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>这是第一种比较简单的方法。</p>
-<p><strong>2、**</strong>打开视频，右键点击画面空白处 选择”查看网页源代码“，再Ctrl+F 打开查找窗口。**</p>
-<p>因为我一直在学习韩语，所以这里以某韩语教学视频为例<br><img src="https://img-blog.csdnimg.cn/20200223235957978.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>输入”url”,复制这些url后面的连接去迅雷直接搜索网站下载就ok了。<br><img src="https://img-blog.csdnimg.cn/20200224000136299.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong>3、**</strong>这个方法就比较小众了，因为很多视频不会出现这种情况**</p>
-<p>有的视频的开发者工具打开后发现全部都是ts后缀的文件</p>
-<p>列表显示的都是分割过的文件，保存下来也只是1段1段的<br><img src="https://img-blog.csdnimg.cn/20200224000803175.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>所以这时候就需要找到这些 ts 后缀的文件的缓存地址了</p>
-<p>打开新的标签页输入“chrome://version/”</p>
-<p>就可以知道这些 mp2t 文件被保存的位置<br><img src="https://img-blog.csdnimg.cn/20200224001554297.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>现在我为了接下来述说简单点，我把刚刚</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">C:\Users\<span class="number">27511</span>\AppData\Local\Google\Chrome\Application\chrome.exe</span><br></pre></td></tr></table></figure>
-<p>这个路径下的 mp2t 文件全部移到新的文件夹，名字就叫 CSDN<br>我再建立一个新的文件夹，名字叫 CSDN2，两个文件夹都放在名为1的文件夹下面</p>
-<p>那么现在按win+R 输入 cmd 打开窗口输入：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">copy /b  D:\<span class="number">1</span>\CSDN D:\<span class="number">1</span>\CSDN2\<span class="keyword">new</span>.mp4</span><br><span class="line">%copy /b  C:\f\  D:\f\<span class="keyword">new</span>.ts</span><br><span class="line">%copy /b不能动</span><br><span class="line">%C：\f\ 是缓存的mp2y文件的位置</span><br><span class="line">%D：\f\是将mp2y合并后储存的位置</span><br><span class="line">%<span class="keyword">new</span>是文件名，ts是文件后缀</span><br></pre></td></tr></table></figure>
-<p>给大家看一下CSDN文件夹<br><img src="https://img-blog.csdnimg.cn/20200224004637895.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>现在在cmd中输入：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">copy /b  D:\<span class="number">1</span>\CSDN D:\<span class="number">1</span>\CSDN2\<span class="keyword">new</span>.mp4</span><br><span class="line">%我这里保存为MP4格式，可以根据需要随意更改后缀</span><br></pre></td></tr></table></figure>
-<p><img src="https://img-blog.csdnimg.cn/202002240048274.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200224004856636.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>而我的CSDN2文件夹中就有了MP4格式的视频文件了</p>
-<p><img src="https://img-blog.csdnimg.cn/20200224005006426.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>这样就可以正常观看了。</p>
-<p>这几种方法均是我最近下载视频文件的终于到的可以解决问题的方法，基本所有的视频均可以解决。</p>
-<p>如有其他问题，可以联系我</p>
 ]]></content>
       <categories>
         <category>win10</category>
