@@ -20,29 +20,6 @@
       </tags>
   </entry>
   <entry>
-    <title>ERROR Cannot uninstall &#39;xxx&#39;. It is a distutils installed project and thus we cannot accurately</title>
-    <url>/ERROR%EF%BC%9ACannot%20uninstall%20&#39;xxx&#39;.%20It%20is%20a%20distutils%20installed%20project%20and%20thus%20we%20cannot%20accurately.html</url>
-    <content><![CDATA[<p>今天安装 <code>serial</code> 时报错：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">ERROR: Cannot uninstall <span class="string">'PyYAML'</span>. It <span class="keyword">is</span> a distutils installed project <span class="keyword">and</span> thus we</span><br><span class="line">       cannot accurately determine which files belong to it which would lead to </span><br><span class="line">       only a partial uninstall .</span><br><span class="line">错误：无法卸载“ PyYAML”。 这是一个distutils安装的项目，因此我们</span><br><span class="line">        无法准确确定哪些文件属于该文件，这将导致</span><br><span class="line">        仅部分卸载</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
-<p>我的环境：win10、py3.6</p>
-<p>解决办法：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">报错 Cannot uninstall <span class="string">'abcd'</span>，那就 pip install --ignore-installed abcd</span><br></pre></td></tr></table></figure>
-
-<p>因为我报错 <code>Cannot uninstall &#39;PyYAML&#39;</code>，所以</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">pip install --ignore-installed pyyaml</span><br><span class="line"><span class="comment">#Successfully installed pyyaml-5.3.1</span></span><br><span class="line"><span class="string">'安装完成后,再下载自己想要下载的包'</span></span><br><span class="line">pip install serial</span><br><span class="line"><span class="comment">#Successfully installed iso8601-0.1.12 serial-0.0.97</span></span><br></pre></td></tr></table></figure>
-<p>就成功解决了。</p>
-]]></content>
-      <categories>
-        <category>python</category>
-        <category>error&amp;库</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>error&amp;库</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Command “python setup.py egg_info” failed——完美解决</title>
     <url>/Command%20%E2%80%9Cpython%20setup.py%20egg_info%E2%80%9D%20failed%E2%80%94%E2%80%94%E5%AE%8C%E7%BE%8E%E8%A7%A3%E5%86%B3.html</url>
     <content><![CDATA[<p>用 ubuntu 安装 <code>django-mdeditor==0.1.13</code> 时报错：</p>
@@ -66,6 +43,29 @@
         <tag>python</tag>
         <tag>error&amp;库</tag>
         <tag>ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>ERROR Cannot uninstall &#39;xxx&#39;. It is a distutils installed project and thus we cannot accurately</title>
+    <url>/ERROR%EF%BC%9ACannot%20uninstall%20&#39;xxx&#39;.%20It%20is%20a%20distutils%20installed%20project%20and%20thus%20we%20cannot%20accurately.html</url>
+    <content><![CDATA[<p>今天安装 <code>serial</code> 时报错：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">ERROR: Cannot uninstall <span class="string">'PyYAML'</span>. It <span class="keyword">is</span> a distutils installed project <span class="keyword">and</span> thus we</span><br><span class="line">       cannot accurately determine which files belong to it which would lead to </span><br><span class="line">       only a partial uninstall .</span><br><span class="line">错误：无法卸载“ PyYAML”。 这是一个distutils安装的项目，因此我们</span><br><span class="line">        无法准确确定哪些文件属于该文件，这将导致</span><br><span class="line">        仅部分卸载</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<p>我的环境：win10、py3.6</p>
+<p>解决办法：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">报错 Cannot uninstall <span class="string">'abcd'</span>，那就 pip install --ignore-installed abcd</span><br></pre></td></tr></table></figure>
+
+<p>因为我报错 <code>Cannot uninstall &#39;PyYAML&#39;</code>，所以</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">pip install --ignore-installed pyyaml</span><br><span class="line"><span class="comment">#Successfully installed pyyaml-5.3.1</span></span><br><span class="line"><span class="string">'安装完成后,再下载自己想要下载的包'</span></span><br><span class="line">pip install serial</span><br><span class="line"><span class="comment">#Successfully installed iso8601-0.1.12 serial-0.0.97</span></span><br></pre></td></tr></table></figure>
+<p>就成功解决了。</p>
+]]></content>
+      <categories>
+        <category>python</category>
+        <category>error&amp;库</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>error&amp;库</tag>
       </tags>
   </entry>
   <entry>
@@ -170,22 +170,6 @@
       </tags>
   </entry>
   <entry>
-    <title>MATLAB账户未关联到许可证—无法打开help文档—解决方法</title>
-    <url>/MATLAB%E8%B4%A6%E6%88%B7%E6%9C%AA%E5%85%B3%E8%81%94%E5%88%B0%E8%AE%B8%E5%8F%AF%E8%AF%81%E2%80%94%E6%97%A0%E6%B3%95%E6%89%93%E5%BC%80help%E6%96%87%E6%A1%A3%E2%80%94%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95.html</url>
-    <content><![CDATA[<p>今天在使用help命令时，需要参阅一些函数的help文档，却发现我的matlab无法关联到许可证<br><img src="https://img-blog.csdnimg.cn/20200211154400903.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<a id="more"></a>
-<p>对于一些朋友，只需要在命令行输入‘license’便可得到许可证编号。但我的matlab是破解版的，所以没有许可证。</p>
-<p>再参阅的国外论坛后，找到了解决方法。<br>下面就教大家如何解决：<br><img src="https://img-blog.csdnimg.cn/20200211154735579.png" alt="在这里插入图片描述"><br>点击‘预设项’—‘帮助’<br><img src="https://img-blog.csdnimg.cn/20200211155006810.png" alt="在这里插入图片描述"></p>
-<p>选择‘安装在本地’—‘在小窗口中’<br><img src="https://img-blog.csdnimg.cn/20200211155132806.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>即可解决问题，方法简单，只供破解版用户参阅。<br>有问题可联系我。</p>
-]]></content>
-      <categories>
-        <category>MATLAB</category>
-      </categories>
-      <tags>
-        <tag>MATLAB</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Matlab如何打开c++文件</title>
     <url>/Matlab%E5%A6%82%E4%BD%95%E6%89%93%E5%BC%80c++%E6%96%87%E4%BB%B6.html</url>
     <content><![CDATA[<p>最近在尝试视觉分析的项目</p>
@@ -200,6 +184,22 @@
 <p>输入 mex +文件名和后缀</p>
 <p>比如我这里需要运行名为 maxsubarray2D.cpp 的文件，</p>
 <p>所以我输入：<code>mex maxsubarray2D.cpp</code><br><img src="https://img-blog.csdnimg.cn/20200314232301967.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200314232508289.png" alt="在这里插入图片描述"><br>显示编译完成后就可以进行接下来的操作了。</p>
+]]></content>
+      <categories>
+        <category>MATLAB</category>
+      </categories>
+      <tags>
+        <tag>MATLAB</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>MATLAB账户未关联到许可证—无法打开help文档—解决方法</title>
+    <url>/MATLAB%E8%B4%A6%E6%88%B7%E6%9C%AA%E5%85%B3%E8%81%94%E5%88%B0%E8%AE%B8%E5%8F%AF%E8%AF%81%E2%80%94%E6%97%A0%E6%B3%95%E6%89%93%E5%BC%80help%E6%96%87%E6%A1%A3%E2%80%94%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95.html</url>
+    <content><![CDATA[<p>今天在使用help命令时，需要参阅一些函数的help文档，却发现我的matlab无法关联到许可证<br><img src="https://img-blog.csdnimg.cn/20200211154400903.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<a id="more"></a>
+<p>对于一些朋友，只需要在命令行输入‘license’便可得到许可证编号。但我的matlab是破解版的，所以没有许可证。</p>
+<p>再参阅的国外论坛后，找到了解决方法。<br>下面就教大家如何解决：<br><img src="https://img-blog.csdnimg.cn/20200211154735579.png" alt="在这里插入图片描述"><br>点击‘预设项’—‘帮助’<br><img src="https://img-blog.csdnimg.cn/20200211155006810.png" alt="在这里插入图片描述"></p>
+<p>选择‘安装在本地’—‘在小窗口中’<br><img src="https://img-blog.csdnimg.cn/20200211155132806.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>即可解决问题，方法简单，只供破解版用户参阅。<br>有问题可联系我。</p>
 ]]></content>
       <categories>
         <category>MATLAB</category>
@@ -1161,40 +1161,6 @@ Did you mean &#39;conda create&#39;?</code></p>
       </tags>
   </entry>
   <entry>
-    <title>人头录音原理及解释</title>
-    <url>/%E4%BA%BA%E5%A4%B4%E5%BD%95%E9%9F%B3%E5%8E%9F%E7%90%86%E5%8F%8A%E8%A7%A3%E9%87%8A.html</url>
-    <content><![CDATA[<p>简介：</p>
-<p>本文简单介绍了环绕声基础知识，还介绍了各种双声道虚拟环绕声（多声道）的技术。最近突然对虚拟环绕声感兴趣，整理了一下相关知识。</p>
-<ol>
-<li>何为环绕声<br>普通的立体声只能分清左右两个方向的声音，而环绕声还能让人声音的前后左右各个方位，更有空间感仿佛置身于现场。常见的环绕声主要有 5.1 声道与 7.1 声道两种，要重现环绕声也相应的需要 6 个或者 8 个音箱。<a id="more"></a>
-电影中最常见的环绕声格式是杜比数字和 DTS，两者是竞争对手关系，电影 DVD 中一般包含有其中一种或者两种音轨都有。此外，这两种格式也有多个不同的版本，这里就不作详细介绍。</li>
-</ol>
-<p>除了这两种格式之外，部分蓝光光盘也提供 LPCM 格式的音轨，这是一种未经压缩的音频格式，体积最大。压缩后的音频解码成 PCM 格式才能播放，所以这种格式无需解码。理论上 LPCM 格式无压缩音质好，无需解码，是最理想的格式，但由于光盘容量是有限的，音频体积大会挤占视频的空间。可以计算 96kHz 采样率，24 位采样精度，7.1 声道的 LPCM 音轨每秒数据量是</p>
-<blockquote>
-<p>96k * (24 / 8) * 8 = 2.3MB</p>
-</blockquote>
-<p>那么一部 90 分钟的电影仅音频就占用了约 12.4 GB 空间，而单面蓝光光盘才 25GB。折中办法是无损压缩，类似于 zip 文件解压后可以 100% 还原成压缩前的文件，杜比和 DTS 都推出了相应的音频格式，分别叫杜比 TrueHD 和 DTS-HD Master Audio。这两种格式除了需要解码之外，和 LPCM 音质没有区别。</p>
-<p>说到无损压缩我们常见的音乐中还有 APE 和 FLAC。APE 不支持多声道，FLAC 可以支持，理论上也可以用于电影光盘，但是没有商业化产品支持，所以没有得到应用。FLAC 是免费、开源的音频格式，但目前还没有电影公司采用，没有播放器、解码器以及音响设备支持。网上已有字幕组使用 FLAC 制作多声道的电影文件，目前只能在电脑上软件解码。</p>
-<p>回放环绕声的方法：</p>
-<p>多声道音箱。需要多个音箱，而且摆位要正确，但效果最好。<br>多单元耳机。多个扬声器单元放在一个耳机上，产品很少。<br>虚拟环绕声。经过算法处理成立体声，用普通耳机回放，下面将详细介绍。<br>2. 虚拟环绕声<br>这里只讨论把多声道音频经过算法处理变成立体声的虚拟环绕声，还有一类是把立体声音频经过算法处理使其具有空间感（很多音效宣传具有此功能）的技术，个人觉得后者无意义只能算是一种音效。</p>
-<p><img src="https://img-blog.csdnimg.cn/2020051421502336.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="HRTF 示意图，来源于维基百科"></p>
-<p>虚拟环绕声都是基于 HRTF（Head Related Transfer Functions）头部相关传输函数来实现的，只是各家的算法以及测量数据有差异，效果也就各不相同。关于 HRTF 引用数码多上的简单介绍：人耳在接收到音源发出的声音时，人的耳廓、耳道、头盖骨、肩部等对声波的折射、绕射和衍射以及鼓膜接收到的信息会被大脑所接受，大脑通过经验来对声音的方位进行判断。根据这一原理，通过信号处理的数学方法，我们构建了 HRTF（Head Related Transfer Functions）头部相关传输函数，根据多组的滤波器来虚拟实现人耳接收到的“位置信息”。关于 HRTF 的详细原理，数码多上同样有一篇文章 HRTF音频3D定位技术综述。有了这个基础知识，我们就可以分析各种各样的虚拟环绕声相关技术。</p>
-<p>2.1 人头录音（Dummy head recording）<br>一般录制环绕声音频需要使用多个麦克风，例如 5.1 声道至少需要 5 个麦克风，而一般音乐是双声道两个麦克风。人头录音也是使用两个麦克风录音，但是模拟了人头听音的效果，相当于把两个麦克风放在人的耳朵里面。因为就算是多声道的音箱，人最终都是靠两个耳朵来听，所以在最理想的情况下人头录音是可以达到真实环绕声效果的。但是现实都是不完美的，首先人头录音要求回放时必须使用耳机（录音时麦克风也是放在耳朵里），保证声音没有串扰；其次每个人身体有差异，大脑对声音的判断也不同，录音不可能按照每个人去完美适配。这就造成了人头录音，包括下面提到的虚拟环绕声技术，效果都不如多声道音箱理想。</p>
-<p>2.2 游戏 3D 音效<br>很多游戏也有 3D 音效，计算游戏场景中多个音源（脚步声、远处动物等等）与环境相互作用的效果（反射、阻碍等等）得出游戏中玩家所在位置的全方位声音，这个声音可以认为是环绕声的，然后这个声音经过 HRTF 处理得到立体声输出，当然也可以直接编码成杜比或 DTS 输出到外部多声道音箱。创新的 EAX 以及以前的 Aureal 3D 音效就是属于这一类。</p>
-<p>2.3 虚拟环绕声回放<br>很多厂家有类似的技术，例如 Dolby Headphone、DTS Surround Sensation、索尼 Virtualphones Technology 等等，都是把多声道的各种格式音频（杜比/DTS/LPCM等）解码并经过自家的基于 HRTF 的处理技术转换成立体声，然后用户可以使用耳机回放。下面简单介绍一下两种常见场景：</p>
-<p>视频播放器集成 HRTF 插件。就是视频播放器解码完多声道音频后，再经过 HRTF 处理成立体声输出。例如 PotPlayer 里面有一个音频输出选项叫“虚拟环绕（HRTF）”，PowerDVD 也带有 Dolby Headphone 插件。<br>外部解码器。杜比/DTS/LPCM 等多声道音轨通过光纤或 HDMI 输出到带有虚拟环绕声处理功能的解码器播放，然后输出到耳机。例如搭载有 Dolby Headphone 的游戏耳机，索尼的 MDR-DS 系列搭载有 Virtualphones Technology 技术的耳机。<br>3. 总结<br>总的来说，靠谱的虚拟环绕声技术都是通过把原始多声道音频经过 HRTF 处理得到的，比直接 downmix 到双声道空间感要强，但感觉还是不太自然，效果最好的还是多声道音箱。如果想体验 Dolby Headphone 的效果，这篇文章里面提供有在线试听 5.1 channel audio through ordinary headphones using MPC-HC。</p>
-<p>转载请注明出处：<a href="http://www.cnblogs.com/imouto/archive/2013/03/13/virtual-surround-sound-explained.html" target="_blank" rel="noopener">http://www.cnblogs.com/imouto/archive/2013/03/13/virtual-surround-sound-explained.html</a></p>
-<p>本文外部镜像：<a href="http://oteku.blogspot.com/2013/03/virtual-surround-sound-explained.html" target="_blank" rel="noopener">http://oteku.blogspot.com/2013/03/virtual-surround-sound-explained.html</a></p>
-<p>文章出处：<a href="https://www.cnblogs.com/imouto/archive/2013/03/13/virtual-surround-sound-explained.html" target="_blank" rel="noopener">https://www.cnblogs.com/imouto/archive/2013/03/13/virtual-surround-sound-explained.html</a></p>
-]]></content>
-      <categories>
-        <category>硬件</category>
-      </categories>
-      <tags>
-        <tag>硬件</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>使用MATLAB调用摄像头并拍照—详细代码</title>
     <url>/%E4%BD%BF%E7%94%A8MATLAB%E8%B0%83%E7%94%A8%E6%91%84%E5%83%8F%E5%A4%B4%E5%B9%B6%E6%8B%8D%E7%85%A7%E2%80%94%E8%AF%A6%E7%BB%86%E4%BB%A3%E7%A0%81.html</url>
     <content><![CDATA[<blockquote>
@@ -1228,6 +1194,40 @@ Did you mean &#39;conda create&#39;?</code></p>
       </categories>
       <tags>
         <tag>MATLAB</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>人头录音原理及解释</title>
+    <url>/%E4%BA%BA%E5%A4%B4%E5%BD%95%E9%9F%B3%E5%8E%9F%E7%90%86%E5%8F%8A%E8%A7%A3%E9%87%8A.html</url>
+    <content><![CDATA[<p>简介：</p>
+<p>本文简单介绍了环绕声基础知识，还介绍了各种双声道虚拟环绕声（多声道）的技术。最近突然对虚拟环绕声感兴趣，整理了一下相关知识。</p>
+<ol>
+<li>何为环绕声<br>普通的立体声只能分清左右两个方向的声音，而环绕声还能让人声音的前后左右各个方位，更有空间感仿佛置身于现场。常见的环绕声主要有 5.1 声道与 7.1 声道两种，要重现环绕声也相应的需要 6 个或者 8 个音箱。<a id="more"></a>
+电影中最常见的环绕声格式是杜比数字和 DTS，两者是竞争对手关系，电影 DVD 中一般包含有其中一种或者两种音轨都有。此外，这两种格式也有多个不同的版本，这里就不作详细介绍。</li>
+</ol>
+<p>除了这两种格式之外，部分蓝光光盘也提供 LPCM 格式的音轨，这是一种未经压缩的音频格式，体积最大。压缩后的音频解码成 PCM 格式才能播放，所以这种格式无需解码。理论上 LPCM 格式无压缩音质好，无需解码，是最理想的格式，但由于光盘容量是有限的，音频体积大会挤占视频的空间。可以计算 96kHz 采样率，24 位采样精度，7.1 声道的 LPCM 音轨每秒数据量是</p>
+<blockquote>
+<p>96k * (24 / 8) * 8 = 2.3MB</p>
+</blockquote>
+<p>那么一部 90 分钟的电影仅音频就占用了约 12.4 GB 空间，而单面蓝光光盘才 25GB。折中办法是无损压缩，类似于 zip 文件解压后可以 100% 还原成压缩前的文件，杜比和 DTS 都推出了相应的音频格式，分别叫杜比 TrueHD 和 DTS-HD Master Audio。这两种格式除了需要解码之外，和 LPCM 音质没有区别。</p>
+<p>说到无损压缩我们常见的音乐中还有 APE 和 FLAC。APE 不支持多声道，FLAC 可以支持，理论上也可以用于电影光盘，但是没有商业化产品支持，所以没有得到应用。FLAC 是免费、开源的音频格式，但目前还没有电影公司采用，没有播放器、解码器以及音响设备支持。网上已有字幕组使用 FLAC 制作多声道的电影文件，目前只能在电脑上软件解码。</p>
+<p>回放环绕声的方法：</p>
+<p>多声道音箱。需要多个音箱，而且摆位要正确，但效果最好。<br>多单元耳机。多个扬声器单元放在一个耳机上，产品很少。<br>虚拟环绕声。经过算法处理成立体声，用普通耳机回放，下面将详细介绍。<br>2. 虚拟环绕声<br>这里只讨论把多声道音频经过算法处理变成立体声的虚拟环绕声，还有一类是把立体声音频经过算法处理使其具有空间感（很多音效宣传具有此功能）的技术，个人觉得后者无意义只能算是一种音效。</p>
+<p><img src="https://img-blog.csdnimg.cn/2020051421502336.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="HRTF 示意图，来源于维基百科"></p>
+<p>虚拟环绕声都是基于 HRTF（Head Related Transfer Functions）头部相关传输函数来实现的，只是各家的算法以及测量数据有差异，效果也就各不相同。关于 HRTF 引用数码多上的简单介绍：人耳在接收到音源发出的声音时，人的耳廓、耳道、头盖骨、肩部等对声波的折射、绕射和衍射以及鼓膜接收到的信息会被大脑所接受，大脑通过经验来对声音的方位进行判断。根据这一原理，通过信号处理的数学方法，我们构建了 HRTF（Head Related Transfer Functions）头部相关传输函数，根据多组的滤波器来虚拟实现人耳接收到的“位置信息”。关于 HRTF 的详细原理，数码多上同样有一篇文章 HRTF音频3D定位技术综述。有了这个基础知识，我们就可以分析各种各样的虚拟环绕声相关技术。</p>
+<p>2.1 人头录音（Dummy head recording）<br>一般录制环绕声音频需要使用多个麦克风，例如 5.1 声道至少需要 5 个麦克风，而一般音乐是双声道两个麦克风。人头录音也是使用两个麦克风录音，但是模拟了人头听音的效果，相当于把两个麦克风放在人的耳朵里面。因为就算是多声道的音箱，人最终都是靠两个耳朵来听，所以在最理想的情况下人头录音是可以达到真实环绕声效果的。但是现实都是不完美的，首先人头录音要求回放时必须使用耳机（录音时麦克风也是放在耳朵里），保证声音没有串扰；其次每个人身体有差异，大脑对声音的判断也不同，录音不可能按照每个人去完美适配。这就造成了人头录音，包括下面提到的虚拟环绕声技术，效果都不如多声道音箱理想。</p>
+<p>2.2 游戏 3D 音效<br>很多游戏也有 3D 音效，计算游戏场景中多个音源（脚步声、远处动物等等）与环境相互作用的效果（反射、阻碍等等）得出游戏中玩家所在位置的全方位声音，这个声音可以认为是环绕声的，然后这个声音经过 HRTF 处理得到立体声输出，当然也可以直接编码成杜比或 DTS 输出到外部多声道音箱。创新的 EAX 以及以前的 Aureal 3D 音效就是属于这一类。</p>
+<p>2.3 虚拟环绕声回放<br>很多厂家有类似的技术，例如 Dolby Headphone、DTS Surround Sensation、索尼 Virtualphones Technology 等等，都是把多声道的各种格式音频（杜比/DTS/LPCM等）解码并经过自家的基于 HRTF 的处理技术转换成立体声，然后用户可以使用耳机回放。下面简单介绍一下两种常见场景：</p>
+<p>视频播放器集成 HRTF 插件。就是视频播放器解码完多声道音频后，再经过 HRTF 处理成立体声输出。例如 PotPlayer 里面有一个音频输出选项叫“虚拟环绕（HRTF）”，PowerDVD 也带有 Dolby Headphone 插件。<br>外部解码器。杜比/DTS/LPCM 等多声道音轨通过光纤或 HDMI 输出到带有虚拟环绕声处理功能的解码器播放，然后输出到耳机。例如搭载有 Dolby Headphone 的游戏耳机，索尼的 MDR-DS 系列搭载有 Virtualphones Technology 技术的耳机。<br>3. 总结<br>总的来说，靠谱的虚拟环绕声技术都是通过把原始多声道音频经过 HRTF 处理得到的，比直接 downmix 到双声道空间感要强，但感觉还是不太自然，效果最好的还是多声道音箱。如果想体验 Dolby Headphone 的效果，这篇文章里面提供有在线试听 5.1 channel audio through ordinary headphones using MPC-HC。</p>
+<p>转载请注明出处：<a href="http://www.cnblogs.com/imouto/archive/2013/03/13/virtual-surround-sound-explained.html" target="_blank" rel="noopener">http://www.cnblogs.com/imouto/archive/2013/03/13/virtual-surround-sound-explained.html</a></p>
+<p>本文外部镜像：<a href="http://oteku.blogspot.com/2013/03/virtual-surround-sound-explained.html" target="_blank" rel="noopener">http://oteku.blogspot.com/2013/03/virtual-surround-sound-explained.html</a></p>
+<p>文章出处：<a href="https://www.cnblogs.com/imouto/archive/2013/03/13/virtual-surround-sound-explained.html" target="_blank" rel="noopener">https://www.cnblogs.com/imouto/archive/2013/03/13/virtual-surround-sound-explained.html</a></p>
+]]></content>
+      <categories>
+        <category>硬件</category>
+      </categories>
+      <tags>
+        <tag>硬件</tag>
       </tags>
   </entry>
   <entry>
@@ -1770,6 +1770,30 @@ Did you mean &#39;conda create&#39;?</code></p>
       </tags>
   </entry>
   <entry>
+    <title>运行sh文件报错：python3 command not found——已解决</title>
+    <url>/%E8%BF%90%E8%A1%8Csh%E6%96%87%E4%BB%B6%E6%8A%A5%E9%94%99%EF%BC%9Apython3%EF%BC%9A%20command%20not%20found%E2%80%94%E2%80%94%E5%B7%B2%E8%A7%A3%E5%86%B3.html</url>
+    <content><![CDATA[<p>我使用windows下的 anaconda 运行 sh 文件时报错：<code>python3: command not found</code></p>
+<p>可是我就是在 anaconda 配置的 python3.6 环境下运行的 sh 文件啊</p>
+<p>网上没有找的任何有效的解决方法</p>
+<p>后来我打开 sh 文件看了下代码：<br>（把 sh 后缀改成 txt 后缀就可以打开文件）</p>
+<a id="more"></a>
+<p><img src="https://img-blog.csdnimg.cn/20200316145609226.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>发现框住的那一行代码不就是我们平时运行 py 文件的命令嘛</p>
+<p>所以我把它改成：<code>python -u train.py \</code></p>
+<p><img src="https://img-blog.csdnimg.cn/20200316145810476.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>结果就可以正常运行了。</p>
+<p>我已经解决了问题，如果有对这种操作有任何问题的可以评论</p>
+]]></content>
+      <categories>
+        <category>python</category>
+        <category>error&amp;库</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>error&amp;库</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>运行SSD-TensorFlow报错：tensorflow.python.framework.errors_impl.NotFoundError：</title>
     <url>/%E8%BF%90%E8%A1%8CSSD-TensorFlow%E6%8A%A5%E9%94%99%EF%BC%9Atensorflow.python.framework.errors_impl.NotFoundError%EF%BC%9A.html</url>
     <content><![CDATA[<p>玩了很久的 yolo，今天下载了 SSD-TensorFlow 的代码，不过在运行的时候出现了一点问题</p>
@@ -1801,30 +1825,6 @@ Did you mean &#39;conda create&#39;?</code></p>
       <tags>
         <tag>python</tag>
         <tag>机器视觉</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>运行sh文件报错：python3 command not found——已解决</title>
-    <url>/%E8%BF%90%E8%A1%8Csh%E6%96%87%E4%BB%B6%E6%8A%A5%E9%94%99%EF%BC%9Apython3%EF%BC%9A%20command%20not%20found%E2%80%94%E2%80%94%E5%B7%B2%E8%A7%A3%E5%86%B3.html</url>
-    <content><![CDATA[<p>我使用windows下的 anaconda 运行 sh 文件时报错：<code>python3: command not found</code></p>
-<p>可是我就是在 anaconda 配置的 python3.6 环境下运行的 sh 文件啊</p>
-<p>网上没有找的任何有效的解决方法</p>
-<p>后来我打开 sh 文件看了下代码：<br>（把 sh 后缀改成 txt 后缀就可以打开文件）</p>
-<a id="more"></a>
-<p><img src="https://img-blog.csdnimg.cn/20200316145609226.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>发现框住的那一行代码不就是我们平时运行 py 文件的命令嘛</p>
-<p>所以我把它改成：<code>python -u train.py \</code></p>
-<p><img src="https://img-blog.csdnimg.cn/20200316145810476.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTA0MTE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>结果就可以正常运行了。</p>
-<p>我已经解决了问题，如果有对这种操作有任何问题的可以评论</p>
-]]></content>
-      <categories>
-        <category>python</category>
-        <category>error&amp;库</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>error&amp;库</tag>
       </tags>
   </entry>
   <entry>
